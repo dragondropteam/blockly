@@ -118,7 +118,6 @@ Blockly.Blocks['variables_set'] = {
     customContextMenu: Blockly.Blocks['variables_get'].customContextMenu
 };
 
-
 Blockly.Blocks['variables_get_typed'] = {
     /**
      * Block for variable getter.
@@ -135,20 +134,34 @@ Blockly.Blocks['variables_get_typed'] = {
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
     },
-    contextMenuType_: 'variables_set',
+    contextMenuType_: 'variable_set_typed',
     /**
      * Add menu option to create getter/setter block for this setter/getter.
      * @param {!Array} options List of menu options to add to.
      * @this Blockly.Block
      */
     customContextMenu: function (options) {
-        var option = {enabled: true};
-        var name = this.getFieldValue('VAR');
+        const option = {enabled: true};
+        const name = this.getFieldValue('VAR');
         option.text = this.contextMenuMsg_.replace('%1', name);
-        var xmlField = goog.dom.createDom('field', null, name);
+
+        // <field name="VAR">Example</field>
+        const xmlField = goog.dom.createDom('field', null, name);
         xmlField.setAttribute('name', 'VAR');
-        var xmlBlock = goog.dom.createDom('block', null, xmlField);
+
+        // <mutation type="..." ctype="..."></mutation>
+        const mutationField = goog.dom.createDom('mutation', null);
+        mutationField.setAttribute('type', this.type_);
+        mutationField.setAttribute('ctype', this.cType);
+
+        // <field name="TYPE">...</field>
+        const typeField = goog.dom.createDom('field', null, this.cType);
+        typeField.setAttribute('name', 'TYPE');
+
+        // Actually constructs the XML using google's create DOM (variadic)
+        const xmlBlock = goog.dom.createDom('block', null, xmlField, mutationField, typeField);
         xmlBlock.setAttribute('type', this.contextMenuType_);
+
         option.callback = Blockly.ContextMenu.callbackFactory(this, xmlBlock);
         options.push(option);
     },
@@ -212,13 +225,13 @@ Blockly.Blocks['variable_set_typed'] = {
     init: function () {
         this.appendValueInput("VALUE")
         //.setCheck("Number")
-            .appendField(Blockly.Msg.VARIABLE_SET_TYPED_FIELD_1)
+            .appendField(Blockly.Msg.SET)
             .appendField(new Blockly.FieldDropdown(types), "TYPE")
             .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLE_SET_TYPED_DEFAULT_VAR), "VAR")
-            .appendField(Blockly.Msg.VARIABLE_SET_TYPED_FIELD_2);
+            .appendField(Blockly.Msg.TO);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(330);
+        this.setColour(Blockly.Blocks.variables.HUE);
         this.setTooltip(Blockly.Msg.VARIABLE_SET_TYPED_TOOLTIP);
         this.setHelpUrl(Blockly.Msg.VARIABLE_SET_TYPED_HELP_URL);
         this.type_ = 'Number';
