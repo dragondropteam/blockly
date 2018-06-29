@@ -93,6 +93,48 @@ Blockly.C['logic_operation'] = function(block) {
   return [code, order];
 };
 
+Blockly.C['logic_operation_and']
+  = Blockly.C['logic_operation_or']
+  = function (block) {
+  //set the operator to && or ||
+  let operator = (block.operator == 'AND') ? ' && ' : ' || ';
+  //set the order according to the operator
+  let order = (operator == ' && ') ? Blockly.C.ORDER_LOGICAL_AND : Blockly.C.ORDER_LOGICAL_OR;
+
+  //assign the 2 permanent arguments
+  let argument0 = Blockly.C.valueToCode(block, 'A', order);
+  let argument1 = Blockly.C.valueToCode(block, 'B', order);
+
+  //set the default argument according to the operator
+  const defaultArgument = (operator == '&&') ? 'true' : 'false';
+
+  //if the arguments are empty, make them default
+  if(!argument0) {argument0 = defaultArgument;}
+  if(!argument1) {argument1 = defaultArgument;}
+
+  //assign the starting code based on the permanent arguments
+  let code = argument0 + operator + argument1;
+
+  //variable to store any additional arguments
+  let temp;
+  //handles additional arguments
+  if(block.itemCount_ >= 1) {
+    for (let i = 0; i < block.itemCount_; i++) {
+      //add an operator in between each additional argument
+      code += operator;
+      //assign the next argument to temp
+      temp = Blockly.C.valueToCode(block, 'ADD' + i, order);
+      //if the argument is empty, make it default
+      if (!temp) {
+        temp = defaultArgument;
+      }
+      //add the argument to the code output
+      code += temp;
+    }
+  }
+  return [code, order];
+};
+
 Blockly.C['logic_negate'] = function(block) {
   // Negation.
   var order = Blockly.C.ORDER_UNARY_PREFIX;
