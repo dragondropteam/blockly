@@ -96,19 +96,14 @@ Blockly.JavaScript['logic_operation_and']
   = function (block) {
   //set the operator to && or ||
   let operator = (block.operator == 'AND') ? ' && ' : ' || ';
+  //set the default argument according to the operator
+  const defaultArgument = (operator == '&&') ? 'true' : 'false';
   //set the order according to the operator
   let order = (operator == ' && ') ? Blockly.JavaScript.ORDER_LOGICAL_AND : Blockly.JavaScript.ORDER_LOGICAL_OR;
 
   //assign the 2 permanent arguments
-  let argument0 = Blockly.JavaScript.valueToCode(block, 'A', order);
-  let argument1 = Blockly.JavaScript.valueToCode(block, 'B', order);
-
-  //set the default argument according to the operator
-  const defaultArgument = (operator == '&&') ? 'true' : 'false';
-
-  //if the arguments are empty, make them default
-  if(!argument0) {argument0 = defaultArgument;}
-  if(!argument1) {argument1 = defaultArgument;}
+  let argument0 = Blockly.JavaScript.valueToCode(block, 'A', order) || defaultArgument;
+  let argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || defaultArgument;
 
   //assign the starting code based on the permanent arguments
   let code = argument0 + operator + argument1;
@@ -116,20 +111,19 @@ Blockly.JavaScript['logic_operation_and']
   //variable to store any additional arguments
   let temp;
   //handles additional arguments
-  if(block.itemCount_ >= 1) {
-    for (let i = 0; i < block.itemCount_; i++) {
-      //add an operator in between each additional argument
-      code += operator;
-      //assign the next argument to temp
-      temp = Blockly.JavaScript.valueToCode(block, 'ADD' + i, order);
-      //if the argument is empty, make it default
-      if (!temp) {
-        temp = defaultArgument;
-      }
-      //add the argument to the code output
-      code += temp;
+  for (let i = 0; i < block.itemCount_; i++) {
+    //add an operator in between each additional argument
+    code += operator;
+    //assign the next argument to temp
+    temp = Blockly.JavaScript.valueToCode(block, 'ADD' + i, order);
+    //if the argument is empty, make it default
+    if (!temp) {
+      temp = defaultArgument;
     }
+    //add the argument to the code output
+    code += temp;
   }
+
   return [code, order];
 };
 
