@@ -9,6 +9,25 @@ goog.provide('Blockly.Blocks.ringo');
 goog.require('Blockly.Blocks');
 
 const RINGO_COLOUR = 290;
+const RINGO_SETUP_AND_LOOP_COLOUR = '#558B2F';
+
+const RINGO_HARDWARE_HEADER_COLOUR = '#1565C0';
+const RINGO_INPUT_COLOUR = '#2479D1';
+const RINGO_PIXELS_COLOUR = '#328DE2';
+const RINGO_MOTORS_COLOUR = '#459A9A';
+const RINGO_MOVEMENT_COLOUR = '#43adfe';
+const RINGO_IR_COMMUNICATION_COLOUR = '#607d8b';
+const RINGO_SENSORS_COLOUR = '#66bcff';
+
+const RINGO_NAVIGATION_HEADER_COLOUR = '#E03400';
+const RINGO_NAVIGATION_COLOUR = '#EC591A';
+const RINGO_CALCULATION_COLOUR = '#F97E35';
+
+const RINGO_FUN_STUFF_HEADER_COLOUR = '#6A1B9A';
+const RINGO_EYES_COLOUR = '#862FB2';
+const RINGO_SHORT_ANIMATIONS_COLOUR = '#A142CA';
+const RINGO_SOUND_COLOUR = '#BD56E2';
+
 const HELP_URL = 'http://www.plumgeek.com/ringo.html';
 
 /**
@@ -22,7 +41,7 @@ Blockly.Blocks['hardwarestartup_ringo'] = {
             .appendField(Blockly.Msg.HARDWARESTARTUP_RINGO_SETUP);
         this.appendStatementInput("do")
             .setCheck(null);
-        this.setColour(330);
+        this.setColour(RINGO_SETUP_AND_LOOP_COLOUR);
         this.setTooltip(Blockly.Msg.HARDWARESTARTUP_RINGO_TOOLTIP);
         this.setHelpUrl(Blockly.Msg.HARDWARESTARTUP_RINGO_HELP_URL);
     }
@@ -34,7 +53,7 @@ Blockly.Blocks['get_gyro_calibration_multiplier'] = {
         this.appendDummyInput()
             .appendField(Blockly.Msg.GET_GYRO_CALIBRATION_MULTIPLIER);
         this.setOutput(true, "Number");
-        this.setColour(290);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.GET_GYRO_CALIBRATION_MULTIPLIER_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -46,7 +65,7 @@ Blockly.Blocks['begin_navigation'] = {
             .appendField(Blockly.Msg.BEGIN_NAVIGATION);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(290);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.BEGIN_NAVIGATION_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -58,7 +77,7 @@ Blockly.Blocks['simple_gyro_navigation'] = {
             .appendField(Blockly.Msg.SIMPLE_GYRO_NAVIGATION);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(290);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.SIMPLE_GYRO_NAVIGATION_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -70,7 +89,7 @@ Blockly.Blocks['simple_navigation'] = {
             .appendField(Blockly.Msg.SIMPLE_NAVIGATION);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(290);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.SIMPLE_NAVIGATION_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -90,7 +109,7 @@ Blockly.Blocks['navigation_xy'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(290);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.NAVIGATION_XY_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -102,7 +121,7 @@ Blockly.Blocks['calibrate_navigation_sensors'] = {
             .appendField(Blockly.Msg.CALIBRATE_NAVIGATION_SENSORS);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.CALIBRATE_NAVIGATION_SENSORS_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -114,7 +133,7 @@ Blockly.Blocks['zero_navigation'] = {
           .appendField(Blockly.Msg.ZERO_NAVIGATION);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      this.setColour(RINGO_COLOUR);
+      this.setColour(RINGO_NAVIGATION_COLOUR);
       this.setTooltip(Blockly.Msg.ZERO_NAVIGATION_TOOLTIP);
       this.setHelpUrl(HELP_URL);
   }
@@ -126,7 +145,7 @@ Blockly.Blocks['pause_navigation'] = {
             .appendField(Blockly.Msg.PAUSE_NAVIGATION);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.PAUSE_NAVIGATION_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -138,7 +157,7 @@ Blockly.Blocks['resume_navigation'] = {
             .appendField(Blockly.Msg.RESUME_NAVIGATION);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.RESUME_NAVIGATION_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -150,7 +169,7 @@ Blockly.Blocks['navigation_paused'] = {
         this.appendDummyInput()
             .appendField(Blockly.Msg.NAVIGATION_PAUSED);
         this.setOutput(true, 'Boolean');
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.NAVIGATION_PAUSED_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -162,14 +181,14 @@ Blockly.Blocks['delay_with_navigation_ms'] = {
             .appendField(Blockly.Msg.DELAY_WITH_NAVIGATION_MS);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.DELAY_WITH_NAVIGATION_MS_TOOLTIP);
         this.setHelpUrl(HELP_URL);
         this.appendValueInput("milliseconds")
             .setCheck("Number");
         this.appendDummyInput()
             .appendField(Blockly.Msg.MILLISECONDS);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -179,14 +198,14 @@ Blockly.Blocks['delay_with_simple_navigation_ms'] = {
             .appendField(Blockly.Msg.DELAY_WITH_SIMPLE_NAVIGATION_MS);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
         this.setTooltip(Blockly.Msg.DELAY_WITH_SIMPLE_NAVIGATION_MS_TOOLTIP);
         this.setHelpUrl(HELP_URL);
         this.appendValueInput("milliseconds")
             .setCheck("Number");
         this.appendDummyInput()
             .appendField(Blockly.Msg.MILLISECONDS);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -197,7 +216,7 @@ Blockly.Blocks['present_heading'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.PRESENT_HEADING_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -208,7 +227,7 @@ Blockly.Blocks['get_degrees_x'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_DEGREES_X_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -219,7 +238,7 @@ Blockly.Blocks['get_degrees_per_second_z'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_DEGREES_PER_SECOND_Z_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -230,7 +249,7 @@ Blockly.Blocks['get_degrees_per_second_x'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_DEGREES_PER_SECOND_X_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -241,7 +260,7 @@ Blockly.Blocks['get_degrees_per_second_y'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_DEGREES_PER_SECOND_Y_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -252,7 +271,7 @@ Blockly.Blocks['get_degrees_to_stop'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_DEGREES_TO_STOP_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -263,7 +282,7 @@ Blockly.Blocks['get_accel_x'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_ACCEL_X_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -274,7 +293,7 @@ Blockly.Blocks['get_accel_y'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_ACCEL_Y_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -285,7 +304,7 @@ Blockly.Blocks['get_accel_z'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_ACCEL_Z_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -296,7 +315,7 @@ Blockly.Blocks['get_accel_y_unzeroed'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_ACCEL_Y_UNZEROED_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -307,7 +326,7 @@ Blockly.Blocks['get_vel_x'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_VEL_X_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -318,7 +337,7 @@ Blockly.Blocks['get_vel_y'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_VEL_Y_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -329,7 +348,7 @@ Blockly.Blocks['get_pos_x'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_POS_X_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -340,7 +359,7 @@ Blockly.Blocks['get_pos_y'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_POS_Y_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -351,7 +370,7 @@ Blockly.Blocks['is_stationary'] = {
         this.setOutput(true, 'Boolean');
         this.setTooltip(Blockly.Msg.IS_STATIONARY_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -362,7 +381,7 @@ Blockly.Blocks['non_stationary_value'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.NON_STATIONARY_VALUE_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -373,7 +392,7 @@ Blockly.Blocks['non_stationary_axis'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.NON_STATIONARY_AXIS_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_NAVIGATION_COLOUR);
     }
 };
 
@@ -389,7 +408,7 @@ Blockly.Blocks['delay_with_navigation_seconds'] = {
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.DELAY_WITH_NAVIGATION_SECONDS_TOOLTIP);
     this.setHelpUrl(HELP_URL);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_NAVIGATION_COLOUR);
   }
 };
 
@@ -403,10 +422,10 @@ Blockly.Blocks['delay_with_simple_navigation_seconds'] = {
       .appendField(Blockly.Msg.SECONDS);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_NAVIGATION_COLOUR);
     this.setTooltip(Blockly.Msg.DELAY_WITH_SIMPLE_NAVIGATION_SECONDS_TOOLTIP);
     this.setHelpUrl(HELP_URL);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_NAVIGATION_COLOUR);
   }
 };
 
@@ -425,7 +444,7 @@ Blockly.Blocks['min_turn'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.MIN_TURN_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_CALCULATION_COLOUR);
         this.setInputsInline(true);
     }
 };
@@ -439,7 +458,7 @@ Blockly.Blocks['min_turn_to_heading'] = {
             .setCheck('Number');
         this.setTooltip(Blockly.Msg.MIN_TURN_TO_HEADING_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_CALCULATION_COLOUR);
         this.setInputsInline(true);
     }
 };
@@ -457,7 +476,7 @@ Blockly.Blocks['vector_to_degrees'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.VECTOR_TO_DEGREES_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_CALCULATION_COLOUR);
         this.setInputsInline(true);
     }
 };
@@ -548,7 +567,7 @@ Blockly.Blocks['set_pixel_rgb'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_PIXELS_COLOUR);
         this.setTooltip(Blockly.Msg.SET_PIXEL_RGB_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -564,7 +583,7 @@ Blockly.Blocks['set_pixel_rgb_colour'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_PIXELS_COLOUR);
         this.setTooltip(Blockly.Msg.SET_PIXEL_RGB_COLOUR_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -587,7 +606,7 @@ Blockly.Blocks['set_all_pixel_rgb'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_PIXELS_COLOUR);
         this.setTooltip(Blockly.Msg.SET_ALL_PIXEL_RGB_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -599,7 +618,7 @@ Blockly.Blocks['refresh_pixels'] = {
             .appendField(Blockly.Msg.REFRESH_PIXELS);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_PIXELS_COLOUR);
         this.setTooltip(Blockly.Msg.REFRESH_PIXELS_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -614,7 +633,7 @@ Blockly.Blocks['set_all_pixel_rgb_colour'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_PIXELS_COLOUR);
         this.setTooltip(Blockly.Msg.SET_ALL_PIXEL_RGB_COLOUR_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -629,7 +648,7 @@ Blockly.Blocks['get_motor_max'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_MOTOR_MAX_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_MOTORS_COLOUR);
     }
 };
 
@@ -640,7 +659,7 @@ Blockly.Blocks['get_left_motor'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_LEFT_MOTOR_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_MOTORS_COLOUR);
     }
 };
 
@@ -651,7 +670,7 @@ Blockly.Blocks['get_right_motor'] = {
         this.setOutput(true, 'Number');
         this.setTooltip(Blockly.Msg.GET_RIGHT_MOTOR_TOOLTIP);
         this.setHelpUrl(HELP_URL);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_MOTORS_COLOUR);
     }
 };
 
@@ -661,7 +680,7 @@ Blockly.Blocks['motors_begin'] = {
             .appendField(Blockly.Msg.MOTORS_BEGIN);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_MOTORS_COLOUR);
         this.setTooltip(Blockly.Msg.MOTORS_BEGIN_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -676,7 +695,7 @@ Blockly.Blocks['maintain_heading_reset'] = {
             .appendField(Blockly.Msg.MAINTAIN_HEADING_RESET);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_MOVEMENT_COLOUR);
         this.setTooltip(Blockly.Msg.MAINTAIN_HEADING_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -699,7 +718,7 @@ Blockly.Blocks['maintain_heading'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(290);
+        this.setColour(RINGO_MOVEMENT_COLOUR);
         this.setTooltip(Blockly.Msg.MAINTAIN_HEADING_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -727,7 +746,7 @@ Blockly.Blocks['drive_arc'] = {
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(290);
+        this.setColour(RINGO_MOVEMENT_COLOUR);
         this.setTooltip(Blockly.Msg.DRIVE_ARC_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -747,7 +766,7 @@ Blockly.Blocks['rotate_accurate'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(290);
+    this.setColour(RINGO_MOVEMENT_COLOUR);
     this.setTooltip(Blockly.Msg.ROTATE_ACCURATE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -766,7 +785,7 @@ Blockly.Blocks['rotate_accurate'] = {
 //         this.setInputsInline(true);
 //         this.setTooltip('');
 //         this.setHelpUrl(HELP_URL);
-//         this.setColour(RINGO_COLOUR);
+//         this.setColour(RINGO_MOVEMENT_COLOUR);
 //     }
 // };
 //endregion
@@ -778,7 +797,7 @@ Blockly.Blocks['play_start_chirp'] = {
             .appendField(Blockly.Msg.PLAY_START_CHIRP);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SHORT_ANIMATIONS_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_START_CHIRP_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -791,7 +810,7 @@ Blockly.Blocks['play_ack'] = {
             .appendField(Blockly.Msg.PLAY_ACK);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SHORT_ANIMATIONS_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_ACK_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -804,7 +823,7 @@ Blockly.Blocks['play_non_ack'] = {
             .appendField(Blockly.Msg.PLAY_NON_ACK);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SHORT_ANIMATIONS_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_NON_ACK_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -817,7 +836,7 @@ Blockly.Blocks['play_anger'] = {
             .appendField(Blockly.Msg.PLAY_ANGER);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SHORT_ANIMATIONS_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_ANGER_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -831,7 +850,7 @@ Blockly.Blocks['play_boredom'] = {
             .appendField(Blockly.Msg.PLAY_BOREDOM);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SHORT_ANIMATIONS_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_BOREDOM_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -844,7 +863,7 @@ Blockly.Blocks['play_excited'] = {
             .appendField(Blockly.Msg.PLAY_EXCITED);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SHORT_ANIMATIONS_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_EXCITED_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -866,7 +885,7 @@ Blockly.Blocks['play_chirp'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SOUND_COLOUR);
         this.setTooltip(Blockly.Msg.PLAY_CHIRP_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -878,7 +897,7 @@ Blockly.Blocks['off_chirp'] = {
             .appendField(Blockly.Msg.OFF_CHIRP);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_SOUND_COLOUR);
         this.setTooltip(Blockly.Msg.OFF_CHIRP_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -893,7 +912,7 @@ Blockly.Blocks['off_pixels'] = {
             .appendField(Blockly.Msg.OFF_PIXELS);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_EYES_COLOUR);
         this.setTooltip(Blockly.Msg.OFF_PIXELS_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -909,7 +928,7 @@ Blockly.Blocks['off_pixel'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_EYES_COLOUR);
         this.setTooltip(Blockly.Msg.OFF_PIXEL_TOOLTIP);
         this.setHelpUrl(HELP_URL);
     }
@@ -921,7 +940,7 @@ Blockly.Blocks['random_eyes'] = {
             .appendField(Blockly.Msg.RANDOM_EYES);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour(RINGO_COLOUR);
+        this.setColour(RINGO_EYES_COLOUR);
         this.setTooltip(Blockly.Msg.RANDOM_EYES_TOOLTIP);
         this.setHelpUrl(HELP_URL);
 
@@ -936,7 +955,7 @@ Blockly.Blocks['read_side_sensors'] = {
       .appendField(Blockly.Msg.READ_SIDE_SENSORS);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.READ_SIDE_SENSORS_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -947,7 +966,7 @@ Blockly.Blocks['read_left_light_sensor'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.READ_LEFT_LIGHT_SENSOR);
     this.setOutput(true, 'Number');
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.READ_LEFT_LIGHT_SENSOR_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -959,7 +978,7 @@ Blockly.Blocks['edge_lights_on'] = {
       .appendField(Blockly.Msg.EDGE_LIGHTS_ON);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.EDGE_LIGHTS_ON_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -971,7 +990,7 @@ Blockly.Blocks['edge_lights_off'] = {
       .appendField(Blockly.Msg.EDGE_LIGHTS_OFF);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.EDGE_LIGHTS_OFF_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -982,7 +1001,7 @@ Blockly.Blocks['read_right_light_sensor'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.READ_RIGHT_LIGHT_SENSOR);
     this.setOutput(true, 'Number');
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.READ_RIGHT_LIGHT_SENSOR_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -994,7 +1013,7 @@ Blockly.Blocks['reset_look_at_edge'] = {
       .appendField(Blockly.Msg.RESET_LOOK_AT_EDGE);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.RESET_LOOK_AT_EDGE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1006,7 +1025,7 @@ Blockly.Blocks['look_at_edge'] = {
       .appendField(Blockly.Msg.LOOK_AT_EDGE);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.LOOK_AT_EDGE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1017,7 +1036,7 @@ Blockly.Blocks['look_for_edge'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.LOOK_FOR_EDGE);
     this.setOutput(true, 'Number');
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.LOOK_FOR_EDGE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1032,7 +1051,7 @@ Blockly.Blocks['read_edge_light_sensors'] = {
       .appendField(Blockly.Msg.READ_EDGE_LIGHT_SENSORS_AVERAGE)
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.READ_EDGE_LIGHT_SENSORS_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1043,7 +1062,7 @@ Blockly.Blocks['is_over_edge'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.IS_OVER_EDGE);
     this.setOutput(true, 'Number');
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.IS_OVER_EDGE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1055,7 +1074,7 @@ Blockly.Blocks['switch_ambient_to_edge'] = {
       .appendField(Blockly.Msg.SWITCH_AMBIENT_TO_EDGE);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.SWITCH_AMBIENT_TO_EDGE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1067,7 +1086,7 @@ Blockly.Blocks['switch_edge_to_ambient'] = {
       .appendField(Blockly.Msg.SWITCH_EDGE_TO_AMBIENT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_SENSORS_COLOUR);
     this.setTooltip(Blockly.Msg.SWITCH_EDGE_TO_AMBIENT_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1081,7 +1100,7 @@ Blockly.Blocks['switch_button_to_pixels'] = {
       .appendField(Blockly.Msg.SWITCH_BUTTON_TO_PIXELS);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_INPUT_COLOUR);
     this.setTooltip(Blockly.Msg.SWITCH_BUTTON_TO_PIXELS_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1093,7 +1112,7 @@ Blockly.Blocks['switch_pixels_to_button'] = {
       .appendField(Blockly.Msg.SWITCH_PIXELS_TO_BUTTON);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_INPUT_COLOUR);
     this.setTooltip(Blockly.Msg.SWITCH_PIXELS_TO_BUTTON_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1105,7 +1124,7 @@ Blockly.Blocks['switch_motors_to_serial'] = {
       .appendField(Blockly.Msg.SWITCH_MOTORS_TO_SERIAL);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_INPUT_COLOUR);
     this.setTooltip(Blockly.Msg.SWITCH_MOTORS_TO_SERIAL_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1116,7 +1135,7 @@ Blockly.Blocks['ringo_button_pressed'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.BUTTON_PRESSED);
     this.setOutput(true, 'Boolean');
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_INPUT_COLOUR);
     this.setTooltip(Blockly.Msg.BUTTON_PRESSED_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
@@ -1130,7 +1149,7 @@ Blockly.Blocks['heading_with_shortest_distance'] = {
     this.appendDummyInput()
       .appendField(Blockly.Msg.DEGREES);
     this.setOutput(true, 'Number');
-    this.setColour(RINGO_COLOUR);
+    this.setColour(RINGO_MOVEMENT_COLOUR);
     this.setTooltip(Blockly.Msg.HEADING_WITH_SHORTEST_DISTANCE_TOOLTIP);
     this.setHelpUrl(HELP_URL);
   }
