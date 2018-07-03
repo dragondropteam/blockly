@@ -13,6 +13,8 @@ const ARDUINO_EEPROM_COLOUR = '#44a14f';//bfab36
 const ARDUINO_SERVO_COLOUR = '#73a82b';//d2aa35
 const ARDUINO_SERIAL_COLOUR = '#bfab36';//9d5b32
 const ARDUINO_CONSTANTS_COLOUR = '#c08027';//'#e6505b';
+const ARDUINO_STRING_COLOUR = '#bc1106';//'#e6505b';
+
 
 // Unused?
 const ARDUINO_RANDOM_NUMBER_COLOUR = 150;//'#283593';

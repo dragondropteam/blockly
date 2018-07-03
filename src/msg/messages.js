@@ -5167,3 +5167,81 @@ Blockly.Msg.DEBUG_GEOM = 'draw shape'
 Blockly.Msg.DEBUG_GEOM_TOOLTIP = 'Renders a Phaser geometry object including Rectangle, Circle, Point or Line.';
 Blockly.Msg.DEBUG_GEOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#geom';
 Blockly.Msg.FILLED = 'filled';
+
+Blockly.Msg.ARDUINO_STRING_CREATE = 'create String from';
+Blockly.Msg.ARDUINO_STRING_CREATE_TOOLTIP = 'Create a String from the given contents.';
+Blockly.Msg.ARDUINO_STRING_CREATE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/';
+
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE_INPUT = 'create String from';
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE = 'in base';
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE_TOOLTIP = 'Create a String from the given contents with the given base.';
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/';
+
+Blockly.Msg.ARDUINO_STRING_CHAR_AT = 'character at position';
+Blockly.Msg.ARDUINO_STRING_CHAR_AT_STRING = 'from string';
+Blockly.Msg.ARDUINO_STRING_CHAR_AT_TOOLTIP = 'Finds the character in the String at the given position.';
+Blockly.Msg.ARDUINO_STRING_CHAR_AT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/charat/';
+
+Blockly.Msg.ARDUINO_STRING_COMPARE_TO = 'come before';
+Blockly.Msg.ARDUINO_STRING_COMPARE_TO_TOOLTIP = 'Compares two Strings. Returns a negative number if LHS comes before RHS. Returns 0 if they are equal. Returns a positive number if LHS comes after RHS.';
+Blockly.Msg.ARDUINO_STRING_COMPARE_TO_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/compareto/';
+
+Blockly.Msg.ARDUINO_STRING_CONCAT = 'concatenate';
+Blockly.Msg.ARDUINO_STRING_CONCAT_TOOLTIP = 'Appends the parameter to the String.';
+Blockly.Msg.ARDUINO_STRING_CONCAT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/concat/';
+
+Blockly.Msg.ARDUINO_STRING_ENDS_WITH = 'end with';
+Blockly.Msg.ARDUINO_STRING_ENDS_WITH_TOOLTIP = 'Tests whether or not a String ends with the characters of another String.';
+Blockly.Msg.ARDUINO_STRING_ENDS_WITH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/endswith/';
+
+Blockly.Msg.ARDUINO_STRING_EQUALS = 'the same as';
+Blockly.Msg.ARDUINO_STRING_EQUALS_CASE = 'ignore case';
+Blockly.Msg.ARDUINO_STRING_EQUALS_TOOLTIP = 'Compares two Strings for equality.';
+Blockly.Msg.ARDUINO_STRING_EQUALS_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/equalsignorecase/';
+
+Blockly.Msg.ARDUINO_STRING_INDEX_OF = 'index of';
+Blockly.Msg.ARDUINO_STRING_INDEX_OF_LOCATION = 'starting at position';
+Blockly.Msg.ARDUINO_STRING_INDEX_OF_TOOLTIP = 'Locates a character or String within another String.';
+Blockly.Msg.ARDUINO_STRING_INDEX_OF_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/indexof/';
+
+Blockly.Msg.ARDUINO_STRING_LENGTH = 'length of';
+Blockly.Msg.ARDUINO_STRING_LENGTH_TOOLTIP = 'Returns the length of the String, in characters.';
+Blockly.Msg.ARDUINO_STRING_LENGTH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/length/';
+
+Blockly.Msg.ARDUINO_STRING_REMOVE = 'remove characters from';
+Blockly.Msg.BETWEEN = 'between';
+Blockly.Msg.ARDUINO_STRING_REMOVE_TOOLTIP = 'Modify in place a String removing chars between the given indices.';
+Blockly.Msg.ARDUINO_STRING_REMOVE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/remove/';
+
+Blockly.Msg.ARDUINO_STRING_REPLACE = 'replace';
+Blockly.Msg.ARDUINO_STRING_REPLACE_TOOLTIP = 'Replaces all instance of the given character/substring with another character/substring.';
+Blockly.Msg.ARDUINO_STRING_REPLACE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/replace/';
+
+Blockly.Msg.ARDUINO_STRING_STARTS_WITH = 'start with';
+Blockly.Msg.ARDUINO_STRING_STARTS_WITH_TOOLTIP = 'Tests whether or not a String starts with the characters of another String.';
+Blockly.Msg.ARDUINO_STRING_STARTS_WITH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/startswith/';
+
+Blockly.Msg.ARDUINO_STRING_SUBSTRING = 'substring of';
+Blockly.Msg.ARDUINO_STRING_SUBSTRING_TOOLTIP = 'Get a substring of a String between the given indices.';
+Blockly.Msg.ARDUINO_STRING_SUBSTRING_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/substring/';
+
+Blockly.Msg.CONVERT = 'convert';
+Blockly.Msg.ARDUINO_STRING_TO_INT = 'to int';
+Blockly.Msg.ARDUINO_STRING_TO_INT_TOOLTIP  = 'Converts a valid String to an integer. The input String should start with an integer number.';
+Blockly.Msg.ARDUINO_STRING_TO_INT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/toint/';
+
+Blockly.Msg.ARDUINO_STRING_TO_FLOAT = 'to float';
+Blockly.Msg.ARDUINO_STRING_TO_FLOAT_TOOLTIP  = 'Converts a valid String to an float. The input String should start with an float number.';
+Blockly.Msg.ARDUINO_STRING_TO_FLOAT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/tofloat/';
+
+Blockly.Msg.ARDUINO_STRING_TO_LOWER = 'to lower-case';
+Blockly.Msg.ARDUINO_STRING_TO_LOWER_TOOLTIP  = 'Get a lower-case version of a String.';
+Blockly.Msg.ARDUINO_STRING_TO_LOWER_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/tolowercase/';
+
+Blockly.Msg.ARDUINO_STRING_TO_UPPER = 'to upper-case';
+Blockly.Msg.ARDUINO_STRING_TO_UPPER_TOOLTIP  = 'Get a upper-case version of a String.';
+Blockly.Msg.ARDUINO_STRING_TO_UPPER_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/touppercase/';
+
+Blockly.Msg.ARDUINO_STRING_TRIM = 'trim';
+Blockly.Msg.ARDUINO_STRING_TRIM_TOOLTIP = 'Get a version of the String with any leading and trailing whitespace removed.';
+Blockly.Msg.ARDUINO_STRING_TRIM_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/touppercase/';
