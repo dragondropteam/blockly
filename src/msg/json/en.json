@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2018-06-20 13:57:29.631184",
+		"lastupdated": "2018-06-29 15:04:30.257000",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -2115,6 +2115,7 @@
 	"YCOLON": "y:",
 	"AT": "at",
 	"AND": "and",
+	"OR": "or",
 	"PHYSICS_DISTANCE_BETWEEN": "distance between",
 	"PHYSICS_DISTANCE_BETWEEN_TOOLTIP": "Find the distance between two display objects (like Sprites).",
 	"PHYSICS_DISTANCE_BETWEEN_HELP_URL": "http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#distanceBetween",
@@ -2316,6 +2317,7 @@
 	"ON_EMITTER": "on emitter,",
 	"RATE": "rate",
 	"OVER": "over",
+	"MILLISECONDS": "milliseconds",
 	"AT_VOLUME": "at volume",
 	"LOOPING": "looping",
 	"SETUP": "setup",
