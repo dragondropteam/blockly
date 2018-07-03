@@ -5168,3 +5168,6 @@ Blockly.Msg.DEBUG_GEOM = 'draw shape';
 Blockly.Msg.DEBUG_GEOM_TOOLTIP = 'Renders a Phaser geometry object including Rectangle, Circle, Point or Line.';
 Blockly.Msg.DEBUG_GEOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#geom';
 Blockly.Msg.FILLED = 'filled';
+
+Blockly.Msg.LOGIC_OPERATION_AND_TOOLTIP = 'Returns true if all inputs are true.';
+Blockly.Msg.LOGIC_OPERATION_OR_TOOLTIP = 'Returns true if some inputs are true.';

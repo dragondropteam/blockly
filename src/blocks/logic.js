@@ -396,7 +396,7 @@ Blockly.Blocks['logic_operation_and'] = {
     this.setInputsInline(true);
     // Assign 'this' to a variable for use in the tooltip closure below.
     let thisBlock = this;
-    this.setTooltip(Blockly.Msg.LOGIC_OPERATION_TOOLTIP_AND);
+    this.setTooltip(Blockly.Msg.LOGIC_OPERATION_AND_TOOLTIP);
   },
 
   mutationToDom: function () {
@@ -522,7 +522,7 @@ Blockly.Blocks['logic_operation_or'] = {
     this.setInputsInline(true);
     // Assign 'this' to a variable for use in the tooltip closure below.
     let thisBlock = this;
-    this.setTooltip(Blockly.Msg.LOGIC_OPERATION_TOOLTIP_OR);
+    this.setTooltip(Blockly.Msg.LOGIC_OPERATION_OR_TOOLTIP);
   },
 
   mutationToDom: function () {
