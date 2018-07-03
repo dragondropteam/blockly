@@ -108,8 +108,6 @@ Blockly.Blocks['arduino_string_equals'] = {
       .setCheck('String')
       .appendField(Blockly.Msg.ARDUINO_STRING_EQUALS);
     this.appendDummyInput()
-      .appendField(new Blockly.FieldCheckbox('FALSE'), 'CASE')
-      .appendField(Blockly.Msg.QUESTION)
       .appendField(Blockly.Msg.ARDUINO_STRING_EQUALS_CASE);
     this.setOutput(true, 'Boolean');
     this.setColour(ARDUINO_STRING_COLOUR);
@@ -119,13 +117,31 @@ Blockly.Blocks['arduino_string_equals'] = {
   }
 };
 
+Blockly.Blocks['arduino_string_equals_ignore_case'] = {
+  init: function () {
+    this.appendValueInput('LHS')
+      .setCheck('String')
+      .appendField(Blockly.Msg.IS);
+    this.appendValueInput('RHS')
+      .setCheck('String')
+      .appendField(Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_CASE);
+    this.setOutput(true, 'Boolean');
+    this.setColour(ARDUINO_STRING_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_HELP_URL);
+  }
+};
+
 Blockly.Blocks['arduino_string_index_of'] = {
   init: function () {
     this.appendValueInput('INPUT')
       .appendField(Blockly.Msg.ARDUINO_STRING_INDEX_OF);
     this.appendValueInput('STRING')
       .setCheck('String')
-      .appendField(Blockly.Msg.FROM);
+      .appendField(Blockly.Msg.IN);
     this.appendValueInput('POSITION')
       .setCheck('Number')
       .appendField(Blockly.Msg.ARDUINO_STRING_INDEX_OF_LOCATION);
