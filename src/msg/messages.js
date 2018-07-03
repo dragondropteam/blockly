@@ -5195,9 +5195,14 @@ Blockly.Msg.ARDUINO_STRING_ENDS_WITH_TOOLTIP = 'Tests whether or not a String en
 Blockly.Msg.ARDUINO_STRING_ENDS_WITH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/endswith/';
 
 Blockly.Msg.ARDUINO_STRING_EQUALS = 'the same as';
-Blockly.Msg.ARDUINO_STRING_EQUALS_CASE = 'ignore case';
+Blockly.Msg.ARDUINO_STRING_EQUALS_CASE = 'not ignoring case?';
 Blockly.Msg.ARDUINO_STRING_EQUALS_TOOLTIP = 'Compares two Strings for equality.';
-Blockly.Msg.ARDUINO_STRING_EQUALS_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/equalsignorecase/';
+Blockly.Msg.ARDUINO_STRING_EQUALS_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/equals/';
+
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE = 'the same as';
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_CASE = 'ignoring case?';
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_TOOLTIP = 'Compares two Strings for equality, regardless of case.';
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/equalsignorecase/';
 
 Blockly.Msg.ARDUINO_STRING_INDEX_OF = 'index of';
 Blockly.Msg.ARDUINO_STRING_INDEX_OF_LOCATION = 'starting at position';
