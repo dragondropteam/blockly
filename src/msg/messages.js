@@ -5059,8 +5059,8 @@ Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_HELP_URL = 'http://dragondrop.digipen.edu/
 
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_DRAG = 'on drag';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_RELEASE = 'on release';
-Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_OFFSET_X = 'offset x';
-Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_OFFSET_Y = 'offset y';
+Blockly.Msg.OFFSET_X = 'offset x';
+Blockly.Msg.OFFSET_Y = 'offset y';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_TOOLTIP = 'Make this Sprite snap to the given grid either during drag or when it\'s released.';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#enableSnap';
 
@@ -5253,3 +5253,10 @@ Blockly.Msg.ARDUINO_STRING_TO_UPPER_HELP_URL = 'https://www.arduino.cc/reference
 Blockly.Msg.ARDUINO_STRING_TRIM = 'trim';
 Blockly.Msg.ARDUINO_STRING_TRIM_TOOLTIP = 'Get a version of the String with any leading and trailing whitespace removed.';
 Blockly.Msg.ARDUINO_STRING_TRIM_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/touppercase/';
+Blockly.Msg.BODY_SET_SIZE = 'set body size for';
+Blockly.Msg.BODY_SET_SIZE_TOOLTIP = 'Modify the physics Body to be any dimension.';
+Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#setSize';
+
+Blockly.Msg.DEBUG_BODY_RENDER = 'render body for';
+Blockly.Msg.DEBUG_BODY_RENDER_TOOLTIP = 'Render Sprite Body.';
+Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#render';

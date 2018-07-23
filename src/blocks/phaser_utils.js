@@ -95,6 +95,24 @@ Blockly.Blocks['debug_body_info'] = {
   }
 };
 
+Blockly.Blocks['debug_body_render'] = {
+  init: function () {
+    this.appendValueInput('BODY')
+    .appendField(Blockly.Msg.DEBUG_BODY_INFO);
+    this.appendValueInput('COLOUR')
+      .appendField(Blockly.Msg.COLOUR);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.FILLED)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'FILLED');
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_UTIL_DEBUG_COLOUR);
+    this.setTooltip(Blockly.Msg.DEBUG_BODY_INFO_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.DEBUG_BODY_INFO_HELP_URL);
+  }
+};
+
 Blockly.Blocks['debug_camera'] = {
   init: function () {
     this.appendValueInput('CAMERA')

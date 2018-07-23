@@ -1037,6 +1037,52 @@ Blockly.Blocks['stop_body'] = {
   }
 };
 
+  Blockly.Blocks['body_set_size'] = {
+  init: function () {
+    this.appendValueInput('BODY')
+      .appendField(Blockly.Msg.BODY_SET_SIZE);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TO)
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TO)
+      .appendField(Blockly.Msg.HEIGHT);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BODY_SET_SIZE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.BODY_SET_SIZE_HELP_URL);
+    this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  }
+};
+
+Blockly.Blocks['body_set_size_complex'] = {
+  init: function () {
+    this.appendValueInput('BODY')
+      .appendField(Blockly.Msg.BODY_SET_SIZE);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.appendValueInput('OFFSET_X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.OFFSET_X);
+    this.appendValueInput('OFFSET_Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.OFFSET_Y);
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BODY_SET_SIZE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.BODY_SET_SIZE_HELP_URL);
+    this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  }
+};
+
 //endregion
 
 Blockly.Blocks['call_function_on_group'] = {
