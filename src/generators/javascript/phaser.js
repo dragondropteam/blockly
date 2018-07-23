@@ -1625,9 +1625,9 @@ Blockly.JavaScript['add_text'] = function (block) {
   const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const value_initial_text = Blockly.JavaScript.valueToCode(block, 'INITIAL_TEXT', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_font_size = Blockly.JavaScript.valueToCode(block, 'FONT_SIZE', Blockly.JavaScript.ORDER_ATOMIC);
-  const colour_fill = block.getFieldValue('FILL');
-  return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: '${value_font_size}px', fill: '${colour_fill}'})`, Blockly.JavaScript.ORDER_NONE];
+  const size = Blockly.JavaScript.valueToCode(block, 'FONT_SIZE', Blockly.JavaScript.ORDER_ATOMIC);
+  const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: \`\${${size}}px\`, fill: ${colour}})`, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['set_text'] = function (block) {
