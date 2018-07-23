@@ -15,9 +15,8 @@ Blockly.Blocks['add_text'] = {
     this.appendValueInput('FONT_SIZE')
       .setCheck('Number')
       .appendField(Blockly.Msg.ADD_TEXT_FONT_SIZE);
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.ADD_TEXT_FONT_COLOUR)
-      .appendField(new Blockly.FieldColour('#ff0000'), 'FILL');
+    this.appendValueInput('COLOUR')
+      .appendField(Blockly.Msg.COLOUR);
     this.setOutput(true, null);
     this.setInputsInline(false);
     this.setTooltip(Blockly.Msg.ADD_TEXT_TOOLTIP);
