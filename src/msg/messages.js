@@ -4825,7 +4825,7 @@ Blockly.Msg.IS_OVER_EDGE_TOOLTIP = '';
 Blockly.Msg.SWITCH_AMBIENT_TO_EDGE = 'switch ambient to edge';
 Blockly.Msg.SWITCH_AMBIENT_TO_EDGE_TOOLTIP = '';
 
-Blockly.Msg.SWITCH_EDGE_TO_AMBIENT = 'switch ambient to edge';
+Blockly.Msg.SWITCH_EDGE_TO_AMBIENT = 'switch edge to ambient';
 Blockly.Msg.SWITCH_EDGE_TO_AMBIENT_TOOLTIP = '';
 
 Blockly.Msg.DELAY_WITH_NAVIGATION_SECONDS = 'delay with navigation for';
