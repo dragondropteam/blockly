@@ -639,8 +639,12 @@ Blockly.Blocks['arduino_math_map'] = {
 Blockly.Blocks['char_input'] = {
   init: function () {
     this.appendDummyInput()
+      .appendField('\'')
       .appendField(new Blockly.FieldCharInput(''), 'TEXT');
+    this.appendDummyInput()
+      .appendField('\'');
     this.setOutput(true, null);
+    this.setInputsInline(true);
     this.setColour(ARDUINO_CHARACTER_COLOUR);
     this.setTooltip(Blockly.Msg.CHAR_INPUT_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.CHAR_INPUT_HELP_URL);
