@@ -2676,11 +2676,9 @@ Blockly.JavaScript['timer_add_event_complex'] = function (block) {
 
   let code = '';
 
-  for(let i = 0; i < block.itemCount_; i++)
-  {
-    code +=  Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if(i < block.itemCount_-1)
-    {
+  for (let i = 0; i < block.itemCount_; i++) {
+    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
+    if (i < block.itemCount_ - 1) {
       code += ' , ';
     }
   }
@@ -2703,11 +2701,9 @@ Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
 
   let code = '';
 
-  for(let i = 0; i < block.itemCount_; i++)
-  {
-    code +=  Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if(i < block.itemCount_-1)
-    {
+  for (let i = 0; i < block.itemCount_; i++) {
+    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
+    if (i < block.itemCount_ - 1) {
       code += ' , ';
     }
   }
@@ -2731,11 +2727,9 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
 
   let code = '';
 
-  for(let i = 0; i < block.itemCount_; i++)
-  {
-    code +=  Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if(i < block.itemCount_-1)
-    {
+  for (let i = 0; i < block.itemCount_; i++) {
+    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
+    if (i < block.itemCount_ - 1) {
       code += ' , ';
     }
   }
