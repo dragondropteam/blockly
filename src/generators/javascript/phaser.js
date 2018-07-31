@@ -2674,14 +2674,7 @@ Blockly.JavaScript['timer_add_event_complex'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
 
-  let code = '';
-
-  for (let i = 0; i < block.itemCount_; i++) {
-    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if (i < block.itemCount_ - 1) {
-      code += ' , ';
-    }
-  }
+  let code = timer_complex_helper(block);
 
   return `${timer}.add(${delay}, ${callback}, undefined, ${code});\n`;
 };
@@ -2699,14 +2692,7 @@ Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
 
-  let code = '';
-
-  for (let i = 0; i < block.itemCount_; i++) {
-    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if (i < block.itemCount_ - 1) {
-      code += ' , ';
-    }
-  }
+  let code = timer_complex_helper(block);
 
   return `${timer}.loop(${delay}, ${callback}, ${code});\n`;
 };
@@ -2725,14 +2711,7 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
 
-  let code = '';
-
-  for (let i = 0; i < block.itemCount_; i++) {
-    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if (i < block.itemCount_ - 1) {
-      code += ' , ';
-    }
-  }
+  let code = timer_complex_helper(block);
 
   return `${timer}.repeat(${delay}, ${repeatCount}, ${callback}, ${code});\n`;
 };
@@ -2841,3 +2820,18 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
   return [`${object}.justPressed()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 //endregion
+
+//region HELPER_FUNCTIONS
+function timer_complex_helper(block) {
+  let code = '';
+
+  for(let i = 0; i < block.itemCount_; i++)
+  {
+    code +=  Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
+    if(i < block.itemCount_-1)
+    {
+      code += ' , ';
+    }
+  }
+  return code;
+}
