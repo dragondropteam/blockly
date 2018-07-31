@@ -98,7 +98,7 @@ Blockly.Blocks['debug_body_info'] = {
 Blockly.Blocks['debug_body_render'] = {
   init: function () {
     this.appendValueInput('BODY')
-    .appendField(Blockly.Msg.DEBUG_BODY_INFO);
+    .appendField(Blockly.Msg.DEBUG_BODY_RENDER);
     this.appendValueInput('COLOUR')
       .appendField(Blockly.Msg.COLOUR);
     this.appendDummyInput()
@@ -108,8 +108,8 @@ Blockly.Blocks['debug_body_render'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(PHASER_UTIL_DEBUG_COLOUR);
-    this.setTooltip(Blockly.Msg.DEBUG_BODY_INFO_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.DEBUG_BODY_INFO_HELP_URL);
+    this.setTooltip(Blockly.Msg.DEBUG_BODY_RENDER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL);
   }
 };
 
