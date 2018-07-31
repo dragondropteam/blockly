@@ -250,90 +250,90 @@ Blockly.C['char_to_lower'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`tolower(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`tolower(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_to_upper'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`toupper(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`toupper(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_alnum'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isalnum(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isalnum(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_alpha'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isalpha(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isalpha(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_cntrl'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`iscntrl(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`iscntrl(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_digit'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isdigit(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isdigit(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_graph'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isgraph(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isgraph(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_lower'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`islower(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`islower(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_print'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isprint(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isprint(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_punct'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`ispunct(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`ispunct(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_space'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isspace(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isspace(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_upper'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isupper(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isupper(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 
 Blockly.C['char_is_xdigit'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
   const char = Blockly.C.valueToCode(block, 'CHAR', Blockly.C.ORDER_ATOMIC);
-  return [`isxdigit(${char})`, Blockly.C.ORDER_ATOMIC];
+  return [`isxdigit(${char})`, Blockly.C.ORDER_FUNCTION_CALL];
 };
 //endregion CHARACTER
