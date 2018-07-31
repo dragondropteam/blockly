@@ -26,6 +26,32 @@ Blockly.Blocks['add_text'] = {
   }
 };
 
+Blockly.Blocks['add_text_input'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.ADD_TEXT);
+    this.appendValueInput('X_POS')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y_POS')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('INITIAL_TEXT')
+      .setCheck('String')
+      .appendField(Blockly.Msg.ADD_TEXT_INITIAL);
+    this.appendValueInput('FONT_SIZE')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.ADD_TEXT_FONT_SIZE);
+    this.appendValueInput('COLOUR')
+      .appendField(Blockly.Msg.COLOUR);
+    this.setOutput(true, null);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.ADD_TEXT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.ADD_TEXT_HELP_URL);
+    this.setColour(PHASER_TEXT_COLOUR);
+  }
+};
+
 /**
  * @deprecated Use set_text_vi instead
  * @type {{init: Blockly.Blocks.set_text.init}}
