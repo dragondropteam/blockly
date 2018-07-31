@@ -156,7 +156,7 @@ Blockly.Blocks['timer_add_event_complex'] = {
     this.setHelpUrl(Blockly.Msg.TIMER_ADD_EVENT_URL);
     this.itemCount_ = 0;
     this.updateShape_();
-    this.setMutator(new Blockly.Mutator(['timer_add_event_item']));
+    this.setMutator(new Blockly.Mutator(['timer_item']));
 
     // Assign 'this' to a variable for use in the tooltip closure below.
     let thisBlock = this;
@@ -183,11 +183,11 @@ Blockly.Blocks['timer_add_event_complex'] = {
    * @this Blockly.Block
    */
   decompose: function (workspace) {
-    let containerBlock = workspace.newBlock('timer_add_event_container');
+    let containerBlock = workspace.newBlock('timer_container');
     containerBlock.initSvg();
     let connection = containerBlock.nextConnection;
     for (let i = 0; i < this.itemCount_; i++) {
-      let itemBlock = workspace.newBlock('timer_add_event_item');
+      let itemBlock = workspace.newBlock('timer_item');
       itemBlock.initSvg();
       connection.connect(itemBlock.previousConnection);
       connection = itemBlock.nextConnection;
