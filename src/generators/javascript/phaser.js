@@ -2822,14 +2822,12 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
 //endregion
 
 //region HELPER_FUNCTIONS
-function timer_complex_helper(block) {
+function timer_complex_helper (block) {
   let code = '';
 
-  for(let i = 0; i < block.itemCount_; i++)
-  {
-    code +=  Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
-    if(i < block.itemCount_-1)
-    {
+  for (let i = 0; i < block.itemCount_; i++) {
+    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
+    if (i < block.itemCount_ - 1) {
       code += ' , ';
     }
   }
