@@ -106,6 +106,12 @@ DragonDrop.Classes.flyoutCategory = function(workspace){
       setMemberBlock.setAttribute('type', 'set_member_in_class');
       setMemberBlock.appendChild(setMutation);
 
+      /*
+      Adds a shadow of "this" to the class member getter and setter blocks
+       */
+      add_this_shadow(getMemberBlock);
+      add_this_shadow(setMemberBlock);
+
       xmlList.push(getMemberBlock);
       xmlList.push(setMemberBlock);
     });
@@ -155,6 +161,8 @@ DragonDrop.Classes.flyoutCategory = function(workspace){
         arg.setAttribute('name', args[j]);
         mutation.appendChild(arg);
       }
+      //add a shadow of the "this reference" block to class method calls
+      add_this_shadow(block);
       xmlList.push(block);
     }
   }
@@ -462,3 +470,14 @@ DragonDrop.Classes.procTupleComparator_ = function(ta, tb) {
 };
 //ENDREGION
 
+//region HELPER_FUNCTIONS
+//add a shadow for the "this" reference block
+function add_this_shadow(block) {
+  let getValue = goog.dom.createDom('value');
+  getValue.setAttribute('name', 'INSTANCE');
+  let getShadow = goog.dom.createDom('shadow');
+  getShadow.setAttribute('type', 'this_reference');
+  getValue.appendChild(getShadow);
+  block.appendChild(getValue);
+}
+//ENDREGION
