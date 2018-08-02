@@ -69,10 +69,12 @@ Blockly.Blocks['delta_time_milliseconds'] = {
 Blockly.Blocks['create_timer'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(`${Blockly.Msg.CREATE_TIMER_TITLE} ${Blockly.Msg.AUTO_DESTROY}`)
+      .appendField(`${Blockly.Msg.CREATE_TIMER_TITLE}`);
+    this.appendDummyInput()
+      .appendField(`${Blockly.Msg.AUTO_DESTROY}`)
       .appendField(new Blockly.FieldCheckbox('FALSE'), 'AUTO_DESTROY');
     this.setOutput(true, 'Timer');
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setColour(PHASER_TIME_COLOUR);
     this.setTooltip(Blockly.Msg.CREATE_TIMER_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.CREATE_TIMER_URL);

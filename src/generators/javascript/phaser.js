@@ -2701,7 +2701,7 @@ Blockly.JavaScript['timer_resume'] = function (block) {
 
 Blockly.JavaScript['timer_stop'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
-  const clearEvents = block.getFieldValue('CLEAR_EVENTS');
+  const clearEvents = block.getFieldValue('CLEAR_EVENTS') === 'TRUE';
   return `${timer}.stop(${clearEvents});\n`;
 };
 
