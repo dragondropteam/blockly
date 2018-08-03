@@ -33,6 +33,22 @@ goog.require('Blockly.Blocks');
  * Common HSV hue for all blocks in this category.
  */
 Blockly.Blocks.texts.HUE = 190;
+const ESCAPE_CHARACTERS = [
+  ['single quote', '\''],
+  ['double quote', '\"'],
+  ['backslash', '\\'],
+  ['new line', 'n'],
+  ['carriage return', 'r'],
+  ['tab', 't'],
+  ['backspace', 'b'],
+  ['form feed', 'f'],
+  ['vertical tab', 'v'],
+  ['null character', '0']
+];
+/*const ESCAPE_CHARACTERS = [
+  ['NewLine', 'n'],
+
+];*/
 
 Blockly.Blocks['text'] = {
   /**
@@ -691,8 +707,19 @@ Blockly.Blocks['log_console'] = {
         .appendField(Blockly.Msg.LOG_CONSOLE_TITLE);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.texts.HUE)
+    this.setColour(Blockly.Blocks.texts.HUE);
     this.setTooltip(Blockly.Msg.LOG_CONSOLE_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.LOG_CONSOLE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['escape_characters'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldDropdown(ESCAPE_CHARACTERS), 'CHAR')
+    this.setOutput(true, null);
+    this.setColour(Blockly.Blocks.texts.HUE);
+    this.setTooltip();
+    this.setHelpUrl();
   }
 };
