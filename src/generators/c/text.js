@@ -253,3 +253,8 @@ Blockly.C['text_prompt_ext'] = function(block) {
 };
 
 Blockly.C['text_prompt'] = Blockly.C['text_prompt_ext'];
+
+Blockly.C['escape_characters'] = function(block) {
+  const char = block.getFieldValue('CHAR');
+  return [`'\\${char}'`, Blockly.C.ORDER_ATOMIC];
+};
