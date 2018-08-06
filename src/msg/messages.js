@@ -1128,25 +1128,25 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = 'Warning: This block may be used only 
 
 //type display names
 /// Display name for integer type.
-Blockly.Msg.TYPE_INT = 'Integer';
+Blockly.Msg.TYPE_INT = 'integer';
 /// Display name for boolean type.
-Blockly.Msg.TYPE_BOOL = 'Boolean';
+Blockly.Msg.TYPE_BOOL = 'boolean';
 /// Display name for floating-point type.
-Blockly.Msg.TYPE_FLOAT = 'Float';
+Blockly.Msg.TYPE_FLOAT = 'float';
 /// Display name for string type.
-Blockly.Msg.TYPE_STRING = 'String';
+Blockly.Msg.TYPE_STRING = 'string';
 /// Display name for character type
-Blockly.Msg.TYPE_CHAR = 'Character';
+Blockly.Msg.TYPE_CHAR = 'character';
 /// Display name for integer array type.
-Blockly.Msg.TYPE_INT_ARR = 'Array of Integers';
+Blockly.Msg.TYPE_INT_ARR = 'array of integers';
 /// Display name for boolean array type.
-Blockly.Msg.TYPE_BOOL_ARR = 'Array of Booleans';
+Blockly.Msg.TYPE_BOOL_ARR = 'array of booleans';
 /// Display name for floating-point array type.
-Blockly.Msg.TYPE_FLOAT_ARR = 'Array of Floats';
+Blockly.Msg.TYPE_FLOAT_ARR = 'array of floats';
 /// Display name for string array type.
-Blockly.Msg.TYPE_STRING_ARR = 'Array of Strings';
+Blockly.Msg.TYPE_STRING_ARR = 'array of strings';
 /// Display name for servo type.
-Blockly.Msg.TYPE_SERVO = 'Servo';
+Blockly.Msg.TYPE_SERVO = 'servo';
 
 //classes
 /// block text

@@ -643,7 +643,7 @@ Blockly.Blocks['char_input'] = {
       .appendField(new Blockly.FieldCharInput(''), 'TEXT');
     this.appendDummyInput()
       .appendField('\'');
-    this.setOutput(true, null);
+    this.setOutput(true, 'CHARACTER');
     this.setInputsInline(true);
     this.setColour(ARDUINO_CHARACTER_COLOUR);
     this.setTooltip(Blockly.Msg.CHAR_INPUT_TOOLTIP);
@@ -656,7 +656,7 @@ Blockly.Blocks['char_to_lower'] = {
         this.appendValueInput('CHAR')
           .appendField(Blockly.Msg.CHAR_TO_LOWER);
       this.setColour(ARDUINO_CHARACTER_COLOUR);
-      this.setOutput(true, 'CHAR');
+      this.setOutput(true, 'CHARACTER');
     this.setTooltip(Blockly.Msg.CHAR_TO_LOWER_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.CHAR_TO_LOWER_HELP_URL);
     }
@@ -667,7 +667,7 @@ Blockly.Blocks['char_to_upper'] = {
     this.appendValueInput('CHAR')
       .appendField(Blockly.Msg.CHAR_TO_UPPER);
     this.setColour(ARDUINO_CHARACTER_COLOUR);
-    this.setOutput(true, 'CHAR');
+    this.setOutput(true, 'CHARACTER');
     this.setTooltip(Blockly.Msg.CHAR_TO_UPPER_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.CHAR_TO_UPPER_HELP_URL);
   }
