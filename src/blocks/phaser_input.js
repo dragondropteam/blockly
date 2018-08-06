@@ -467,10 +467,10 @@ Blockly.Blocks['input_handler_enable_snap_complex'] = {
       .appendField(new Blockly.FieldCheckbox('FALSE'), 'RELEASE');
     this.appendValueInput('OFFSET_X')
       .setCheck('Number')
-      .appendField(Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_OFFSET_X);
+      .appendField(Blockly.Msg.OFFSET_X);
     this.appendValueInput('OFFSET_Y')
       .setCheck('Number')
-      .appendField(Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_OFFSET_Y);
+      .appendField(Blockly.Msg.OFFSET_Y);
     this.setInputsInline(false);
     this.setNextStatement(true, null);
     this.setPreviousStatement(true, null);
