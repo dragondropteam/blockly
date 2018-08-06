@@ -841,6 +841,26 @@ Blockly.JavaScript['get_body_numeric_field'] = function (block) {
   const element = block.getFieldValue('ELEMENT');
   return [`${object}.body.${element}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
+
+Blockly.JavaScript['body_set_size'] = function (block) {
+  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
+
+  return `${body}.body.setSize(${width}, ${height});\n`;
+};
+
+Blockly.JavaScript['body_set_size_complex'] = function (block) {
+  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
+  const offset_x = Blockly.JavaScript.valueToCode(block, 'OFFSET_X', Blockly.JavaScript.ORDER_ATOMIC);
+  const offset_y = Blockly.JavaScript.valueToCode(block, 'OFFSET_Y', Blockly.JavaScript.ORDER_ATOMIC);
+
+  return `${body}.body.setSize(${width}, ${height}, ${offset_x}, ${offset_y});\n`;
+};
+
+
 //endregion
 
 Blockly.JavaScript['create_object_in_group'] = function (block) {
@@ -1913,7 +1933,15 @@ Blockly.JavaScript['debug_body_info'] = function (block) {
   const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.spriteInfo(${object}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.bodyInfo(${object}, ${x_pos}, ${y_pos}, ${colour});\n`;
+};
+
+Blockly.JavaScript['debug_body_render'] = function (block) {
+  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
+  const filled = block.getFieldValue('FILLED') == 'TRUE';
+
+  return `game.debug.body(${body}, ${colour}, ${filled});\n`;
 };
 
 Blockly.JavaScript['debug_camera'] = function (block) {
