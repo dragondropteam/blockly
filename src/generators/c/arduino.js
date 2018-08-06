@@ -242,7 +242,7 @@ Blockly.C['arduino_math_map'] = function (block) {
 Blockly.C['char_input'] = function (block) {
   Blockly.C.definitions_['import_c_type'] =
     '#include <ctype.h>';
-  var char = block.getFieldValue('TEXT');
+  const char = block.getFieldValue('TEXT');
   return [`'${char}'`, Blockly.C.ORDER_ATOMIC];
 };
 
