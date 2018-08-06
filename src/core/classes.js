@@ -109,8 +109,8 @@ DragonDrop.Classes.flyoutCategory = function(workspace){
       /*
       Adds a shadow of "this" to the class member getter and setter blocks
        */
-      add_this_shadow(getMemberBlock);
-      add_this_shadow(setMemberBlock);
+      addThisShadow(getMemberBlock);
+      addThisShadow(setMemberBlock);
 
       xmlList.push(getMemberBlock);
       xmlList.push(setMemberBlock);
@@ -162,7 +162,7 @@ DragonDrop.Classes.flyoutCategory = function(workspace){
         mutation.appendChild(arg);
       }
       //add a shadow of the "this reference" block to class method calls
-      add_this_shadow(block);
+      addThisShadow(block);
       xmlList.push(block);
     }
   }
@@ -472,7 +472,7 @@ DragonDrop.Classes.procTupleComparator_ = function(ta, tb) {
 
 //region HELPER_FUNCTIONS
 //add a shadow for the "this" reference block
-function add_this_shadow(block) {
+function addThisShadow(block) {
   let getValue = goog.dom.createDom('value');
   getValue.setAttribute('name', 'INSTANCE');
   let getShadow = goog.dom.createDom('shadow');
