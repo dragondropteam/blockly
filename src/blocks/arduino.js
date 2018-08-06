@@ -4,7 +4,7 @@ goog.require('Blockly.Blocks');
 
 const ARDUINO_REQUIRED_BLOCKS_COLOUR = '#558B2F'; //'#689f38';
 
-
+const ARDUINO_CHARACTER_COLOUR = '#bc3eb9';//'#e6505b';
 const ARDUINO_TIME_COLOUR = '#726dc5';//377ae2
 const ARDUINO_PINS_COLOUR = '#4d6bc4';//'#2c897f';
 const ARDUINO_ANALOG_IO_COLOUR = '#439bbc';//'#2aaf44';
@@ -634,3 +634,187 @@ Blockly.Blocks['arduino_math_map'] = {
 };
 
 //endregion
+
+//region CHARACTER
+Blockly.Blocks['char_input'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField('\'')
+      .appendField(new Blockly.FieldCharInput(''), 'TEXT');
+    this.appendDummyInput()
+      .appendField('\'');
+    this.setOutput(true, 'CHARACTER');
+    this.setInputsInline(true);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setTooltip(Blockly.Msg.CHAR_INPUT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_INPUT_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_to_lower'] = {
+    init: function () {
+        this.appendValueInput('CHAR')
+          .appendField(Blockly.Msg.CHAR_TO_LOWER);
+      this.setColour(ARDUINO_CHARACTER_COLOUR);
+      this.setOutput(true, 'CHARACTER');
+    this.setTooltip(Blockly.Msg.CHAR_TO_LOWER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_TO_LOWER_HELP_URL);
+    }
+};
+
+Blockly.Blocks['char_to_upper'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.CHAR_TO_UPPER);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'CHARACTER');
+    this.setTooltip(Blockly.Msg.CHAR_TO_UPPER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_TO_UPPER_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_alnum'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_ALNUM);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_ALNUM_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_ALNUM_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_alpha'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_ALPHA);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_ALPHA_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_ALPHA_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_cntrl'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_CNTRL);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_CNTRL_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_CNTRL_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_digit'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_DIGIT);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_DIGIT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_DIGIT_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_graph'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.DOES);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_GRAPH);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_GRAPH_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_GRAPH_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_lower'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_LOWER);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_LOWER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_LOWER_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_print'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_PRINT);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_PRINT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_PRINT_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_punct'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_PUNCT);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_PUNCT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_PUNCT_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_space'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_SPACE);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_SPACE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_SPACE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_upper'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_UPPER);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_UPPER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_UPPER_HELP_URL);
+  }
+};
+
+Blockly.Blocks['char_is_xdigit'] = {
+  init: function () {
+    this.appendValueInput('CHAR')
+      .appendField(Blockly.Msg.IS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CHAR_IS_XDIGIT);
+    this.setColour(ARDUINO_CHARACTER_COLOUR);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.CHAR_IS_XDIGIT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL);
+  }
+};
+
+
+//endregion CHARACTER
