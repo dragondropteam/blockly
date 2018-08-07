@@ -2826,7 +2826,7 @@ function timer_complex_helper (block) {
   let code = '';
 
   for (let i = 0; i < block.itemCount_; i++) {
-    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC);
+    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC) || '';
     if (i < block.itemCount_ - 1) {
       code += ' , ';
     }
