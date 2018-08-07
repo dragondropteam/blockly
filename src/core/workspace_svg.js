@@ -41,7 +41,8 @@ goog.require('goog.dom');
 goog.require('goog.math.Coordinate');
 goog.require('goog.userAgent');
 
-
+let mouseX, mouseY;
+document.addEventListener("mousemove", getMousePosition);
 /**
  * Class for a workspace.  This is an onscreen area with optional trashcan,
  * scrollbars, bubbles, and dragging.
@@ -579,6 +580,7 @@ Blockly.WorkspaceSvg.prototype.highlightBlock = function(id) {
  * @param {!Element} xmlBlock XML block element.
  */
 Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
+  let blockX, blockY;
   if (!this.rendered || xmlBlock.getElementsByTagName('block').length >=
       this.remainingCapacity()) {
     return;
@@ -587,9 +589,11 @@ Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
   Blockly.Events.disable();
   try {
     var block = Blockly.Xml.domToBlock(xmlBlock, this);
-    // Move the duplicate to original position.
-    var blockX = parseInt(xmlBlock.getAttribute('x'), 10);
-    var blockY = parseInt(xmlBlock.getAttribute('y'), 10);
+/*     blockX = mouseX;
+     blockY = mouseY;*/
+    blockX = parseInt(xmlBlock.getAttribute('x'), 10);
+    blockY = parseInt(xmlBlock.getAttribute('y'), 10);
+
     if (!isNaN(blockX) && !isNaN(blockY)) {
       if (this.RTL) {
         blockX = -blockX;
@@ -628,7 +632,9 @@ Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
           blockY += Blockly.SNAP_RADIUS * 2;
         }
       } while (collide);
+      console.log('call moveby');
       block.moveBy(blockX, blockY);
+      console.log('end of moveby');
     }
   } finally {
     Blockly.Events.enable();
@@ -636,6 +642,14 @@ Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
   if (Blockly.Events.isEnabled() && !block.isShadow()) {
     Blockly.Events.fire(new Blockly.Events.Create(block));
   }
+  console.log({
+    parentBlockX: xmlBlock.getAttribute('x'),
+    blockX: blockX,
+    blockY: blockY,
+    mouseX: mouseX,
+    mouseY: mouseY,
+    test: block.getRelativeToSurfaceXY()
+});
   block.select();
 };
 
@@ -1450,3 +1464,10 @@ Blockly.WorkspaceSvg.setTopLevelWorkspaceMetrics_ = function(xyRatio) {
 // Export symbols that would otherwise be renamed by Closure compiler.
 Blockly.WorkspaceSvg.prototype['setVisible'] =
     Blockly.WorkspaceSvg.prototype.setVisible;
+
+function getMousePosition(event) {
+  event = event || window.event;
+  mouseX = event.pageX;
+  mouseY = event.pageY;
+  console.log({mouseX: mouseX, mouseY: mouseY});
+};
