@@ -348,9 +348,17 @@ Blockly.BlockSvg.prototype.getRelativeToSurfaceXY = function () {
  * @param {number} dy Vertical offset.
  */
 Blockly.BlockSvg.prototype.moveBy = function (dx, dy) {
-    goog.asserts.assert(!this.parentBlock_, 'Block has parent.');
+  console.log('MOVEBY');
+  goog.asserts.assert(!this.parentBlock_, 'Block has parent.');
     var event = new Blockly.Events.Move(this);
     var xy = this.getRelativeToSurfaceXY();
+    console.log({
+      movebyXY: xy,
+      movebyDX: dx,
+      movebyDY: dy,
+      xAddition: xy.x + dx,
+      yAddition: xy.y + dy
+    });
     this.getSvgRoot().setAttribute('transform',
         'translate(' + (xy.x + dx) + ',' + (xy.y + dy) + ')');
     this.moveConnections_(dx, dy);
