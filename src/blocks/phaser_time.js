@@ -132,9 +132,168 @@ Blockly.Blocks['timer_add_event'] = {
     this.setPreviousStatement(true);
     this.setInputsInline(true);
     this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.TIMER_ADD_EVENT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TIMER_ADD_EVENT_URL);
+  }
+};
+
+Blockly.Blocks['timer_add_event_complex'] = {
+  init: function () {
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.TIMER_ADD_EVENT)
+      .setCheck('Timer');
+    this.appendValueInput('DELAY')
+      .appendField(Blockly.Msg.IN)
+      .setCheck('Number');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.MILLISECONDS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CALL)
+      .appendField(new Blockly.FieldProcedure('timerCallback'), 'CALLBACK');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setInputsInline(true);
     this.setColour(PHASER_TIME_COLOUR);
     this.setTooltip(Blockly.Msg.TIMER_ADD_EVENT_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.TIMER_ADD_EVENT_URL);
+    this.itemCount_ = 0;
+    this.updateShape_();
+    this.setMutator(new Blockly.Mutator(['timer_item']));
+
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    let thisBlock = this;
+  },
+  mutationToDom: function () {
+
+    let container = document.createElement('mutation');
+    container.setAttribute('items', this.itemCount_);
+    return container;
+  },
+  /**
+   * Parse XML to restore the else-if and else inputs.
+   * @param {!Element} xmlElement XML storage element.
+   * @this Blockly.Block
+   */
+  domToMutation: function (xmlElement) {
+    this.itemCount_ = parseInt(xmlElement.getAttribute('items'),10);
+    this.updateShape_();
+  },
+  /**
+   * Populate the mutator's dialog with this block's components.
+   * @param {!Blockly.Workspace} workspace Mutator's workspace.
+   * @return {!Blockly.Block} Root block in mutator.
+   * @this Blockly.Block
+   */
+  decompose: function (workspace) {
+    let containerBlock = workspace.newBlock('timer_container');
+    containerBlock.initSvg();
+    let connection = containerBlock.nextConnection;
+    for (let i = 0; i < this.itemCount_; i++) {
+      let itemBlock = workspace.newBlock('timer_item');
+      itemBlock.initSvg();
+      connection.connect(itemBlock.previousConnection);
+      connection = itemBlock.nextConnection;
+    }
+    return containerBlock;
+  },
+  /**
+   * Reconfigure this block based on the mutator dialog's components.
+   * @param {!Blockly.Block} containerBlock Root block in mutator.
+   * @this Blockly.Block
+   */
+  compose: function (containerBlock) {
+
+    let itemBlock = containerBlock.nextConnection.targetBlock();
+
+    let connections = [];
+
+    while (itemBlock) {
+      connections.push(itemBlock.valueConnection_);
+      itemBlock = itemBlock.nextConnection &&
+        itemBlock.nextConnection.targetBlock();
+    }
+    for (let i = 0; i < this.itemCount_; i++) {
+      let connection = this.getInput('ADD' + i).connection.targetConnection;
+      if (connection && connections.indexOf(connection) == -1) {
+        connection.disconnect();
+      }
+    }
+    this.itemCount_ = connections.length;
+    this.updateShape_();
+    // Reconnect any child blocks.
+    for (let i = 0; i < this.itemCount_; i++) {
+      Blockly.Mutator.reconnect(connections[i], this, 'ADD' + i);
+    }
+  },
+  /**
+   * Store pointers to any connected child blocks.
+   * @param {!Blockly.Block} containerBlock Root block in mutator.
+   * @this Blockly.Block
+   */
+  saveConnections: function (containerBlock) {
+    let i = 0;
+    let itemBlock = containerBlock.nextConnection.targetBlock();
+    while (itemBlock) {
+      let input = this.getInput('ADD' + i);
+      itemBlock.valueConnection_  = input && input.connection.targetConnection;
+      i++;
+      itemBlock = itemBlock.nextConnection &&
+        itemBlock.nextConnection.targetBlock();
+    }
+  },
+
+  updateShape_: function () {
+    let i;
+
+    if (this.itemCount_ && this.getInput('EMPTY')) {
+      this.removeInput('EMPTY');
+    }
+
+    // Add new inputs.
+    for ( i = 0; i < this.itemCount_; i++) {
+      if (!this.getInput('ADD' + i)) {
+        let input = this.appendValueInput('ADD' + i);
+        if(i == 0)
+        {
+          input.appendField(Blockly.Msg.WITH);
+        }
+      }
+    }
+    // Remove deleted inputs.
+    while (this.getInput('ADD' + i)) {
+      this.removeInput('ADD' + i);
+      i++;
+    }
+  },
+};
+
+Blockly.Blocks['timer_container'] = {
+  /**
+   * Mutator block for container.
+   * @this Blockly.Block
+   */
+  init: function () {
+    this.setColour(PHASER_TIME_COLOUR);
+    this.appendDummyInput()
+      .appendField('arguments');
+    this.setPreviousStatement(false, null);
+    this.setNextStatement(true, null);
+    this.contextMenu = false;
+  }
+};
+
+Blockly.Blocks['timer_item'] = {
+  /**
+   * Mutator block for add items.
+   * @this Blockly.Block
+   */
+  init: function () {
+    this.setColour(PHASER_TIME_COLOUR);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WITH);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.contextMenu = false;
   }
 };
 
@@ -215,6 +374,136 @@ Blockly.Blocks['timer_loop_event'] = {
   }
 };
 
+Blockly.Blocks['timer_loop_event_complex'] = {
+  init: function () {
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.TIMER_LOOP_EVENT)
+      .setCheck('Timer');
+    this.appendValueInput('DELAY')
+      .appendField(Blockly.Msg.EVERY)
+      .setCheck('Number');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.MILLISECONDS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CALL)
+      .appendField(new Blockly.FieldProcedure('timerCallback'), 'CALLBACK');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setInputsInline(true);
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.TIMER_LOOP_EVENT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TIMER_LOOP_EVENT_URL);
+    this.itemCount_ = 0;
+    this.updateShape_();
+    this.setMutator(new Blockly.Mutator(['timer_item']));
+
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    let thisBlock = this;
+  },
+  mutationToDom: function () {
+
+    let container = document.createElement('mutation');
+    container.setAttribute('items', this.itemCount_);
+    return container;
+  },
+  /**
+   * Parse XML to restore the else-if and else inputs.
+   * @param {!Element} xmlElement XML storage element.
+   * @this Blockly.Block
+   */
+  domToMutation: function (xmlElement) {
+    this.itemCount_ = parseInt(xmlElement.getAttribute('items'),10);
+    this.updateShape_();
+  },
+  /**
+   * Populate the mutator's dialog with this block's components.
+   * @param {!Blockly.Workspace} workspace Mutator's workspace.
+   * @return {!Blockly.Block} Root block in mutator.
+   * @this Blockly.Block
+   */
+  decompose: function (workspace) {
+    let containerBlock = workspace.newBlock('timer_container');
+    containerBlock.initSvg();
+    let connection = containerBlock.nextConnection;
+    for (let i = 0; i < this.itemCount_; i++) {
+      let itemBlock = workspace.newBlock('timer_item');
+      itemBlock.initSvg();
+      connection.connect(itemBlock.previousConnection);
+      connection = itemBlock.nextConnection;
+    }
+    return containerBlock;
+  },
+  /**
+   * Reconfigure this block based on the mutator dialog's components.
+   * @param {!Blockly.Block} containerBlock Root block in mutator.
+   * @this Blockly.Block
+   */
+  compose: function (containerBlock) {
+
+    let itemBlock = containerBlock.nextConnection.targetBlock();
+
+    let connections = [];
+
+    while (itemBlock) {
+      connections.push(itemBlock.valueConnection_);
+      itemBlock = itemBlock.nextConnection &&
+        itemBlock.nextConnection.targetBlock();
+    }
+    for (let i = 0; i < this.itemCount_; i++) {
+      let connection = this.getInput('ADD' + i).connection.targetConnection;
+      if (connection && connections.indexOf(connection) == -1) {
+        connection.disconnect();
+      }
+    }
+    this.itemCount_ = connections.length;
+    this.updateShape_();
+    // Reconnect any child blocks.
+    for (let i = 0; i < this.itemCount_; i++) {
+      Blockly.Mutator.reconnect(connections[i], this, 'ADD' + i);
+    }
+  },
+  /**
+   * Store pointers to any connected child blocks.
+   * @param {!Blockly.Block} containerBlock Root block in mutator.
+   * @this Blockly.Block
+   */
+  saveConnections: function (containerBlock) {
+    let i = 0;
+    let itemBlock = containerBlock.nextConnection.targetBlock();
+    while (itemBlock) {
+      let input = this.getInput('ADD' + i);
+      itemBlock.valueConnection_  = input && input.connection.targetConnection;
+      i++;
+      itemBlock = itemBlock.nextConnection &&
+        itemBlock.nextConnection.targetBlock();
+    }
+  },
+
+  updateShape_: function () {
+    let i;
+
+    if (this.itemCount_ && this.getInput('EMPTY')) {
+      this.removeInput('EMPTY');
+    }
+
+    // Add new inputs.
+    for ( i = 0; i < this.itemCount_; i++) {
+      if (!this.getInput('ADD' + i)) {
+        let input = this.appendValueInput('ADD' + i);
+        if(i == 0)
+        {
+          input.appendField(Blockly.Msg.WITH);
+        }
+      }
+    }
+    // Remove deleted inputs.
+    while (this.getInput('ADD' + i)) {
+      this.removeInput('ADD' + i);
+      i++;
+    }
+  },
+};
+
 Blockly.Blocks['timer_repeat_event'] = {
   init: function () {
     this.appendValueInput('TIMER')
@@ -240,7 +529,139 @@ Blockly.Blocks['timer_repeat_event'] = {
     this.setHelpUrl(Blockly.Msg.TIMER_REPEAT_EVENT_URL);
   }
 };
+Blockly.Blocks['timer_repeat_event_complex'] = {
+  init: function () {
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.TIMER_REPEAT_EVENT)
+      .setCheck('Timer');
+    this.appendValueInput('REPEAT_COUNT')
+      .setCheck('Number');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.TIMER_REPEAT_EVENT_COUNT);
+    this.appendValueInput('DELAY')
+      .appendField(Blockly.Msg.EVERY)
+      .setCheck('Number');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.MILLISECONDS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CALL)
+      .appendField(new Blockly.FieldProcedure('timerCallback'), 'CALLBACK');
+    this.setNextStatement(true);
+    this.setPreviousStatement(true);
+    this.setInputsInline(true);
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.TIMER_REPEAT_EVENT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TIMER_REPEAT_EVENT_URL);
+    this.itemCount_ = 0;
+    this.updateShape_();
+    this.setMutator(new Blockly.Mutator(['timer_item']));
 
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    let thisBlock = this;
+  },
+  mutationToDom: function () {
+
+    let container = document.createElement('mutation');
+    container.setAttribute('items', this.itemCount_);
+    return container;
+  },
+  /**
+   * Parse XML to restore the else-if and else inputs.
+   * @param {!Element} xmlElement XML storage element.
+   * @this Blockly.Block
+   */
+  domToMutation: function (xmlElement) {
+    this.itemCount_ = parseInt(xmlElement.getAttribute('items'),10);
+    this.updateShape_();
+  },
+  /**
+   * Populate the mutator's dialog with this block's components.
+   * @param {!Blockly.Workspace} workspace Mutator's workspace.
+   * @return {!Blockly.Block} Root block in mutator.
+   * @this Blockly.Block
+   */
+  decompose: function (workspace) {
+    let containerBlock = workspace.newBlock('timer_container');
+    containerBlock.initSvg();
+    let connection = containerBlock.nextConnection;
+    for (let i = 0; i < this.itemCount_; i++) {
+      let itemBlock = workspace.newBlock('timer_item');
+      itemBlock.initSvg();
+      connection.connect(itemBlock.previousConnection);
+      connection = itemBlock.nextConnection;
+    }
+    return containerBlock;
+  },
+  /**
+   * Reconfigure this block based on the mutator dialog's components.
+   * @param {!Blockly.Block} containerBlock Root block in mutator.
+   * @this Blockly.Block
+   */
+  compose: function (containerBlock) {
+
+    let itemBlock = containerBlock.nextConnection.targetBlock();
+
+    let connections = [];
+
+    while (itemBlock) {
+      connections.push(itemBlock.valueConnection_);
+      itemBlock = itemBlock.nextConnection &&
+        itemBlock.nextConnection.targetBlock();
+    }
+    for (let i = 0; i < this.itemCount_; i++) {
+      let connection = this.getInput('ADD' + i).connection.targetConnection;
+      if (connection && connections.indexOf(connection) == -1) {
+        connection.disconnect();
+      }
+    }
+    this.itemCount_ = connections.length;
+    this.updateShape_();
+    // Reconnect any child blocks.
+    for (let i = 0; i < this.itemCount_; i++) {
+      Blockly.Mutator.reconnect(connections[i], this, 'ADD' + i);
+    }
+  },
+  /**
+   * Store pointers to any connected child blocks.
+   * @param {!Blockly.Block} containerBlock Root block in mutator.
+   * @this Blockly.Block
+   */
+  saveConnections: function (containerBlock) {
+    let i = 0;
+    let itemBlock = containerBlock.nextConnection.targetBlock();
+    while (itemBlock) {
+      let input = this.getInput('ADD' + i);
+      itemBlock.valueConnection_  = input && input.connection.targetConnection;
+      i++;
+      itemBlock = itemBlock.nextConnection &&
+        itemBlock.nextConnection.targetBlock();
+    }
+  },
+
+  updateShape_: function () {
+    let i;
+
+    if (this.itemCount_ && this.getInput('EMPTY')) {
+      this.removeInput('EMPTY');
+    }
+
+    // Add new inputs.
+    for ( i = 0; i < this.itemCount_; i++) {
+      if (!this.getInput('ADD' + i)) {
+        let input = this.appendValueInput('ADD' + i);
+        if(i == 0)
+        {
+          input.appendField(Blockly.Msg.WITH);
+        }
+      }
+    }
+    // Remove deleted inputs.
+    while (this.getInput('ADD' + i)) {
+      this.removeInput('ADD' + i);
+      i++;
+    }
+  },
+};
 Blockly.Blocks['timer_set_on_complete_callback'] = {
   init: function () {
     this.appendValueInput('TIMER')
