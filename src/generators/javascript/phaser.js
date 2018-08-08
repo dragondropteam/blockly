@@ -2674,7 +2674,7 @@ Blockly.JavaScript['timer_add_event_complex'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
 
-  let code = timer_complex_helper(block);
+  let code = timerComplexHelper(block);
 
   return `${timer}.add(${delay}, ${callback}, undefined, ${code});\n`;
 };
@@ -2692,7 +2692,7 @@ Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
 
-  let code = timer_complex_helper(block);
+  let code = timerComplexHelper(block);
 
   return `${timer}.loop(${delay}, ${callback}, ${code});\n`;
 };
@@ -2711,7 +2711,7 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
 
-  let code = timer_complex_helper(block);
+  let code = timerComplexHelper(block);
 
   return `${timer}.repeat(${delay}, ${repeatCount}, ${callback}, ${code});\n`;
 };
@@ -2822,7 +2822,7 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
 //endregion
 
 //region HELPER_FUNCTIONS
-function timer_complex_helper (block) {
+function timerComplexHelper (block) {
   let code = '';
 
   for (let i = 0; i < block.itemCount_; i++) {
