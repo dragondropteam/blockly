@@ -349,16 +349,4 @@ Blockly.Blocks['timer_set_on_complete_callback'] = {
     this.setHelpUrl(Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_URL);
   }
 };
-
-Blockly.Blocks['timer_duration'] = {
-  init: function () {
-    this.appendValueInput('TIMER')
-      .appendField(Blockly.Msg.TIMER_DURATION)
-      .setCheck('Timer');
-    this.setColour(PHASER_TIME_COLOUR);
-    this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.TIMER_DURATION_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.TIMER_DURATION_HELP_URL);
-  }
-};
 //endregion
