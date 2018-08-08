@@ -65,6 +65,101 @@ Blockly.Blocks['delta_time_milliseconds'] = {
 };
 
 //region TIMER
+const TIMER_FIELDS_NUMERIC_WRITABLE = ['timeCap'];
+const TIMER_FIELDS_NUMERIC_RO = ['duration', 'length', 'ms', 'next', 'seconds'];
+const TIMER_FIELDS_NUMERIC = createDropDownField(TIMER_FIELDS_NUMERIC_WRITABLE, TIMER_FIELDS_NUMERIC_RO);
+
+const TIMER_FIELDS_BOOLEAN_WRITABLE = ['autoDestroy'];
+const TIMER_FIELDS_BOOLEAN_RO = ['expired', 'paused', 'running'];
+const TIMER_FIELDS_BOOLEAN = createDropDownField(TIMER_FIELDS_BOOLEAN_WRITABLE, TIMER_FIELDS_BOOLEAN_RO);
+
+Blockly.Blocks['get_timer_numeric_member'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TITLE)
+      .appendField(new Blockly.FieldDropdown(TIMER_FIELDS_NUMERIC.all), 'PROPERTY');
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.OF)
+      .setCheck('Timer');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL);
+  },
+  onchange: function () {
+    if (TIMER_FIELDS_NUMERIC_RO.includes(this.getFieldValue('PROPERTY'))) {
+      this.customContextMenu = null;
+    } else {
+      this.customContextMenu = createNumericGetterContextMenu('set_timer_numeric_member', {objectTag: null});
+    }
+  },
+  customContextMenu: createNumericGetterContextMenu('set_timer_numeric_member', {objectTag: null})
+};
+
+Blockly.Blocks['set_timer_numeric_member'] = {
+  init: function () {
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TITLE)
+      .appendField(new Blockly.FieldDropdown(TIMER_FIELDS_NUMERIC.writable), 'PROPERTY')
+      .appendField(Blockly.Msg.OF)
+      .setCheck('Timer');
+    this.appendValueInput('VALUE')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TO);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL);
+  },
+  customContextMenu: createSetterContextMenu('get_timer_numeric_member', {objectTag: null})
+};
+
+Blockly.Blocks['get_timer_boolean_member'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TITLE)
+      .appendField(new Blockly.FieldDropdown(TIMER_FIELDS_BOOLEAN.all), 'PROPERTY');
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.OF)
+      .setCheck('Timer');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL);
+  },
+  onchange: function () {
+    if (TIMER_FIELDS_BOOLEAN_RO.includes(this.getFieldValue('PROPERTY'))) {
+      this.customContextMenu = null;
+    } else {
+      this.customContextMenu = createNumericGetterContextMenu('set_timer_boolean_member', {objectTag: null});
+    }
+  },
+  customContextMenu: createNumericGetterContextMenu('set_timer_boolean_member', {objectTag: null})
+};
+
+Blockly.Blocks['set_timer_boolean_member'] = {
+  init: function () {
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TITLE)
+      .appendField(new Blockly.FieldDropdown(TIMER_FIELDS_BOOLEAN.writable), 'PROPERTY')
+      .appendField(Blockly.Msg.OF)
+      .setCheck('Timer');
+    this.appendValueInput('VALUE')
+      .setCheck('Boolean')
+      .appendField(Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setTooltip(Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL);
+  },
+  customContextMenu: createSetterContextMenu('get_timer_boolean_member', {objectTag: null})
+};
 
 Blockly.Blocks['create_timer'] = {
   init: function () {
@@ -252,6 +347,18 @@ Blockly.Blocks['timer_set_on_complete_callback'] = {
     this.setColour(PHASER_TIME_COLOUR);
     this.setTooltip(Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_URL);
+  }
+};
+
+Blockly.Blocks['timer_duration'] = {
+  init: function () {
+    this.appendValueInput('TIMER')
+      .appendField(Blockly.Msg.TIMER_DURATION)
+      .setCheck('Timer');
+    this.setColour(PHASER_TIME_COLOUR);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.TIMER_DURATION_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TIMER_DURATION_HELP_URL);
   }
 };
 //endregion

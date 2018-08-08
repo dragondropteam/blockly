@@ -5253,3 +5253,91 @@ Blockly.Msg.ARDUINO_STRING_TO_UPPER_HELP_URL = 'https://www.arduino.cc/reference
 Blockly.Msg.ARDUINO_STRING_TRIM = 'trim';
 Blockly.Msg.ARDUINO_STRING_TRIM_TOOLTIP = 'Get a version of the String with any leading and trailing whitespace removed.';
 Blockly.Msg.ARDUINO_STRING_TRIM_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/touppercase/';
+
+Blockly.Msg.TYPE_CHARACTER = 'character';
+Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
+Blockly.Msg.CHAR_INPUT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/ctype_h.htm';
+
+Blockly.Msg.CHAR_TO_LOWER = 'lower-case';
+Blockly.Msg.CHAR_TO_LOWER_TOOLTIP = 'Returns the lower-case value of the given character.';
+Blockly.Msg.CHAR_TO_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_tolower.htm';
+
+Blockly.Msg.CHAR_TO_UPPER = 'upper-case';
+Blockly.Msg.CHAR_TO_UPPER_TOOLTIP = 'Returns the upper-case value of the given character.';
+Blockly.Msg.CHAR_TO_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_toupper.htm';
+
+Blockly.Msg.CHAR_IS_ALNUM = 'alphanumeric?';
+Blockly.Msg.CHAR_IS_ALNUM_TOOLTIP = 'Returns non-zero value if c is a digit or a letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALNUM_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalnum.htm';
+
+Blockly.Msg.CHAR_IS_ALPHA = 'alphabetic?';
+Blockly.Msg.CHAR_IS_ALPHA_TOOLTIP = 'Returns non-zero value if c is an alphabet, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALPHA_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalpha.htm';
+
+Blockly.Msg.CHAR_IS_CNTRL = 'a control character?';
+Blockly.Msg.CHAR_IS_CNTRL_TOOLTIP = 'Returns non-zero value if c is a control character, else it returns 0.';
+Blockly.Msg.CHAR_IS_CNTRL_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_iscntrl.htm';
+
+Blockly.Msg.CHAR_IS_DIGIT = 'a digit?';
+Blockly.Msg.CHAR_IS_DIGIT_TOOLTIP = 'Returns non-zero value if c is a digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_DIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isdigit.htm';
+
+Blockly.Msg.CHAR_IS_GRAPH = 'have graphical representation?';
+Blockly.Msg.CHAR_IS_GRAPH_TOOLTIP = 'Returns non-zero value if c has graphical representation, else it returns 0.';
+Blockly.Msg.CHAR_IS_GRAPH_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isgraph.htm';
+
+Blockly.Msg.CHAR_IS_LOWER = 'lower-case?';
+Blockly.Msg.CHAR_IS_LOWER_TOOLTIP = 'Returns non-zero value if c is a lowercase alphabetic letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_islower.htm';
+
+Blockly.Msg.CHAR_IS_PRINT = 'printable?';
+Blockly.Msg.CHAR_IS_PRINT_TOOLTIP = 'Returns non-zero value if c is a printable character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PRINT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isprint.htm';
+
+Blockly.Msg.CHAR_IS_PUNCT = 'a punctuation character?';
+Blockly.Msg.CHAR_IS_PUNCT_TOOLTIP = 'Returns non-zero value if c is a punctuation character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PUNCT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_ispunct.htm';
+
+Blockly.Msg.CHAR_IS_SPACE = 'a space?';
+Blockly.Msg.CHAR_IS_SPACE_TOOLTIP = 'Returns non-zero value if c is a white-space character, else it returns 0.';
+Blockly.Msg.CHAR_IS_SPACE_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm';
+
+Blockly.Msg.CHAR_IS_UPPER = 'upper-case?';
+Blockly.Msg.CHAR_IS_UPPER_TOOLTIP = 'Returns non-zero value if c is upper-case, else it returns 0.';
+Blockly.Msg.CHAR_IS_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isupper.htm';
+
+Blockly.Msg.CHAR_IS_XDIGIT = 'a hexadecimal digit?';
+Blockly.Msg.CHAR_IS_XDIGIT_TOOLTIP = 'Returns non-zero value if c is a hexadecimal digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isxdigit.htm';
+
+Blockly.Msg.TIMER_DURATION = 'remaining duration of';
+Blockly.Msg.TIMER_DURATION_TOOLTIP = 'The duration in ms remaining until the next event will occur.';
+Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#duration';
+
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TITLE = 'get';
+/// tooltip - Specify that you are reading variables from game timer and that they are numeric types.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Read numeric fields of game timer.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TITLE = 'set';
+/// block text - Grammatical connection between the member variable and what it will be set to.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TO = 'to';
+/// tooltip - Specify that you are writing values to game.timer and that they are numeric types.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Write to one of the game timer\'s numeric fields.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TITLE = 'get';
+/// tooltip - Specify that you are reading variables from game timer and that they are boolean types.
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Read boolean fields of game timer.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TITLE = 'set';
+/// block text - Grammatical connection between the member variable and what it will be set to.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
+/// tooltip - Specify that you are writing values to game.timer and that they are boolean types.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
