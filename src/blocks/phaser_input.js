@@ -891,7 +891,8 @@ Blockly.Blocks['device_button_get_numeric_field'] = {
 Blockly.Blocks['device_button_just_pressed'] = {
   init: function () {
     this.appendValueInput('OBJECT')
-      .appendField(Blockly.Msg.JUST_PRESSED);
+      .appendField(Blockly.Msg.JUST_PRESSED)
+      .appendField(Blockly.Msg.QUESTION);
     this.setOutput('true', 'Boolean');
     this.setColour(PHASER_DEVICE_BUTTON_COLOUR);
     this.setTooltip(Blockly.Msg.DEVICE_BUTTON_JUST_PRESSED_TOOLTIP);
@@ -902,7 +903,42 @@ Blockly.Blocks['device_button_just_pressed'] = {
 Blockly.Blocks['device_button_just_released'] = {
   init: function () {
     this.appendValueInput('OBJECT')
-      .appendField(Blockly.Msg.JUST_RELEASED);
+      .appendField(Blockly.Msg.JUST_RELEASED)
+      .appendField(Blockly.Msg.QUESTION);
+    this.setOutput('true', 'Boolean');
+    this.setColour(PHASER_DEVICE_BUTTON_COLOUR);
+    this.setTooltip(Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_HELP_URL);
+  }
+};
+
+Blockly.Blocks['device_button_just_pressed_complex'] = {
+  init: function () {
+    this.appendValueInput('OBJECT');
+    this.appendValueInput('DURATION')
+      .appendField(Blockly.Msg.JUST_PRESSED)
+      .appendField(Blockly.Msg.WITHIN);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.MILLISECONDS)
+      .appendField(Blockly.Msg.QUESTION);
+    this.setInputsInline(true, null);
+    this.setOutput('true', 'Boolean');
+    this.setColour(PHASER_DEVICE_BUTTON_COLOUR);
+    this.setTooltip(Blockly.Msg.DEVICE_BUTTON_JUST_PRESSED_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.DEVICE_BUTTON_JUST_PRESSED_HELP_URL);
+  }
+};
+
+Blockly.Blocks['device_button_just_released_complex'] = {
+  init: function () {
+    this.appendValueInput('OBJECT');
+    this.appendValueInput('DURATION')
+      .appendField(Blockly.Msg.JUST_RELEASED)
+      .appendField(Blockly.Msg.WITHIN);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.MILLISECONDS)
+      .appendField(Blockly.Msg.QUESTION);
+    this.setInputsInline(true, null);
     this.setOutput('true', 'Boolean');
     this.setColour(PHASER_DEVICE_BUTTON_COLOUR);
     this.setTooltip(Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_TOOLTIP);
