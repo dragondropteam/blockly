@@ -2685,6 +2685,23 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
 //endregion
 
 //region TIMER
+Blockly.JavaScript['get_timer_numeric_member'] =
+Blockly.JavaScript['get_timer_boolean_member'] =
+  function (block) {
+  const property = block.getFieldValue('PROPERTY');
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${timer}.${property}`, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['set_timer_numeric_member'] =
+Blockly.JavaScript['set_timer_boolean_member'] =
+  function (block) {
+  const property = block.getFieldValue('PROPERTY');
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
+  return `${timer}.${property} = ${value};\n`;
+};
+
 Blockly.JavaScript['create_timer'] = function (block) {
   const autoDestroy = block.getFieldValue('AUTO_DESTROY') === 'TRUE';
   return [`game.time.create(${autoDestroy})`, Blockly.JavaScript.ORDER_ATOMIC];
@@ -2774,6 +2791,11 @@ Blockly.JavaScript['timer_stop'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const clearEvents = block.getFieldValue('CLEAR_EVENTS') === 'TRUE';
   return `${timer}.stop(${clearEvents});\n`;
+};
+
+Blockly.JavaScript['timer_duration'] = function (block) {
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${timer}.duration`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {
