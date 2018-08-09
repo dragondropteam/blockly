@@ -1773,6 +1773,7 @@ Blockly.Msg.SET_ANIMATION_PROPERTY_VI_HELP_URL = 'http://dragondrop.digipen.edu/
 /// SET for Boolean Types in animations
 Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_TOOLTIP = 'Sets the boolean value for the selected animation property';
 Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.ANIMATION_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html#%1';
 /// SET for Numeric Types in animations
 Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_TOOLTIP = 'Sets the numeric value for the selected animation property';
 Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
@@ -1999,6 +2000,7 @@ Blockly.Msg.DEBUG_BODY_TOOLTIP = 'Enable debug information for the game object';
 Blockly.Msg.DEBUG_BODY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#body';
 
 /// auto generated
+Blockly.Msg.BODY_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#%1';
 Blockly.Msg.GET_BODY_FIELD_POINT_CLASS = 'get point field';
 /// auto generated
 Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_TOOLTIP = 'Gets the value of the specified point as a point object';
@@ -2207,6 +2209,7 @@ Blockly.Msg.GET_WORLD_REFERENCE_TOOLTIP = 'Returns a reference to the game world
 /// auto generated
 Blockly.Msg.GET_WORLD_REFERENCE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.World.html';
 /// auto generated
+Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#%1';
 Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD = 'set point field';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD_TOOLTIP = 'Set a point property on the object';
@@ -4468,6 +4471,7 @@ Blockly.Msg.STATEMANAGER_CHECK_STATE_TOOLTIP = 'Returns if a given phaser state 
 Blockly.Msg.STATEMANAGER_CHECK_STATE_HELP_URL = 'http://phaser.io/docs/2.6.2/Phaser.StateManager.html#checkState';
 
 Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_TOOLTIP = 'Sets the boolean value for the selected physics property';
+Blockly.Msg.PHYSICS_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#%1';
 Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
 Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_TOOLTIP = 'Gets the boolean value for the selected physics property';
 Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
@@ -4741,6 +4745,7 @@ Blockly.Msg.UP = 'up';
 Blockly.Msg.ADD_KEY = 'add key from keycode';
 Blockly.Msg.ADD_KEY_TOOLTIP = 'Create a new Phaser.Key that can be polled, have events attached to it, etc.';
 Blockly.Msg.ADD_KEY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Keyboard.html#addKey';
+Blockly.Msg.KEY_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#%1';
 Blockly.Msg.GET_KEY_BOOLEAN_FIELD_TOOLTIP = 'Read the boolean values of the given key.';
 Blockly.Msg.GET_KEY_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html';
 Blockly.Msg.GET_KEY_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html';
@@ -4770,7 +4775,8 @@ Blockly.Msg.ARDUINO_RANDOM_TOOLTIP = 'The random function generates pseudo-rando
 Blockly.Msg.ARDUINO_RANDOM_HELP_URL = 'https://www.arduino.cc/reference/en/language/functions/random-numbers/random/';
 Blockly.Msg.AND = 'and';
 
-Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP = 'Get teh %1 field for the selected DeviceButton';
+Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#%1';
+Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected DeviceButton';
 Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html';
 
 Blockly.Msg.GET_POINTER_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected Pointer';
@@ -4948,6 +4954,7 @@ Blockly.Msg.RADIUS = 'radius';
 Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_TOOLTIP = 'Get numeric fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_SET_NUMERIC_FIELDS_TOOLTIP = 'Set numeric fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#toc-3';
+Blockly.Msg.RECTANGLE_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#%1';
 
 Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_TOOLTIP = 'Get point fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_SET_POINT_FIELDS_TOOLTIP = 'Set point fields of a Rectangle object.';
@@ -4967,7 +4974,7 @@ Blockly.Msg.CIRCLE_CREATE = 'make circle';
 Blockly.Msg.CIRCLE_CREATE_TOOLTIP = 'Creates a new Circle object with the center coordinate specified by the x and y parameters and the diameter specified by the diameter parameter.';
 Blockly.Msg.CIRCLE_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#Circle';
 Blockly.Msg.DIAMETER = 'diameter';
-
+Blockly.Msg.CIRCLE_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#%1';
 Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_TOOLTIP = 'Get numeric fields of a Circle object.';
 Blockly.Msg.CIRCLE_SET_NUMERIC_FIELDS_TOOLTIP = 'Set numeric fields of a Circle object.';
 Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#toc-3';
@@ -5005,6 +5012,7 @@ Blockly.Msg.RECTANGLE_RANDOM = 'random point in';
 Blockly.Msg.RECTANGLE_RANDOM_TOOLTIP = 'Returns a uniformly distributed random point from anywhere within this Rectangle.';
 Blockly.Msg.RECTANGLE_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#random';
 
+Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#%1';
 Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_TOOLTIP = 'Sets the boolean fields of the input handler';
 Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
 
