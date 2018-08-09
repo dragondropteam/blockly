@@ -260,7 +260,7 @@ Blockly.Blocks['is_body_touching'] = {
   init: function () {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable('defaultObject'), 'BODY')
-      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_UP, 'up'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_DOWN, 'down'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_LEFT, 'left'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_RIGHT, 'Right'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_NONE, 'none']]), 'DIRECTION')
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_UP, 'up'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_DOWN, 'down'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_LEFT, 'left'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_RIGHT, 'right'], [Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_NONE, 'none']]), 'DIRECTION')
       .appendField(Blockly.Msg.IS_BODY_TOUCHING)
 
       .appendField(Blockly.Msg.QUESTION);
