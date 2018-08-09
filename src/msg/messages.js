@@ -4777,8 +4777,8 @@ Blockly.Msg.GET_POINTER_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected Po
 Blockly.Msg.GET_POINTER_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Pointer.html';
 
 Blockly.Msg.DEVICE_BUTTON = 'device button';
-Blockly.Msg.JUST_PRESSED = 'just pressed?';
-Blockly.Msg.JUST_RELEASED = 'just released?';
+Blockly.Msg.JUST_PRESSED = 'just pressed';
+Blockly.Msg.JUST_RELEASED = 'just released';
 Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_TOOLTIP = 'True if the device button was released within 250ms';
 Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#justReleased';
 
