@@ -254,7 +254,10 @@ Blockly.Blocks['set_animation_boolean_field_vi'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_ANIMATION_COLOUR);
     this.setTooltip(Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function(event) {
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_animation_boolean_field_vi', {propertyTag: 'FIELD'})
 };
@@ -274,7 +277,10 @@ Blockly.Blocks['set_animation_numeric_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_ANIMATION_COLOUR);
     this.setTooltip(Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function(event) {
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_animation_numeric_field', {propertyTag: 'FIELD'})
 };
@@ -294,7 +300,10 @@ Blockly.Blocks['set_animation_string_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_ANIMATION_COLOUR);
     this.setTooltip(Blockly.Msg.SET_ANIMATION_STRING_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_ANIMATION_STRING_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function(event) {
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_animation_string_field', {propertyTag: 'FIELD'})
 };
@@ -310,7 +319,10 @@ Blockly.Blocks['get_animation_boolean_field_vi'] = {
     this.setOutput(true, 'Boolean');
     this.setColour(PHASER_ANIMATION_COLOUR);
     this.setTooltip(Blockly.Msg.GET_ANIMATION_BOOLEAN_FIELD_VI_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function(event) {
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createBooleanGetterContextMenu('set_animation_boolean_field_vi', {propertyTag: 'FIELD'})
 };
@@ -326,7 +338,10 @@ Blockly.Blocks['get_animation_numeric_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_ANIMATION_COLOUR);
     this.setTooltip(Blockly.Msg.GET_ANIMATION_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_ANIMATION_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function(event) {
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createNumericGetterContextMenu('set_animation_numeric_field', {propertyTag: 'FIELD'})
 };
@@ -342,7 +357,10 @@ Blockly.Blocks['get_animation_string_field'] = {
     this.setOutput(true, 'String');
     this.setColour(PHASER_ANIMATION_COLOUR);
     this.setTooltip(Blockly.Msg.GET_ANIMATION_STRING_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_ANIMATION_STRING_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function(event) {
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createStringGetterContextMenu('set_animation_string_field', {propertyTag: 'FIELD'})
 };

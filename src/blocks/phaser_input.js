@@ -103,7 +103,10 @@ Blockly.Blocks['get_key_boolean_field'] = {
     this.setOutput(true, 'Boolean');
     this.setColour(PHASER_KEYBOARD_INPUT);
     this.setTooltip(Blockly.Msg.GET_KEY_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_KEY_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.KEY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.KEY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -119,7 +122,10 @@ Blockly.Blocks['get_key_numeric_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_KEYBOARD_INPUT);
     this.setTooltip(Blockly.Msg.GET_KEY_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_KEY_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.KEY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.KEY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -241,7 +247,10 @@ Blockly.Blocks['set_input_handler_boolean_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_INPUT_HANDLER_COLOUR);
     this.setTooltip(Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_input_handler_boolean_field', {propertyTag: 'FIELD'})
 };
@@ -261,7 +270,10 @@ Blockly.Blocks['set_input_handler_numeric_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_INPUT_HANDLER_COLOUR);
     this.setTooltip(Blockly.Msg.SET_INPUT_HANDLER_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_INPUT_HANDLER_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_input_handler_numeric_field', {propertyTag: 'FIELD'})
 };
@@ -280,7 +292,10 @@ Blockly.Blocks['set_input_handler_point_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_INPUT_HANDLER_COLOUR);
     this.setTooltip(Blockly.Msg.SET_INPUT_HANDLER_POINT_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_INPUT_HANDLER_POINT_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_input_handler_point_field', {propertyTag: 'FIELD'})
 };
@@ -296,7 +311,10 @@ Blockly.Blocks['get_input_handler_boolean_field'] = {
     this.setOutput(true, 'Boolean');
     this.setColour(PHASER_INPUT_HANDLER_COLOUR);
     this.setTooltip(Blockly.Msg.GET_INPUT_HANDLER_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createBooleanGetterContextMenu('set_input_handler_boolean_field', {propertyTag: 'FIELD'})
 };
@@ -312,7 +330,10 @@ Blockly.Blocks['get_input_handler_numeric_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_INPUT_HANDLER_COLOUR);
     this.setTooltip(Blockly.Msg.GET_INPUT_HANDLER_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_INPUT_HANDLER_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createBooleanGetterContextMenu('set_input_handler_numeric_field', {propertyTag: 'FIELD'})
 };
@@ -328,7 +349,10 @@ Blockly.Blocks['get_input_handler_point_field'] = {
     this.setOutput(true);
     this.setColour(PHASER_INPUT_HANDLER_COLOUR);
     this.setTooltip(Blockly.Msg.GET_INPUT_HANDLER_POINT_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_INPUT_HANDLER_POINT_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createBooleanGetterContextMenu('set_input_handler_point_field', {propertyTag: 'FIELD'})
 };
@@ -839,7 +863,10 @@ Blockly.Blocks['device_button_get_boolean_field'] = {
     this.setOutput(true, 'Boolean');
     this.setColour(PHASER_DEVICE_BUTTON_COLOUR);
     this.setTooltip(Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP.replace('%1', 'boolean'));
-    this.setHelpUrl(Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -854,7 +881,10 @@ Blockly.Blocks['device_button_get_numeric_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_DEVICE_BUTTON_COLOUR);
     this.setTooltip(Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP.replace('%1', 'numeric'));
-    this.setHelpUrl(Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 

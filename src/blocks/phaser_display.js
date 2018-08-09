@@ -731,7 +731,6 @@ Blockly.Blocks['swap_children'] = {
   }
 };
 
-
 //endregion
 
 //region GAME OBJECT
@@ -765,6 +764,9 @@ Blockly.Blocks['set_game_object_point_field'] = {
     this.setHelpUrl(Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD_HELP_URL);
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
   },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
+  },
   customContextMenu: createSetterContextMenu('get_game_object_point_field')
 };
 
@@ -778,8 +780,11 @@ Blockly.Blocks['get_game_object_point_field'] = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.GET_GAME_OBJECT_POINT_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_GAME_OBJECT_POINT_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
   },
   customContextMenu: createPointGetterContextMenu('set_game_object_point_field', {valueTag: 'POINT'})
 };
@@ -797,8 +802,11 @@ Blockly.Blocks['set_game_object_numeric_field'] = {
     this.setNextStatement(true, null);
     this.setPreviousStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
   },
   customContextMenu: createSetterContextMenu('get_game_object_numeric_field')
 };
@@ -813,8 +821,11 @@ Blockly.Blocks['get_game_object_numeric_field'] = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
   },
   customContextMenu: createNumericGetterContextMenu('set_game_object_numeric_field')
 };
@@ -833,8 +844,11 @@ Blockly.Blocks['set_game_object_boolean_field'] = {
     this.setNextStatement(true, null);
     this.setPreviousStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
   },
   customContextMenu: createSetterContextMenu('get_game_object_boolean_field')
 };
@@ -853,7 +867,7 @@ Blockly.Blocks['set_game_object_boolean_field_vi'] = {
     this.setNextStatement(true, null);
     this.setPreviousStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
   },
   customContextMenu: createSetterContextMenu('get_game_object_boolean_field')
@@ -869,8 +883,11 @@ Blockly.Blocks['get_game_object_boolean_field'] = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.GET_GAME_OBJECT_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
   },
   customContextMenu: createBooleanGetterContextMenu('set_game_object_boolean_field')
 };
