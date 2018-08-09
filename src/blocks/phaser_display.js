@@ -800,7 +800,7 @@ Blockly.Blocks['set_game_object_numeric_field'] = {
     this.setHelpUrl(Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL);
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
   },
-  customContextMenu: createSetterContextMenu('set_game_object_numeric_field')
+  customContextMenu: createSetterContextMenu('get_game_object_numeric_field')
 };
 
 Blockly.Blocks['get_game_object_numeric_field'] = {
@@ -816,7 +816,7 @@ Blockly.Blocks['get_game_object_numeric_field'] = {
     this.setHelpUrl(Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL);
     this.setColour(PHASER_GAMEOBJECT_COLOUR);
   },
-  customContextMenu: createGetterContextMenu('get_game_object_numeric_field')
+  customContextMenu: createNumericGetterContextMenu('set_game_object_numeric_field')
 };
 
 Blockly.Blocks['set_game_object_boolean_field'] = {
