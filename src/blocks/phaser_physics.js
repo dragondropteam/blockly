@@ -763,9 +763,13 @@ Blockly.Blocks['set_physics_boolean_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_PHYSICS_DYNAMICS_COLOUR);
     this.setTooltip(Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+    console.log(this.getFieldValue('FIELD'));
   },
-  customContextMenu: createSetterContextMenu('set_physics_boolean_field', {propertyTag: 'FIELD'})
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  customContextMenu: createSetterContextMenu('get_physics_boolean_field', {propertyTag: 'FIELD', objectTag: null})
 };
 
 Blockly.Blocks['get_physics_boolean_field'] = {
@@ -777,9 +781,15 @@ Blockly.Blocks['get_physics_boolean_field'] = {
     this.setOutput(true, 'Boolean');
     this.setColour(PHASER_PHYSICS_DYNAMICS_COLOUR);
     this.setTooltip(Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
-  customContextMenu: createBooleanGetterContextMenu('set_animation_boolean_field_vi', {propertyTag: 'FIELD'})
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  customContextMenu: createBooleanGetterContextMenu('set_physics_boolean_field', {
+    propertyTag: 'FIELD',
+    objectTag: null
+  })
 };
 
 Blockly.Blocks['set_physics_point_field'] = {
@@ -794,9 +804,12 @@ Blockly.Blocks['set_physics_point_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_PHYSICS_DYNAMICS_COLOUR);
     this.setTooltip(Blockly.Msg.SET_PHYSICS_POINT_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_PHYSICS_POINT_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
-  customContextMenu: createSetterContextMenu('set_physics_boolean_field', {propertyTag: 'FIELD'})
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  customContextMenu: createSetterContextMenu('get_physics_boolean_field', {propertyTag: 'FIELD', objectTag: null})
 };
 
 Blockly.Blocks['get_physics_point_field'] = {
@@ -808,9 +821,12 @@ Blockly.Blocks['get_physics_point_field'] = {
     this.setOutput(true);
     this.setColour(PHASER_PHYSICS_DYNAMICS_COLOUR);
     this.setTooltip(Blockly.Msg.GET_PHYSICS_POINT_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_PHYSICS_POINT_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
-  customContextMenu: createBooleanGetterContextMenu('set_animation_boolean_field_vi', {propertyTag: 'FIELD'})
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.PHYSICS_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  customContextMenu: createBooleanGetterContextMenu('set_physics_point_field', {propertyTag: 'FIELD', objectTag: null})
 };
 //endregion
 
@@ -850,8 +866,11 @@ Blockly.Blocks['set_body_field_point'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_BODY_FIELD_POINT_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_BODY_FIELD_POINT_HELP_URL);
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -875,8 +894,11 @@ Blockly.Blocks['set_body_field_point_vi'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_BODY_FIELD_POINT_VI_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_BODY_FIELD_POINT_VI_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.ANIMATION_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_body_field_point_class', {propertyTag: 'FIELD'})
 };
@@ -894,8 +916,11 @@ Blockly.Blocks['set_body_field_point_class_vi'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_BODY_FIELD_POINT_CLASS_VI_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_BODY_FIELD_POINT_CLASS_VI_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('get_body_field_point_class', {propertyTag: 'FIELD'})
 };
@@ -910,8 +935,11 @@ Blockly.Blocks['get_body_field_point_class'] = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createPointGetterContextMenu('set_body_field_point_vi', {propertyTag: 'FIELD', valueTag: 'POINT'})
 };
@@ -933,8 +961,11 @@ Blockly.Blocks['set_body_boolean_field'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_BODY_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_BODY_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
   },
   customContextMenu: createSetterContextMenu('get_body_boolean_field', {propertyTag: 'ELEMENT'})
 };
@@ -953,8 +984,11 @@ Blockly.Blocks['set_body_boolean_field_vi'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_BODY_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_BODY_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
   },
   customContextMenu: createSetterContextMenu('get_body_boolean_field', {propertyTag: 'ELEMENT'})
 };
@@ -969,8 +1003,11 @@ Blockly.Blocks['get_body_boolean_field'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip(Blockly.Msg.GET_BODY_BOOLEAN_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_BODY_BOOLEAN_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
   },
   customContextMenu: createBooleanGetterContextMenu('set_body_boolean_field', {propertyTag: 'ELEMENT'})
 };
@@ -989,8 +1026,11 @@ Blockly.Blocks['set_body_numeric_field'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.SET_BODY_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.SET_BODY_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
   },
   customContextMenu: createSetterContextMenu('get_body_numeric_field', {propertyTag: 'ELEMENT'})
 };
@@ -1005,8 +1045,11 @@ Blockly.Blocks['get_body_numeric_field'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.GET_BODY_NUMERIC_FIELD_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.GET_BODY_NUMERIC_FIELD_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.BODY_FIELD_HELP_URL.replace('%1', this.getFieldValue('ELEMENT')));
   },
   customContextMenu: createNumericGetterContextMenu('set_body_numeric_field', {propertyTag: 'ELEMENT'})
 };
@@ -1033,6 +1076,52 @@ Blockly.Blocks['stop_body'] = {
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.STOP_BODY_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.STOP_BODY_HELP_URL);
+    this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  }
+};
+
+Blockly.Blocks['body_set_size'] = {
+  init: function () {
+    this.appendValueInput('BODY')
+      .appendField(Blockly.Msg.BODY_SET_SIZE);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TO)
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TO)
+      .appendField(Blockly.Msg.HEIGHT);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BODY_SET_SIZE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.BODY_SET_SIZE_HELP_URL);
+    this.setColour(PHASER_PHYSICS_BODY_COLOUR);
+  }
+};
+
+Blockly.Blocks['body_set_size_complex'] = {
+  init: function () {
+    this.appendValueInput('BODY')
+      .appendField(Blockly.Msg.BODY_SET_SIZE);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.appendValueInput('OFFSET_X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.OFFSET_X);
+    this.appendValueInput('OFFSET_Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.OFFSET_Y);
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.BODY_SET_SIZE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.BODY_SET_SIZE_HELP_URL);
     this.setColour(PHASER_PHYSICS_BODY_COLOUR);
   }
 };
