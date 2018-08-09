@@ -61,7 +61,10 @@ Blockly.Blocks['rectangle_get_numeric_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_RECTANGLE_COLOUR);
     this.setTooltip(Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -76,7 +79,10 @@ Blockly.Blocks['rectangle_get_point_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_RECTANGLE_COLOUR);
     this.setTooltip(Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -95,7 +101,10 @@ Blockly.Blocks['rectangle_set_numeric_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_RECTANGLE_COLOUR);
     this.setTooltip(Blockly.Msg.RECTANGLE_SET_NUMERIC_FIELDS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('rectangle_get_numeric_field', {propertyTag: 'FIELD'})
 };
@@ -114,7 +123,10 @@ Blockly.Blocks['rectangle_set_point_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_RECTANGLE_COLOUR);
     this.setTooltip(Blockly.Msg.RECTANGLE_SET_POINT_FIELDS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.RECTANGLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('PROPERTY')));
   },
   customContextMenu: createSetterContextMenu('rectangle_get_point_field', {propertyTag: 'FIELD'})
 };
@@ -838,7 +850,10 @@ Blockly.Blocks['circle_get_numeric_field'] = {
     this.setOutput(true, 'Number');
     this.setColour(PHASER_CIRCLE_COLOUR);
     this.setTooltip(Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.CIRCLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.CIRCLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   }
 };
 
@@ -857,7 +872,10 @@ Blockly.Blocks['circle_set_numeric_field'] = {
     this.setNextStatement(true, null);
     this.setColour(PHASER_CIRCLE_COLOUR);
     this.setTooltip(Blockly.Msg.CIRCLE_SET_NUMERIC_FIELDS_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_HELP_URL);
+    this.setHelpUrl(Blockly.Msg.CIRCLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
+  },
+  onchange: function (event) {
+    this.setHelpUrl(Blockly.Msg.CIRCLE_FIELDS_HELP_URL.replace('%1', this.getFieldValue('FIELD')));
   },
   customContextMenu: createSetterContextMenu('circle_get_numeric_field', {propertyTag: 'FIELD'})
 };
