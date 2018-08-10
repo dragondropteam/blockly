@@ -580,77 +580,19 @@ Blockly.WorkspaceSvg.prototype.highlightBlock = function(id) {
  * @param {!Element} xmlBlock XML block element.
  */
 Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
-  let blockX, blockY;
-  if (!this.rendered || xmlBlock.getElementsByTagName('block').length >=
-      this.remainingCapacity()) {
-    return;
-  }
-  Blockly.terminateDrag_();  // Dragging while pasting?  No.
-  Blockly.Events.disable();
-  try {
-    var block = Blockly.Xml.domToBlock(xmlBlock, this);
-/*     blockX = mouseX;
-     blockY = mouseY;*/
-    blockX = parseInt(xmlBlock.getAttribute('x'), 10);
-    blockY = parseInt(xmlBlock.getAttribute('y'), 10);
+  var mouseLoc = { x:0, y:0 };
+  if(this.mouseLocation)
+  {
+    let mainWorkspace = Blockly.getMainWorkspace();
+    let item = document.getElementsByClassName('blocklyToolboxDiv');
+    let offset = 0; // default. 0 is acceptable.
+    if(item[0])
+      offset = item[0].clientWidth;
 
-    if (!isNaN(blockX) && !isNaN(blockY)) {
-      if (this.RTL) {
-        blockX = -blockX;
-      }
-      // Offset block until not clobbering another block and not in connection
-      // distance with neighbouring blocks.
-      do {
-        var collide = false;
-        var allBlocks = this.getAllBlocks();
-        for (var i = 0, otherBlock; otherBlock = allBlocks[i]; i++) {
-          var otherXY = otherBlock.getRelativeToSurfaceXY();
-          if (Math.abs(blockX - otherXY.x) <= 1 &&
-              Math.abs(blockY - otherXY.y) <= 1) {
-            collide = true;
-            break;
-          }
-        }
-        if (!collide) {
-          // Check for blocks in snap range to any of its connections.
-          var connections = block.getConnections_(false);
-          for (var i = 0, connection; connection = connections[i]; i++) {
-            var neighbour = connection.closest(Blockly.SNAP_RADIUS,
-                new goog.math.Coordinate(blockX, blockY));
-            if (neighbour.connection) {
-              collide = true;
-              break;
-            }
-          }
-        }
-        if (collide) {
-          if (this.RTL) {
-            blockX -= Blockly.SNAP_RADIUS;
-          } else {
-            blockX += Blockly.SNAP_RADIUS;
-          }
-          blockY += Blockly.SNAP_RADIUS * 2;
-        }
-      } while (collide);
-      console.log('call moveby');
-      block.moveBy(blockX, blockY);
-      console.log('end of moveby');
-    }
-  } finally {
-    Blockly.Events.enable();
+    mouseLoc.x = (mouseX - mainWorkspace.scrollX) / mainWorkspace.scale - offset;
+    mouseLoc.y = (mouseY - mainWorkspace.scrollY) / mainWorkspace.scale;
   }
-  if (Blockly.Events.isEnabled() && !block.isShadow()) {
-    Blockly.Events.fire(new Blockly.Events.Create(block));
-  }
-  console.log({
-    parentBlockX: xmlBlock.getAttribute('x'),
-    blockX: blockX,
-    blockY: blockY,
-    mouseX: mouseX,
-    mouseY: mouseY,
-    test: block.getRelativeToSurfaceXY()
-});
-  block.select();
+  Blockly.ContextMenu.callbackFactoryWorkspace(this, mouseLoc, xmlBlock)();
 };
 
 /**
