@@ -598,7 +598,6 @@ Blockly.Events.Change.prototype.run = function(forward) {
  * @constructor
  */
 Blockly.Events.Move = function(block) {
-  console.log("MOVE");
   if (!block) {
     return;  // Blank event to be populated by fromJson.
   }

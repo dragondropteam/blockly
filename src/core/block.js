@@ -1356,12 +1356,9 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
  * @param {number} dy Vertical offset.
  */
 Blockly.Block.prototype.moveBy = function(dx, dy) {
-  console.log('MOVEBY');
   goog.asserts.assert(!this.parentBlock_, 'Block has parent.');
   var event = new Blockly.Events.Move(this);
-  console.log({oldxy: this.xy_});
   this.xy_.translate(dx, dy);
-  console.log({newxy: this.xy_});
   event.recordNew();
   Blockly.Events.fire(event);
 };
