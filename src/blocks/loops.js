@@ -310,3 +310,25 @@ Blockly.Blocks['controls_flow_statements'] = {
   LOOP_TYPES: ['controls_repeat', 'controls_repeat_ext', 'controls_forEach',
       'controls_for', 'controls_whileUntil']
 };
+
+Blockly.Blocks['proper_for'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.FOR)
+      .appendField(new Blockly.FieldVariable('i'), 'VAR');
+    this.appendValueInput('START_VALUE')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.FOR_START_VALUE);
+    this.appendValueInput('COMPARE')
+      .appendField(Blockly.Msg.UNTIL);
+    this.appendValueInput('INCREMENT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.INCREMENT);
+    this.appendStatementInput('DO')
+      .appendField(Blockly.Msg.CONTROLS_FOR_INPUT_DO);
+    this.setColour(Blockly.Blocks.loops.HUE);
+    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, null);
+    this.setInputsInline(true, null);
+  }
+};
