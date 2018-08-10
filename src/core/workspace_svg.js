@@ -1411,5 +1411,4 @@ function getMousePosition(event) {
   event = event || window.event;
   mouseX = event.pageX;
   mouseY = event.pageY;
-  console.log({mouseX: mouseX, mouseY: mouseY});
 };
