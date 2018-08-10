@@ -197,8 +197,6 @@ Blockly.JavaScript['proper_for'] = function(block) {
   let branch = Blockly.JavaScript.statementToCode(block, 'DO');
 
   branch = Blockly.JavaScript.addLoopTrap(branch, block.id);
-  let code = 'for (' + counter + ' = ' + start_value + '; ' +
-  compare + '; ' + counter + ' += ' + increment + ') {\n' + branch + '}\n';;
-
-  return code;
+  return code = 'for (' + counter + ' = ' + start_value + '; ' +
+  compare + '; ' + counter + ' += ' + increment + ') {\n' + branch + '}\n';
 };
