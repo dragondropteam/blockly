@@ -187,3 +187,18 @@ Blockly.JavaScript['controls_flow_statements'] = function(block) {
   }
   throw 'Unknown flow statement.';
 };
+
+Blockly.JavaScript['proper_for'] = function(block) {
+  // For loop.
+  const counter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  const start_value = Blockly.JavaScript.valueToCode(block, 'START_VALUE', Blockly.JavaScript.ORDER_ATOMIC);
+  const compare = Blockly.JavaScript.valueToCode(block, 'COMPARE', Blockly.JavaScript.ORDER_ATOMIC);
+  const increment = Blockly.JavaScript.valueToCode(block, 'INCREMENT', Blockly.JavaScript.ORDER_ATOMIC);
+  let branch = Blockly.JavaScript.statementToCode(block, 'DO');
+
+  branch = Blockly.JavaScript.addLoopTrap(branch, block.id);
+  let code = 'for (' + counter + ' = ' + start_value + '; ' +
+  compare + '; ' + counter + ' += ' + increment + ') {\n' + branch + '}\n';;
+
+  return code;
+};
