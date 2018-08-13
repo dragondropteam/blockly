@@ -5568,3 +5568,26 @@ Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
 /// url - Phaser documentation for game.timer.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+
+Blockly.Msg.PHASER_LOAD_TILEMAP = 'create tilemap';
+Blockly.Msg.PHASER_LOAD_TILEMAP_TOOLTIP = 'Adds a Tile Map data file to the current load queue.';
+Blockly.Msg.PHASER_LOAD_TILEMAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#tilemap';
+
+Blockly.Msg.PHASER_ADD_TILEMAP = 'add tilemap';
+Blockly.Msg.PHASER_ADD_TILEMAP_TOOLITP = 'Creates a new Phaser.Tilemap object.';
+Blockly.Msg.PHASER_ADD_TILEMAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.GameObjectFactory.html#tilemap';
+
+Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER = 'create layer number';
+Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_TOOLTIP = 'Creates a new TilemapLayer object.';
+Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createLayer';
+
+Blockly.Msg.PHASER_ADD_TILSET_IMAGE = 'add tileset image for';
+Blockly.Msg.PHASER_ADD_TILSET_IMAGE_TOOLTIP = 'Adds an image to the map to be used as a tileset.';
+Blockly.Msg.PHASER_ADD_TILSET_IMAGE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#addTilesetImage';
+
+Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_TOOLTIP = '';
+Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#_EAST';
+
+Blockly.Msg.PHASER_TILKMAP_SET_FIELD_TOOLTIP = 'Set member fields for the given map.';
+Blockly.Msg.PHASER_TILKMAP_GET_FIELD_TOOLTIP = 'Get member fields for the given map.';
+Blockly.Msg.PHASER_TILKMAP_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#toc-3';
