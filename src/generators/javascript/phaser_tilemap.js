@@ -1,14 +1,37 @@
 Blockly.JavaScript['set_tilemap_boolean_field'] = function (block) {
-  const field = block.getFieldValue('FIELD');
-  const map = Blockly.JavaScript.valueToCode(block, 'MAP', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const field = block.getFieldValue('PROPERTY');
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const value = block.getFieldValue('VALUE') == 'TRUE';
   return `${map}.${field} = ${value};\n`;
 };
 
-Blockly.JavaScript['get_tilemap_boolean_field'] = function (block) {
-  const field = block.getFieldValue('FIELD');
-  const map = Blockly.JavaScript.valueToCode(block, 'map', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  return [`${map}.${field}`, Blockly.JavaScript.ORDER_ATOMIC];
+Blockly.JavaScript['set_tilemap_numeric_field'] =
+  Blockly.JavaScript['set_tilemap_array_field'] =
+    Blockly.JavaScript['set_tilemap_string_field'] = function (block) {
+      const field = block.getFieldValue('PROPERTY');
+      const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+      const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+      return `${map}.${field} = ${value};\n`;
+    };
+
+Blockly.JavaScript['get_tilemap_boolean_field'] =
+  Blockly.JavaScript['get_tilemap_string_field'] =
+    Blockly.JavaScript['get_tilemap_array_field'] =
+      Blockly.JavaScript['get_tilemap_numeric_field'] = function (block) {
+        const field = block.getFieldValue('PROPERTY');
+        const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+        return [`${map}.${field}`, Blockly.JavaScript.ORDER_ATOMIC];
+      };
+
+Blockly.JavaScript['set_tilemap_layer_field'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return `${map}.layer = ${value};\n`;
+};
+
+Blockly.JavaScript['get_tilemap_layer_field'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return [`${map}.layer`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['tilemap_direction_members'] = function (block) {
@@ -52,9 +75,75 @@ Blockly.JavaScript['create_tilemap_layer'] = function (block) {
   return [`${map}.createLayer(${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-Blockly.JavaScript['add_tileset_image'] = function (block) {
+Blockly.JavaScript['add_tileset_image_simple'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
   const map = Blockly.JavaScript.valueToCode(block, 'MAP', Blockly.JavaScript.ORDER_NONE);
 
   return `${map}.addTilesetImage(${tag});\n`;
+};
+
+Blockly.JavaScript['add_tileset_image_complex'] = function (block) {
+  const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
+  const key = Blockly.JavaScript.valueToCode(block, 'KEY', Blockly.JavaScript.ORDER_NONE);
+  const map = Blockly.JavaScript.valueToCode(block, 'MAP', Blockly.JavaScript.ORDER_NONE);
+  const height = Blockly.JavaScript.valueToCode(block, 'TILE_HEIGHT', Blockly.JavaScript.ORDER_NONE);
+  const width = Blockly.JavaScript.valueToCode(block, 'TILE_WIDTH', Blockly.JavaScript.ORDER_NONE);
+  const margin = Blockly.JavaScript.valueToCode(block, 'TILE_MARGIN', Blockly.JavaScript.ORDER_NONE);
+  const spacing = Blockly.JavaScript.valueToCode(block, 'TILE_SPACING', Blockly.JavaScript.ORDER_NONE);
+  const gid = Blockly.JavaScript.valueToCode(block, 'GID', Blockly.JavaScript.ORDER_NONE);
+
+  return `${map}.addTilesetImage(${tag},${key},${width},${height},${margin},${spacing},${gid});\n`;
+};
+
+Blockly.JavaScript['tilemap_copy'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return [`${map}.copy(${x},${y},${width},${height},${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_create'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const group = Blockly.JavaScript.valueToCode(block, 'GROUP', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const tile_width = Blockly.JavaScript.valueToCode(block, 'TILE_WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const tile_height = Blockly.JavaScript.valueToCode(block, 'TILE_HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return [`${map}.create(${name},${width},${height},${tile_width},${tile_height},${group})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_create_blank_layer'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const tile_width = Blockly.JavaScript.valueToCode(block, 'TILE_WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const tile_height = Blockly.JavaScript.valueToCode(block, 'TILE_HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return `${map}.createBlankLayer(${name},${width},${height},${tile_width},${tile_height});\n`;
+};
+
+Blockly.JavaScript['tilemap_create_from_objects_simple'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const gid = Blockly.JavaScript.valueToCode(block, 'GID', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const key = Blockly.JavaScript.valueToCode(block, 'KEY', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return `${map}.createFromObjects(${name},${gid},${key});\n`;
+};
+
+Blockly.JavaScript['tilemap_create_from_objects_complex'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const gid = Blockly.JavaScript.valueToCode(block, 'GID', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const key = Blockly.JavaScript.valueToCode(block, 'KEY', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const group = Blockly.JavaScript.valueToCode(block, 'GROUP', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const frame = Blockly.JavaScript.valueToCode(block, 'FRAME', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sprite_class = Blockly.JavaScript.valueToCode(block, 'CLASS', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const exists = block.getFieldValue('EXISTS') == 'TRUE';
+  const cull = block.getFieldValue('CULL') == 'TRUE';
+  const y = block.getFieldValue('Y') == 'TRUE';
+  return `${map}.createFromObjects(${name},${gid},${key},${frame},${exists},${cull},${group},${sprite_class},${y});\n`;
 };
