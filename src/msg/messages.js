@@ -5588,6 +5588,51 @@ Blockly.Msg.PHASER_ADD_TILSET_IMAGE_HELP_URL = 'http://dragondrop.digipen.edu/do
 Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_TOOLTIP = '';
 Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#_EAST';
 
-Blockly.Msg.PHASER_TILKMAP_SET_FIELD_TOOLTIP = 'Set member fields for the given map.';
-Blockly.Msg.PHASER_TILKMAP_GET_FIELD_TOOLTIP = 'Get member fields for the given map.';
-Blockly.Msg.PHASER_TILKMAP_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#toc-3';
+Blockly.Msg.PHASER_TILEMAP_SET_FIELD_TOOLTIP = 'Set member fields for the given map.';
+Blockly.Msg.PHASER_TILEMAP_GET_FIELD_TOOLTIP = 'Get member fields for the given map.';
+Blockly.Msg.PHASER_TILEMAP_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#toc-3';
+
+Blockly.Msg.GET_ARRAY_FIELD = 'get array field';
+Blockly.Msg.SET_ARRAY_FIELD = 'set array field';
+
+Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD = 'set current layer for';
+Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD_TOOLTIP = 'The current layer object.';
+Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#layer';
+Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD = 'get current layer for';
+Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD_TOOLTIP = 'The current layer object.';
+Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#layer';
+
+Blockly.Msg.TILE_WIDTH = 'tile width:';
+Blockly.Msg.TILE_HEIGHT = 'tile height:';
+Blockly.Msg.TILE_MARGIN = 'tile margin:';
+Blockly.Msg.TILE_SPACING = 'tile spacing:';
+Blockly.Msg.GID = 'gid:';
+
+Blockly.Msg.TILEMAP_COPY = 'get tiles of';
+Blockly.Msg.TILEMAP_COPY_LAYER = 'from layer';
+Blockly.Msg.TILEMAP_COPY_POSITION = 'starting at position';
+Blockly.Msg.TILEMAP_COPY_BOUNDS = 'with the bounds of';
+Blockly.Msg.TILEMAP_COPY_TOOLTIP = 'Copies all of the tiles in the given rectangular block into the tilemap data buffer.';
+Blockly.Msg.TILEMAP_COPY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#toc-4';
+
+Blockly.Msg.TILEMAP_CREATE = 'reset tile map';
+Blockly.Msg.TILEMAP_CREATE_TOOLTUP = 'Creates an empty map of the given dimensions and one blank layer.';
+Blockly.Msg.TILEMAP_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#create';
+
+Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER = 'add blank layer to';
+Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER_TOOLTUP = 'Creates a new and empty layer on this Tilemap.';
+Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createBlankLayer';
+
+Blockly.Msg.GET_WORLD = 'game.world';
+Blockly.Msg.GET_WORLD_TOOLTIP = '';
+Blockly.Msg.GET_WORLD_HELP_URL = '';
+
+Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS = 'add objects to';
+Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_NAME = 'from the group';
+Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_TOOLTUP = 'Creates a Sprite for every object matching the gid argument.';
+Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createBlankLayer';
+Blockly.Msg.EXISTS = 'exists';
+Blockly.Msg.TILEMAP_ADJUST_Y = 'adjust y'
+Blockly.Msg.CULL = 'auto cull';
+
+Blockly.Msg.TILEMAP_CREATE_FROM_TILES = ''

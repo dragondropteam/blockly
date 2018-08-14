@@ -37,7 +37,7 @@ const PHASER_ANIMATION_COLOUR = '#22736D';         //'#00796b';
 const PHASER_TEXT_COLOUR = '#348783';              //'#009688';
 const PHASER_PARTICLES_COLOUR = '#459A9A';         //'#56ADB0';
 const PHASER_GAMEOBJECT_COLOUR = '#56ADB0';        //'#00bfa5';
-const PHASER_TILEMAP_COLOUR = '#69dcdf';        //'#00bfa5';
+const PHASER_TILEMAP_COLOUR = '#66cbce';        //'#00bfa5';
 
 
 const PHASER_PHYSICS_STARTUP_COLOUR = '#6A1B9A';   //'#d500f9';
@@ -700,6 +700,17 @@ Blockly.Blocks['start_phaser_for_states'] = {
 //endregion
 
 //region WORLD
+Blockly.Blocks['get_world'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GET_WORLD);
+    this.setOutput(true, null);
+    this.setTooltip(Blockly.Msg.GET_WORLD_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GET_WORLD_HELP_URL);
+    this.setColour(PHASER_WORLD_COLOUR);
+  }
+};
+
 Blockly.Blocks['get_world_property'] = {
   init: function () {
     this.appendDummyInput()
