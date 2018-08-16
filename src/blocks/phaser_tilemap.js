@@ -464,26 +464,7 @@ Blockly.Blocks['tilemap_create_from_objects_complex'] = {
   }
 };
 
-Blockly.Blocks['tilemap_create_from_tiles_simple'] = {
-  init: function () {
-    this.appendValueInput('OBJECT')
-      .appendField(Blockly.Msg.TILEMAP_CREATE_FROM_TILES);
-    this.appendValueInput('TILES')
-      .appendField(Blockly.Msg.AT);
-    this.appendValueInput('REPLACEMENT')
-      .appendField(Blockly.Msg.TILEMAP_CREATE_FROM_TILES_REPLACEMENT);
-    this.appendValueInput('KEY')
-      .setCheck('String')
-      .appendField(Blockly.Msg.TAGGED);
-    this.setOutput(true, 'Number');
-    this.setColour(PHASER_TILEMAP_COLOUR);
-    this.setInputsInline(false);
-    this.setTooltip(Blockly.Msg.TILEMAP_CREATE_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.TILEMAP_CREATE_HELP_URL);
-  }
-};
-
-Blockly.Blocks['tilemap_create_from_tiles_complex'] = {
+Blockly.Blocks['tilemap_create_from_tiles'] = {
   init: function () {
     this.appendValueInput('OBJECT')
       .appendField(Blockly.Msg.TILEMAP_CREATE_FROM_TILES);
@@ -540,35 +521,7 @@ Blockly.Blocks['tilemap_create_layer_complex'] = {
   }
 };
 
-Blockly.Blocks['tilemap_fill_simple'] = {
-  init: function () {
-    this.appendValueInput('OBJECT')
-      .appendField(Blockly.Msg.FILL);
-    this.appendValueInput('INDEX')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.TILEMAP_FILL_INDEX);
-    this.appendValueInput('X')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.X);
-    this.appendValueInput('Y')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.Y);
-    this.appendValueInput('WIDTH')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.WIDTH);
-    this.appendValueInput('HEIGHT')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.HEIGHT);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(PHASER_TILEMAP_COLOUR);
-    this.setInputsInline(false);
-    this.setTooltip(Blockly.Msg.TILEMAP_FILL_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.TILEMAP_FILL_HELP_URL);
-  }
-};
-
-Blockly.Blocks['tilemap_fill_complex'] = {
+Blockly.Blocks['tilemap_fill'] = {
   init: function () {
     this.appendValueInput('OBJECT')
       .appendField(Blockly.Msg.FILL);
@@ -598,37 +551,7 @@ Blockly.Blocks['tilemap_fill_complex'] = {
   }
 };
 
-Blockly.Blocks['tilemap_for_each_simple'] = {
-  init: function () {
-    this.appendValueInput('OBJECT')
-      .appendField(Blockly.Msg.IN);
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.CALL)
-      .appendField(new Blockly.FieldProcedure('callback'), 'NAME');
-    this.appendValueInput('CONTEXT')
-      .appendField(Blockly.Msg.WHEN);
-    this.appendValueInput('X')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.X);
-    this.appendValueInput('Y')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.Y);
-    this.appendValueInput('WIDTH')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.WIDTH);
-    this.appendValueInput('HEIGHT')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.HEIGHT);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(PHASER_TILEMAP_COLOUR);
-    this.setInputsInline(false);
-    this.setTooltip(Blockly.Msg.TILEMAP_FOR_EACH_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.TILEMAP_FOR_EACH_HELP_URL);
-  }
-};
-
-Blockly.Blocks['tilemap_for_each_complex'] = {
+Blockly.Blocks['tilemap_for_each'] = {
   init: function () {
     this.appendValueInput('OBJECT')
       .appendField(Blockly.Msg.IN);
@@ -798,5 +721,80 @@ Blockly.Blocks['tilemap_has_tile'] = {
     this.setInputsInline(true);
     this.setTooltip(Blockly.Msg.TILEMAP_HAS_TILE_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.TILEMAP_HAS_TILE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_paste'] = {
+  init: function () {
+    this.appendValueInput('TILEBLOCK')
+      .setCheck('Array')
+      .appendField(Blockly.Msg.TILEMAP_PASTE);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.ON);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.TILEMAP_PASTE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_PASTE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_put_tile'] = {
+  init: function () {
+    this.appendValueInput('TILE')
+      .appendField(Blockly.Msg.PUT);
+    this.appendValueInput('X')
+      .appendField(Blockly.Msg.AT)
+      .appendField(Blockly.Msg.X)
+      .setCheck('Number');
+    this.appendValueInput('Y')
+      .appendField(Blockly.Msg.AT)
+      .appendField(Blockly.Msg.Y)
+      .setCheck('Number');
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.ON);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.setOutput(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_HAS_TILE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_HAS_TILE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_random'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+    .appendField(Blockly.Msg.TILEMAP_RANDOM);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.TILEMAP_RANDOM_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_RANDOM_HELP_URL);
   }
 };
