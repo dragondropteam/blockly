@@ -533,11 +533,12 @@ Blockly.Blocks['collide_function_field'] = {
 
 Blockly.Blocks['collide_boolean'] = {
   init: function () {
-    this.appendValueInput('OBJECTA');
+    this.appendValueInput('OBJECTA')
+      .appendField(Blockly.Msg.COLLIDE);
     this.appendValueInput('OBJECTB')
-      .appendField(Blockly.Msg.COLLIDE_BOOLEAN);
+      .appendField(Blockly.Msg.WITH);
     this.appendDummyInput()
-      .appendField(Blockly.Msg.QUESTION);
+      .appendField(Blockly.Msg.COLLIDE_BOOLEAN);
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setColour(PHASER_PHYSICS_COLLISION_COLOUR);
