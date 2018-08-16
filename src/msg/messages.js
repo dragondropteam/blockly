@@ -5608,8 +5608,8 @@ Blockly.Msg.TILE_MARGIN = 'tile margin';
 Blockly.Msg.TILE_SPACING = 'tile spacing';
 Blockly.Msg.GID = 'gid';
 
-Blockly.Msg.TILEMAP_COPY = 'get tiles of';
-Blockly.Msg.TILEMAP_COPY_LAYER = 'from layer';
+Blockly.Msg.TILEMAP_COPY = 'copy tiles from';
+Blockly.Msg.TILEMAP_COPY_LAYER = 'on layer';
 Blockly.Msg.TILEMAP_COPY_POSITION = 'starting at position';
 Blockly.Msg.TILEMAP_COPY_BOUNDS = 'with the bounds of';
 Blockly.Msg.TILEMAP_COPY_TOOLTIP = 'Copies all of the tiles in the given rectangular block into the tilemap data buffer.';
@@ -5683,3 +5683,15 @@ Blockly.Msg.TILEMAP_GET_TILESET_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/
 Blockly.Msg.TILEMAP_HAS_TILE = 'have a tile at';
 Blockly.Msg.TILEMAP_HAS_TILE_TOOLTIP = 'Checks if there is a tile at the given location.';
 Blockly.Msg.TILEMAP_HAS_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#hasTile';
+
+Blockly.Msg.TILEMAP_PASTE = 'paste blocks from';
+Blockly.Msg.TILEMAP_PASTE_TOOLTIP = 'Pastes a previously copied block of tile data into the given x/y coordinates. Data should have been prepared with Tilemap.copy.';
+Blockly.Msg.TILEMAP_PASTE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#paste';
+
+Blockly.Msg.PUT = 'put tile';
+Blockly.Msg.TILEMAP_PUT_TILE_TOOLTIP = 'Puts a tile of the given index value at the coordinate specified.';
+Blockly.Msg.TILEMAP_PUT_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#putTile';
+
+Blockly.Msg.TILEMAP_RANDOM = 'randomise tiles in';
+Blockly.Msg.TILEMAP_RANDOM_TOOLTIP = 'Randomises a set of tiles in a given area.';
+Blockly.Msg.TILEMAP_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#random';

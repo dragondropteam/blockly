@@ -148,16 +148,7 @@ Blockly.JavaScript['tilemap_create_from_objects_complex'] = function (block) {
   return `${map}.createFromObjects(${name},${gid},${key},${frame},${exists},${cull},${group},${sprite_class},${y});\n`;
 };
 
-Blockly.JavaScript['tilemap_create_from_tiles_simple'] = function (block) {
-  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const key = Blockly.JavaScript.valueToCode(block, 'KEY', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const tiles = Blockly.JavaScript.valueToCode(block, 'TILES', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const replacement = Blockly.JavaScript.valueToCode(block, 'REPLACEMENT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-
-  return [`${map}.createFromTiles(${tiles},${replacement},${key})`, Blockly.JavaScript.ORDER_ATOMIC];
-};
-
-Blockly.JavaScript['tilemap_create_from_tiles_complex'] = function (block) {
+Blockly.JavaScript['tilemap_create_from_tiles'] = function (block) {
   const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const key = Blockly.JavaScript.valueToCode(block, 'KEY', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const tiles = Blockly.JavaScript.valueToCode(block, 'TILES', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -185,18 +176,7 @@ Blockly.JavaScript['tilemap_create_layer_complex'] = function (block) {
   return [`${map}.createLayer(${layer},${width},${height},${group})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-Blockly.JavaScript['tilemap_fill_simple'] = function (block) {
-  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-
-  return `${map}.fill(${index},${x},${y},${width},${height});\n`;
-};
-
-Blockly.JavaScript['tilemap_fill_complex'] = function (block) {
+Blockly.JavaScript['tilemap_fill'] = function (block) {
   const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -208,19 +188,7 @@ Blockly.JavaScript['tilemap_fill_complex'] = function (block) {
   return `${map}.fill(${index},${x},${y},${width},${height},${layer});\n`;
 };
 
-Blockly.JavaScript['tilemap_for_each_simple'] = function (block) {
-  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const context = Blockly.JavaScript.valueToCode(block, 'CONTEXT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  const callback = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
-
-  return `${map}.forEach(${callback},${context},${x},${y},${width},${height});\n`;
-};
-
-Blockly.JavaScript['tilemap_for_each_complex'] = function (block) {
+Blockly.JavaScript['tilemap_for_each'] = function (block) {
   const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -289,4 +257,35 @@ Blockly.JavaScript['tilemap_has_tile'] = function (block) {
   const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
 
   return [`${map}.hasTile(${x},${y},${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_paste'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const tileblock = Blockly.JavaScript.valueToCode(block, 'TILEBLOCK', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.paste(${x},${y},${tileblock},${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_put_tile'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const tile = Blockly.JavaScript.valueToCode(block, 'TILE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return [`${map}.putTile(${tile},${x},${y},${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_random'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.random(${x},${y},${width},${height},${layer});\n`;
 };
