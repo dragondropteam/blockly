@@ -5642,7 +5642,7 @@ Blockly.Msg.TILEMAP_CREATE_FROM_TILES_REPLACEMENT = 'replacing with the tiles fr
 Blockly.Msg.LAYER = 'layer';
 Blockly.Msg.PROPERTIES = 'properties';
 
-Blockly.Msg.TILEMAP_CREATE_LAYER = 'create a copy of layer';
+Blockly.Msg.TILEMAP_CREATE_LAYER = 'create layer';
 Blockly.Msg.TILEMAP_CREATE_LAYER_TOOLTIP = 'Creates a new TilemapLayer object.';
 Blockly.Msg.TILEMAP_CREATE_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createLayer';
 
@@ -5695,3 +5695,21 @@ Blockly.Msg.TILEMAP_PUT_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phas
 Blockly.Msg.TILEMAP_RANDOM = 'randomise tiles in';
 Blockly.Msg.TILEMAP_RANDOM_TOOLTIP = 'Randomises a set of tiles in a given area.';
 Blockly.Msg.TILEMAP_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#random';
+
+Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS = 'remove all layers from';
+Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_TOOLTIP = 'Removes all layers from this tile map.';
+Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#removeAllLayers';
+
+Blockly.Msg.TILEMAP_REMOVE_TILE = 'remove tile from';
+Blockly.Msg.TILEMAP_REMOVE_TILE_TOOLTIP = 'Removes the tile located at the given coordinates and updates the collision data.';
+Blockly.Msg.TILEMAP_REMOVE_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#removeTile';
+
+Blockly.Msg.TILEMAP_REPLACE = 'with tile from index';
+Blockly.Msg.TILEMAP_REPLACE_DEST = 'replace tile at index';
+Blockly.Msg.TILEMAP_REPLACE_TOOLTIP = 'Scans the given area for tiles with an index matching source and updates their index to match dest';
+Blockly.Msg.TILEMAP_REPLACE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#replace';
+
+Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX = 'tile at index';
+Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_TOOLTIP = 'Searches the entire map layer for the first tile matching the given index, then returns that Phaser.Tile object.';
+Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#searchTileIndex';
+Blockly.Msg.SKIP = 'skip';

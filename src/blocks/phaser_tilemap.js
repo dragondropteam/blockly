@@ -14,7 +14,7 @@ const TILEMAP_STRING_FIELDS = createDropDownField(TILEMAP_STRING_WRITABLE, []);
 const TILEMAP_ARRAY_WRITABLE = ['collideIndexes', 'collision', 'debugMap', 'imageCollections', 'images', 'layers', 'objects', 'tiles', 'tilesets'];
 const TILEMAP_ARRAY_FIELDS = createDropDownField(TILEMAP_ARRAY_WRITABLE, []);
 
-const tilemap_get_tile_direction = [['above','Above'],['below','Below'],['left','Left'],['right','Right']];
+const tilemap_get_tile_direction = [['above', 'Above'], ['below', 'Below'], ['left', 'Left'], ['right', 'Right']];
 
 Blockly.Blocks['set_tilemap_boolean_field'] = {
   init: function () {
@@ -253,21 +253,6 @@ Blockly.Blocks['add_tilemap_complex'] = {
   }
 };
 
-Blockly.Blocks['create_tilemap_layer'] = {
-  init: function () {
-    this.appendValueInput('LAYER')
-      .setCheck('Number')
-      .appendField(Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER);
-    this.appendValueInput('MAP')
-      .appendField(Blockly.Msg.ON);
-    this.setInputsInline(true);
-    this.setOutput(true, null);
-    this.setColour(PHASER_TILEMAP_COLOUR);
-    this.setTooltip(Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_TOOLTIP);
-    this.setHelpUrl(Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_HELP_URL);
-  }
-};
-
 Blockly.Blocks['add_tileset_image_simple'] = {
   init: function () {
     this.appendValueInput('MAP')
@@ -490,7 +475,7 @@ Blockly.Blocks['tilemap_create_from_tiles'] = {
 Blockly.Blocks['tilemap_create_layer_simple'] = {
   init: function () {
     this.appendValueInput('LAYER')
-    .appendField(Blockly.Msg.TILEMAP_CREATE_LAYER);
+      .appendField(Blockly.Msg.TILEMAP_CREATE_LAYER);
     this.appendValueInput('OBJECT')
       .appendField(Blockly.Msg.FROM);
     this.setOutput(true, null);
@@ -504,7 +489,7 @@ Blockly.Blocks['tilemap_create_layer_simple'] = {
 Blockly.Blocks['tilemap_create_layer_complex'] = {
   init: function () {
     this.appendValueInput('LAYER')
-    .appendField(Blockly.Msg.TILEMAP_CREATE_LAYER);
+      .appendField(Blockly.Msg.TILEMAP_CREATE_LAYER);
     this.appendValueInput('OBJECT')
       .appendField(Blockly.Msg.FROM);
     this.appendValueInput('WIDTH')
@@ -775,7 +760,7 @@ Blockly.Blocks['tilemap_put_tile'] = {
 Blockly.Blocks['tilemap_random'] = {
   init: function () {
     this.appendValueInput('OBJECT')
-    .appendField(Blockly.Msg.TILEMAP_RANDOM);
+      .appendField(Blockly.Msg.TILEMAP_RANDOM);
     this.appendValueInput('LAYER')
       .appendField(Blockly.Msg.LAYER);
     this.appendValueInput('X')
@@ -796,5 +781,121 @@ Blockly.Blocks['tilemap_random'] = {
     this.setInputsInline(false);
     this.setTooltip(Blockly.Msg.TILEMAP_RANDOM_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.TILEMAP_RANDOM_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_remove_all_layers'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_remove_tile'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_REMOVE_TILE);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.setOutput(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_replace_complex'] = {
+  init: function () {
+    this.appendValueInput('DEST')
+    .appendField(Blockly.Msg.TILEMAP_REPLACE_DEST);
+    this.appendValueInput('SOURCE')
+      .appendField(Blockly.Msg.TILEMAP_REPLACE);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.IN);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.TILEMAP_REPLACE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_REPLACE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_replace_simple'] = {
+  init: function () {
+    this.appendValueInput('DEST')
+      .appendField(Blockly.Msg.TILEMAP_REPLACE_DEST);
+    this.appendValueInput('SOURCE')
+      .appendField(Blockly.Msg.TILEMAP_REPLACE);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.IN);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.TILEMAP_REPLACE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_REPLACE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_search_tile_index_simple'] = {
+  init: function () {
+    this.appendValueInput('INDEX')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.IN);
+    this.setOutput(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_search_tile_index_complex'] = {
+  init: function () {
+    this.appendValueInput('INDEX')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.IN);
+    this.appendValueInput('SKIP')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.SKIP);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.setOutput(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL);
   }
 };

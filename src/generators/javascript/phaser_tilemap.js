@@ -68,13 +68,6 @@ Blockly.JavaScript['add_tilemap_complex'] = function (block) {
   return [`game.add.tilemap(${tag},${x},${y})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-Blockly.JavaScript['create_tilemap_layer'] = function (block) {
-  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_NONE);
-  const map = Blockly.JavaScript.valueToCode(block, 'MAP', Blockly.JavaScript.ORDER_NONE);
-
-  return [`${map}.createLayer(${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
-};
-
 Blockly.JavaScript['add_tileset_image_simple'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
   const map = Blockly.JavaScript.valueToCode(block, 'MAP', Blockly.JavaScript.ORDER_NONE);
@@ -288,4 +281,56 @@ Blockly.JavaScript['tilemap_random'] = function (block) {
   const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
 
   return `${map}.random(${x},${y},${width},${height},${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_remove_all_layers'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.removeAllLayers();\n`;
+};
+
+Blockly.JavaScript['tilemap_remove_tile'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return [`${map}.removeTile(${x},${y},${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_replace_complex'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const source = Blockly.JavaScript.valueToCode(block, 'SOURCE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const dest = Blockly.JavaScript.valueToCode(block, 'DEST', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.replace(${source},${dest},${x},${y},${width},${height},${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_replace_simple'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const source = Blockly.JavaScript.valueToCode(block, 'SOURCE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const dest = Blockly.JavaScript.valueToCode(block, 'DEST', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.replace(${source},${dest});\n`;
+};
+
+Blockly.JavaScript['tilemap_search_tile_index_simple'] = function(block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return [`${map}.searchTileIndex(${index})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_search_tile_index_complex'] = function(block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const skip = Blockly.JavaScript.valueToCode(block, 'SKIP', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return [`${map}.searchTileIndex(${index},${skip},false,${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
