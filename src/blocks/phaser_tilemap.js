@@ -820,7 +820,7 @@ Blockly.Blocks['tilemap_remove_tile'] = {
 Blockly.Blocks['tilemap_replace_complex'] = {
   init: function () {
     this.appendValueInput('DEST')
-    .appendField(Blockly.Msg.TILEMAP_REPLACE_DEST);
+      .appendField(Blockly.Msg.TILEMAP_REPLACE_DEST);
     this.appendValueInput('SOURCE')
       .appendField(Blockly.Msg.TILEMAP_REPLACE);
     this.appendValueInput('OBJECT')
@@ -897,5 +897,261 @@ Blockly.Blocks['tilemap_search_tile_index_complex'] = {
     this.setInputsInline(true);
     this.setTooltip(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_set_collision'] = {
+  init: function () {
+    this.appendValueInput('INDEXES')
+      .appendField(Blockly.Msg.TILEMAP_SET_COLLISION);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.ON);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.COLLIDES)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'COLLIDE');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.RECALCULATE)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'RECALCULATE');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_COLLISION_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_COLLISION_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_set_collision_between'] = {
+  init: function () {
+    this.appendValueInput('START')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN);
+    this.appendValueInput('STOP')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.AND);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.ON);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.COLLIDES)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'COLLIDE');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.RECALCULATE)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'RECALCULATE');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_set_collision_by_exclusion'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendValueInput('INDEXES')
+      .setCheck('Array')
+      .appendField(Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_TILES);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.COLLIDES)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'COLLIDE');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.RECALCULATE)
+      .appendField(new Blockly.FieldCheckbox('TRUE'), 'RECALCULATE');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_set_layer'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_SET_LAYER);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.TO);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_LAYER_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_LAYER_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_set_prevent_recalculate'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE);
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldCheckbox('FALSE'), 'VALUE')
+      .appendField(Blockly.Msg.QUESTION);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_set_tile_index_callback'] = {
+  init: function () {
+    this.appendValueInput('INDEXES')
+      .appendField(Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.ON);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CALLING)
+      .appendField(new Blockly.FieldProcedure('onCollide'), 'NAME');
+    this.appendValueInput('CONTEXT')
+      .appendField(Blockly.Msg.ON);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.IF_COLLIDING);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_HELP_URL);
+  },
+  renameProcedure: function (oldName, legalName) {
+    if (this.getFieldValue('NAME') == oldName) {
+      this.setFieldValue(legalName, 'NAME');
+    }
+  }
+};
+
+Blockly.Blocks['tilemap_set_tile_location_callback'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.AT);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CALLING)
+      .appendField(new Blockly.FieldProcedure('onCollide'), 'NAME');
+    this.appendValueInput('CONTEXT')
+      .appendField(Blockly.Msg.ON);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.IF_COLLIDING);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_HELP_URL);
+  },
+  renameProcedure: function (oldName, legalName) {
+    if (this.getFieldValue('NAME') == oldName) {
+      this.setFieldValue(legalName, 'NAME');
+    }
+  }
+};
+
+Blockly.Blocks['tilemap_set_tile_size'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_SET_TILE_SIZE);
+
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TO)
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SET_TILE_SIZE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SET_TILE_SIZE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_shuffle'] = {
+  init: function () {
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.TILEMAP_SHUFFLE);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.TILEMAP_SHUFFLE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SHUFFLE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['tilemap_swap'] = {
+  init: function () {
+    this.appendValueInput('A')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TILEMAP_SWAP);
+    this.appendValueInput('B')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.TILEMAP_SWAP_WITH);
+    this.appendValueInput('OBJECT')
+      .appendField(Blockly.Msg.ON);
+    this.appendValueInput('LAYER')
+      .appendField(Blockly.Msg.LAYER);
+    this.appendValueInput('X')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.HEIGHT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_TILEMAP_COLOUR);
+    this.setInputsInline(false);
+    this.setTooltip(Blockly.Msg.TILEMAP_SWAP_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.TILEMAP_SWAP_HELP_URL);
   }
 };
