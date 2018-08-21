@@ -5713,3 +5713,50 @@ Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX = 'tile at index';
 Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_TOOLTIP = 'Searches the entire map layer for the first tile matching the given index, then returns that Phaser.Tile object.';
 Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#searchTileIndex';
 Blockly.Msg.SKIP = 'skip';
+
+Blockly.Msg.TILEMAP_SET_COLLISION = 'set collision for tiles at index';
+Blockly.Msg.TILEMAP_SET_COLLISION_TOOLTIP = 'Sets collision on the given tile or tiles. You can pass in either a single numeric index or an array of indexes.';
+Blockly.Msg.TILEMAP_SET_COLLISION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setCollision';
+
+Blockly.Msg.COLLIDES = 'collide?';
+Blockly.Msg.RECALCULATE = 'recalculate?';
+
+Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN = 'set collision between tiles at index';
+Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_TOOLTIP = 'Sets collision on a range of tiles where the tile IDs increment sequentially.';
+Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setCollisionBetween';
+
+Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION = 'set collision for';
+Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_TILES = 'except for tile array';
+Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_TOOLTIP = 'Sets collision on all tiles in the given layer, except for the IDs of those in the given array.';
+Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setCollisionByExclusion';
+
+Blockly.Msg.TILEMAP_SET_LAYER = 'set layer for';
+Blockly.Msg.TILEMAP_SET_LAYER_TOOLTIP = 'Sets the current layer to the given index.';
+Blockly.Msg.TILEMAP_SET_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setLayer';
+
+Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE = 'prevent recalculate for tiles on';
+Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_TOOLTIP = 'Turn off/on the recalculation of faces for tile or collision updates.';
+Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setPreventRecalculate';
+
+Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK = 'check collision for tiles at index';
+Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_TOOLTIP = 'Sets a global collision callback for the given tile index within the layer.';
+Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setTileIndexCallback';
+Blockly.Msg.IF_COLLIDING = 'if colliding';
+
+Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK = 'check collision for tiles on';
+Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_TOOLTIP = 'ets a global collision callback for the given map location within the layer.';
+Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setTileLocationCallback';
+Blockly.Msg.IF_COLLIDING = 'if colliding';
+
+Blockly.Msg.TILEMAP_SET_TILE_SIZE = 'set tile size for';
+Blockly.Msg.TILEMAP_SET_TILE_SIZE_TOOLTIP = 'Sets the base tile size for the map.';
+Blockly.Msg.TILEMAP_SET_TILE_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setTileSize';
+
+Blockly.Msg.TILEMAP_SHUFFLE = 'shuffle tiles on';
+Blockly.Msg.TILEMAP_SHUFFLE_TOOLTIP = 'Shuffles a set of tiles in a given area. It will only randomise the tiles in that area, so if they\'re all the same nothing will appear to have changed!';
+Blockly.Msg.TILEMAP_SHUFFLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#shuffle';
+
+Blockly.Msg.TILEMAP_SWAP = 'swap tiles at index';
+Blockly.Msg.TILEMAP_SWAP_WITH = 'with tiles at index';
+Blockly.Msg.TILEMAP_SWAP_TOOLTIP = 'Scans the given area for tiles with an index matching tileA and swaps them with tileB.';
+Blockly.Msg.TILEMAP_SWAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#swap';

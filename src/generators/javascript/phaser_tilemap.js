@@ -319,18 +319,118 @@ Blockly.JavaScript['tilemap_replace_simple'] = function (block) {
   return `${map}.replace(${source},${dest});\n`;
 };
 
-Blockly.JavaScript['tilemap_search_tile_index_simple'] = function(block) {
+Blockly.JavaScript['tilemap_search_tile_index_simple'] = function (block) {
   const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
 
   return [`${map}.searchTileIndex(${index})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-Blockly.JavaScript['tilemap_search_tile_index_complex'] = function(block) {
+Blockly.JavaScript['tilemap_search_tile_index_complex'] = function (block) {
   const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const skip = Blockly.JavaScript.valueToCode(block, 'SKIP', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
 
   return [`${map}.searchTileIndex(${index},${skip},false,${layer})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['tilemap_set_collision'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const indexes = Blockly.JavaScript.valueToCode(block, 'INDEXES', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const collide = block.getFieldValue('COLLIDE') == 'TRUE';
+  const recalculate = block.getFieldValue('RECALCULATE') == 'TRUE';
+
+  return `${map}.setCollision(${indexes},${collide},${layer},${recalculate});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_collision_between'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const start = Blockly.JavaScript.valueToCode(block, 'START', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const stop = Blockly.JavaScript.valueToCode(block, 'STOP', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const collide = block.getFieldValue('COLLIDE') == 'TRUE';
+  const recalculate = block.getFieldValue('RECALCULATE') == 'TRUE';
+
+  return `${map}.setCollisionBetween(${start},${stop},${collide},${layer},${recalculate});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_collision_by_exclusion'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const indexes = Blockly.JavaScript.valueToCode(block, 'INDEXES', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const collide = block.getFieldValue('COLLIDE') == 'TRUE';
+  const recalculate = block.getFieldValue('RECALCULATE') == 'TRUE';
+
+  return `${map}.setCollisionByExclusion(${indexes},${collide},${layer},${recalculate});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_layer'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.setLayer(${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_prevent_recalculate'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const value = block.getFieldValue('VALUE') == 'TRUE';
+
+  return `${map}.setPreventRecalculate(${value});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_tile_index_callback'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const indexes = Blockly.JavaScript.valueToCode(block, 'INDEXES', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const context = Blockly.JavaScript.valueToCode(block, 'CONTEXT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const functionName = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
+
+  return `${map}.setTileIndexCallback(${indexes},${functionName},${context},${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_tile_location_callback'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const context = Blockly.JavaScript.valueToCode(block, 'CONTEXT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const functionName = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
+
+  return `${map}.setTileLocationCallback(${x},${y},${width},${height},${functionName},${context},${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_set_tile_size'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.setTileSize(${width},${height});\n`;
+};
+
+Blockly.JavaScript['tilemap_shuffle'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.shuffle(${x},${y},${width},${height},${layer});\n`;
+};
+
+Blockly.JavaScript['tilemap_swap'] = function (block) {
+  const map = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const a = Blockly.JavaScript.valueToCode(block, 'A', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const b = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const layer = Blockly.JavaScript.valueToCode(block, 'LAYER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+
+  return `${map}.swap(${a},${b},${x},${y},${width},${height},${layer});\n`;
 };
