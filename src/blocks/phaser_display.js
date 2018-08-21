@@ -1,4 +1,16 @@
 //region SPRITES AND IMAGES
+Blockly.Blocks['sprite_get_tag'] = {
+  init: function () {
+    this.appendValueInput('SPRITE')
+      .appendField(Blockly.Msg.SPRITE_GET_TAG);
+    this.setOutput(true, 'String');
+    this.setColour(PHASER_SPRITE_AND_IMAGES_COLOUR);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.Msg.SPRITE_GET_TAG_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.SPRITE_GET_TAG_HELP_URL);
+  }
+};
+
 Blockly.Blocks['create_image'] = {
   init: function () {
     this.appendDummyInput()
