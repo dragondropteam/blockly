@@ -1,8 +1,11 @@
+/**
+ * @file Blocks for Arduino serial library
+ * @author Luke Powell
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 // Color Configuration
-//const ARDUINO_SERIAL_COLOUR = '#5B67A5'; // Hue 230
 
-
-//All content copyright DigiPen Institute of Technology 2016
 Blockly.Blocks['serial_read'] = {
     init: function () {
         this.appendDummyInput()

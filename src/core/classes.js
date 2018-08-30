@@ -1,5 +1,8 @@
 /**
- * Created by lukepowell on 3/28/17.
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @fileoverview Core functions for classes & object oriented programming
+ * @copyright DigiPen Institute of Technology 2017
  */
 
 goog.provide('DragonDrop');

@@ -1,9 +1,6 @@
 /**
- * Copyright DigiPen Institute of Technology 2017
- */
-
-/**
  * @fileoverview DOM blocks for Blockly.
+ * @copyright DigiPen Institute of Technology 2018
  * @author clarissa.jarem@digipen.edu (Clarissa Jarem)
  * @author luke.powell@digipen.edu (Luke Powell)
  */

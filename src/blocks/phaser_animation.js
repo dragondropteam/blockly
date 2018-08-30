@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser animation
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 Blockly.Blocks['add_animation_vi'] = {
   init: function () {
     this.appendValueInput('OBJECT')

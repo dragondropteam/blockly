@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser sprites
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region SPRITES AND IMAGES
 Blockly.Blocks['create_image'] = {
   init: function () {

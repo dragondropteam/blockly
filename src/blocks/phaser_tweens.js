@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser tween
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region TWEEN
 Blockly.Blocks['tween_mutatorcontainer'] = {
   /**

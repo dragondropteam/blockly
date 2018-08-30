@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser physics
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 const PHYSICS_BOOLEAN_WRITABLE = ['isPaused'];
 const PHYSICS_BOOLEAN_READABLE = [];
 const PHYSICS_BOOLEAN_FIELDS = createDropDownField(PHYSICS_BOOLEAN_WRITABLE, PHYSICS_BOOLEAN_READABLE);

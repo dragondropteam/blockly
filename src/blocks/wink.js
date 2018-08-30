@@ -1,4 +1,10 @@
-// All content copyright DigiPen Institute of Technology 2016
+/**
+ * @file Blocks for Wink bots
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2016
+ */
+
 'use strict';
 goog.provide('Blockly.Blocks.wink');
 goog.require('Blockly.Blocks');

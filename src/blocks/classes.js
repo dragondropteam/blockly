@@ -1,11 +1,9 @@
+//See procedures for where the base of this file game from
+
 /**
- * Created by lukepowell on 3/28/17.
- *
- * See procedures for were the base of this file game from
- *
- * @author luke.powell@digipen.edu (Luke Powell
- * @fileoverview Block definitions to allow object oriented programming
- *
+ * @author Luke Powell
+ * @fileoverview Block definitions to allow classes & object oriented programming
+ * @copyright DigiPen Institute of Technology 2018
  */
 const CLASS_COLOUR = 230;
 const CALL_IN_CLASS_MSG = 'in %1 instance';

@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser graphics
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region DRAWPRIMITIVES
 Blockly.Blocks['create_graphics_object'] = {
   init: function () {

@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser utils
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region DEBUG
 Blockly.Blocks['debug_geom'] = {
   init: function () {

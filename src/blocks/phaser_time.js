@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser time
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region TIME.PROPERTIES
 const TIME_FIELDS_NUMERIC_WRITABLE = ['desiredFps', 'slowMotion',];
 const TIME_FIELDS_NUMERIC_RO = ['pauseDuration', 'physicsElapsed', 'physicsElapsedMS'];

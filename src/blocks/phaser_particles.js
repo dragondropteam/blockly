@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser particles
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region EMITTER
 Blockly.Blocks['addemitter'] = {
   init: function () {

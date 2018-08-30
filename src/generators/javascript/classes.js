@@ -1,6 +1,9 @@
 /**
- * Created by lukepowell on 3/28/17.
+ * @author Luke Powell
+ * @fileoverview Generates Javascript for classes blocks
+ * @copyright DigiPen Institute of Technology 2018
  */
+
 Blockly.JavaScript['class_definition'] = function(block) {
     let text_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
     let value_extends = Blockly.JavaScript.valueToCode(block, 'extends', Blockly.JavaScript.ORDER_ATOMIC);

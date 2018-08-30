@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser input
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region MOUSE
 Blockly.Blocks['get_current_mouse_position'] = {
   init: function () {

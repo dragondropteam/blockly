@@ -1,3 +1,9 @@
+/**
+ * @file Blocks for Phaser scaling
+ * @author Luke Powell
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 Blockly.Blocks['center_and_stretch'] = {
   init: function () {
     this.appendDummyInput()
