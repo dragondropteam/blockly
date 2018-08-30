@@ -1,3 +1,9 @@
+/**
+ * @file Blocks for Phaser texts
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
 
 Blockly.Blocks['add_text'] = {
   init: function () {

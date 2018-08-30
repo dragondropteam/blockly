@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser math
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 Blockly.Blocks['math_deg_to_rad'] = {
   init: function () {
     this.appendValueInput('DEGREES')

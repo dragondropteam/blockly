@@ -1,13 +1,7 @@
 /**
- * @license
- *
- * Copyright DigiPen Institute of Technology
- */
-
-/**
- * @fileoverview Procedure input field
- * Modified field_variable.js to work with procedures instead of variable blocks
+ * @fileoverview Procedure input field. Modified field_variable.js to work with procedures instead of variable blocks
  * @author luke.powell@digipen.edu (Luke Powell)
+ * @copyright DigiPen Institute of Technology 2018
  */
 'use strict';
 

@@ -1,28 +1,29 @@
-/**
+/*
  * Created by lukepowell on 12/15/16.
  *
  * All content copyright DigiPen Institute of Technology 2016
- */
 
-/**
+*
  * This file modified by DigiPen Institute of Technology USA
  * All modifications DigiPen Institute of Technology USA 2017
  * These modifications are not under the Apache license
- */
 
-/**
+*
  * Start modifications by DigiPen Institute of Technology 2017
  * All changes copyright DigiPen Institute of Technology USA 2017
  * These below changes are not under the Apache license
- */
 
-/**
+*
  * End modifications by DigiPen Institute of Technology 2017
  * All changes copyright DigiPen Institute of Technology 2017
- * The above changes are not under the Apache license
- */
+ * The above changes are not under the Apache license*/
 
 // Configuration and utilities
+/**
+ * @file Blocks for general Phaser functions & color definitions
+ * @author Luke Powell
+ * @copyright This file modified by DigiPen Institute of Technology USA. All modifications DigiPen Institute of Technology USA 2017. These modifications are not under the Apache license
+ */
 
 //region COLOURS
 const PHASER_COLOUR = 120;

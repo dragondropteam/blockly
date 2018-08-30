@@ -1,3 +1,9 @@
+/**
+ * @file Blocks for Arduino pwm library
+ * @author Luke Powell
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 'use strict';
 goog.provide('Blockly.Blocks.arduino_pwm');
 

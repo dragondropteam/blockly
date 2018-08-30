@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser states
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 Blockly.Blocks['statemanager_add_state'] = {
   init: function () {
     this.appendValueInput('NAME')

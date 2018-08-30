@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser game object
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region GROUP
 Blockly.Blocks['create_group'] = {
   init: function () {

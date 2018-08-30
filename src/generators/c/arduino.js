@@ -1,3 +1,9 @@
+/**
+ * @author Luke Powell
+ * @fileoverview Generates C for Arduino blocks
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 'use strict';
 goog.provide('Blockly.C.arduino');
 

@@ -1,14 +1,13 @@
 /**
- * Created by lukepowell on 12/15/16.
- *
- * All content Copyright DigiPen Institute of Technology 2016
+ * @author Luke Powell
+ * @file Generates JavaScript for phaser blocks
+ * @copyright DigiPen Institute of Technology 2016
  */
 
 //region MEMBER_FUNCTIONS
 /**
  * Generic method to translate a block for a set_<object>_<type>_member block
  * @param block A block containing two value inputs OBJECT and VALUE representing the object the member is on and the value to set it to and a field ELEMENT to determine the member
- * @return {[string,*]}
  */
 function getMember (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -250,7 +249,6 @@ Blockly.JavaScript['check_world_bounds'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @return {[string,*]}
  */
 Blockly.JavaScript['contains'] = function (block) {
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
@@ -296,7 +294,6 @@ Blockly.JavaScript['get_child_at_vi'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @return {[string,*]}
  */
 Blockly.JavaScript['get_child_index'] = function (block) {
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
@@ -900,7 +897,7 @@ Blockly.JavaScript['set_immovable'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @returns {*[]}
+ * @returns
  */
 Blockly.JavaScript['is_body_touching'] = function (block) {
   const body = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('BODY'), Blockly.Variables.NAME_TYPE);
@@ -1090,7 +1087,6 @@ Blockly.JavaScript['animation_update'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @return {[string,*]}
  */
 Blockly.JavaScript['validate_frames'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('Object'), Blockly.Variables.NAME_TYPE);
