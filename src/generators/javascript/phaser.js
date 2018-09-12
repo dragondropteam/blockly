@@ -42,6 +42,16 @@ function setPointField (block) {
 
 //endregion
 //region STARTUP
+
+/**
+ * <img src="img/phaser_simple_init.jpg" width="250"> <br>
+ * The main controller for the entire Phaser game. The functions run in order from top to bottom, with preload and create running once, and update running as a loop until the game ends.
+ * [Check the game engine documentation for more details.]{@link http://dragondrop.digipen.edu/docs/Phaser.Timer.html}
+ * @param width {number} The width of the game world
+ * @param height {number} The height of the game world
+ * @returns {} var game = new Phaser.Game([width], [height], Phaser.AUTO, '', {preload: preload, create: create, update: update});
+
+ */
 Blockly.JavaScript['phaser_simple_init'] = function (block) {
 
   Blockly.JavaScript.addReservedWords('game, preload, create, update');
@@ -59,27 +69,54 @@ Blockly.JavaScript['phaser_simple_init'] = function (block) {
   return phaser + preload + create + update;
 };
 
+/**The main controller for the entire Phaser game. Starts an instance of phaser without using preload, create, and update.
+ * @method start_phaser_for_states
+ * @param width {number} The width of the game world
+ * @param height {number} The height of the game world
+ * @returns {} var game = new Phaser.Game(${number_width}, ${number_height}, Phaser.AUTO, '');
+ */
 Blockly.JavaScript['start_phaser_for_states'] = function (block) {
   const number_width = block.getFieldValue('WIDTH');
   const number_height = block.getFieldValue('HEIGHT');
   return `var game = new Phaser.Game(${number_width}, ${number_height}, Phaser.AUTO, '');\n`;
 };
 
+/**
+ * Stretch the stuff
+ * @method center_and_stretch
+ * @returns {} game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+ this.scale.pageAlignHorizontally = true;
+ this.scale.pageAlignVertically = true;
+ this.scale.updateLayout( true );
+
+ */
 Blockly.JavaScript['center_and_stretch'] = function (block) {
   return 'game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;\n  this.scale.pageAlignHorizontally = true;\n  this.scale.pageAlignVertically = true;\n  this.scale.updateLayout( true );\n';
 };
 //endregion
 
 //region STEPPING
-
+/**
+ * Enables stepping through the game loop one frame at a time. Must use game.step()
+ * @method enable_step
+ * @returns {} game.enableStep();
+ */
 Blockly.JavaScript['enable_step'] = function (block) {
   return `game.enableStep();\n`;
 };
-
+/**
+ * Disables stepping through the game loop.
+ * @method disable_step
+ * @returns {} game.disableStep();
+ */
 Blockly.JavaScript['disable_step'] = function (block) {
   return `game.disableStep();\n`;
 };
-
+/**
+ * Steps through the game loop one frame at a time.
+ * @method step
+ * @returns {} game.step();
+ */
 Blockly.JavaScript['step'] = function (block) {
   return `game.step();\n`;
 };
@@ -87,7 +124,13 @@ Blockly.JavaScript['step'] = function (block) {
 //endregion
 
 //region DRAWPRIMITIVES
-
+/**
+ * Adds a graphics object to use to draw primitive shapes.
+ * @method create_graphics_object
+ * @param x {number} x position of the new graphics object
+ * @param y {number} y position of the new graphics object
+ * @returns {} game.add.graphics(x, y);
+ */
 Blockly.JavaScript['create_graphics_object'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -95,6 +138,16 @@ Blockly.JavaScript['create_graphics_object'] = function (block) {
   return [`game.add.graphics(${value_x}, ${value_y})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Enables graphics filling for shapes.
+ * @method draw_shapes_with_colour
+ * @param colour the colour to fill the shapes with
+ * @param graphics the graphics object to use
+ * @returns {}
+ * graphics.beginFill(toHexColor(colour));
+ * (shapes to fill)
+ * graphics.endFill();
+ */
 Blockly.JavaScript['draw_shapes_with_colour'] = function (block) {
   let value_colour = Blockly.JavaScript.valueToCode(block, 'colour', Blockly.JavaScript.ORDER_ATOMIC);
   const variable_graphics_object_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('graphics_object_name'), Blockly.Variables.NAME_TYPE);
@@ -111,6 +164,15 @@ ${statements_shape_draw_functions}\n
 ${variable_graphics_object_name}.endFill();\n`;
 };
 
+/**
+ * Draws a rectangle. Use inside of {@link draw_shapes_with_colour}
+ * @method draw_rectangle
+ * @param x {number} x position of the rectangle
+ * @param y {number} y position of the rectangle
+ * @param width {number} the width of the rectangle
+ * @param height {number} the height of the rectangle
+ * @returns {} graphicsVar.drawRect(x, y, width, height);
+ */
 Blockly.JavaScript['draw_rectangle'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -121,6 +183,14 @@ Blockly.JavaScript['draw_rectangle'] = function (block) {
   return `${variable_graphics_object_name}.drawRect(${value_x}, ${value_y}, ${value_w}, ${value_h});\n`;
 };
 
+/**
+ * Draws a circle. Use inside of {@link draw_shapes_with_colour}
+ * @method draw_circle
+ * @param x {number} x position of the rectangle
+ * @param y {number} y position of the rectangle
+ * @param diameter {number} the diameter of the rectangle
+ * @returns {} graphicsVar.drawCircle(x, y, diameter);
+ */
 Blockly.JavaScript['draw_circle'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -133,6 +203,14 @@ Blockly.JavaScript['draw_circle'] = function (block) {
 //endregion
 
 //region SPRITE/IMAGE
+
+/**
+ * Create an image to be used in the game.
+ * @method create_image
+ * @param tag {string} the tag that defines the image
+ * @param source {string} the file path of the image
+ * @returns {} game.load.image(tag, source);
+ */
 Blockly.JavaScript['create_image'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
   const source = Blockly.JavaScript.valueToCode(block, 'SRC', Blockly.JavaScript.ORDER_NONE);
@@ -140,6 +218,14 @@ Blockly.JavaScript['create_image'] = function (block) {
   return `game.load.image(${tag}, ${source});\n`;
 };
 
+/**
+ * Create an atlas image to be used in the game.
+ * @method addspritewithatlas
+ * @param tag {string} the tag that defines the image
+ * @param source {string} the file path of the image
+ * @param xml {string} the file path of the xml file
+ * @returns {} game.load.atlasXML(tag, source, xml);
+ */
 Blockly.JavaScript['addspritewithatlas'] = function (block) {
   const value_tag = Blockly.JavaScript.valueToCode(block, 'tag', Blockly.JavaScript.ORDER_ATOMIC);
   const value_text_source = Blockly.JavaScript.valueToCode(block, 'text_source', Blockly.JavaScript.ORDER_ATOMIC);
@@ -147,6 +233,15 @@ Blockly.JavaScript['addspritewithatlas'] = function (block) {
   return `game.load.atlasXML(${value_tag}, ${value_text_source}, ${value_text_xmlsource})\n`;
 };
 
+/**
+ * Create a sprite based on an atlas image.
+ * @method imagesubtextureatlas
+ * @param x {number} x position of the sprite
+ * @param y {number} y position of the sprite
+ * @param tag {string} the tag of the image to use for the sprite
+ * @param id {string} the id of the xml texture to use for the sprite
+ * @returns {} game.add.sprite(x, y, tag, id);
+ */
 Blockly.JavaScript['imagesubtextureatlas'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -155,6 +250,14 @@ Blockly.JavaScript['imagesubtextureatlas'] = function (block) {
   return [`game.add.sprite(${value_x}, ${value_y}, ${value_spritesource}, ${value_xmlsubtexture} )`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Create a sprite based on an image.
+ * @method add_image
+ * @param x {number} x position of the sprite
+ * @param y {number} y position of the sprite
+ * @param tag {string} the tag of the image to use for the sprite
+ * @returns {} game.add.sprite(x, y, tag);
+ */
 Blockly.JavaScript['add_image'] = function (block) {
   const x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -163,6 +266,17 @@ Blockly.JavaScript['add_image'] = function (block) {
   return [`game.add.sprite(${x_pos}, ${y_pos}, ${tag})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * @deprecated Use add_animation_vi instead
+ * Add an animation to a sprite object.
+ * @method add_animation
+ * @param object {sprite} sprite to apply the animation to
+ * @param name {string} name of the tag for the animation
+ * @param frames array of numbers or strings that correspond to frames to add to the animation
+ * @param fps {number} the speed the animation should play
+ * @param loop {boolean} whether or not the animation should loop or play once
+ * @returns {} object.animations.add(name, frames, fps, loop);
+ */
 Blockly.JavaScript['add_animation'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('object'), Blockly.Variables.NAME_TYPE);
   const text_name = block.getFieldValue('NAME');
@@ -172,6 +286,16 @@ Blockly.JavaScript['add_animation'] = function (block) {
   return `${variable_object}.animations.add('${text_name}', ${value_frames}, ${number_fps}, ${checkbox_loop});\n`;
 };
 
+/**
+ * Add an animation to a sprite object.
+ * @method add_animation
+ * @param object {sprite} sprite to apply the animation to
+ * @param name {string} name of the tag for the animation
+ * @param frames array of numbers or strings that correspond to frames to add to the animation
+ * @param fps {number} the speed the animation should play
+ * @param loop {boolean} whether or not the animation should loop or play once
+ * @returns {} object.animations.add(name, frames, fps, loop);
+ */
 // These blocks move towards using value input verus variable fields, this allows the students to for example loop through
 // a list of objects they want an animation to start playing on
 Blockly.JavaScript['add_animation_vi'] = function (block) {
@@ -183,6 +307,15 @@ Blockly.JavaScript['add_animation_vi'] = function (block) {
   return `${variable_object}.animations.add('${text_name}', ${value_frames}, ${number_fps}, ${checkbox_loop});\n`;
 };
 
+/**
+ * Create a sprite sheet from an image.
+ * @method create_sprite_sheet
+ * @param tag {string} the tag that defines the image
+ * @param source {string} the file path of the image
+ * @param width {number} the width of each frame
+ * @param height {number} the height of each frame
+ * @returns {} game.load.spritesheet(tag, source, width, height);
+ */
 Blockly.JavaScript['create_sprite_sheet'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
   const source = Blockly.JavaScript.valueToCode(block, 'SRC', Blockly.JavaScript.ORDER_NONE);
@@ -191,18 +324,43 @@ Blockly.JavaScript['create_sprite_sheet'] = function (block) {
   return `game.load.spritesheet(${tag}, ${source}, ${number_frame_width}, ${number_frame_height});\n`;
 };
 
+/**
+ * @deprecated
+ * Adds a child to the given object.
+ * @method add_child
+ * @param object the object to add a child to
+ * @param child the child to add to the object
+ * @returns {} object.addChild(child);
+ */
 Blockly.JavaScript['add_child'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   return `${variable_object}.addChild(${value_child});\n`;
 };
 
+/**
+ * Adds a child to the given object.
+ * @method add_child
+ * @param object the object to add a child to
+ * @param child the child to add to the object
+ * @returns {} object.addChild(child);
+ */
 Blockly.JavaScript['add_child_vi'] = function (block) {
   const variable_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   return `${variable_object}.addChild(${value_child});\n`;
 };
 
+/**
+ * @deprecated
+ * Adds a child to the given object at the given index.
+ * @method add_child_at
+ * @param object the object to add a child to
+ * @param child the child to add to the object
+ * @param index {number} the index to add the child to
+ * @returns {} object.addChildAt(child, index);
+ * @block
+ */
 Blockly.JavaScript['add_child_at'] = function (block) {
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -210,6 +368,15 @@ Blockly.JavaScript['add_child_at'] = function (block) {
   return `${variable_object}.addChildAt(${value_child}, ${value_index});\n`;
 };
 
+/**
+ * Adds a child to the given object at the given index.
+ * @method add_child_at
+ * @param object the object to add a child to
+ * @param child the child to add to the object
+ * @param index {number} the index to add the child to
+ * @returns {} object.addChildAt(child, index);
+ * @block
+ */
 Blockly.JavaScript['add_child_at_vi'] = function (block) {
   const child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -217,6 +384,16 @@ Blockly.JavaScript['add_child_at_vi'] = function (block) {
   return `${object}.addChildAt(${child}, ${index});\n`;
 };
 
+/**
+ * Align an object inside of another object.
+ * @method align_in
+ * @param object object to align
+ * @param container object to align to
+ * @param position {number} position to justify the alignment to
+ * @param offset_x {number} horizontal adjustment of the alignment
+ * @param offset_y {number} vertical adjustment of the alignment
+ * @returns {} object.alignIn(container, Phaser.position, offset_x, offset_y);
+ */
 Blockly.JavaScript['align_in'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const container = Blockly.JavaScript.valueToCode(block, 'CONTAINER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -226,6 +403,16 @@ Blockly.JavaScript['align_in'] = function (block) {
   return `${object}.alignIn(${container}, Phaser.${dropdown_position}, ${offset_x}, ${offset_y});\n`;
 };
 
+/**
+ * Align an object to the side of another object.
+ * @method align_to
+ * @param object object to align
+ * @param container object to align to
+ * @param position {number} position to justify the alignment to
+ * @param offset_x {number} horizontal adjustment of the alignment
+ * @param offset_y {number} vertical adjustment of the alignment
+ * @returns {} object.alignTo(container, Phaser.position, offset_x, offset_y);
+ */
 Blockly.JavaScript['align_to'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const container = Blockly.JavaScript.valueToCode(block, 'CONTAINER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -235,11 +422,24 @@ Blockly.JavaScript['align_to'] = function (block) {
   return `${object}.alignTo(${container}, Phaser.${dropdown_position}, ${offset_x}, ${offset_y});\n`;
 };
 
+/**
+ * Render an object on top of all other objects.
+ * @method bring_to_top
+ * @param object object to render
+ * @returns {} object.bringToTop();
+ */
 Blockly.JavaScript['bring_to_top'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.bringToTop();\n`;
 };
 
+/**
+ * If true, the game checks every frame to see if an object is within the world bounds, and returns a boolean with the result.
+ * @method check_world_bounds
+ * @param object object to check
+ * @param bool {boolean} enables/disables checking world bounds
+ * @returns {} object.checkWorldBounds = bool;
+ */
 Blockly.JavaScript['check_world_bounds'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_bool = Blockly.JavaScript.valueToCode(block, 'BOOL', Blockly.JavaScript.ORDER_ATOMIC);
@@ -248,7 +448,11 @@ Blockly.JavaScript['check_world_bounds'] = function (block) {
 
 /**
  * @deprecated
- * @param block
+ * Checks if an object contains the given child.
+ * @method contains
+ * @param object object to check
+ * @param child child to check
+ * @returns {} object.contains(child);
  */
 Blockly.JavaScript['contains'] = function (block) {
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
@@ -256,35 +460,77 @@ Blockly.JavaScript['contains'] = function (block) {
   return [`${variable_object}.contains(${value_child})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Checks if an object contains the given child.
+ * @method contains
+ * @param object object to check
+ * @param child child to check
+ * @returns {} object.contains(child);
+ */
 Blockly.JavaScript['contains_vi'] = function (block) {
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.contains(${value_child})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Crop the image of an object to the given rectangular bounds.
+ * @method crop
+ * @param object object whose image is getting cropped
+ * @param rectangle {Phaser.Rectangle} the rectangle bounds and properites to use for the crop
+ * @returns {} object.crop(rectangle);
+ */
 Blockly.JavaScript['crop'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_rectangle = Blockly.JavaScript.valueToCode(block, 'RECTANGLE', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.crop(${value_rectangle});\n`;
 };
 
+/**
+ * Clear the cropping on an object's image.
+ * @method clear_cropping
+ * @param object object whose image is cropped
+ * @returns {} object.crop();
+ */
 Blockly.JavaScript['clear_cropping'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.crop();\n`;
 };
 
+/**
+ * Destroy the given sprite object.
+ * @method destroy_sprite
+ * @param object object to destroy
+ * @param bool {boolean} whether or not the sprite's children should also be destroyed
+ * @returns {} object.destroy(bool);
+ */
 Blockly.JavaScript['destroy_sprite'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_bool = Blockly.JavaScript.valueToCode(block, 'BOOL', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.destroy(${value_bool});\n`;
 };
 
+/**
+ * @deprecated
+ * Get the child at the given index.
+ * @method get_child_at
+ * @param object object to retrieve the child from
+ * @param index {number} index the child is located at
+ * @returns {} object.getChildAt(index);
+ */
 Blockly.JavaScript['get_child_at'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
   const value_index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${variable_object}.getChildAt(${value_index})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Get the child at the given index.
+ * @method get_child_at
+ * @param object object to get the child from
+ * @param index {number} index the child is located at
+ * @returns {} object.getChildAt(index);
+ */
 Blockly.JavaScript['get_child_at_vi'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC);
@@ -293,7 +539,11 @@ Blockly.JavaScript['get_child_at_vi'] = function (block) {
 
 /**
  * @deprecated
- * @param block
+ * Get the index of the given child.
+ * @method get_child_index
+ * @param object object to get the child from
+ * @param child child to get the index from
+ * @returns {} object.getChildIndex(child);
  */
 Blockly.JavaScript['get_child_index'] = function (block) {
   const value_child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
@@ -301,40 +551,82 @@ Blockly.JavaScript['get_child_index'] = function (block) {
   return [`${variable_object}.getChildIndex(${value_child})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Get the index of the given child.
+ * @method get_child_index
+ * @param object object to get the child from
+ * @param child child to get the index from
+ * @returns {} object.getChildIndex(child);
+ */
 Blockly.JavaScript['get_child_index_vi'] = function (block) {
   const child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.getChildIndex(${child})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Changes the image of a sprite object.
+ * @method load_texture
+ * @param object object whose image is getting changed
+ * @param tag {string} the tag of the texture to change the image to
+ * @returns {} object.loadTexture(tag);
+ */
 Blockly.JavaScript['load_texture'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_texture = Blockly.JavaScript.valueToCode(block, 'TEXTURE', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.loadTexture(${value_texture});\n`;
 };
 
+/**
+ * Moves the object down one layer in the display list.
+ * @method move_down
+ * @param object object to render
+ * @returns {} object.moveDown();
+ */
 Blockly.JavaScript['move_down'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.moveDown();\n`;
 };
 
+/**
+ * Moves the object up one layer in the display list.
+ * @method move_up
+ * @param object object to render
+ * @returns {} object.moveUp();
+ */
 Blockly.JavaScript['move_up'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.moveUp();\n`;
 };
 
+/**
+ * @deprecated
+ * Checks to see if two objects overlap.
+ * @method sprite_overlap
+ */
 Blockly.JavaScript['sprite_overlap'] = function (block) {
   const value_sprite_a = Blockly.JavaScript.valueToCode(block, 'SPRITEA', Blockly.JavaScript.ORDER_ATOMIC);
   const value_sprite_b = Blockly.JavaScript.valueToCode(block, 'SPRITEB', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${value_sprite_a}.overlap(${value_sprite_b})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * @deprecated
+ * @method out_of_bounds_kill
+ */
 Blockly.JavaScript['out_of_bounds_kill'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_bool = Blockly.JavaScript.valueToCode(block, 'BOOL', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.outOfBoundsKill = ${value_bool};\n`;
 };
 
+/**
+ * If true, the object gets deleted if it leaves the world bounds.
+ * @method out_of_bounds_faint
+ * @param object object that gets deleted
+ * @param boolean {boolean} sets the action to true or false
+ * @returns {} object.outOfBoundsFaint = boolean;
+ */
 Blockly.JavaScript['out_of_bounds_faint'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_bool = Blockly.JavaScript.valueToCode(block, 'BOOL', Blockly.JavaScript.ORDER_ATOMIC);
@@ -373,28 +665,61 @@ Blockly.JavaScript['remove_children'] = function (block) {
   return `${variable_object}.removeChildren();\n`;
 };
 
+/**
+ * Removes the given child from the object.
+ * @method remove_child
+ * @param object object to remove the child from
+ * @param child child to remove from the object
+ * @returns {} object.removeChild(child);
+ */
 Blockly.JavaScript['remove_child_vi'] = function (block) {
   const child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.removeChild(${child});\n`;
 };
 
+/**
+ * Removes the child at the given index from the object.
+ * @method remove_child_at
+ * @param object object to remove the child from
+ * @param index index of the child to remove from the object
+ * @returns {} object.removeChildAt(index);
+ */
 Blockly.JavaScript['remove_child_at_vi'] = function (block) {
   const value_index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_ATOMIC);
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.removeChildAt(${value_index});\n`;
 };
 
+/**
+ * Removes all children from the object.
+ * @method remove_children
+ * @params object object to remove children from
+ * @returns {} object.removeChildren();
+ */
 Blockly.JavaScript['remove_children_vi'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.removeChildren();\n`;
 };
 
+/**
+ * @deprecated
+ * Resets the dimensions of the frame the Game Object uses for rendering.
+ * @method reset_frame
+ * @param object object to reset
+ * @returns {} object.resetFrame();
+ */
 Blockly.JavaScript['reset_frame'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.resetFrame();\n`;
 };
 
+/**
+ * @deprecated
+ * @method resize_frame
+ * @param
+ * @returns {}
+ */
 Blockly.JavaScript['resize_frame'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_parent = Blockly.JavaScript.valueToCode(block, 'PARENT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -403,6 +728,12 @@ Blockly.JavaScript['resize_frame'] = function (block) {
   return `${value_object}.resetFrame(${value_parent}, ${value_width}, ${value_height});\n`;
 };
 
+/**
+ * Render an object below all other objects.
+ * @method send_to_back
+ * @param object object to render
+ * @returns {} object.sendToBack();
+ */
 Blockly.JavaScript['send_to_back'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.sendToBack();\n`;
@@ -420,6 +751,14 @@ Blockly.JavaScript['set_child_index'] = function (block) {
   return `${variable_parent}.setChildIndex(${value_child}, ${value_index});\n`;
 };
 
+/**
+ * Sets the position of the child in the object's list of children.
+ * @method set_child_index
+ * @param object object that contains the child
+ * @param child child to change the position of
+ * @param index {number} index to set the child's position to
+ * @returns {} object.setChildIndex(child, index);
+ */
 Blockly.JavaScript['set_child_index_vi'] = function (block) {
   const child = Blockly.JavaScript.valueToCode(block, 'CHILD', Blockly.JavaScript.ORDER_ATOMIC);
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -427,12 +766,29 @@ Blockly.JavaScript['set_child_index_vi'] = function (block) {
   return `${object}.setChildIndex(${child}, ${index});\n`;
 };
 
+/**
+ * Sets the texture frame for the object to use for rendering.
+ * @method set_sprite_frame
+ * @param object object to set the frame for
+ * @param frame frame to set the texture to
+ * @returns {} object.setFrame(frame);
+ */
 Blockly.JavaScript['set_sprite_frame'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_frame = Blockly.JavaScript.valueToCode(block, 'FRAME', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.setFrame(${value_frame});\n`;
 };
 
+/**
+ * Sets the limits for how the object will scale based on it's parent.
+ * @method set_scale_min_max
+ * @param object object to set the scale constraints for
+ * @param minX {number} the minimum horizontal scale the Game Object can scale down to
+ * @param minY {number} the minimum vertical scale the Game Object can scale down to
+ * @param maxX {number} the maximum horizontal scale the Game Object can scale down to
+ * @param maxY {number} the maximum vertical scale the Game Object can scale down to
+ * @returns {} object.setScaleMinMax(minX, minY, maxX, maxY);
+ */
 Blockly.JavaScript['set_scale_min_max'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const minX = Blockly.JavaScript.valueToCode(block, 'MINX', Blockly.JavaScript.ORDER_ATOMIC);
@@ -442,6 +798,12 @@ Blockly.JavaScript['set_scale_min_max'] = function (block) {
   return `${value_object}.setScaleMinMax(${minX}, ${minY}, ${maxX}, ${maxY});\n`;
 };
 
+/**
+ * Clears all scale constraints set on the object.
+ * @method clear_scale_min_max
+ * @param object object to clear scale constraints from
+ * @returns {} object.setScaleMinMax();
+ */
 Blockly.JavaScript['clear_scale_min_max'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.setScaleMinMax();\n`;
@@ -897,7 +1259,6 @@ Blockly.JavaScript['set_immovable'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @returns
  */
 Blockly.JavaScript['is_body_touching'] = function (block) {
   const body = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('BODY'), Blockly.Variables.NAME_TYPE);
@@ -2902,3 +3263,4 @@ function timerComplexHelper (block) {
   }
   return code;
 }
+
