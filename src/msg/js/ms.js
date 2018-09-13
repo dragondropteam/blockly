@@ -2679,6 +2679,7 @@ Blockly.Msg.TYPE_FLOAT_ARR = "array of floats";  // untranslated
 Blockly.Msg.TYPE_INT = "integer";  // untranslated
 Blockly.Msg.TYPE_INT_ARR = "array of integers";  // untranslated
 Blockly.Msg.TYPE_SERVO = "servo";  // untranslated
+Blockly.Msg.TYPE_STEPPER = "stepper";  // untranslated
 Blockly.Msg.TYPE_STRING = "string";  // untranslated
 Blockly.Msg.TYPE_STRING_ARR = "array of strings";  // untranslated
 Blockly.Msg.UNDO = "Undo";  // untranslated
