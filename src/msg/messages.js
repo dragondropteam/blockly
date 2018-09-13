@@ -1147,6 +1147,7 @@ Blockly.Msg.TYPE_FLOAT_ARR = 'array of floats';
 Blockly.Msg.TYPE_STRING_ARR = 'array of strings';
 /// Display name for servo type.
 Blockly.Msg.TYPE_SERVO = 'servo';
+Blockly.Msg.TYPE_STEPPER = 'stepper';
 
 //classes
 /// block text
@@ -5568,3 +5569,17 @@ Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
 /// url - Phaser documentation for game.timer.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+
+Blockly.Msg.STEPPER_CREATE = 'create stepper with';
+Blockly.Msg.STEPS = 'steps';
+Blockly.Msg.STEPPER_TOOLTIP = 'Creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board.';
+Blockly.Msg.STEPPER_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperConstructor';
+Blockly.Msg.PIN = 'pin #';
+
+Blockly.Msg.STEPPER_SET_SPEED = 'set speed of';
+Blockly.Msg.STEPPER_SET_SPEED_TOOLTIP = 'Sets the motor speed in rotations per minute (RPMs).';
+Blockly.Msg.STEPPER_SET_SPEED_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperSetSpeed';
+
+Blockly.Msg.STEPPER_STEPS = 'number of steps';
+Blockly.Msg.STEPPER_STEPS_TOOLTIP = 'Turns the motor a specific number of steps, at a speed determined by the most recent call to setSpeed().';
+Blockly.Msg.STEPPER_STEPS_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperStep';
