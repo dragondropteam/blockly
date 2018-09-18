@@ -308,3 +308,9 @@ Blockly.JavaScript['log_console'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   return `console.log(${value_output});\n`;
 };
+
+Blockly.JavaScript['escape_characters'] = function(block) {
+  const char = block.getFieldValue('CHAR');
+  return [`'\\${char}'`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+

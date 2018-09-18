@@ -1128,25 +1128,26 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = 'Warning: This block may be used only 
 
 //type display names
 /// Display name for integer type.
-Blockly.Msg.TYPE_INT = 'Integer';
+Blockly.Msg.TYPE_INT = 'integer';
 /// Display name for boolean type.
-Blockly.Msg.TYPE_BOOL = 'Boolean';
+Blockly.Msg.TYPE_BOOL = 'boolean';
 /// Display name for floating-point type.
-Blockly.Msg.TYPE_FLOAT = 'Float';
+Blockly.Msg.TYPE_FLOAT = 'float';
 /// Display name for string type.
-Blockly.Msg.TYPE_STRING = 'String';
+Blockly.Msg.TYPE_STRING = 'string';
 /// Display name for character type
-Blockly.Msg.TYPE_CHAR = 'Character';
+Blockly.Msg.TYPE_CHAR = 'character';
 /// Display name for integer array type.
-Blockly.Msg.TYPE_INT_ARR = 'Array of Integers';
+Blockly.Msg.TYPE_INT_ARR = 'array of integers';
 /// Display name for boolean array type.
-Blockly.Msg.TYPE_BOOL_ARR = 'Array of Booleans';
+Blockly.Msg.TYPE_BOOL_ARR = 'array of booleans';
 /// Display name for floating-point array type.
-Blockly.Msg.TYPE_FLOAT_ARR = 'Array of Floats';
+Blockly.Msg.TYPE_FLOAT_ARR = 'array of floats';
 /// Display name for string array type.
-Blockly.Msg.TYPE_STRING_ARR = 'Array of Strings';
+Blockly.Msg.TYPE_STRING_ARR = 'array of strings';
 /// Display name for servo type.
-Blockly.Msg.TYPE_SERVO = 'Servo';
+Blockly.Msg.TYPE_SERVO = 'servo';
+Blockly.Msg.TYPE_STEPPER = 'stepper';
 
 //classes
 /// block text
@@ -1773,6 +1774,7 @@ Blockly.Msg.SET_ANIMATION_PROPERTY_VI_HELP_URL = 'http://dragondrop.digipen.edu/
 /// SET for Boolean Types in animations
 Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_TOOLTIP = 'Sets the boolean value for the selected animation property';
 Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.ANIMATION_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html#%1';
 /// SET for Numeric Types in animations
 Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_TOOLTIP = 'Sets the numeric value for the selected animation property';
 Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
@@ -1999,6 +2001,7 @@ Blockly.Msg.DEBUG_BODY_TOOLTIP = 'Enable debug information for the game object';
 Blockly.Msg.DEBUG_BODY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#body';
 
 /// auto generated
+Blockly.Msg.BODY_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#%1';
 Blockly.Msg.GET_BODY_FIELD_POINT_CLASS = 'get point field';
 /// auto generated
 Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_TOOLTIP = 'Gets the value of the specified point as a point object';
@@ -2207,6 +2210,7 @@ Blockly.Msg.GET_WORLD_REFERENCE_TOOLTIP = 'Returns a reference to the game world
 /// auto generated
 Blockly.Msg.GET_WORLD_REFERENCE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.World.html';
 /// auto generated
+Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#%1';
 Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD = 'set point field';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD_TOOLTIP = 'Set a point property on the object';
@@ -4468,6 +4472,7 @@ Blockly.Msg.STATEMANAGER_CHECK_STATE_TOOLTIP = 'Returns if a given phaser state 
 Blockly.Msg.STATEMANAGER_CHECK_STATE_HELP_URL = 'http://phaser.io/docs/2.6.2/Phaser.StateManager.html#checkState';
 
 Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_TOOLTIP = 'Sets the boolean value for the selected physics property';
+Blockly.Msg.PHYSICS_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#%1';
 Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
 Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_TOOLTIP = 'Gets the boolean value for the selected physics property';
 Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
@@ -4488,6 +4493,7 @@ Blockly.Msg.XCOLON = 'x:';
 Blockly.Msg.YCOLON = 'y:';
 Blockly.Msg.AT = 'at';
 Blockly.Msg.AND = 'and';
+Blockly.Msg.OR = 'or';
 Blockly.Msg.PHYSICS_DISTANCE_BETWEEN = 'distance between';
 Blockly.Msg.PHYSICS_DISTANCE_BETWEEN_TOOLTIP = 'Find the distance between two display objects (like Sprites).';
 Blockly.Msg.PHYSICS_DISTANCE_BETWEEN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#distanceBetween';
@@ -4709,7 +4715,7 @@ Blockly.Msg.MAX = 'max';
 Blockly.Msg.ON_EMITTER = 'on emitter,';
 Blockly.Msg.RATE = 'rate';
 Blockly.Msg.OVER = 'over';
-Blockly.Msg.MILLISECONDS = 'milliseconds';  
+Blockly.Msg.MILLISECONDS = 'milliseconds';
 Blockly.Msg.AT_VOLUME = 'at volume';
 Blockly.Msg.LOOPING = 'looping';
 Blockly.Msg.SETUP = 'setup';
@@ -4740,6 +4746,7 @@ Blockly.Msg.UP = 'up';
 Blockly.Msg.ADD_KEY = 'add key from keycode';
 Blockly.Msg.ADD_KEY_TOOLTIP = 'Create a new Phaser.Key that can be polled, have events attached to it, etc.';
 Blockly.Msg.ADD_KEY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Keyboard.html#addKey';
+Blockly.Msg.KEY_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#%1';
 Blockly.Msg.GET_KEY_BOOLEAN_FIELD_TOOLTIP = 'Read the boolean values of the given key.';
 Blockly.Msg.GET_KEY_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html';
 Blockly.Msg.GET_KEY_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html';
@@ -4769,15 +4776,16 @@ Blockly.Msg.ARDUINO_RANDOM_TOOLTIP = 'The random function generates pseudo-rando
 Blockly.Msg.ARDUINO_RANDOM_HELP_URL = 'https://www.arduino.cc/reference/en/language/functions/random-numbers/random/';
 Blockly.Msg.AND = 'and';
 
-Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP = 'Get teh %1 field for the selected DeviceButton';
+Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#%1';
+Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected DeviceButton';
 Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html';
 
 Blockly.Msg.GET_POINTER_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected Pointer';
 Blockly.Msg.GET_POINTER_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Pointer.html';
 
 Blockly.Msg.DEVICE_BUTTON = 'device button';
-Blockly.Msg.JUST_PRESSED = 'just pressed?';
-Blockly.Msg.JUST_RELEASED = 'just released?';
+Blockly.Msg.JUST_PRESSED = 'just pressed';
+Blockly.Msg.JUST_RELEASED = 'just released';
 Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_TOOLTIP = 'True if the device button was released within 250ms';
 Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#justReleased';
 
@@ -4824,7 +4832,7 @@ Blockly.Msg.IS_OVER_EDGE_TOOLTIP = '';
 Blockly.Msg.SWITCH_AMBIENT_TO_EDGE = 'switch ambient to edge';
 Blockly.Msg.SWITCH_AMBIENT_TO_EDGE_TOOLTIP = '';
 
-Blockly.Msg.SWITCH_EDGE_TO_AMBIENT = 'switch ambient to edge';
+Blockly.Msg.SWITCH_EDGE_TO_AMBIENT = 'switch edge to ambient';
 Blockly.Msg.SWITCH_EDGE_TO_AMBIENT_TOOLTIP = '';
 
 Blockly.Msg.DELAY_WITH_NAVIGATION_SECONDS = 'delay with navigation for';
@@ -4947,6 +4955,7 @@ Blockly.Msg.RADIUS = 'radius';
 Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_TOOLTIP = 'Get numeric fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_SET_NUMERIC_FIELDS_TOOLTIP = 'Set numeric fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#toc-3';
+Blockly.Msg.RECTANGLE_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#%1';
 
 Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_TOOLTIP = 'Get point fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_SET_POINT_FIELDS_TOOLTIP = 'Set point fields of a Rectangle object.';
@@ -4966,7 +4975,7 @@ Blockly.Msg.CIRCLE_CREATE = 'make circle';
 Blockly.Msg.CIRCLE_CREATE_TOOLTIP = 'Creates a new Circle object with the center coordinate specified by the x and y parameters and the diameter specified by the diameter parameter.';
 Blockly.Msg.CIRCLE_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#Circle';
 Blockly.Msg.DIAMETER = 'diameter';
-
+Blockly.Msg.CIRCLE_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#%1';
 Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_TOOLTIP = 'Get numeric fields of a Circle object.';
 Blockly.Msg.CIRCLE_SET_NUMERIC_FIELDS_TOOLTIP = 'Set numeric fields of a Circle object.';
 Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#toc-3';
@@ -5004,6 +5013,7 @@ Blockly.Msg.RECTANGLE_RANDOM = 'random point in';
 Blockly.Msg.RECTANGLE_RANDOM_TOOLTIP = 'Returns a uniformly distributed random point from anywhere within this Rectangle.';
 Blockly.Msg.RECTANGLE_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#random';
 
+Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#%1';
 Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_TOOLTIP = 'Sets the boolean fields of the input handler';
 Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
 
@@ -5058,8 +5068,8 @@ Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_HELP_URL = 'http://dragondrop.digipen.edu/
 
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_DRAG = 'on drag';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_RELEASE = 'on release';
-Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_OFFSET_X = 'offset x';
-Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_OFFSET_Y = 'offset y';
+Blockly.Msg.OFFSET_X = 'offset x';
+Blockly.Msg.OFFSET_Y = 'offset y';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_TOOLTIP = 'Make this Sprite snap to the given grid either during drag or when it\'s released.';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#enableSnap';
 
@@ -5163,7 +5173,413 @@ Blockly.Msg.MOUSE_POSITION_POINT = 'get current mouse position';
 Blockly.Msg.MOUSE_POSITION_POINT_TOOLTIP = 'Returns a Point with the mouse position.';
 Blockly.Msg.MOUSE_POSITION_POINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Mouse.html';
 
-Blockly.Msg.DEBUG_GEOM = 'draw shape'
+Blockly.Msg.DEBUG_GEOM = 'draw shape';
 Blockly.Msg.DEBUG_GEOM_TOOLTIP = 'Renders a Phaser geometry object including Rectangle, Circle, Point or Line.';
 Blockly.Msg.DEBUG_GEOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#geom';
 Blockly.Msg.FILLED = 'filled';
+
+Blockly.Msg.LOGIC_OPERATION_AND_TOOLTIP = 'Returns true if all inputs are true.';
+Blockly.Msg.LOGIC_OPERATION_OR_TOOLTIP = 'Returns true if some inputs are true.';
+Blockly.Msg.ARDUINO_STRING_CREATE = 'create String from';
+Blockly.Msg.ARDUINO_STRING_CREATE_TOOLTIP = 'Create a String from the given contents.';
+Blockly.Msg.ARDUINO_STRING_CREATE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/';
+
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE_INPUT = 'create String from';
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE = 'in base';
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE_TOOLTIP = 'Create a String from the given contents with the given base.';
+Blockly.Msg.ARDUINO_STRING_CREATE_BASE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/';
+
+Blockly.Msg.ARDUINO_STRING_CHAR_AT = 'character at position';
+Blockly.Msg.ARDUINO_STRING_CHAR_AT_STRING = 'from string';
+Blockly.Msg.ARDUINO_STRING_CHAR_AT_TOOLTIP = 'Finds the character in the String at the given position.';
+Blockly.Msg.ARDUINO_STRING_CHAR_AT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/charat/';
+
+Blockly.Msg.ARDUINO_STRING_COMPARE_TO = 'come before';
+Blockly.Msg.ARDUINO_STRING_COMPARE_TO_TOOLTIP = 'Compares two Strings. Returns a negative number if LHS comes before RHS. Returns 0 if they are equal. Returns a positive number if LHS comes after RHS.';
+Blockly.Msg.ARDUINO_STRING_COMPARE_TO_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/compareto/';
+
+Blockly.Msg.ARDUINO_STRING_CONCAT = 'concatenate';
+Blockly.Msg.ARDUINO_STRING_CONCAT_TOOLTIP = 'Appends the parameter to the String.';
+Blockly.Msg.ARDUINO_STRING_CONCAT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/concat/';
+
+Blockly.Msg.ARDUINO_STRING_ENDS_WITH = 'end with';
+Blockly.Msg.ARDUINO_STRING_ENDS_WITH_TOOLTIP = 'Tests whether or not a String ends with the characters of another String.';
+Blockly.Msg.ARDUINO_STRING_ENDS_WITH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/endswith/';
+
+Blockly.Msg.ARDUINO_STRING_EQUALS = 'the same as';
+Blockly.Msg.ARDUINO_STRING_EQUALS_CASE = 'not ignoring case?';
+Blockly.Msg.ARDUINO_STRING_EQUALS_TOOLTIP = 'Compares two Strings for equality.';
+Blockly.Msg.ARDUINO_STRING_EQUALS_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/equals/';
+
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE = 'the same as';
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_CASE = 'ignoring case?';
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_TOOLTIP = 'Compares two Strings for equality, regardless of case.';
+Blockly.Msg.ARDUINO_STRING_EQUALS_IGNORE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/equalsignorecase/';
+
+Blockly.Msg.ARDUINO_STRING_INDEX_OF = 'index of';
+Blockly.Msg.ARDUINO_STRING_INDEX_OF_LOCATION = 'starting at position';
+Blockly.Msg.ARDUINO_STRING_INDEX_OF_TOOLTIP = 'Locates a character or String within another String.';
+Blockly.Msg.ARDUINO_STRING_INDEX_OF_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/indexof/';
+
+Blockly.Msg.ARDUINO_STRING_LENGTH = 'length of';
+Blockly.Msg.ARDUINO_STRING_LENGTH_TOOLTIP = 'Returns the length of the String, in characters.';
+Blockly.Msg.ARDUINO_STRING_LENGTH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/length/';
+
+Blockly.Msg.ARDUINO_STRING_REMOVE = 'remove characters from';
+Blockly.Msg.BETWEEN = 'between';
+Blockly.Msg.ARDUINO_STRING_REMOVE_TOOLTIP = 'Modify in place a String removing chars between the given indices.';
+Blockly.Msg.ARDUINO_STRING_REMOVE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/remove/';
+
+Blockly.Msg.ARDUINO_STRING_REPLACE = 'replace';
+Blockly.Msg.ARDUINO_STRING_REPLACE_TOOLTIP = 'Replaces all instance of the given character/substring with another character/substring.';
+Blockly.Msg.ARDUINO_STRING_REPLACE_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/replace/';
+
+Blockly.Msg.ARDUINO_STRING_STARTS_WITH = 'start with';
+Blockly.Msg.ARDUINO_STRING_STARTS_WITH_TOOLTIP = 'Tests whether or not a String starts with the characters of another String.';
+Blockly.Msg.ARDUINO_STRING_STARTS_WITH_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/startswith/';
+
+Blockly.Msg.ARDUINO_STRING_SUBSTRING = 'substring of';
+Blockly.Msg.ARDUINO_STRING_SUBSTRING_TOOLTIP = 'Get a substring of a String between the given indices.';
+Blockly.Msg.ARDUINO_STRING_SUBSTRING_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/substring/';
+
+Blockly.Msg.CONVERT = 'convert';
+Blockly.Msg.ARDUINO_STRING_TO_INT = 'to int';
+Blockly.Msg.ARDUINO_STRING_TO_INT_TOOLTIP  = 'Converts a valid String to an integer. The input String should start with an integer number.';
+Blockly.Msg.ARDUINO_STRING_TO_INT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/toint/';
+
+Blockly.Msg.ARDUINO_STRING_TO_FLOAT = 'to float';
+Blockly.Msg.ARDUINO_STRING_TO_FLOAT_TOOLTIP  = 'Converts a valid String to an float. The input String should start with an float number.';
+Blockly.Msg.ARDUINO_STRING_TO_FLOAT_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/tofloat/';
+
+Blockly.Msg.ARDUINO_STRING_TO_LOWER = 'to lower-case';
+Blockly.Msg.ARDUINO_STRING_TO_LOWER_TOOLTIP  = 'Get a lower-case version of a String.';
+Blockly.Msg.ARDUINO_STRING_TO_LOWER_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/tolowercase/';
+
+Blockly.Msg.ARDUINO_STRING_TO_UPPER = 'to upper-case';
+Blockly.Msg.ARDUINO_STRING_TO_UPPER_TOOLTIP  = 'Get a upper-case version of a String.';
+Blockly.Msg.ARDUINO_STRING_TO_UPPER_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/touppercase/';
+
+Blockly.Msg.ARDUINO_STRING_TRIM = 'trim';
+Blockly.Msg.ARDUINO_STRING_TRIM_TOOLTIP = 'Get a version of the String with any leading and trailing whitespace removed.';
+Blockly.Msg.ARDUINO_STRING_TRIM_HELP_URL = 'https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/touppercase/';
+
+Blockly.Msg.TYPE_CHARACTER = 'character';
+Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
+Blockly.Msg.CHAR_INPUT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/ctype_h.htm';
+
+Blockly.Msg.CHAR_TO_LOWER = 'lower-case';
+Blockly.Msg.CHAR_TO_LOWER_TOOLTIP = 'Returns the lower-case value of the given character.';
+Blockly.Msg.CHAR_TO_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_tolower.htm';
+
+Blockly.Msg.CHAR_TO_UPPER = 'upper-case';
+Blockly.Msg.CHAR_TO_UPPER_TOOLTIP = 'Returns the upper-case value of the given character.';
+Blockly.Msg.CHAR_TO_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_toupper.htm';
+
+Blockly.Msg.CHAR_IS_ALNUM = 'alphanumeric?';
+Blockly.Msg.CHAR_IS_ALNUM_TOOLTIP = 'Returns non-zero value if c is a digit or a letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALNUM_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalnum.htm';
+
+Blockly.Msg.CHAR_IS_ALPHA = 'alphabetic?';
+Blockly.Msg.CHAR_IS_ALPHA_TOOLTIP = 'Returns non-zero value if c is an alphabet, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALPHA_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalpha.htm';
+
+Blockly.Msg.CHAR_IS_CNTRL = 'a control character?';
+Blockly.Msg.CHAR_IS_CNTRL_TOOLTIP = 'Returns non-zero value if c is a control character, else it returns 0.';
+Blockly.Msg.CHAR_IS_CNTRL_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_iscntrl.htm';
+
+Blockly.Msg.CHAR_IS_DIGIT = 'a digit?';
+Blockly.Msg.CHAR_IS_DIGIT_TOOLTIP = 'Returns non-zero value if c is a digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_DIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isdigit.htm';
+
+Blockly.Msg.CHAR_IS_GRAPH = 'have graphical representation?';
+Blockly.Msg.CHAR_IS_GRAPH_TOOLTIP = 'Returns non-zero value if c has graphical representation, else it returns 0.';
+Blockly.Msg.CHAR_IS_GRAPH_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isgraph.htm';
+
+Blockly.Msg.CHAR_IS_LOWER = 'lower-case?';
+Blockly.Msg.CHAR_IS_LOWER_TOOLTIP = 'Returns non-zero value if c is a lowercase alphabetic letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_islower.htm';
+
+Blockly.Msg.CHAR_IS_PRINT = 'printable?';
+Blockly.Msg.CHAR_IS_PRINT_TOOLTIP = 'Returns non-zero value if c is a printable character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PRINT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isprint.htm';
+
+Blockly.Msg.CHAR_IS_PUNCT = 'a punctuation character?';
+Blockly.Msg.CHAR_IS_PUNCT_TOOLTIP = 'Returns non-zero value if c is a punctuation character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PUNCT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_ispunct.htm';
+
+Blockly.Msg.CHAR_IS_SPACE = 'a space?';
+Blockly.Msg.CHAR_IS_SPACE_TOOLTIP = 'Returns non-zero value if c is a white-space character, else it returns 0.';
+Blockly.Msg.CHAR_IS_SPACE_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm';
+
+Blockly.Msg.CHAR_IS_UPPER = 'upper-case?';
+Blockly.Msg.CHAR_IS_UPPER_TOOLTIP = 'Returns non-zero value if c is upper-case, else it returns 0.';
+Blockly.Msg.CHAR_IS_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isupper.htm';
+
+Blockly.Msg.CHAR_IS_XDIGIT = 'a hexadecimal digit?';
+Blockly.Msg.CHAR_IS_XDIGIT_TOOLTIP = 'Returns non-zero value if c is a hexadecimal digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isxdigit.htm';
+
+Blockly.Msg.BODY_SET_SIZE = 'set body size for';
+Blockly.Msg.BODY_SET_SIZE_TOOLTIP = 'Modify the physics Body to be any dimension.';
+Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#setSize';
+
+Blockly.Msg.DEBUG_BODY_RENDER = 'render body for';
+Blockly.Msg.DEBUG_BODY_RENDER_TOOLTIP = 'Render Sprite Body.';
+Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#render';
+
+Blockly.Msg.TYPE_CHARACTER = 'character';
+Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
+Blockly.Msg.CHAR_INPUT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/ctype_h.htm';
+
+Blockly.Msg.CHAR_TO_LOWER = 'lower-case';
+Blockly.Msg.CHAR_TO_LOWER_TOOLTIP = 'Returns the lower-case value of the given character.';
+Blockly.Msg.CHAR_TO_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_tolower.htm';
+
+Blockly.Msg.CHAR_TO_UPPER = 'upper-case';
+Blockly.Msg.CHAR_TO_UPPER_TOOLTIP = 'Returns the upper-case value of the given character.';
+Blockly.Msg.CHAR_TO_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_toupper.htm';
+
+Blockly.Msg.CHAR_IS_ALNUM = 'alphanumeric?';
+Blockly.Msg.CHAR_IS_ALNUM_TOOLTIP = 'Returns non-zero value if c is a digit or a letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALNUM_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalnum.htm';
+
+Blockly.Msg.CHAR_IS_ALPHA = 'alphabetic?';
+Blockly.Msg.CHAR_IS_ALPHA_TOOLTIP = 'Returns non-zero value if c is an alphabet, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALPHA_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalpha.htm';
+
+Blockly.Msg.CHAR_IS_CNTRL = 'a control character?';
+Blockly.Msg.CHAR_IS_CNTRL_TOOLTIP = 'Returns non-zero value if c is a control character, else it returns 0.';
+Blockly.Msg.CHAR_IS_CNTRL_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_iscntrl.htm';
+
+Blockly.Msg.CHAR_IS_DIGIT = 'a digit?';
+Blockly.Msg.CHAR_IS_DIGIT_TOOLTIP = 'Returns non-zero value if c is a digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_DIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isdigit.htm';
+
+Blockly.Msg.CHAR_IS_GRAPH = 'have graphical representation?';
+Blockly.Msg.CHAR_IS_GRAPH_TOOLTIP = 'Returns non-zero value if c has graphical representation, else it returns 0.';
+Blockly.Msg.CHAR_IS_GRAPH_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isgraph.htm';
+
+Blockly.Msg.CHAR_IS_LOWER = 'lower-case?';
+Blockly.Msg.CHAR_IS_LOWER_TOOLTIP = 'Returns non-zero value if c is a lowercase alphabetic letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_islower.htm';
+
+Blockly.Msg.CHAR_IS_PRINT = 'printable?';
+Blockly.Msg.CHAR_IS_PRINT_TOOLTIP = 'Returns non-zero value if c is a printable character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PRINT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isprint.htm';
+
+Blockly.Msg.CHAR_IS_PUNCT = 'a punctuation character?';
+Blockly.Msg.CHAR_IS_PUNCT_TOOLTIP = 'Returns non-zero value if c is a punctuation character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PUNCT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_ispunct.htm';
+
+Blockly.Msg.CHAR_IS_SPACE = 'a space?';
+Blockly.Msg.CHAR_IS_SPACE_TOOLTIP = 'Returns non-zero value if c is a white-space character, else it returns 0.';
+Blockly.Msg.CHAR_IS_SPACE_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm';
+
+Blockly.Msg.CHAR_IS_UPPER = 'upper-case?';
+Blockly.Msg.CHAR_IS_UPPER_TOOLTIP = 'Returns non-zero value if c is upper-case, else it returns 0.';
+Blockly.Msg.CHAR_IS_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isupper.htm';
+
+Blockly.Msg.CHAR_IS_XDIGIT = 'a hexadecimal digit?';
+Blockly.Msg.CHAR_IS_XDIGIT_TOOLTIP = 'Returns non-zero value if c is a hexadecimal digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isxdigit.htm';
+
+Blockly.Msg.TIMER_DURATION = 'remaining duration of';
+Blockly.Msg.TIMER_DURATION_TOOLTIP = 'The duration in ms remaining until the next event will occur.';
+Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#duration';
+
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TITLE = 'get';
+/// tooltip - Specify that you are reading variables from game timer and that they are numeric types.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Read numeric fields of game timer.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TITLE = 'set';
+/// block text - Grammatical connection between the member variable and what it will be set to.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TO = 'to';
+/// tooltip - Specify that you are writing values to game.timer and that they are numeric types.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Write to one of the game timer\'s numeric fields.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TITLE = 'get';
+/// tooltip - Specify that you are reading variables from game timer and that they are boolean types.
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Read boolean fields of game timer.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TITLE = 'set';
+/// block text - Grammatical connection between the member variable and what it will be set to.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
+/// tooltip - Specify that you are writing values to game.timer and that they are boolean types.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.FOR_START_VALUE = 'starting at';
+Blockly.Msg.INCREMENT = 'increment by';
+Blockly.Msg.UNTIL = 'until';
+
+Blockly.Msg.TYPE_CHARACTER = 'character';
+Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
+Blockly.Msg.CHAR_INPUT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/ctype_h.htm';
+
+Blockly.Msg.CHAR_TO_LOWER = 'lower-case';
+Blockly.Msg.CHAR_TO_LOWER_TOOLTIP = 'Returns the lower-case value of the given character.';
+Blockly.Msg.CHAR_TO_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_tolower.htm';
+
+Blockly.Msg.CHAR_TO_UPPER = 'upper-case';
+Blockly.Msg.CHAR_TO_UPPER_TOOLTIP = 'Returns the upper-case value of the given character.';
+Blockly.Msg.CHAR_TO_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_toupper.htm';
+
+Blockly.Msg.CHAR_IS_ALNUM = 'alphanumeric?';
+Blockly.Msg.CHAR_IS_ALNUM_TOOLTIP = 'Returns non-zero value if c is a digit or a letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALNUM_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalnum.htm';
+
+Blockly.Msg.CHAR_IS_ALPHA = 'alphabetic?';
+Blockly.Msg.CHAR_IS_ALPHA_TOOLTIP = 'Returns non-zero value if c is an alphabet, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALPHA_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalpha.htm';
+
+Blockly.Msg.CHAR_IS_CNTRL = 'a control character?';
+Blockly.Msg.CHAR_IS_CNTRL_TOOLTIP = 'Returns non-zero value if c is a control character, else it returns 0.';
+Blockly.Msg.CHAR_IS_CNTRL_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_iscntrl.htm';
+
+Blockly.Msg.CHAR_IS_DIGIT = 'a digit?';
+Blockly.Msg.CHAR_IS_DIGIT_TOOLTIP = 'Returns non-zero value if c is a digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_DIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isdigit.htm';
+
+Blockly.Msg.CHAR_IS_GRAPH = 'have graphical representation?';
+Blockly.Msg.CHAR_IS_GRAPH_TOOLTIP = 'Returns non-zero value if c has graphical representation, else it returns 0.';
+Blockly.Msg.CHAR_IS_GRAPH_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isgraph.htm';
+
+Blockly.Msg.CHAR_IS_LOWER = 'lower-case?';
+Blockly.Msg.CHAR_IS_LOWER_TOOLTIP = 'Returns non-zero value if c is a lowercase alphabetic letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_islower.htm';
+
+Blockly.Msg.CHAR_IS_PRINT = 'printable?';
+Blockly.Msg.CHAR_IS_PRINT_TOOLTIP = 'Returns non-zero value if c is a printable character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PRINT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isprint.htm';
+
+Blockly.Msg.CHAR_IS_PUNCT = 'a punctuation character?';
+Blockly.Msg.CHAR_IS_PUNCT_TOOLTIP = 'Returns non-zero value if c is a punctuation character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PUNCT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_ispunct.htm';
+
+Blockly.Msg.CHAR_IS_SPACE = 'a space?';
+Blockly.Msg.CHAR_IS_SPACE_TOOLTIP = 'Returns non-zero value if c is a white-space character, else it returns 0.';
+Blockly.Msg.CHAR_IS_SPACE_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm';
+
+Blockly.Msg.CHAR_IS_UPPER = 'upper-case?';
+Blockly.Msg.CHAR_IS_UPPER_TOOLTIP = 'Returns non-zero value if c is upper-case, else it returns 0.';
+Blockly.Msg.CHAR_IS_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isupper.htm';
+
+Blockly.Msg.CHAR_IS_XDIGIT = 'a hexadecimal digit?';
+Blockly.Msg.CHAR_IS_XDIGIT_TOOLTIP = 'Returns non-zero value if c is a hexadecimal digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isxdigit.htm';
+
+Blockly.Msg.BODY_SET_SIZE = 'set body size for';
+Blockly.Msg.BODY_SET_SIZE_TOOLTIP = 'Modify the physics Body to be any dimension.';
+Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#setSize';
+
+Blockly.Msg.DEBUG_BODY_RENDER = 'render body for';
+Blockly.Msg.DEBUG_BODY_RENDER_TOOLTIP = 'Render Sprite Body.';
+Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#render';
+
+Blockly.Msg.TYPE_CHARACTER = 'character';
+Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
+Blockly.Msg.CHAR_INPUT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/ctype_h.htm';
+
+Blockly.Msg.CHAR_TO_LOWER = 'lower-case';
+Blockly.Msg.CHAR_TO_LOWER_TOOLTIP = 'Returns the lower-case value of the given character.';
+Blockly.Msg.CHAR_TO_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_tolower.htm';
+
+Blockly.Msg.CHAR_TO_UPPER = 'upper-case';
+Blockly.Msg.CHAR_TO_UPPER_TOOLTIP = 'Returns the upper-case value of the given character.';
+Blockly.Msg.CHAR_TO_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_toupper.htm';
+
+Blockly.Msg.CHAR_IS_ALNUM = 'alphanumeric?';
+Blockly.Msg.CHAR_IS_ALNUM_TOOLTIP = 'Returns non-zero value if c is a digit or a letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALNUM_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalnum.htm';
+
+Blockly.Msg.CHAR_IS_ALPHA = 'alphabetic?';
+Blockly.Msg.CHAR_IS_ALPHA_TOOLTIP = 'Returns non-zero value if c is an alphabet, else it returns 0.';
+Blockly.Msg.CHAR_IS_ALPHA_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isalpha.htm';
+
+Blockly.Msg.CHAR_IS_CNTRL = 'a control character?';
+Blockly.Msg.CHAR_IS_CNTRL_TOOLTIP = 'Returns non-zero value if c is a control character, else it returns 0.';
+Blockly.Msg.CHAR_IS_CNTRL_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_iscntrl.htm';
+
+Blockly.Msg.CHAR_IS_DIGIT = 'a digit?';
+Blockly.Msg.CHAR_IS_DIGIT_TOOLTIP = 'Returns non-zero value if c is a digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_DIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isdigit.htm';
+
+Blockly.Msg.CHAR_IS_GRAPH = 'have graphical representation?';
+Blockly.Msg.CHAR_IS_GRAPH_TOOLTIP = 'Returns non-zero value if c has graphical representation, else it returns 0.';
+Blockly.Msg.CHAR_IS_GRAPH_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isgraph.htm';
+
+Blockly.Msg.CHAR_IS_LOWER = 'lower-case?';
+Blockly.Msg.CHAR_IS_LOWER_TOOLTIP = 'Returns non-zero value if c is a lowercase alphabetic letter, else it returns 0.';
+Blockly.Msg.CHAR_IS_LOWER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_islower.htm';
+
+Blockly.Msg.CHAR_IS_PRINT = 'printable?';
+Blockly.Msg.CHAR_IS_PRINT_TOOLTIP = 'Returns non-zero value if c is a printable character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PRINT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isprint.htm';
+
+Blockly.Msg.CHAR_IS_PUNCT = 'a punctuation character?';
+Blockly.Msg.CHAR_IS_PUNCT_TOOLTIP = 'Returns non-zero value if c is a punctuation character, else it returns 0.';
+Blockly.Msg.CHAR_IS_PUNCT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_ispunct.htm';
+
+Blockly.Msg.CHAR_IS_SPACE = 'a space?';
+Blockly.Msg.CHAR_IS_SPACE_TOOLTIP = 'Returns non-zero value if c is a white-space character, else it returns 0.';
+Blockly.Msg.CHAR_IS_SPACE_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm';
+
+Blockly.Msg.CHAR_IS_UPPER = 'upper-case?';
+Blockly.Msg.CHAR_IS_UPPER_TOOLTIP = 'Returns non-zero value if c is upper-case, else it returns 0.';
+Blockly.Msg.CHAR_IS_UPPER_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isupper.htm';
+
+Blockly.Msg.CHAR_IS_XDIGIT = 'a hexadecimal digit?';
+Blockly.Msg.CHAR_IS_XDIGIT_TOOLTIP = 'Returns non-zero value if c is a hexadecimal digit, else it returns 0.';
+Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard_library/c_function_isxdigit.htm';
+
+Blockly.Msg.TIMER_DURATION = 'remaining duration of';
+Blockly.Msg.TIMER_DURATION_TOOLTIP = 'The duration in ms remaining until the next event will occur.';
+Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#duration';
+
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TITLE = 'get';
+/// tooltip - Specify that you are reading variables from game timer and that they are numeric types.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Read numeric fields of game timer.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TITLE = 'set';
+/// block text - Grammatical connection between the member variable and what it will be set to.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TO = 'to';
+/// tooltip - Specify that you are writing values to game.timer and that they are numeric types.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Write to one of the game timer\'s numeric fields.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TITLE = 'get';
+/// tooltip - Specify that you are reading variables from game timer and that they are boolean types.
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Read boolean fields of game timer.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+/// block text - Label that this block lets users get the value of members of game.timer.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TITLE = 'set';
+/// block text - Grammatical connection between the member variable and what it will be set to.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
+/// tooltip - Specify that you are writing values to game.timer and that they are boolean types.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
+/// url - Phaser documentation for game.timer.
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+
+Blockly.Msg.STEPPER_CREATE = 'create stepper with';
+Blockly.Msg.STEPS = 'steps';
+Blockly.Msg.STEPPER_TOOLTIP = 'Creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board.';
+Blockly.Msg.STEPPER_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperConstructor';
+Blockly.Msg.PIN = 'pin #';
+
+Blockly.Msg.STEPPER_SET_SPEED = 'set speed of stepper to';
+Blockly.Msg.STEPPER_SET_SPEED_TOOLTIP = 'Sets the motor speed in rotations per minute (RPMs).';
+Blockly.Msg.STEPPER_SET_SPEED_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperSetSpeed';
+
+Blockly.Msg.STEPPER_STEPS = 'turn stepper';
+Blockly.Msg.STEPPER_STEPS_TOOLTIP = 'Turns the motor a specific number of steps, at a speed determined by the most recent call to setSpeed().';
+Blockly.Msg.STEPPER_STEPS_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperStep';

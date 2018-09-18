@@ -41,7 +41,8 @@ goog.require('goog.dom');
 goog.require('goog.math.Coordinate');
 goog.require('goog.userAgent');
 
-
+let mouseX, mouseY;
+document.addEventListener("mousemove", getMousePosition);
 /**
  * Class for a workspace.  This is an onscreen area with optional trashcan,
  * scrollbars, bubbles, and dragging.
@@ -579,64 +580,19 @@ Blockly.WorkspaceSvg.prototype.highlightBlock = function(id) {
  * @param {!Element} xmlBlock XML block element.
  */
 Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
-  if (!this.rendered || xmlBlock.getElementsByTagName('block').length >=
-      this.remainingCapacity()) {
-    return;
+  var mouseLoc = { x:0, y:0 };
+  if(this.mouseLocation)
+  {
+    let mainWorkspace = Blockly.getMainWorkspace();
+    let item = document.getElementsByClassName('blocklyToolboxDiv');
+    let offset = 0; // default. 0 is acceptable.
+    if(item[0])
+      offset = item[0].clientWidth;
+
+    mouseLoc.x = (mouseX - mainWorkspace.scrollX) / mainWorkspace.scale - offset;
+    mouseLoc.y = (mouseY - mainWorkspace.scrollY) / mainWorkspace.scale;
   }
-  Blockly.terminateDrag_();  // Dragging while pasting?  No.
-  Blockly.Events.disable();
-  try {
-    var block = Blockly.Xml.domToBlock(xmlBlock, this);
-    // Move the duplicate to original position.
-    var blockX = parseInt(xmlBlock.getAttribute('x'), 10);
-    var blockY = parseInt(xmlBlock.getAttribute('y'), 10);
-    if (!isNaN(blockX) && !isNaN(blockY)) {
-      if (this.RTL) {
-        blockX = -blockX;
-      }
-      // Offset block until not clobbering another block and not in connection
-      // distance with neighbouring blocks.
-      do {
-        var collide = false;
-        var allBlocks = this.getAllBlocks();
-        for (var i = 0, otherBlock; otherBlock = allBlocks[i]; i++) {
-          var otherXY = otherBlock.getRelativeToSurfaceXY();
-          if (Math.abs(blockX - otherXY.x) <= 1 &&
-              Math.abs(blockY - otherXY.y) <= 1) {
-            collide = true;
-            break;
-          }
-        }
-        if (!collide) {
-          // Check for blocks in snap range to any of its connections.
-          var connections = block.getConnections_(false);
-          for (var i = 0, connection; connection = connections[i]; i++) {
-            var neighbour = connection.closest(Blockly.SNAP_RADIUS,
-                new goog.math.Coordinate(blockX, blockY));
-            if (neighbour.connection) {
-              collide = true;
-              break;
-            }
-          }
-        }
-        if (collide) {
-          if (this.RTL) {
-            blockX -= Blockly.SNAP_RADIUS;
-          } else {
-            blockX += Blockly.SNAP_RADIUS;
-          }
-          blockY += Blockly.SNAP_RADIUS * 2;
-        }
-      } while (collide);
-      block.moveBy(blockX, blockY);
-    }
-  } finally {
-    Blockly.Events.enable();
-  }
-  if (Blockly.Events.isEnabled() && !block.isShadow()) {
-    Blockly.Events.fire(new Blockly.Events.Create(block));
-  }
-  block.select();
+  Blockly.ContextMenu.callbackFactoryWorkspace(this, mouseLoc, xmlBlock)();
 };
 
 /**
@@ -1450,3 +1406,9 @@ Blockly.WorkspaceSvg.setTopLevelWorkspaceMetrics_ = function(xyRatio) {
 // Export symbols that would otherwise be renamed by Closure compiler.
 Blockly.WorkspaceSvg.prototype['setVisible'] =
     Blockly.WorkspaceSvg.prototype.setVisible;
+
+function getMousePosition(event) {
+  event = event || window.event;
+  mouseX = event.pageX;
+  mouseY = event.pageY;
+};

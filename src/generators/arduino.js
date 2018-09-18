@@ -86,13 +86,14 @@ Blockly.C.TYPE_CONVERSION = [];
 Blockly.C.TYPE_CONVERSION['INTEGER'] = ['int', Blockly.Msg.TYPE_INT];
 Blockly.C.TYPE_CONVERSION['BOOLEAN'] = ['bool', Blockly.Msg.TYPE_BOOL];
 Blockly.C.TYPE_CONVERSION['FLOAT'] = ['float', Blockly.Msg.TYPE_FLOAT];
+Blockly.C.TYPE_CONVERSION['CHARACTER'] = ['char', Blockly.Msg.TYPE_CHARACTER];
 Blockly.C.TYPE_CONVERSION['STRING'] = ['String', Blockly.Msg.TYPE_STRING];
-// Blockly.C.TYPE_CONVERSION['CHARACTER'] = 'char';
 Blockly.C.TYPE_CONVERSION['ArrayINT'] = ['int *', Blockly.Msg.TYPE_INT_ARR];
 Blockly.C.TYPE_CONVERSION['ArrayFLOAT'] = ['float *', Blockly.Msg.TYPE_FLOAT_ARR];
 Blockly.C.TYPE_CONVERSION['ArrayBoolean'] = ['bool *', Blockly.Msg.TYPE_BOOL_ARR];
 Blockly.C.TYPE_CONVERSION['ArrayString'] = ['String *', Blockly.Msg.TYPE_STRING_ARR];
 Blockly.C.TYPE_CONVERSION['SERVO'] = ['Servo', Blockly.Msg.TYPE_SERVO];
+Blockly.C.TYPE_CONVERSION['STEPPER'] = ['Stepper', Blockly.Msg.TYPE_STEPPER];
 
 
 /**
