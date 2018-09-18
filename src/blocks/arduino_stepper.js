@@ -30,7 +30,8 @@ Blockly.Blocks['stepper'] = {
     this.appendValueInput('PIN4')
       .setCheck('Number')
       .appendField(Blockly.Msg.PIN);
-    this.setOutput(true, 'STEPPER');
+    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, null);
     this.setColour(ARDUINO_STEPPER_COLOUR);
     this.setTooltip(Blockly.Msg.STEPPER_TOOLTIP);
     this.setHelpUrl(Blockly.Msg.STEPPER_HELP_URL);
@@ -39,12 +40,9 @@ Blockly.Blocks['stepper'] = {
 
 Blockly.Blocks['stepper_set_speed'] = {
   init: function () {
-    this.appendValueInput('STEPPER')
-      .setCheck('STEPPER')
-      .appendField(Blockly.Msg.STEPPER_SET_SPEED);
     this.appendValueInput('SPEED')
       .setCheck('Number')
-      .appendField(Blockly.Msg.TO);
+      .appendField(Blockly.Msg.STEPPER_SET_SPEED);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setInputsInline(true);
@@ -56,12 +54,11 @@ Blockly.Blocks['stepper_set_speed'] = {
 
 Blockly.Blocks['stepper_steps'] = {
   init: function () {
-    this.appendValueInput('STEPPER')
-      .setCheck('STEPPER')
-      .appendField(Blockly.Msg.TURN);
     this.appendValueInput('STEPS')
       .setCheck('Number')
       .appendField(Blockly.Msg.STEPPER_STEPS);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.STEPS);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setInputsInline(true);
