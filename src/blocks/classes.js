@@ -1653,6 +1653,7 @@ Blockly.Blocks['method_callnoreturn'] = {
       .setCheck('Class');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
+    this.setInputsInline(true);
 
     // Tooltip is set in renameMethod.
     this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
@@ -1990,6 +1991,7 @@ Blockly.Blocks['method_callreturn'] = {
       .appendField(CALL_IN_CLASS_MSG.replace('%1', this.class_ || 'class'), 'INSTANCE_NAME')
       .setCheck('Class');
     this.setOutput(true);
+    this.setInputsInline(true);
 
     // Tooltip is set in domToMutation.
     this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL);

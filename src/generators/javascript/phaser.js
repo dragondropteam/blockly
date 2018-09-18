@@ -841,6 +841,26 @@ Blockly.JavaScript['get_body_numeric_field'] = function (block) {
   const element = block.getFieldValue('ELEMENT');
   return [`${object}.body.${element}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
+
+Blockly.JavaScript['body_set_size'] = function (block) {
+  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
+
+  return `${body}.body.setSize(${width}, ${height});\n`;
+};
+
+Blockly.JavaScript['body_set_size_complex'] = function (block) {
+  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
+  const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
+  const offset_x = Blockly.JavaScript.valueToCode(block, 'OFFSET_X', Blockly.JavaScript.ORDER_ATOMIC);
+  const offset_y = Blockly.JavaScript.valueToCode(block, 'OFFSET_Y', Blockly.JavaScript.ORDER_ATOMIC);
+
+  return `${body}.body.setSize(${width}, ${height}, ${offset_x}, ${offset_y});\n`;
+};
+
+
 //endregion
 
 Blockly.JavaScript['create_object_in_group'] = function (block) {
@@ -1621,14 +1641,25 @@ Blockly.JavaScript['object_set_to'] = function (block) {
 //     return `game.world.sendToBack(${variable_object});\n`;
 // };
 
+Blockly.JavaScript['add_text_input'] = function (block) {
+  const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const value_y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const value_initial_text = Blockly.JavaScript.valueToCode(block, 'INITIAL_TEXT', Blockly.JavaScript.ORDER_ATOMIC);
+  const size = Blockly.JavaScript.valueToCode(block, 'FONT_SIZE', Blockly.JavaScript.ORDER_ATOMIC);
+  const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: \`\${${size}}px\`, fill: ${colour}})`, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['add_text'] = function (block) {
   const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const value_initial_text = Blockly.JavaScript.valueToCode(block, 'INITIAL_TEXT', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_font_size = Blockly.JavaScript.valueToCode(block, 'FONT_SIZE', Blockly.JavaScript.ORDER_ATOMIC);
+  const size = Blockly.JavaScript.valueToCode(block, 'FONT_SIZE', Blockly.JavaScript.ORDER_ATOMIC);
   const colour_fill = block.getFieldValue('FILL');
-  return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: '${value_font_size}px', fill: '${colour_fill}'})`, Blockly.JavaScript.ORDER_NONE];
+  return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: \`\${${size}}px\`, fill: '${colour_fill}'})`, Blockly.JavaScript.ORDER_NONE];
 };
+
+
 
 Blockly.JavaScript['set_text'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -1902,7 +1933,15 @@ Blockly.JavaScript['debug_body_info'] = function (block) {
   const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.spriteInfo(${object}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.bodyInfo(${object}, ${x_pos}, ${y_pos}, ${colour});\n`;
+};
+
+Blockly.JavaScript['debug_body_render'] = function (block) {
+  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
+  const filled = block.getFieldValue('FILLED') == 'TRUE';
+
+  return `game.debug.body(${body}, ${colour}, ${filled});\n`;
 };
 
 Blockly.JavaScript['debug_camera'] = function (block) {
@@ -2646,6 +2685,23 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
 //endregion
 
 //region TIMER
+Blockly.JavaScript['get_timer_numeric_member'] =
+Blockly.JavaScript['get_timer_boolean_member'] =
+  function (block) {
+  const property = block.getFieldValue('PROPERTY');
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${timer}.${property}`, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['set_timer_numeric_member'] =
+Blockly.JavaScript['set_timer_boolean_member'] =
+  function (block) {
+  const property = block.getFieldValue('PROPERTY');
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
+  return `${timer}.${property} = ${value};\n`;
+};
+
 Blockly.JavaScript['create_timer'] = function (block) {
   const autoDestroy = block.getFieldValue('AUTO_DESTROY') === 'TRUE';
   return [`game.time.create(${autoDestroy})`, Blockly.JavaScript.ORDER_ATOMIC];
@@ -2669,11 +2725,32 @@ Blockly.JavaScript['timer_add_event'] = function (block) {
   return `${timer}.add(${delay}, ${callback});\n`;
 };
 
+Blockly.JavaScript['timer_add_event_complex'] = function (block) {
+  const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  const callback = block.getFieldValue('CALLBACK');
+
+  let code = timerComplexHelper(block);
+
+  return `${timer}.add(${delay}, ${callback}, undefined, ${code});\n`;
+};
+
 Blockly.JavaScript['timer_loop_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
+
   return `${timer}.loop(${delay}, ${callback});\n`;
+};
+
+Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
+  const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  const callback = block.getFieldValue('CALLBACK');
+
+  let code = timerComplexHelper(block);
+
+  return `${timer}.loop(${delay}, ${callback}, ${code});\n`;
 };
 
 Blockly.JavaScript['timer_repeat_event'] = function (block) {
@@ -2682,6 +2759,17 @@ Blockly.JavaScript['timer_repeat_event'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
   return `${timer}.repeat(${delay}, ${repeatCount}, ${callback});\n`;
+};
+
+Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
+  const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  const repeatCount = Blockly.JavaScript.valueToCode(block, 'REPEAT_COUNT', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  const callback = block.getFieldValue('CALLBACK');
+
+  let code = timerComplexHelper(block);
+
+  return `${timer}.repeat(${delay}, ${repeatCount}, ${callback}, ${code});\n`;
 };
 
 Blockly.JavaScript['timer_destroy'] = function (block) {
@@ -2701,8 +2789,13 @@ Blockly.JavaScript['timer_resume'] = function (block) {
 
 Blockly.JavaScript['timer_stop'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
-  const clearEvents = block.getFieldValue('CLEAR_EVENTS');
+  const clearEvents = block.getFieldValue('CLEAR_EVENTS') === 'TRUE';
   return `${timer}.stop(${clearEvents});\n`;
+};
+
+Blockly.JavaScript['timer_duration'] = function (block) {
+  const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${timer}.duration`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {
@@ -2787,4 +2880,29 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.justPressed()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
+
+Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
+  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
+  const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${object}.justReleased(${duration})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+};
+
+Blockly.JavaScript['device_button_just_pressed_complex'] = function (block) {
+  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
+  const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${object}.justPressed(${duration})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+};
 //endregion
+
+//region HELPER_FUNCTIONS
+function timerComplexHelper (block) {
+  let code = '';
+
+  for (let i = 0; i < block.itemCount_; i++) {
+    code += Blockly.JavaScript.valueToCode(block, 'ADD' + i, Blockly.JavaScript.ORDER_ATOMIC) || '';
+    if (i < block.itemCount_ - 1) {
+      code += ' , ';
+    }
+  }
+  return code;
+}
