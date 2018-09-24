@@ -93,7 +93,7 @@ Blockly.C.TYPE_CONVERSION['ArrayFLOAT'] = ['float *', Blockly.Msg.TYPE_FLOAT_ARR
 Blockly.C.TYPE_CONVERSION['ArrayBoolean'] = ['bool *', Blockly.Msg.TYPE_BOOL_ARR];
 Blockly.C.TYPE_CONVERSION['ArrayString'] = ['String *', Blockly.Msg.TYPE_STRING_ARR];
 Blockly.C.TYPE_CONVERSION['SERVO'] = ['Servo', Blockly.Msg.TYPE_SERVO];
-
+Blockly.C.TYPE_CONVERSION['STEPPER'] = ['Stepper', Blockly.Msg.TYPE_STEPPER];
 
 
 /**
