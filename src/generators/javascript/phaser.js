@@ -1380,7 +1380,7 @@ Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
 
 Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`${object}.input.pointerUp()`, Blockly.JavaScript.ORDER_ATOMIC];
+  return [`${object}.input.pointerDown()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['input_handler_start'] = function (block) {
