@@ -5570,6 +5570,10 @@ Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'
 /// url - Phaser documentation for game.timer.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
 
+Blockly.Msg.SPRITE_GET_TAG = 'get tag of sprite';
+Blockly.Msg.SPRITE_GET_TAG_TOOLTIP = 'The key of the image or texture used by this Game Object during rendering.';
+Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#key';
+
 <<<<<<< HEAD
 Blockly.Msg.PHASER_LOAD_TILEMAP = 'create tilemap';
 Blockly.Msg.PHASER_LOAD_TILEMAP_TOOLTIP = 'Adds a Tile Map data file to the current load queue.';
