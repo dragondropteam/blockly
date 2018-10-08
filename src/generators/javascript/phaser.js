@@ -134,6 +134,12 @@ Blockly.JavaScript['draw_circle'] = function (block) {
 //endregion
 
 //region SPRITE/IMAGE
+Blockly.JavaScript['sprite_get_tag'] = function (block) {
+  const sprite = Blockly.JavaScript.valueToCode(block, 'SPRITE', Blockly.JavaScript.ORDER_ATOMIC);
+
+  return [`${sprite}.key`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
 Blockly.JavaScript['create_image'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
   const source = Blockly.JavaScript.valueToCode(block, 'SRC', Blockly.JavaScript.ORDER_NONE);
