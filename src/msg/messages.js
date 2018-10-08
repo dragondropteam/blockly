@@ -5583,3 +5583,7 @@ Blockly.Msg.STEPPER_SET_SPEED_HELP_URL = 'https://www.arduino.cc/en/Reference/St
 Blockly.Msg.STEPPER_STEPS = 'turn stepper';
 Blockly.Msg.STEPPER_STEPS_TOOLTIP = 'Turns the motor a specific number of steps, at a speed determined by the most recent call to setSpeed().';
 Blockly.Msg.STEPPER_STEPS_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperStep';
+
+Blockly.Msg.SPRITE_GET_TAG = 'get tag of sprite';
+Blockly.Msg.SPRITE_GET_TAG_TOOLTIP = 'The key of the image or texture used by this Game Object during rendering.';
+Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#key';
