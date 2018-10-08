@@ -1452,6 +1452,10 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
 //endregion
 
 //region WORLD
+Blockly.JavaScript['get_world'] = function (block) {
+  return [`game.world`, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['get_world_property'] = function (block) {
   const dropdown_name = block.getFieldValue('NAME');
   return [`game.world.${dropdown_name}`, Blockly.JavaScript.ORDER_NONE];
