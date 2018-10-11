@@ -2828,10 +2828,10 @@ Blockly.JavaScript['input_handler_down_duration'] = function (block) {
 };
 
 /**
- * 
- * @method
- * @param
- * @returns {}
+ * Returns true/false if the pointer is up.
+ * @method input_handler_pointer_up
+ * @param object object to check
+ * @returns {} object.input.pointerUp()
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
@@ -2839,64 +2839,152 @@ Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
   return [`${object}.input.pointerUp()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns true/false if the pointer is down.
+ * @method input_handler_pointer_down
+ * @param object object to check
+ * @returns {} object.input.pointerDown()
+ * @block
+ */
 Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.input.pointerUp()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Starts the Input Handler. This is automatically called if input is enabled on an object. Higher priority objects take click priority when objects are stacked on top of each other.
+ * @method input_handler_start
+ * @param object object to start input handler for
+ * @param priority {Number} the priority of the object
+ * @returns {} object.input.start(priority);
+ * @block
+ */
 Blockly.JavaScript['input_handler_start'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const priority = Blockly.JavaScript.valueToCode(block, 'PRIORITY', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.input.start(${priority});\n`;
 };
 
+/**
+ * Stops the Input Handler from running on the object.
+ * @method input_handler_stop
+ * @param object object to affect
+ * @returns {} object.input.stop();
+ * @block
+ */
 Blockly.JavaScript['input_handler_stop'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.input.stop();\n`;
 };
 
+/**
+ * Returns true/false if the pointer left the object's bounds within the given duration.
+ * @method input_handler_just_out
+ * @param object object to check
+ * @param time {Number} duration to check
+ * @returns {} object.input.justOut(0, time)
+ * @block
+ */
 Blockly.JavaScript['input_handler_just_out'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const time = Blockly.JavaScript.valueToCode(block, 'TIME', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.input.justOut(0, ${time})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns true/false if the pointer is outside of the object's bounds.
+ * @method input_handler_pointer_out
+ * @param object object to check
+ * @returns {} object.input.pointerOut()
+ * @block
+ */
 Blockly.JavaScript['input_handler_pointer_out'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.input.pointerOut()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns the x coordinate of the pointer, relative to the top-left of anchor of the object.
+ * @method input_handler_pointer_x
+ * @param object object to check
+ * @returns {} object.input.pointerX()
+ * @block
+ */
 Blockly.JavaScript['input_handler_pointer_x'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.input.pointerX()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns the y coordinate of the pointer, relative to the top-left of anchor of the object.
+ * @method input_handler_pointer_y
+ * @param object object to check
+ * @returns {} object.input.pointerY()
+ * @block
+ */
 Blockly.JavaScript['input_handler_pointer_y'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.input.pointerY()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns a point containing the x & y coordinates of the pointer, relative to the top-left of the anchor of the object.
+ * @method input_handler_pointer_position
+ * @param object object to check
+ * @returns {} new Phaser.Point(object.input.pointerX(), object.input.pointerY())
+ * @block
+ */
 Blockly.JavaScript['input_handler_pointer_position'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const position = `new Phaser.Point(${object}.input.pointerX(), ${object}.input.pointerY())`;
   return [`${position}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Resets the input handler for the object, and disables it.
+ * @method input_handler_reset
+ * @param object object to reset the input handler for
+ * @returns {} object.input.reset();
+ * @block
+ */
 Blockly.JavaScript['input_handler_reset'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.input.reset();\n`;
 };
 
+/**
+ * Destroys the input handler for the object.
+ * @method input_handler_destroy
+ * @param object object to destroy the handler for
+ * @returns {} object.input.destroy();
+ * @block
+ */
 Blockly.JavaScript['input_handler_destroy'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.input.destroy();\n`;
 };
 
+/**
+ * Returns true/false if the object is currently being dragged.
+ * @method input_handler_pointer_dragged
+ * @param object object to check
+ * @returns {} object.input.pointerDragged()
+ * @block
+ */
 Blockly.JavaScript['input_handler_pointer_dragged'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.input.pointerDragged()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Locks dragging for the object in certain directions.
+ * @method input_handler_set_drag_lock
+ * @param object object to lock dragging for
+ * @param horizontal {Boolean} enables/disables the object from being dragged horizontally
+ * @param vertical {Boolean} enables/disables the object from being dragged vertically
+ * @returns {} object.input.setDragLock(horizontal, vertical);
+ * @block
+ */
 Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const horizontal = block.getFieldValue('HORIZONTAL') === 'TRUE';
@@ -2907,25 +2995,52 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
 //endregion
 
 //region WORLD
+/**
+ * Returns the property of the object.
+ * @method get_world_property
+ * @param property property to get values from
+ * @returns {} game.world.property
+ * @block
+ */
 Blockly.JavaScript['get_world_property'] = function (block) {
-  const dropdown_name = block.getFieldValue('NAME');
-  return [`game.world.${dropdown_name}`, Blockly.JavaScript.ORDER_NONE];
+  const property = block.getFieldValue('NAME');
+  return [`game.world.${property}`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Sets the top-left coordinates and size/physical bounds of the game world.
+ * @method set_world_bounds
+ * @param x {Number} the x coordinate of the top-left corner of the world
+ * @param y {Number} the y coordinate of the top-left corner of the world
+ * @param w {Number} the width of the game world
+ * @param h {Number} the height of the game world
+ * @returns {} game.world.setBounds(x, y, w, h);
+ * @block
+ */
 Blockly.JavaScript['set_world_bounds'] = function (block) {
-  const value_x = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_y = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_w = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_h = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
-  return `game.world.setBounds(${value_x}, ${value_y}, ${value_w}, ${value_h});\n`;
+  const x = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const w = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
+  const h = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
+  return `game.world.setBounds(${x}, ${y}, ${w}, ${h});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['create_point'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
   return [`new Phaser.Point(${value_x}, ${value_y})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_scale'] = function (block) {
   const xScale = Blockly.JavaScript.valueToCode(block, 'SCALE_X', Blockly.JavaScript.ORDER_ATOMIC);
   const yScale = Blockly.JavaScript.valueToCode(block, 'SCALE_Y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2933,13 +3048,27 @@ Blockly.JavaScript['set_scale'] = function (block) {
   return `${object}.scale.setTo(${xScale}, ${yScale});\n`;
 };
 
+/**
+ * Sets the scale of the object.
+ * @method set_scale_vi
+ * @param x {Number} amount to scale the object in the x direction
+ * @param y {Number} amount to scale the object in the y direction
+ * @param object object to scale
+ * @returns {} object.scale.setTo(x, y);
+ * @block
+ */
 Blockly.JavaScript['set_scale_vi'] = function (block) {
-  const xScale = Blockly.JavaScript.valueToCode(block, 'SCALE_X', Blockly.JavaScript.ORDER_ATOMIC);
-  const yScale = Blockly.JavaScript.valueToCode(block, 'SCALE_Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'SCALE_X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'SCALE_Y', Blockly.JavaScript.ORDER_ATOMIC);
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${object}.scale.setTo(${xScale}, ${yScale});\n`;
+  return `${object}.scale.setTo(${x}, ${y});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_pos'] = function (block) {
   const param_name = block.getFieldValue('PARAM');
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2948,6 +3077,11 @@ Blockly.JavaScript['set_pos'] = function (block) {
   return `${object}.${param_name} = ${val};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_velocity'] = function (block) {
   const param_name = block.getFieldValue('PARAM');
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2956,6 +3090,11 @@ Blockly.JavaScript['set_velocity'] = function (block) {
   return `${object}.${param_name} = ${val};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_param'] = function (block) {
   const param_name = block.getFieldValue('PARAM');
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2963,16 +3102,34 @@ Blockly.JavaScript['get_param'] = function (block) {
   return [`${object}.${param_name}`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_world_reference'] = function (block) {
   return [`game.world`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Pauses/unpauses the game.
+ * @method set_game_pause
+ * @param paused {Boolean} sets the game paused to true or false
+ * @returns {} game.paused = paused;
+ * @block
+ */
 Blockly.JavaScript['set_game_pause'] = function (block) {
   var paused = Blockly.JavaScript.valueToCode(block, 'PAUSED', Blockly.JavaScript.ORDER_ATOMIC);
 
   return `game.paused = ${paused};\n`;
 };
 
+/**
+ * Returns whether or not the game is paused.
+ * @method get_game_pause
+ * @returns {} game.paused
+ * @block
+ */
 Blockly.JavaScript['get_game_pause'] = function (block) {
   return [`game.paused`, Blockly.JavaScript.ORDER_ATOMIC];
 };
@@ -2988,21 +3145,52 @@ Blockly.JavaScript['get_game_pause'] = function (block) {
     return `${object}.${field}.copyFrom(${point});\n`;
 };* @block
  */
+/**
+ * Assigns the chosen point field for the game object.
+ * @method set_game_object_point_field
+ * @param field the field to set
+ * @param point point to set the field to
+ * @param object object to set the field for
+ * @returns {} object.field.copyFrom(point);
+ * @block
+ */
 Blockly.JavaScript['set_game_object_point_field'] = setPointField;
 
+/**
+ * Returns the chosen point field value of the game object.
+ * @method get_physics_point_field
+ * @param object object to get values from
+ * @param field the field to get the value of
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['get_game_object_point_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const field = block.getFieldValue('PROPERTY');
   return [`${object}.${field}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_game_object_boolean_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const field = block.getFieldValue('PROPERTY');
-  const boolean = block.getFieldValue('BOOLEAN') == 'TRUE';
-  return `${object}.${field} = ${boolean};\n`;
+  const value = block.getFieldValue('BOOLEAN') == 'TRUE';
+  return `${object}.${field} = ${value};\n`;
 };
 
+/**
+ * Assigns the chosen boolean field for the game object.
+ * @method set_game_object_boolean_field
+ * @param object object to set the field for
+ * @param field the field to set
+ * @param value value to set the field to
+ * @returns {} object.field = value;
+ * @block
+ */
 Blockly.JavaScript['set_game_object_boolean_field_vi'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const field = block.getFieldValue('PROPERTY');
@@ -3010,12 +3198,29 @@ Blockly.JavaScript['set_game_object_boolean_field_vi'] = function (block) {
   return `${object}.${field} = ${boolean};\n`;
 };
 
+/**
+ * Returns the chosen boolean field value for the game object.
+ * @method get_game_object_boolean_field
+ * @param object object to get values from
+ * @param field the field to get the value of
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['get_game_object_boolean_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const field = block.getFieldValue('PROPERTY');
   return [`${object}.${field}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Assigns the chosen numeric value for the game object.
+ * @method set_game_object_numeric_field
+ * @param object object to set the field for
+ * @param field the field to set
+ * @param value value to set the field to
+ * @returns {} object.field = value;
+ * @block
+ */
 Blockly.JavaScript['set_game_object_numeric_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const field = block.getFieldValue('PROPERTY');
@@ -3023,13 +3228,25 @@ Blockly.JavaScript['set_game_object_numeric_field'] = function (block) {
   return `${object}.${field} = ${value};\n`;
 };
 
+/**
+ * Returns the chosen point numeric value for the game object.
+ * @method get_game_object_numeric_field
+ * @param object object to get the values from
+ * @param field the field to get the value of
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['get_game_object_numeric_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const field = block.getFieldValue('PROPERTY');
   return [`${object}.${field}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 //endregion
-
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_object_anchor'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_NONE);
   const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3037,25 +3254,55 @@ Blockly.JavaScript['set_object_anchor'] = function (block) {
   return `${object}.anchor.setTo(${value_x_pos}, ${value_y_pos});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['kill_object'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.kill();\n`;
 };
 
+/**
+ * Sets the values of game object alive, exists, and visible to false. Does not actually destroy the object or free it from memory.
+ * @method faint_object
+ * @param object object to faint
+ * @returns {} object.faint();
+ * @block
+ */
 Blockly.JavaScript['faint_object'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.faint();\n`;
 };
 
+/**
+ * Deletes everything about the game object.
+ * @method destroy_object
+ * @param object object to destroy
+ * @returns {} object.destroy();
+ * @block
+ */
 Blockly.JavaScript['destroy_object'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${object}.destroy();\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['object_inCamera'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.inCamera`, Blockly.JavaScript.ORDER_NONE];
 };
+
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['camera_follow'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble JavaScript into code variable.
@@ -3063,22 +3310,52 @@ Blockly.JavaScript['camera_follow'] = function (block) {
 
 };
 
+/**
+ * Makes the game camera follow the object.
+ * @method camera_follow_vi
+ * @param object object for the camera to follow
+ * @returns {} game.camera.follow(object);
+ * @block
+ */
 Blockly.JavaScript['camera_follow_vi'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.camera.follow(${object});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.camera.follow(${object});\n`;
 };
 
+/**
+ * Makes the game camera follow the object, with a specific style of following.
+ * @method camera_follow_vi_styled
+ * @param object object for the camera to follow
+ * @param style the style of the camera following
+ * @returns {} game.camera.follow(object, Phaser.Camera.style);
+ * @block
+ */
 Blockly.JavaScript['camera_follow_vi_styled'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const style = block.getFieldValue('STYLE');
   return `game.camera.follow(${object}, Phaser.Camera.${style});\n`;
 };
 
+/**
+ * Makes the game camera follow the object, with a specific style of following. Lerp designates how much linear interpolation to use when horizontally tracking the object. The closer the values is to 1, the faster the camera will track.
+ * @method camera_follow_vi_complex
+ * @param object object for the camera to follow
+ * @param lerpX {Number} linear interpolation in the x direction
+ * @param lerpY {Number} linear interpolation in the y direction
+ * @param style the style of the camera following
+ * @returns {} game.camera.follow(object, style, lerpX, lerpY);
+ * @block
+ */
 Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const lerpX = Blockly.JavaScript.valueToCode(block, 'LERP_X', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -3087,10 +3364,20 @@ Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
   return `game.camera.follow(${object}, ${style}, ${lerpX}, ${lerpY});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_camera'] = function (block) {
   return [`game.camera`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['object_set_to'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
   const value_setx = Blockly.JavaScript.valueToCode(block, 'setx', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3103,15 +3390,31 @@ Blockly.JavaScript['object_set_to'] = function (block) {
 //     return `game.world.sendToBack(${variable_object});\n`;
 // };
 
+/**
+ * Creates a new text object and adds it to the game.
+ * @method add_text_input
+ * @param x {Number} the x coordinate to display the text at
+ * @param y {Number} the y coordinate to display the text at
+ * @param initial_text {String} the text to display
+ * @param size {Number} the font size to display the text with
+ * @param colour the colour to display the text with
+ * @returns {} game.add.text(x, y, initial_text, {fontSize: `${size}px`, fill: 'colour'})
+ * @block
+ */
 Blockly.JavaScript['add_text_input'] = function (block) {
-  const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_initial_text = Blockly.JavaScript.valueToCode(block, 'INITIAL_TEXT', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const initial_text = Blockly.JavaScript.valueToCode(block, 'INITIAL_TEXT', Blockly.JavaScript.ORDER_ATOMIC);
   const size = Blockly.JavaScript.valueToCode(block, 'FONT_SIZE', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: \`\${${size}}px\`, fill: ${colour}})`, Blockly.JavaScript.ORDER_NONE];
+  return [`game.add.text(${x}, ${y}, ${initial_text}, { fontSize: \`\${${size}}px\`, fill: ${colour}})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['add_text'] = function (block) {
   const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3121,58 +3424,119 @@ Blockly.JavaScript['add_text'] = function (block) {
   return [`game.add.text(${value_x_pos}, ${value_y_pos}, ${value_initial_text}, { fontSize: \`\${${size}}px\`, fill: '${colour_fill}'})`, Blockly.JavaScript.ORDER_NONE];
 };
 
-
-
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_text'] = function (block) {
-  const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
-  const value_text = Blockly.JavaScript.valueToCode(block, 'TEXT', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${variable_object}.text = ${value_text};\n`;
+  const object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
+  const text_string = Blockly.JavaScript.valueToCode(block, 'TEXT', Blockly.JavaScript.ORDER_ATOMIC);
+  return `${object}.text = ${text_string};\n`;
 };
 
+/**
+ * Sets the text to display on the text object.
+ * @method set_text
+ * @param object text object to set the text for
+ * @param text_string {String} text to display on the object
+ * @returns {} object.text = text_string;
+ * @block
+ */
 Blockly.JavaScript['set_text_vi'] = function (block) {
   const variable_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_text = Blockly.JavaScript.valueToCode(block, 'TEXT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${variable_object}.text = ${value_text};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_bounds'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${value_object}.getBounds()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_rotation'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${value_object}.angle`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Rotates the object by the number of degrees. 0 to 180 rotates clockwise, 0 to -180 rotates counterclockwise.
+ * @method rotate
+ * @param object object to rotate
+ * @param value_angle {Number} number of degrees to rotate by
+ * @returns {} object.angle += value_angle;
+ * @block
+ */
 Blockly.JavaScript['rotate'] = function (block) {
-  const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
+  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_angle = Blockly.JavaScript.valueToCode(block, 'ANGLE', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${value_object}.angle += ${value_angle};\n`;
+  return `${object}.angle += ${value_angle};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_rotation'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const value_rotation = Blockly.JavaScript.valueToCode(block, 'ROTATION', Blockly.JavaScript.ORDER_ATOMIC);
   return `${value_object}.angle = ${value_angle};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_local_bounds'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${value_object}.getLocalBounds()`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Moves the game object to the given coordinates, and sets properties fresh, exists, visible, and renderable to true.
+ * @method reset
+ * @param object object to reset
+ * @param x {Number} x position to move the object to
+ * @param y {Number} y position to move the object to
+ * @returns {} object.reset(x, y);
+ * @block
+ */
 Blockly.JavaScript['reset'] = function (block) {
-  const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_y_pos = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${value_object}.reset(${value_x_pos}, ${value_y_pos});\n`;
+  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y_POS', Blockly.JavaScript.ORDER_ATOMIC);
+  return `${object}.reset(${x}, ${y});\n`;
 };
 
+/**
+ * Brings a fainted object back to "life". Sets alive, exists, and visible to true.
+ * @method revive
+ * @param object object to revive
+ * @returns {} object.revive();
+ * @block
+ */
 Blockly.JavaScript['revive'] = function (block) {
-  const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${value_object}.revive();\n`;
+  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
+  return `${object}.revive();\n`;
 };
+
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['create_bitmapFont'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
   const source = Blockly.JavaScript.valueToCode(block, 'SRC', Blockly.JavaScript.ORDER_NONE);
@@ -3181,6 +3545,15 @@ Blockly.JavaScript['create_bitmapFont'] = function (block) {
   return `game.load.bitmapFont(${tag}, ${source}, ${xml});\n`;
 };
 
+/**
+ * Move the position of the object by the given amount, relative to the object's current position.
+ * @method move_by
+ * @param object object to move
+ * @param x {Number} number of pixels in the x direction to move
+ * @param y {Number} number of pixels in the y direction to move
+ * @returns {} object.position.add(x, y);
+ * @block
+ */
 Blockly.JavaScript['move_by'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3190,6 +3563,11 @@ Blockly.JavaScript['move_by'] = function (block) {
 };
 //endregion
 //region DRAW CIRCLE
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['drawcircle'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
   const value_y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3202,12 +3580,22 @@ Blockly.JavaScript['drawcircle'] = function (block) {
 
 //region GET_OBJECT_WIDTH
 //TODO: TO COMPLETE
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['get_object_width'] = function (block) {
   const variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
   return [`${variable_name}.width`, Blockly.JavaScript.ORDER_NONE];
 };
 //endregion
 //region SET_OBJECT_WIDTH
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_object_width'] = function (block) {
   const variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
   const value_name = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3216,19 +3604,46 @@ Blockly.JavaScript['set_object_width'] = function (block) {
 //endregion
 
 //region PARTICLE_EMITTER
+/**
+ * Creates a particle emitter at the given location, with a total number of max particles.
+ * @method addemitter
+ * @param x {Number} the x location of the emitter
+ * @param y {Number} the y location of the emitter
+ * @param maxparticles {Number} the total number of particles in the emitter
+ * @returns {} game.add.emitter(x, y, maxparticles)
+ * @block
+ */
 Blockly.JavaScript['addemitter'] = function (block) {
-  const value_x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-  const value_y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-  const value_maxparticles = Blockly.JavaScript.valueToCode(block, 'maxParticles', Blockly.JavaScript.ORDER_ATOMIC) || '1';
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  const maxparticles = Blockly.JavaScript.valueToCode(block, 'maxParticles', Blockly.JavaScript.ORDER_ATOMIC) || '1';
 
-  return [`game.add.emitter(${value_x}, ${value_y}, ${value_maxparticles})`, Blockly.JavaScript.ORDER_NONE];
+  return [`game.add.emitter(${x}, ${y}, ${maxparticles})`, Blockly.JavaScript.ORDER_NONE];
 };
+
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_make_particles'] = function (block) {
-  const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
-  const text_tag = block.getFieldValue('TAG');
-  return `${variable_emitter}.makeParticles('${text_tag}');\n`;
+  const emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
+  const tag = block.getFieldValue('TAG');
+  return `${emitter}.makeParticles('${tag}');\n`;
 };
 
+/**
+ * Generates new particles to be used by the emitter.
+ * @method emitters_make_particles
+ * @param emitter emitter to make new particles for
+ * @param keys {String} the sprite/texture to use for the particles
+ * @param frames {Number} the frames the sprites will use
+ * @param quantity {Number} the number of particles to generate
+ * @param collide {Boolean} whether or not the particles should collide with physics bodies
+ * @param collideWorldBounds {Boolean} whether or not the particles should collide with the world bounds
+ * @returns {} emitter.makeParticles(keys, frames, quantity, collide, collideWorldBounds);
+ * @block
+ */
 Blockly.JavaScript['emitter_make_particles'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const keys = Blockly.JavaScript.valueToCode(block, 'KEYS', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -3239,6 +3654,11 @@ Blockly.JavaScript['emitter_make_particles'] = function (block) {
   return `${emitter}.makeParticles(${keys}, ${frames}, ${quantity}, ${collide}, ${collideWorldBounds});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_set_rotation'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
   const x_rotation = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 0;
@@ -3246,6 +3666,11 @@ Blockly.JavaScript['emitters_set_rotation'] = function (block) {
   return `${variable_emitter}.setRotation(${x_rotation}, ${y_rotation});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_set_rotation_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC);
   const min = Blockly.JavaScript.valueToCode(block, 'MIN', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3256,7 +3681,7 @@ Blockly.JavaScript['emitters_set_rotation_vi'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @return {String}
+ * @return {}
  * @block
  */
 Blockly.JavaScript['emitters_set_alpha'] = function (block) {
@@ -3267,6 +3692,16 @@ Blockly.JavaScript['emitters_set_alpha'] = function (block) {
   return `${variable_emitter}.setAlpha(${value_min}, ${value_max}, ${value_rate});\n`;
 };
 
+/**
+ * Sets the alpha constraints and variations for the particles on the emitter.
+ * @method emitters_set_alpha_vi
+ * @param emitter emitter to change the particles of
+ * @param min {Number} the minimum value the alpha of the particles can reach
+ * @param max {Number} the maximum value the alpha of the particles can reach
+ * @param rate {Number} the rate the particles will change between min and max
+ * @returns {} emitter.setAlpha(min, max, rate);
+ * @block
+ */
 Blockly.JavaScript['emitters_set_alpha_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const min = Blockly.JavaScript.valueToCode(block, 'MIN', Blockly.JavaScript.ORDER_ATOMIC) || '1';
@@ -3275,6 +3710,11 @@ Blockly.JavaScript['emitters_set_alpha_vi'] = function (block) {
   return `${emitter}.setAlpha(${min}, ${max}, ${rate});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_set_scale'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
   const value_minx = Blockly.JavaScript.valueToCode(block, 'MINX', Blockly.JavaScript.ORDER_ATOMIC) || null;
@@ -3285,6 +3725,18 @@ Blockly.JavaScript['emitters_set_scale'] = function (block) {
   return `${variable_emitter}.setScale(${value_minx}, ${value_maxx}, ${value_miny}, ${value_maxy}, ${value_rate});\n`;
 };
 
+/**
+ * Sets the scale constraints and variations for the particles on the emitter.
+ * @method emitters_set_scale_vi
+ * @param emitter emitter to change the particles of
+ * @param minx {Number} the minimum x value the scale the particles can reach
+ * @param maxx {Number} the maximum x value the scale the particles can reach
+ * @param miny {Number} the minimum y value the scale the particles can reach
+ * @param maxy {Number} the maximum y value the scale the particles can reach
+ * @param rate {Number} the rate the particles will change between min and max
+ * @returns {} emitter.setScale(minx, maxx, miny, maxy, rate);
+ * @block
+ */
 Blockly.JavaScript['emitters_set_scale_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC);
   const minx = Blockly.JavaScript.valueToCode(block, 'MINX', Blockly.JavaScript.ORDER_ATOMIC) || null;
@@ -3298,7 +3750,7 @@ Blockly.JavaScript['emitters_set_scale_vi'] = function (block) {
 /**
  * @deprecated
  * @param block
- * @return {String}
+ * @return {}
  * @block
  */
 Blockly.JavaScript['emitters_set_speed'] = function (block) {
@@ -3313,6 +3765,17 @@ Blockly.JavaScript['emitters_set_speed'] = function (block) {
   return setMin + setMax;
 };
 
+/**
+ * Sets the maximum and minimum speeds of the particles released from the emitter.
+ * @method emitters_set_speed_vi
+ * @param emitter emitter to set the speed of the particles for
+ * @param minx {Number} the minimum speed for the particles to move in the x direction
+ * @param maxx {Number} the maximum speed for the particles to move in the x direction
+ * @param miny {Number} the minimum speed for the particles to move in the y direction
+ * @param maxy {Number} the maximum speed for the particles to move in the y direction
+ * @returns {} emitter.minParticleSpeed.set(minx, miny); emitter.maxParticleSpeed.set(maxx, maxy);
+ * @block
+ */
 Blockly.JavaScript['emitters_set_speed_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC);
   const minx = Blockly.JavaScript.valueToCode(block, 'MINX', Blockly.JavaScript.ORDER_ATOMIC) || null;
@@ -3326,24 +3789,47 @@ Blockly.JavaScript['emitters_set_speed_vi'] = function (block) {
   return setMin + setMax;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_set_gravity'] = function (block) {
-  const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
-  const value_gravity = Blockly.JavaScript.valueToCode(block, 'GRAVITY', Blockly.JavaScript.ORDER_ATOMIC) || 0;
-  return `${variable_emitter}.gravity = ${value_gravity};\n`;
+  const emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
+  const gravity = Blockly.JavaScript.valueToCode(block, 'GRAVITY', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+  return `${emitter}.gravity = ${gravity};\n`;
 };
 
+/**
+ * Sets the gravity each particle has when launched from the emitter.
+ * @method emitters_set_gravity
+ * @param emitter emitter to set the gravity of the particles for
+ * @param particle_gravity {Number} the gravity each particle will have
+ * @returns {} emitter.gravity = particle_gravity;
+ * @block
+ */
 Blockly.JavaScript['emitters_set_gravity_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const gravity = Blockly.JavaScript.valueToCode(block, 'GRAVITY', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   return `${emitter}.gravity = ${gravity};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_set_width'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
   const value_width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   return `${variable_emitter}.width = ${value_width};\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['emitters_start'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
   const bool_explode = Blockly.JavaScript.valueToCode(block, 'EXPLODE', Blockly.JavaScript.ORDER_ATOMIC) || null;
@@ -3353,6 +3839,17 @@ Blockly.JavaScript['emitters_start'] = function (block) {
   return `${variable_emitter}.start(${bool_explode}, ${value_lifespan}, ${value_frequency}, ${value_quantity});\n`;
 };
 
+/**
+ * Tell the emitter to start emitting particles.
+ * @method emitters_start_vi
+ * @param emitter emitter to start emitting particles from
+ * @param explode {Boolean} whether the particles should burst out at once (true), or at the frequency given (false)
+ * @param lifespan {Number} how long each particle lives once emitted
+ * @param frequency {Number} the interval between the release of each particle
+ * @param quantity {Number} how many particles to emit before turning off
+ * @returns {} emitter.start(explode, lifespan, frequncy, quantity);
+ * @block
+ */
 Blockly.JavaScript['emitters_start_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const explode = block.getFieldValue('EXPLODE') == 'TRUE';
@@ -3362,6 +3859,11 @@ Blockly.JavaScript['emitters_start_vi'] = function (block) {
   return `${emitter}.start(${explode}, ${lifespan}, ${frequency}, ${quantity});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['set_emit_from'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'Object', Blockly.JavaScript.ORDER_ATOMIC);
   const dropdown_cord = block.getFieldValue('cord');
@@ -3371,6 +3873,15 @@ Blockly.JavaScript['set_emit_from'] = function (block) {
 //endregion EMITTERS
 
 //region DEBUG
+/**
+ * Renders a geometry object.
+ * @method debug_geom
+ * @param object object to render
+ * @param colour colour to render the object with
+ * @param filled {Boolean} whether or not to leave the object filled or stroked
+ * @returns {} game.debug.geom(object, colour, filled);
+ * @block
+ */
 Blockly.JavaScript['debug_geom'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3379,12 +3890,21 @@ Blockly.JavaScript['debug_geom'] = function (block) {
   return `game.debug.geom(${object}, ${colour}, ${filled});\n`;
 };
 
+/**
+ * Display all information about the sprite object and it's properties.
+ * @method debug_sprite
+ * @param object object to display information about
+ * @param x {Number} x coordiante to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @returns {} game.debug.spriteInfo(object, x, y);
+ * @block
+ */
 Blockly.JavaScript['debug_sprite'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_x = Blockly.JavaScript.valueToCode(block, 'X_VAL', Blockly.JavaScript.ORDER_ATOMIC);
-  const value_y = Blockly.JavaScript.valueToCode(block, 'Y_VAL', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X_VAL', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y_VAL', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.spriteInfo(${object}, ${value_x}, ${value_y});\n`;
+  return `game.debug.spriteInfo(${object}, ${x}, ${y});\n`;
 };
 
 /*Blockly.JavaScript['debug_body_info'] = function(block) {
@@ -3392,54 +3912,114 @@ Blockly.JavaScript['debug_sprite'] = function (block) {
   return `game.debug.bodyInfo(${object},${0},${20});\n`;
 };* @block
  */
+/**
+ *
+ * @method Display all information about the object's physics body.
+ * @param object object to display body information of
+ * @param x {Number} x coordiante to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @param colour colour to display the information with
+ * @returns {} game.debug.bodyInfo(object, x, y, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_body_info'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.bodyInfo(${object}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.bodyInfo(${object}, ${x}, ${y}, ${colour});\n`;
 };
 
+/**
+ * Makes the physics body for the object visible.
+ * @method debug_body_render
+ * @param object object to display the body of
+ * @param colour colour to display the body with
+ * @param filled {Boolean} whether or not the body should display as stroked or filled
+ * @returns {} game.debug.body(object, colour, filled);
+ * @block
+ */
 Blockly.JavaScript['debug_body_render'] = function (block) {
-  const body = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
+  const object = Blockly.JavaScript.valueToCode(block, 'BODY', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
   const filled = block.getFieldValue('FILLED') == 'TRUE';
 
-  return `game.debug.body(${body}, ${colour}, ${filled});\n`;
+  return `game.debug.body(${object}, ${colour}, ${filled});\n`;
 };
 
+/**
+ * Makes the game camera target and deadzone visible.
+ * @method debug_camera
+ * @param camera camera to display properties of
+ * @param colour colour to display the properties with
+ * @returns {} game.debug.camera(camera, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_camera'] = function (block) {
   const camera = Blockly.JavaScript.valueToCode(block, 'CAMERA', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.debug.camera(${camera},${colour});\n`;
 };
 
+/**
+ * Displays information about the camera at the given location.
+ * @method debug_camera_info
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @param colour colour to display the information with
+ * @returns {} game.debug.cameraInfo(game.camera, x, y, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_camera_info'] = function (block) {
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.cameraInfo(${`game.camera`}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.cameraInfo(${`game.camera`}, ${x}, ${y}, ${colour});\n`;
 };
 
+/**
+ * Display information about the mouse at the given location.
+ * @method debug_input_info
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @param colour colour to display the information with
+ * @returns {} game.debug.inputInfo(x, y, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_input_info'] = function (block) {
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.inputInfo(${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.inputInfo(${x}, ${y}, ${colour});\n`;
 };
 
+/**
+ * Display information about the key at the given location.
+ * @method debug_key
+ * @param dropdown_key key to display information of
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @param colour colour to display the information with
+ * @returns {} game.debug.key(game.input.keyboard.addKey(Phaser.Keyboard.dropdown_key), x, y);
+ * @block
+ */
 Blockly.JavaScript['debug_key'] = function (block) {
   const dropdown_key = block.getFieldValue('KEY');
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.key(game.input.keyboard.addKey(Phaser.Keyboard.${dropdown_key}), ${x_pos}, ${y_pos});\n`;//, ${colour});\n`;
+  return `game.debug.key(game.input.keyboard.addKey(Phaser.Keyboard.${dropdown_key}), ${x}, ${y});\n`;//, ${colour});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['debug_physics_group'] = function (block) {
   const group = Blockly.JavaScript.valueToCode(block, 'GROUP', Blockly.JavaScript.ORDER_ATOMIC);
   const check_exists = block.getFieldValue('CHECK_EXISTS') == 'TRUE';
@@ -3447,6 +4027,14 @@ Blockly.JavaScript['debug_physics_group'] = function (block) {
   return `game.debug.physicsGroup(${group});\n`;//, ${"'#73ff5c'"}, ${true}, ${check_exists});\n`;
 };
 
+/**
+ * Display a rectangle with the given properties.
+ * @method debug_rectangle
+ * @param rect rectangle to display
+ * @param colour colour to display the rectangle with
+ * @returns {} game.debug.rectangle(rect, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_rectangle'] = function (block) {
   const rect = Blockly.JavaScript.valueToCode(block, 'RECT', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3454,6 +4042,11 @@ Blockly.JavaScript['debug_rectangle'] = function (block) {
   return `game.debug.rectangle(${rect},${colour});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['debug_sound'] = function (block) {
   const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
   const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3462,65 +4055,139 @@ Blockly.JavaScript['debug_sound'] = function (block) {
   return `game.debug.sound(${x_pos}, ${y_pos}, ${colour});\n`;
 };
 
+/**
+ * Display information about the sound at the given location.
+ * @method debug_sound_info
+ * @param sound sound to display information of
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @param colour colour to display the information with
+ * @returns {} game.debug.soundInfo(sound, x, y, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_sound_info'] = function (block) {
   const sound = Blockly.JavaScript.valueToCode(block, 'SOUND', Blockly.JavaScript.ORDER_ATOMIC);
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.soundInfo(${sound}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.soundInfo(${sound}, ${x}, ${y}, ${colour});\n`;
 };
 
+/**
+ * Display the sprite object's coordinates at the given location.
+ * @method debug_sprite_coords
+ * @param sprite sprite to display the coordinates of
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @parm colour colour to display the coordinates with
+ * @returns {}
+ * @block
+ */
 Blockly.JavaScript['debug_sprite_coords'] = function (block) {
   const sprite = Blockly.JavaScript.valueToCode(block, 'SPRITE', Blockly.JavaScript.ORDER_ATOMIC);
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.spriteCoords(${sprite}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.spriteCoords(${sprite}, ${x}, ${y}, ${colour});\n`;
 };
 
+/**
+ * Display information about the sprite object at the given location.
+ * @method debug_sprite_info
+ * @param sprite sprite to display information of
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @parm colour colour to display the information with
+ * @returns {} game.debug.spriteInfo(sprite, x, y, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_sprite_info'] = function (block) {
   const sprite = Blockly.JavaScript.valueToCode(block, 'SPRITE', Blockly.JavaScript.ORDER_ATOMIC);
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.spriteInfo(${sprite}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.spriteInfo(${sprite}, ${x}, ${y}, ${colour});\n`;
 };
 
+/**
+ * Display the text at the given location.
+ * @method debug_text
+ * @param text text to display
+ * @param x {Number} x coordinate to display the information at
+ * @param y {Number} y coordinate to display the information at
+ * @param colour colour to display the information with
+ * @returns {} game.debug.text(text, x, y, colour);
+ * @block
+ */
 Blockly.JavaScript['debug_text'] = function (block) {
   const text = Blockly.JavaScript.valueToCode(block, 'TEXT', Blockly.JavaScript.ORDER_ATOMIC);
-  const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
-  const y_pos = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+  const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+  const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
 
-  return `game.debug.text(${text}, ${x_pos}, ${y_pos}, ${colour});\n`;
+  return `game.debug.text(${text}, ${x}, ${y}, ${colour});\n`;
 };
 //endregion
 
 //region STATES
+/**
+ * Adds a state to the game with the given name and key.
+ * @method statemanager_add_state
+ * @param name {String} name of the new state
+ * @param key tag to use for the state
+ * @returns {} game.state.add(key, name);
+ * @block
+ */
 Blockly.JavaScript['statemanager_add_state'] = function (block) {
-  const value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
-  const text_key = block.getFieldValue('KEY');
+  const name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+  const key = block.getFieldValue('KEY');
 
-  return `game.state.add('${text_key}', ${value_name});\n`;
+  return `game.state.add('${key}', ${name});\n`;
 };
 
+/**
+ * Start the state with the given tag.
+ * @method statemanager_start_state
+ * @param tag tag of the state to start
+ * @returns {} game.start.state(tag);
+ * @block
+ */
 Blockly.JavaScript['statemanager_start_state'] = function (block) {
   const tag = block.getFieldValue('TAG');
 
   return `game.state.start('${tag}');\n`;
 };
 
+/**
+ * Returns the state that is currently running.
+ * @method statemanager_get_current_state
+ * @returns {} game.state.getCurrentState()
+ * @block
+ */
 Blockly.JavaScript['statemanager_get_current_state'] = function (block) {
   return [`game.state.getCurrentState()`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Restarts the current state.
+ * @method statemanager_restart_state
+ * @returns {} game.state.restart();
+ * @block
+ */
 Blockly.JavaScript['statemanager_restart_state'] = function (block) {
   return `game.state.restart();\n`;
 };
 
+/**
+ * Returns true or false if the state with the given tag is valid.
+ * @method statemanager_check_state
+ * @param key {String} tag of the state to check
+ * @returns {} game.state.checkState(key)
+ * @block
+ */
 Blockly.JavaScript['statemanager_check_state'] = function (block) {
   const key = Blockly.JavaScript.valueToCode(block, 'KEY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`game.state.checkState(${key})`, Blockly.JavaScript.ORDER_NONE];
@@ -3530,6 +4197,16 @@ Blockly.JavaScript['statemanager_check_state'] = function (block) {
 
 //region GEOMETRY
 //region RECTANGLE
+/**
+ * Creates a rectangle with the given properties.
+ * @method rectangle_create
+ * @param x {Number} x coordinate for the new rectangle
+ * @param y {Number} y coordinate for the new rectangle
+ * @param width {Number} width of the rectangle
+ * @param height {Number} height of the rectangle
+ * @returns {} new Phaser.Rectangle(x, y, width, height)
+ * @block
+ */
 Blockly.JavaScript['rectangle_create'] = function (block) {
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
@@ -3538,12 +4215,36 @@ Blockly.JavaScript['rectangle_create'] = function (block) {
   return [`new Phaser.Rectangle(${x}, ${y}, ${width}, ${height})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the two rectangles intersect.
+ * @method rectangle_intersects
+ * @param rectA first rectangle to check
+ * @param rectB second rectangle to check
+ * @returns {} Phaser.Rectangle.intersects(rectA, rectB)
+ * @block
+ */
 Blockly.JavaScript['rectangle_intersects'] = function (block) {
   const rectA = Blockly.JavaScript.valueToCode(block, 'RECT_A', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const rectB = Blockly.JavaScript.valueToCode(block, 'RECT_B', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   return [`Phaser.Rectangle.intersects(${rectA}, ${rectB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns the chosen numeric field value of the rectangle.
+ * @method rectangle_get_numeric_field
+ * @param object object to get values from
+ * @param field the field to get values of
+ * @returns {} object.field
+ * @block
+ */
+/**
+ * Returns the chosen point field value of the rectangle.
+ * @method rectangle_get_point_field
+ * @param object object to get values from
+ * @param field the field to get values of
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['rectangle_get_numeric_field']
   = Blockly.JavaScript['rectangle_get_point_field']
   = function (block) {
@@ -3552,6 +4253,15 @@ Blockly.JavaScript['rectangle_get_numeric_field']
   return [`${object}.${field}`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Assign the chosen numeric field of the rectangle.
+ * @method rectangle_set_numeric_field
+ * @param object object to set the value for
+ * @param field the field to set
+ * @param value {Number} value to set the field to
+ * @returns {} object.field = value;
+ * @block
+ */
 Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3559,51 +4269,123 @@ Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
   return `${object}.${field} = ${value};\n`;
 };
 
+/**
+ * Assign the chosen point field of the rectangle.
+ * @method rectangle_set_point_field
+ * @param object object to set the point for
+ * @param field the field to set
+ * @param point point to set the field to
+ * @returns {} object.field.copyFrom(point);
+ * @block
+ */
 Blockly.JavaScript['rectangle_set_point_field'] = setPointField;
 
+/**
+ * Returns true/false if the rectangle contains the point.
+ * @method rectangle_contains_point
+ * @param rectangle rectangle to check
+ * @param point point to check
+ * @returns {} Phaser.Rectangle.containsPoint(rectangle, point)
+ * @block
+ */
 Blockly.JavaScript['rectangle_contains_point'] = function (block) {
   const rectangle = Blockly.JavaScript.valueToCode(block, 'RECTANGLE', Blockly.JavaScript.ORDER_ATOMIC);
   const point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.Rectangle.containsPoint(${rectangle}, ${point})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the rectangle contains the given coordinates.
+ * @method rectangle_contains
+ * @param rectangle rectangle to check
+ * @param x {Number} x coordinate to check
+ * @param y {Number} y coordinate to check
+ * @returns {} Phaser.Rectangle.contains(rectangle, x, y)
+ * @block
+ */
 Blockly.JavaScript['rectangle_contains'] = function (block) {
   const rectangle = Blockly.JavaScript.valueToCode(block, 'RECTANGLE', Blockly.JavaScript.ORDER_ATOMIC);
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
   const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.Rectangle.contains(${rectangle}, ${x}, ${y})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
-
+/**
+ * Returns true/false if one rectangle is fulling contained within another.
+ * @method rectangle_contains_rect
+ * @param rectangle_a the first rectangle to check
+ * @param rectangle_b the second rectangle to check
+ * @returns {} Phaser.Rectangle.containsRect(rectangle_a, rectangle_b)
+ * @block
+ */
 Blockly.JavaScript['rectangle_contains_rect'] = function (block) {
   const rectangle_a = Blockly.JavaScript.valueToCode(block, 'RECTANGLE_A', Blockly.JavaScript.ORDER_ATOMIC);
   const rectangle_b = Blockly.JavaScript.valueToCode(block, 'RECTANGLE_B', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.Rectangle.containsRect(${rectangle_a}, ${rectangle_b})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a new rectangle with the same x, y, width, and height properties of the original.
+ * @method rectangle_clone
+ * @param rectangle rectangle to clone
+ * @returns {} rectangle.clone()
+ * @block
+ */
 Blockly.JavaScript['rectangle_clone'] = function (block) {
   const rectangle = Blockly.JavaScript.valueToCode(block, 'RECTANGLE', Blockly.JavaScript.ORDER_ATOMIC);
 //  return [`Phaser.Rectangle.clone(${rectangle})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   return [`${rectangle}.clone()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a random x/y coordinate point from the rectangle.
+ * @method rectangle_random
+ * @param rectangle rectangle to get values from
+ * @returns {} rectangle.random()
+ * @block
+ */
 Blockly.JavaScript['rectangle_random'] = function (block) {
   const rectangle = Blockly.JavaScript.valueToCode(block, 'RECTANGLE', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${rectangle}.random()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 //endregion
 //region POINT
+/**
+ * Returns a point from the given x/y values.
+ * @method point_create
+ * @param x {Number} x value for the point
+ * @param y {Number} y value for the point
+ * @returns {} new Phaser.Point(x, y)
+ * @block
+ */
 Blockly.JavaScript['point_create'] = function (block) {
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   return [`new Phaser.Point(${x}, ${y})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns the x or y value of the point.
+ * @method point_get_element
+ * @param element which value to return
+ * @param point point to get the value from
+ * @returns {} point.element
+ * @block
+ */
 Blockly.JavaScript['point_get_element'] = function (block) {
   const element = block.getFieldValue('ELEMENT');
   const point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${point}.${element}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Assigns the x or y value of the point to a number.
+ * @method point_set_element
+ * @param element which value to set
+ * @param point point to set the value for
+ * @param value {Number} value to set the element to
+ * @returns {} point.element = value;
+ * @block
+ */
 Blockly.JavaScript['point_set_element'] = function (block) {
   const element = block.getFieldValue('ELEMENT');
   const point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3611,81 +4393,191 @@ Blockly.JavaScript['point_set_element'] = function (block) {
   return `${point}.${element} = ${value};\n`;
 };
 
+/**
+ * Sets the magnitude of the point to a number.
+ * @method point_set_magnitude
+ * @param point point to set the magnitude for
+ * @param value {Number} value to set the magnitude to
+ * @returns {} point.setMagnitude(value);
+ * @block
+ */
 Blockly.JavaScript['point_set_magnitude'] = function (block) {
   const point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
   return `${point}.setMagnitude(${value});\n`;
 };
 
+/**
+ * Adds the coordinates of two points and returns a new point with the result.
+ * @method points_add
+ * @param pointA first point to add
+ * @param pointB second point to add
+ * @returns {} Phaser.Point.add(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_add'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.add(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.add(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Subtracts the coordinates of two points and returns a new point with the result.
+ * @method points_subtract
+ * @param pointA first point to subtract
+ * @param pointB second point to subtract
+ * @returns {} Phaser.Point.subtract(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_subtract'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.subtract(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.subtract(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Calculates the angle between two points and returns the result.
+ * @method points_angle_between
+ * @param pointA first angle to calculate
+ * @param pointB second angle to calculate
+ * @returns {} Phaser.Point.angle(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_angle_between'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.angle(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.angle(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Calculates the distance between two points and returns the result.
+ * @method points_distance
+ * @param pointA first angle to calculate
+ * @param pointB second angle to calculate
+ * @returns {} Phaser.Point.distance(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_distance'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.distance(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.distance(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Divides the coordinates of two points and returns a new point with the result.
+ * @method points_divide
+ * @param pointA first point to divide
+ * @param pointB second point to divide
+ * @returns {} Phaser.Point.divide(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_divide'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.divide(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.divide(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if one point has the same x/y values as another.
+ * @method points_equal
+ * @param pointA first point to check
+ * @param pointB second point to check
+ * @returns {} Phaser.Point.equals(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_equals'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.equals(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.equals(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Interpolates the two points based on the percent value between 0 and 1.
+ * @method points_interpolate
+ * @param pointA first point
+ * @param pointB second point
+ * @param f {Number} the level of interpolation between the two points
+ * @returns {} Phaser.Point.interpolate(pointA, pointB, f)
+ * @block
+ */
 Blockly.JavaScript['points_interpolate'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
   const f = Blockly.JavaScript.valueToCode(block, 'F', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.interpolate(${lhs}, ${rhs}, ${f})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  return [`Phaser.Point.interpolate(${pointA}, ${pointB}, ${f})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Multiplies the coordinates of two points and returns a new point with the result.
+ * @method points_multiply
+ * @param pointA first point to multiply
+ * @param pointB second point to multiply
+ * @returns {} Phaser.Point.multiply(pointA, pointB)
+ * @block
+ */
 Blockly.JavaScript['points_multiply'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  const rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.multiply(${lhs}, ${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  const pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.multiply(${pointA}, ${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Creates a new point with negative values of the original point.
+ * @method points_negate
+ * @param pointA point to get the values from
+ * @returns {} Phaser.Point.negative(pointA)
+ * @block
+ */
 Blockly.JavaScript['points_negate'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.negative(${lhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.negative(${pointA})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a new point of the normalized values of the original.
+ * @method points_normalize
+ * @param pointA point to normalize
+ * @returns {} Phaser.Point.normalize(pointA)
+ * @block
+ */
 Blockly.JavaScript['points_normalize'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.normalize(${lhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.normalize(${pointA})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a new point with the perpendicular vector to the original point.
+ * @method points_perpendicular
+ * @param pointA point to get the vector from
+ * @returns {} Phaser.Point.perp(pointA)
+ * @block
+ */
 Blockly.JavaScript['points_perpendicular'] = function (block) {
-  const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`Phaser.Point.perp(${lhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  const pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`Phaser.Point.perp(${pointA})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a new point with the centroid of the list of points.
+ * @method points_centroid
+ * @param array {Array} list of points to calculate the centroid from
+ * @returns {} Phaser.Point.centroid(array)
+ * @block
+ */
 Blockly.JavaScript['points_centroid'] = function (block) {
   var array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.Point.centroid(${array})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Clamps the point object values to be between the given minimum and maximum.
+ * @method points_clamp
+ * @param point point to clamp
+ * @param min {Number} the minimum value to clamp the point to
+ * @param max {Number} the maximum value to clamp the point to
+ * @returns {} point.clamp(min, max);
+ * @block
+ */
 Blockly.JavaScript['points_clamp'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var min = Blockly.JavaScript.valueToCode(block, 'MIN', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3693,6 +4585,15 @@ Blockly.JavaScript['points_clamp'] = function (block) {
   return `${point}.clamp(${min}, ${max});\n`;
 };
 
+/**
+ * Clamp the point object x value to be between the given minimum and maximum.
+ * @method points_clamp_x
+ * @param point point to clamp
+ * @param min {Number} the minimum value to clamp the value to
+ * @param max {Number} the maximum value to lcmap the value to
+ * @returns {} point.clampX(min, max);
+ * @block
+ */
 Blockly.JavaScript['points_clamp_x'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var min = Blockly.JavaScript.valueToCode(block, 'MIN', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3700,6 +4601,15 @@ Blockly.JavaScript['points_clamp_x'] = function (block) {
   return `${point}.clampX(${min}, ${max});\n`;
 };
 
+/**
+ * Clamp the point object y value to be between the given minimum and maximum.
+ * @method points_clamp_y
+ * @param point point to clamp
+ * @param min {Number} the minimum value to clamp the value to
+ * @param max {Number} the maximum value to lcmap the value to
+ * @returns {} point.clampY(min, max);
+ * @block
+ */
 Blockly.JavaScript['points_clamp_y'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var min = Blockly.JavaScript.valueToCode(block, 'MIN', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3707,29 +4617,69 @@ Blockly.JavaScript['points_clamp_y'] = function (block) {
   return `${point}.clampY(${min}, ${max});\n`;
 };
 
+/**
+ * Returns a new point with the same properties as the original point.
+ * @method points_clone
+ * @param point point to clone
+ * @returns {} point.clone()
+ * @block
+ */
 Blockly.JavaScript['points_clone'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${point}.clone()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Copies values from one point to another, overwriting the original values.
+ * @method points_copy_from
+ * @param source point to get the values from
+ * @param target point to copy the values to
+ * @returns {} target.copyFrom(source);
+ * @block
+ */
 Blockly.JavaScript['points_copy_from'] = function (block) {
   var source = Blockly.JavaScript.valueToCode(block, 'SOURCE', Blockly.JavaScript.ORDER_ATOMIC);
   var target = Blockly.JavaScript.valueToCode(block, 'TARGET', Blockly.JavaScript.ORDER_ATOMIC);
   return `${target}.copyFrom(${source});\n`;
 };
 
+/**
+ * Calculates the cross product of two points and returns the result.
+ * @method points_cross
+ * @param pointA left-hand side
+ * @param pointB right-hand side
+ * @returns {} pointA.cross(pointB)
+ * @block
+ */
 Blockly.JavaScript['points_cross'] = function (block) {
-  var lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  var rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`${lhs}.cross(${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  var pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  var pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${pointA}.cross(${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Calculates the dot product of two points and returns the result.
+ * @method points_dot
+ * @param pointA left-hand side
+ * @param pointB right-hand side
+ * @returns {} pointA.dot(pointB)
+ * @block
+ */
 Blockly.JavaScript['points_dot'] = function (block) {
-  var lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
-  var rhs = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`${lhs}.dot(${rhs})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  var pointA = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
+  var pointB = Blockly.JavaScript.valueToCode(block, 'RHS', Blockly.JavaScript.ORDER_ATOMIC);
+  return [`${pointA}.dot(${pointB})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Adds the given x and y values to the point.
+ * @method points_add_member
+ * @param point point to add values to
+ * @param x {Number} x value to add to the point
+ * @param y {Number} y value to add to the point
+ * @returns {} point.add(x, y);
+ * @block
+ */
 Blockly.JavaScript['points_add_member'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3737,6 +4687,15 @@ Blockly.JavaScript['points_add_member'] = function (block) {
   return `${point}.add(${x}, ${y});\n`;
 };
 
+/**
+ * Subtracts the given x and y values from the point.
+ * @method points_subtract_member
+ * @param point point to subtract values from
+ * @param x {Number} x value to subtract from the point
+ * @param y {Number} y value to subtract from the point
+ * @returns {} point.subtract(x, y);
+ * @block
+ */
 Blockly.JavaScript['points_subtract_member'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3744,6 +4703,15 @@ Blockly.JavaScript['points_subtract_member'] = function (block) {
   return `${point}.subtract(${x}, ${y});\n`;
 };
 
+/**
+ * Divides the point values by the given x and y values.
+ * @method points_divide_member
+ * @param point point to divide
+ * @param x {Number} x value to divide the point by
+ * @param y {Number} y value to divide the point by
+ * @returns {} point.divide(x, y);
+ * @block
+ */
 Blockly.JavaScript['points_divide_member'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3751,6 +4719,15 @@ Blockly.JavaScript['points_divide_member'] = function (block) {
   return `${point}.divide(${x}, ${y});\n`;
 };
 
+/**
+ * Multiplies the point values by the given x and y values.
+ * @method points_multiply_member
+ * @param point point to multiply
+ * @param x {Number} x value to multiply the point by
+ * @param y {Number} y value to multiply the point by
+ * @returns {} point.multiply(x, y);
+ * @block
+ */
 Blockly.JavaScript['points_multiply_member'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3758,42 +4735,101 @@ Blockly.JavaScript['points_multiply_member'] = function (block) {
   return `${point}.multiply(${x}, ${y});\n`;
 };
 
+/**
+ * Applies Math.ceil() to the x and y values of the point.
+ * @method points_ceil
+ * @param point point to change the values of
+ * @returns {} point.ceil();
+ * @block
+ */
 Blockly.JavaScript['points_ceil'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${point}.ceil();\n`;
 };
 
+/**
+ * Applies Math.floor() to the x and y values of the point.
+ * @method points_floor
+ * @param point point to change the values of
+ * @returns {} point.floor();
+ * @block
+ */
 Blockly.JavaScript['points_floor'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${point}.floor();\n`;
 };
 
+/**
+ * Returns the length of the point object.
+ * @method points_get_magnitude
+ * @param point point to get the magnitude of
+ * @returns {} point.getMagnitude()
+ * @block
+ */
 Blockly.JavaScript['points_get_magnitude'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${point}.getMagnitude()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns the length squared of the point object.
+ * @method points_get_magnitude_squared
+ * @param point point to get the magnitude squared of
+ * @returns {} point.getMagnitudeSq()
+ * @block
+ */
 Blockly.JavaScript['points_get_magnitude_squared'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${point}.getMagnitudeSq()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Inverts the x and y values of the point.
+ * @method points_invert
+ * @param point point to invert
+ * @returns {} point.invert();
+ * @block
+ */
 Blockly.JavaScript['points_invert'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return `${point}.invert();\n`;
 };
 
+/**
+ * Returns true/false if the point has the values 0,0.
+ * @method points_is_zero
+ * @param point point to check
+ * @returns {} point.isZero()
+ * @block
+ */
 Blockly.JavaScript['points_is_zero'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${point}.isZero()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Alters the point so it's magnitude is no more than the given maximum value.
+ * @method points_limit
+ * @param point point to change
+ * @param max {Number} the value to set the maximum to
+ * @returns {} point.limit(max);
+ * @block
+ */
 Blockly.JavaScript['points_limit'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var max = Blockly.JavaScript.valueToCode(block, 'MAX', Blockly.JavaScript.ORDER_ATOMIC);
   return `${point}.limit(${max});\n`;
 };
 
+/**
+ * Sets the x and y values of hte point based on the given polar coordinate.
+ * @method points_set_to_polar
+ * @param point point to change the values of
+ * @param degrees {Number} degrees of the polar coordinate
+ * @param radius {Number} radius of the polar coordinate
+ * @returns {} point.setToPolar(degrees, radius, true);
+ * @block
+ */
 Blockly.JavaScript['points_set_to_polar'] = function (block) {
   var point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
   var degrees = Blockly.JavaScript.valueToCode(block, 'DEGREES', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3802,6 +4838,15 @@ Blockly.JavaScript['points_set_to_polar'] = function (block) {
 };
 //endregion
 //region CIRCLE
+/**
+ * Returns a circle with the given properties.
+ * @method circle_create
+ * @param x {Number} x coordinate to create the circle at
+ * @param y {Number} y coordinate to create the circle at
+ * @param diameter {Number} diameter of the circle
+ * @returns {} new Phaser.Circle(x, y, diameter)
+ * @block
+ */
 Blockly.JavaScript['circle_create'] = function (block) {
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   const y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
@@ -3809,12 +4854,29 @@ Blockly.JavaScript['circle_create'] = function (block) {
   return [`new Phaser.Circle(${x}, ${y}, ${diameter})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns the chosen numeric field value of the circle.
+ * @method circle_get_numeric_field
+ * @param object object to get values from
+ * @param field the field to get values of
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['circle_get_numeric_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const field = block.getFieldValue('FIELD');
   return [`${object}.${field}`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Assign the chosen numeric field of the circle.
+ * @method circle_set_numeric_field
+ * @param object object to set the value for
+ * @param field the field to set
+ * @param value {Number} value to set the field to
+ * @returns {} object.field = value;
+ * @block
+ */
 Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3822,23 +4884,55 @@ Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
   return `${object}.${field} = ${value};\n`;
 };
 
+/**
+ * Returns true/false if the two circle objects intersect, determined by the radius distances between the two.
+ * @method circle_intersects
+ * @param circle_a first circle to check
+ * @param circle_b second circle to check
+ * @returns {} Phaser.Circle.intersects(circle_a, circle_b)
+ * @block
+ */
 Blockly.JavaScript['circle_intersects'] = function (block) {
   const circle_a = Blockly.JavaScript.valueToCode(block, 'CIRCLE_A', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const circle_b = Blockly.JavaScript.valueToCode(block, 'CIRCLE_B', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   return [`Phaser.Circle.intersects(${circle_a}, ${circle_b})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the circle and rectangle objects intersect.
+ * @method circle_intersects_rectangle
+ * @param circle circle to check
+ * @param rectangle rectangle to check
+ * @returns {} Phaser.Circle.intersectsRectangle(circle, rectangle)
+ * @block
+ */
 Blockly.JavaScript['circle_intersects_rectangle'] = function (block) {
   const circle = Blockly.JavaScript.valueToCode(block, 'CIRCLE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const rectangle = Blockly.JavaScript.valueToCode(block, 'RECTANGLE', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   return [`Phaser.Circle.intersectsRectangle(${circle}, ${rectangle})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a new circle object with the same properties as the original.
+ * @method circle_clone
+ * @param circle circle to clone
+ * @returns {} circle.clone()
+ * @block
+ */
 Blockly.JavaScript['circle_clone'] = function (block) {
   const circle = Blockly.JavaScript.valueToCode(block, 'CIRCLE', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${circle}.clone()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the given x/y coordinate can be found within the circle.
+ * @method circle_contains
+ * @param circle circle to check
+ * @param x {Number} the x value to check
+ * @param y {Number} the y value to check
+ * @returns {} circle.contains(x, y)
+ * @block
+ */
 Blockly.JavaScript['circle_contains'] = function (block) {
   const circle = Blockly.JavaScript.valueToCode(block, 'CIRCLE', Blockly.JavaScript.ORDER_ATOMIC);
   const x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3846,16 +4940,38 @@ Blockly.JavaScript['circle_contains'] = function (block) {
   return [`${circle}.contains(${x}, ${y})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a point containing random values of x and y found within the circle.
+ * @method cirlce_random
+ * @param circle circle to get values from
+ * @returns {} circle.random()
+ * @block
+ */
 Blockly.JavaScript['circle_random'] = function (block) {
   const circle = Blockly.JavaScript.valueToCode(block, 'CIRCLE', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${circle}.random()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns the circumference of the circle.
+ * @method circle_circumference
+ * @param circle circle to get circumference of
+ * @returns {} circle.circumference()
+ * @block
+ */
 Blockly.JavaScript['circle_circumference'] = function (block) {
   const circle = Blockly.JavaScript.valueToCode(block, 'CIRCLE', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${circle}.circumference()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns a point containing the coordinates of the point on the circumference of the circle based on the given angle.
+ * @method circle_circumference_point
+ * @param circle circle to get values from
+ * @param degrees {Number} angle to get the point at
+ * @returns {} circle_circumference_point
+ * @block
+ */
 Blockly.JavaScript['circle_circumference_point'] = function (block) {
   const circle = Blockly.JavaScript.valueToCode(block, 'CIRCLE', Blockly.JavaScript.ORDER_ATOMIC);
   const degrees = Blockly.JavaScript.valueToCode(block, 'DEGREES', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3865,12 +4981,25 @@ Blockly.JavaScript['circle_circumference_point'] = function (block) {
 //endregion
 
 //region SOUND
+/**
+ * Creates a sound with the given tag by loading it into the audio queue.
+ * @method load_sound
+ * @param tag {String} tag to name the sound
+ * @param source {String} file path of the sound
+ * @returns {} game.load.audio(tag, source);
+ * @block
+ */
 Blockly.JavaScript['load_sound'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
   const source = Blockly.JavaScript.valueToCode(block, 'SOURCE', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.load.audio(${tag}, ${source});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['play_sound'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
   const volume = Blockly.JavaScript.valueToCode(block, 'VOLUME', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3878,6 +5007,15 @@ Blockly.JavaScript['play_sound'] = function (block) {
   return `game.sound.play(${tag}, ${volume}, ${looping});\n`;
 };
 
+/**
+ * Returns a new sound object.
+ * @method add_sound
+ * @param tag {String} the tag of the sound to add
+ * @param volume {Number} volume to play the sound at
+ * @param looping {Boolean} whether or not to loop the sound when it's played
+ * @returns {} game.add.audio(tag, volume, looping)
+ * @block
+ */
 Blockly.JavaScript['add_sound'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
   const volume = Blockly.JavaScript.valueToCode(block, 'VOLUME', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3885,85 +5023,230 @@ Blockly.JavaScript['add_sound'] = function (block) {
   return [`game.add.audio(${tag}, ${volume}, ${looping})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['remove_sound'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.sound.removeByKey(${tag});\n`;
 };
 
+/**
+ * Stop, pause, or remove all sounds in the game.
+ * @method stop_pause_resume_sounds
+ * @param option which option to do
+ * @returns {} game.sound.optionAll();
+ * @block
+ */
 Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
   const option = block.getFieldValue('OPTION');
   return `game.sound.${option}All();\n`;
 };
 
+/**
+ * Assigns the chosen boolean field for the sound.
+ * @method set_sound_boolean_member
+ * @param element the field to set
+ * @param object sound to assign values for
+ * @param value value to set the field to
+ * @returns {} object.element = value;
+ * @block
+ */
+/**
+ * Assigns the chosen numeric field for the sound.
+ * @method set_sound_numeric_member
+ * @param element the field to set
+ * @param object sound to assign values for
+ * @param value value to set the field to
+ * @returns {} object.element = value;
+ * @block
+ */
 Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_numeric_member'] = setMember;
+
+/**
+ * Returns the chosen boolean field value of the sound.
+ * @method get_sound_boolean_member
+ * @param object object to get values from
+ * @param element the element to get values of
+ * @returns {} object.element
+ * @block
+ */
+/**
+ * Returns the chosen numeric field value of the sound.
+ * @method get_sound_numeric_member
+ * @param object object to get values from
+ * @param element the element to get values of
+ * @returns {} object.element
+ * @block
+ */
+/**
+ * Returns the chosen string field value of the sound.
+ * @method get_sound_string_member
+ * @param object object to get values from
+ * @param element the element to get values of
+ * @returns {} object.element
+ * @block
+ */
 Blockly.JavaScript['get_sound_boolean_member'] = Blockly.JavaScript['get_sound_numeric_member'] = Blockly.JavaScript['get_sound_string_member'] = getMember;
 
+/**
+ * Starts playing the sound at a volume of 0, and reaches the maximum volume for the sound over the given time, with the option to loop.
+ * @method sound_fade_in
+ * @param sound_object sound to play
+ * @param duration {Number} the time it takes for the sound to reach maximum volume
+ * @param loop {Boolean} whether or not the sound should loop
+ * @returns {} sound_object.fadeIn(duration, loop);
+ * @block
+ */
 Blockly.JavaScript['sound_fade_in'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const loop = block.getFieldValue('LOOP') == 'TRUE';
-  return `${object}.fadeIn(${duration}, ${loop});\n`;
+  return `${sound_object}.fadeIn(${duration}, ${loop});\n`;
 };
 
+/**
+ * Makes the sound go from it's current volume to a volume of 0 over the given time.
+ * @method sound_fade_out
+ * @param sound_object sound to stop
+ * @param duration {Number} the time it takes for the sound to reach 0
+ * @returns {} sound_object.fadeOut(duration);
+ * @block
+ */
 Blockly.JavaScript['sound_fade_out'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-  return `${object}.fadeOut(${duration});\n`;
+  return `${sound_object}.fadeOut(${duration});\n`;
 };
 
+/**
+ * Makes the sound go from it's current volume to the given volume over the given time.
+ * @method sound_fade_to
+ * @param sound_object sound to change
+ * @param duration {Number} the time it takes for the sound to reach the new volume
+ * @param volume {Number} the volume to change the sound to
+ * @returns {} sound_object.fadeTo(duration, volume);
+ * @block
+ */
 Blockly.JavaScript['sound_fade_to'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const volume = Blockly.JavaScript.valueToCode(block, 'VOLUME', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${object}.fadeTo(${duration}, ${volume});\n`;
+  return `${sound_object}.fadeTo(${duration}, ${volume});\n`;
 };
 
+/**
+ * Loops the entire sound at the given volume.
+ * @method sound_loop_full
+ * @param sound_object sound to loop
+ * @param volume {Number} volume to play the sound at
+ * @returns {} sound_object.loopFull(volume);
+ * @block
+ */
 Blockly.JavaScript['sound_loop_full'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const volume = Blockly.JavaScript.valueToCode(block, 'VOLUME', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${object}.loopFull(${volume});\n`;
+  return `${sound_object}.loopFull(${volume});\n`;
 };
 
+/**
+ * Stop the sound playing.
+ * @method sound_stop
+ * @param sound_object sound to stop
+ * @returns {} sound_object.stop();
+ * @block
+ */
 Blockly.JavaScript['sound_stop'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  return `${object}.stop();\n`;
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return `${sound_object}.stop();\n`;
 };
 
+/**
+ * Pause the sound.
+ * @method sound_pause
+ * @param sound_object sound to pause
+ * @returns {} sound_object.pause();
+ * @block
+ */
 Blockly.JavaScript['sound_pause'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  return `${object}.pause();\n`;
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return `${sound_object}.pause();\n`;
 };
 
+/**
+ * Resume the sound.
+ * @method sound_resume
+ * @param sound_object sound to resume
+ * @returns {} sound_object.resume();
+ * @block
+ */
 Blockly.JavaScript['sound_resume'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
-  return `${object}.resume();\n`;
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  return `${sound_object}.resume();\n`;
 };
 
+/**
+ * Play the sound with the given properties.
+ * @method sound_play
+ * @param sound_object sound to play
+ * @param position {Number} position to play the sound from
+ * @param volume {Number} volume to play the sound at
+ * @param loop {Boolean} whether or not the sound should loop
+ * @param restart {Boolean} option to force the sound to restart from the beginning
+ * @returns {} sound_object.play('', position, volume, loop, restart);
+ * @block
+ */
 Blockly.JavaScript['sound_play'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const position = Blockly.JavaScript.valueToCode(block, 'POSITION', Blockly.JavaScript.ORDER_ATOMIC);
   const volume = Blockly.JavaScript.valueToCode(block, 'VOLUME', Blockly.JavaScript.ORDER_ATOMIC);
   const loop = block.getFieldValue('LOOP') == 'TRUE';
   const restart = block.getFieldValue('RESTART') == 'TRUE';
 
-  return `${object}.play('', ${position}, ${volume}, ${loop}, ${restart});\n`;
+  return `${sound_object}.play('', ${position}, ${volume}, ${loop}, ${restart});\n`;
 };
 
+/**
+ * Restarts the sound with the given properties.
+ * @method sound_restart
+ * @param sound_object sound to restart
+ * @param position {Number} the starting position to play the sound from
+ * @param volume {Number} the volume to play the sound at
+ * @param loop {Boolean} whether or not the sound should loop
+ * @returns {} sound_object.play('', position, volume loop);
+ * @block
+ */
 Blockly.JavaScript['sound_restart'] = function (block) {
-  const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
+  const sound_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   const position = Blockly.JavaScript.valueToCode(block, 'POSITION', Blockly.JavaScript.ORDER_ATOMIC);
   const volume = Blockly.JavaScript.valueToCode(block, 'VOLUME', Blockly.JavaScript.ORDER_ATOMIC);
   const loop = block.getFieldValue('LOOP') == 'TRUE';
 
-  return `${object}.play('', ${position}, ${volume}, ${loop});\n`;
+  return `${sound_object}.play('', ${position}, ${volume}, ${loop});\n`;
 };
 //endregion
 
 //region CAMERA
+/**
+ * Returns the game camera.
+ * @method game_camera
+ * @returns {} game.camera
+ * @block
+ */
 Blockly.JavaScript['game_camera'] = function () {
   return ['game.camera', Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Fades the screen to the colour over the given amount of time.
+ * @method camera_fade
+ * @param colour colour to fade the screen to
+ * @param time {Number} how long to take to fade
+ * @returns {} function toHexColor(color) { return color.replace("#", "0x"); } game.camera.fade(toHexColorFunc(colour), time, true);
+ * @block
+ */
 Blockly.JavaScript['camera_fade'] = function (block) {
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
   const time = Blockly.JavaScript.valueToCode(block, 'TIME', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3977,6 +5260,14 @@ Blockly.JavaScript['camera_fade'] = function (block) {
   return `game.camera.fade(${toHexColorFunc}(${colour}), ${time}, true);\n`;
 };
 
+/**
+ * Fills the game with the colour specified, then fades the colour away over the given amount of time.
+ * @method camera_flash
+ * @param colour colour to show
+ * @param time {Number} how long to take to fade the colour away
+ * @returns {} function toHexColor(color) { return color.replace("#", "0x"); } game.camera.flash(toHexColorFunc(colour), time, true);
+ * @block
+ */
 Blockly.JavaScript['camera_flash'] = function (block) {
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
   const time = Blockly.JavaScript.valueToCode(block, 'TIME', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3990,41 +5281,99 @@ Blockly.JavaScript['camera_flash'] = function (block) {
   return `game.camera.flash(${toHexColorFunc}(${colour}), ${time}, true);\n`;
 };
 
+/**
+ * Focus the camera on the given object.
+ * @method camera_focus_on
+ * @param object object to focus on
+ * @returns {} game.camera.focusOn(object);
+ * @block
+ */
 Blockly.JavaScript['camera_focus_on'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.camera.focusOn(${object});\n`;
 };
 
+/**
+ * Focus the camera on the given location.
+ * @method camera_focus_on_xy
+ * @param posX {Number} x position to focus on
+ * @param posY {Number} y position to focus on
+ * @returns {} game.camera.focusOnXY(posX, posY);
+ * @block
+ */
 Blockly.JavaScript['camera_focus_on_xy'] = function (block) {
   const posX = Blockly.JavaScript.valueToCode(block, 'POSX', Blockly.JavaScript.ORDER_ATOMIC);
   const posY = Blockly.JavaScript.valueToCode(block, 'POSY', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.camera.focusOnXY(${posX}, ${posY});\n`;
 };
 
+/**
+ * Resets the camera by making it focus back to 0,0 and unfollowing all objects. Also resets any camera effects.
+ * @method camera_reset
+ * @returns {} game.camera.reset();
+ * @block
+ */
 Blockly.JavaScript['camera_reset'] = function (block) {
   return `game.camera.reset();\n`;
 };
 
+/**
+ * Resets any active camera effects.
+ * @method camera_reset_fx
+ * @return {} game.camera.resetFX();
+ * @block
+ */
 Blockly.JavaScript['camera_reset_fx'] = function (block) {
   return `game.camera.resetFX();\n`;
 };
 
+/**
+ * Updates the camera bounds to match the game world bounds.
+ * @method camera_set_bounds_to_world
+ * @returns {} game.camera.setBoundsToWorld();
+ * @block
+ */
 Blockly.JavaScript['camera_set_bounds_to_world'] = function (block) {
   return `game.camera.setBoundsToWorld();\n`;
 };
 
+/**
+ * Sets the game camera position.
+ * @method camera_set_position
+ * @param posX {Number} x position for the camera
+ * @param posY {Number} y position for the camera
+ * @returns {} game.camera.setPosition(posX, posY);
+ * @block
+ */
 Blockly.JavaScript['camera_set_position'] = function (block) {
   const posX = Blockly.JavaScript.valueToCode(block, 'POSX', Blockly.JavaScript.ORDER_ATOMIC);
   const posY = Blockly.JavaScript.valueToCode(block, 'POSY', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.camera.setPosition(${posX}, ${posY});\n`;
 };
 
+/**
+ * Sets the size of the camera viewing rectangle.
+ * @method camera_set_size
+ * @param width {Number} the width of the camera view port
+ * @param height {Number} the height of the camera view port
+ * @returns {} game.camera.setSize(width, height);
+ * @block
+ */
 Blockly.JavaScript['camera_set_size'] = function (block) {
   const width = Blockly.JavaScript.valueToCode(block, 'WIDTH', Blockly.JavaScript.ORDER_ATOMIC);
   const height = Blockly.JavaScript.valueToCode(block, 'HEIGHT', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.camera.setSize(${width}, ${height});\n`;
 };
 
+/**
+ * Creates a camera shake effect by moving the camera randomly at the given intensity for the given amount of time.
+ * @method camera_shake
+ * @param intensity {Number} how much the camera should move while shaking
+ * @param direction which direction the camera should shake
+ * @param duration {Number} how long the camera should shake
+ * @returns {} game.camera.shake(intensity, duration, true, Phaser.Camera.direction);
+ * @block
+ */
 Blockly.JavaScript['camera_shake'] = function (block) {
   const intensity = Blockly.JavaScript.valueToCode(block, 'INTENSITY', Blockly.JavaScript.ORDER_ATOMIC);
   const direction = block.getFieldValue('DIRECTION');
@@ -4032,29 +5381,67 @@ Blockly.JavaScript['camera_shake'] = function (block) {
   return `game.camera.shake(${intensity}, ${duration}, true, Phaser.Camera.${direction});\n`;
 };
 
+/**
+ * Stops the camera from following all objects.
+ * @method camera_unfollow
+ * @returns {} game.camera.unfollow();
+ * @block
+ */
 Blockly.JavaScript['camera_unfollow'] = function (block) {
   return `game.camera.unfollow();\n`;
 };
 //endregion
 
 //region LIST.METHODS
+/**
+ * Finds the value in the list that is closest to the given value
+ * @method list_find_closest
+ * @param value {Number} the search value
+ * @param array the list to search
+ * @returns {} Phaser.ArrayUtils.findClosest(value, array)
+ * @block
+ */
 Blockly.JavaScript['list_find_closest'] = function (block) {
   const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
   const array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.ArrayUtils.findClosest(${value}, ${array})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a randomly selected item from the given list.
+ * @method list_get_random
+ * @param array list to get the value from
+ * @returns {} Phaser.ArrayUtils.getRandomItem(array)
+ * @block
+ */
 Blockly.JavaScript['list_get_random'] = function (block) {
   const array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.ArrayUtils.getRandomItem(${array})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Creates and returns a list with every number between the given parameters.
+ * @method number_list
+ * @param start {Number} the minimum value the list starts with
+ * @param end {Number} the maximum value the list contains
+ * @returns {} Phaser.ArrayUtils.numberArray(start, end)
+ * @block
+ */
 Blockly.JavaScript['number_list'] = function (block) {
   const start = Blockly.JavaScript.valueToCode(block, 'START', Blockly.JavaScript.ORDER_ATOMIC);
   const end = Blockly.JavaScript.valueToCode(block, 'END', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.ArrayUtils.numberArray(${start}, ${end})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Creates and returns a list starting with the min value, stepping by the given value, and stopping at the max value.
+ * @method number_list_step
+ * @param start {Number} the minimum value the list starts with
+ * @param end {Number} the maximum value the list starts with
+ * @param step {Number} the value to incremement/decrement by
+ * @returns {} Phaser.ArrayUtils.numberArrayStep(start, end, step)
+ * @block
+ */
 Blockly.JavaScript['number_list_step'] = function (block) {
   const start = Blockly.JavaScript.valueToCode(block, 'START', Blockly.JavaScript.ORDER_ATOMIC);
   const end = Blockly.JavaScript.valueToCode(block, 'END', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4062,11 +5449,25 @@ Blockly.JavaScript['number_list_step'] = function (block) {
   return [`Phaser.ArrayUtils.numberArrayStep(${start}, ${end}, ${step})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random item and removes it from the list.
+ * @method list_remove_random_item
+ * @param array list to get the item from
+ * @returns {} Phaser.ArrayUtils.removeRandomItem(array)
+ * @block
+ */
 Blockly.JavaScript['list_remove_random_item'] = function (block) {
   const array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`Phaser.ArrayUtils.removeRandomItem(${array})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Shuffles the contents of the list by changing the positions of all items.
+ * @method list_shuffle
+ * @param array list to shuffle
+ * @returns {} Phaser.ArrayUtils.shuffle(array);
+ * @block
+ */
 Blockly.JavaScript['list_shuffle'] = function (block) {
   const array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return `Phaser.ArrayUtils.shuffle(${array});\n`;
@@ -4074,54 +5475,124 @@ Blockly.JavaScript['list_shuffle'] = function (block) {
 //endregion
 
 //region RANDOMISATION
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['create_random_generator'] = function (block) {
   return [`new Phaser.RandomDataGenerator([new Date().getTime()])`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['create_random_generator_seeded'] = function (block) {
   const seed = Blockly.JavaScript.valueToCode(block, 'SEED', Blockly.JavaScript.ORDER_ATOMIC);
   return [`new Phaser.RandomDataGenerator(${seed})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random angle between -180 and 180.
+ * @method random_angle
+ * @returns {} game.rnd.angle()
+ * @block
+ */
 Blockly.JavaScript['random_angle'] = function (block) {
   return [`game.rnd.angle()`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random item from the list.
+ * @method random_pick
+ * @param array list to pick from
+ * @returns {} game.rnd.pick(array)
+ * @block
+ */
 Blockly.JavaScript['random_pick'] = function (block) {
   const array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`game.rnd.pick(${array})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random item from the list, favoring items at the beginning.
+ * @method random_pick_weighted
+ * @param array list to pick from
+ * @returns {} game.rnd.weightedPick(array)
+ * @block
+ */
 Blockly.JavaScript['random_pick_weighted'] = function (block) {
   const array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_ATOMIC);
   return [`game.rnd.weightedPick(${array})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random real number between 0 and 2^32.
+ * @method random_real
+ * @returns {} game.rnd.real()
+ * @block
+ */
 Blockly.JavaScript['random_real'] = function (block) {
   return [`game.rnd.real()`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random number between the given range, inclusive.
+ * @method random_real_in_range
+ * @param min {Number} the minimum value in the range
+ * @param max {Number} the maximum value in the range
+ * @returns {} game.rnd.realInRange(min, max)
+ * @block
+ */
 Blockly.JavaScript['random_real_in_range'] = function (block) {
   const min = Blockly.JavaScript.valueToCode(block, 'MIN', Blockly.JavaScript.ORDER_ATOMIC);
   const max = Blockly.JavaScript.valueToCode(block, 'MAX', Blockly.JavaScript.ORDER_ATOMIC);
   return [`game.rnd.realInRange(${min}, ${max})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Returns a random sign to be used with multiplication. Returns -1 or +1.
+ * @method random_sign
+ * @returns {} game.rnd.sign()
+ * @block
+ */
 Blockly.JavaScript['random_sign'] = function (block) {
   return [`game.rnd.sign()`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Randomly returns true or false.
+ * @method random_boolean
+ * @returns {} game.rnd.pick([true, false])
+ * @block
+ */
 Blockly.JavaScript['random_boolean'] = function () {
   return ['game.rnd.pick([true, false])', Blockly.JavaScript.ORDER_NONE];
 };
 //endregion
 
 //region MATH
+/**
+ * Converts the given degrees to radians and returns the result.
+ * @method math_deg_to_rad
+ * @param degrees {Number} the number of degrees to convert to radians.
+ * @returns {} game.math.degToRad(degrees)
+ * @block
+ */
 Blockly.JavaScript['math_deg_to_rad'] = function (block) {
   const degrees = Blockly.JavaScript.valueToCode(block, 'DEGREES', Blockly.JavaScript.ORDER_ATOMIC);
   return [`game.math.degToRad(${degrees})`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Converts the given radians to degrees and returns the result.
+ * @method math_rad_to_deg
+ * @param radians {Number} the number of radians to convert to degrees
+ * @returns {} game.math.radToDeg(radians)
+ * @block
+ */
 Blockly.JavaScript['math_rad_to_deg'] = function (block) {
   const radians = Blockly.JavaScript.valueToCode(block, 'RADIANS', Blockly.JavaScript.ORDER_ATOMIC);
   return [`game.math.radToDeg(${radians})`, Blockly.JavaScript.ORDER_NONE];
@@ -4129,67 +5600,165 @@ Blockly.JavaScript['math_rad_to_deg'] = function (block) {
 //endregion
 
 //region TIME
+
+/**
+ * Returns the chosen numeric field value of the game timer.
+ * @method get_time_numeric_member
+ * @param field the value to get
+ * @returns {} game.time.field
+ * @block
+ */
 Blockly.JavaScript['get_time_numeric_member'] = function (block) {
-  const property = block.getFieldValue('PROPERTY');
-  return [`game.time.${property}`, Blockly.JavaScript.ORDER_NONE];
+  const field = block.getFieldValue('PROPERTY');
+  return [`game.time.${field}`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Assigns the chosen numeric field for the game timer.
+ * @method set_time_numeric_member
+ * @param field the value to set
+ * @param value value to set the field to
+ * @returns {} game.time.field = value;
+ * @block
+ */
 Blockly.JavaScript['set_time_numeric_member'] = function (block) {
-  const property = block.getFieldValue('PROPERTY');
+  const field = block.getFieldValue('PROPERTY');
   const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
-  return `game.time.${property} = ${value};\n`;
+  return `game.time.${field} = ${value};\n`;
 };
 
+/**
+ * Returns the physics update delta in seconds.
+ * @method delta_time_seconds
+ * @returns {} game.time.physicsElapsed
+ * @block
+ */
 Blockly.JavaScript['delta_time_seconds'] = function (block) {
   return [`game.time.physicsElapsed`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns the physics update delta in milliseconds.
+ * @method delta_time_milliseconds
+ * @returns {} game.time.physicsElapsedMS
+ * @block
+ */
 Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
   return [`game.time.physicsElapsedMS`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 //endregion
 
 //region TIMER
+/**
+ * Returns the chosen numeric field value of the timer.
+ * @method get_timer_numeric_member
+ * @param field the value to get
+ * @param timer timer to get the values from
+ * @returns {} timer.field
+ * @block
+ */
+/**
+ * Returns the chosen boolean field value of the timer.
+ * @method get_timer_boolean_member
+ * @param field the value to get
+ * @param timer timer to get the values from
+ * @returns {} timer.field
+ * @block
+ */
 Blockly.JavaScript['get_timer_numeric_member'] =
 Blockly.JavaScript['get_timer_boolean_member'] =
   function (block) {
-  const property = block.getFieldValue('PROPERTY');
+  const field = block.getFieldValue('PROPERTY');
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`${timer}.${property}`, Blockly.JavaScript.ORDER_NONE];
+  return [`${timer}.${field}`, Blockly.JavaScript.ORDER_NONE];
 };
 
+/**
+ * Assigns the chosen boolean field for the timer.
+ * @method set_timer_boolean_member
+ * @param field the value to set
+ * @param timer timer to assign values for
+ * @param value value to set the field to
+ * @returns {} timer.field = value;
+ * @block
+ */
+/**
+ * Assigns the chosen numeric field for the timer.
+ * @method set_timer_numeric_member
+ * @param field the value to set
+ * @param timer timer to assign values for
+ * @param value value to set the field to
+ * @returns {} timer.field = value;
+ * @block
+ */
 Blockly.JavaScript['set_timer_numeric_member'] =
 Blockly.JavaScript['set_timer_boolean_member'] =
   function (block) {
-  const property = block.getFieldValue('PROPERTY');
+  const field = block.getFieldValue('PROPERTY');
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${timer}.${property} = ${value};\n`;
+  return `${timer}.${field} = ${value};\n`;
 };
 
+/**
+ * Creates and returns a new timer.
+ * @method create_timer
+ * @param autoDestroy {Boolean} whether or not the timer should automatically destroy when it's done
+ * @returns {} game.time.create(autoDestroy)
+ * @block
+ */
 Blockly.JavaScript['create_timer'] = function (block) {
   const autoDestroy = block.getFieldValue('AUTO_DESTROY') === 'TRUE';
   return [`game.time.create(${autoDestroy})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns the chosen constant time value.
+ * @method time_constants
+ * @param constant which time value to return
+ * @returns {} constant
+ * @block
+ */
 Blockly.JavaScript['time_constants'] = function (block) {
   const constant = block.getFieldValue('VALUE');
   return [`${constant}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Start the chosen timer after the given amount of time.
+ * @method start_timer
+ * @param delay {Number} how long to wait before starting the timer
+ * @param timer timer to start
+ * @returns {} timer.start(delay);
+ * @block
+ */
 Blockly.JavaScript['start_timer'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   return `${timer}.start(${delay});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['timer_add_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
   return `${timer}.add(${delay}, ${callback});\n`;
 };
-
+/**
+ * Adds an event to the timer, to be called after the given amount of time, once the timer has started running. The delay applies only after the timer has started.
+ * @method timer_add_event_complex
+ * @param delay {Number} the number of milliseconds before the timer function is called
+ * @param callback the function to call
+ * @param timer timer to add the function call event to
+ * @param arguments (optional) arguments to use in the function that gets called
+ * @returns {} timer.add(delay, callback, undefined, arguments[if any]);
+ * @block
+ */
 Blockly.JavaScript['timer_add_event_complex'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4200,6 +5769,11 @@ Blockly.JavaScript['timer_add_event_complex'] = function (block) {
   return `${timer}.add(${delay}, ${callback}, undefined, ${code});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['timer_loop_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4208,6 +5782,16 @@ Blockly.JavaScript['timer_loop_event'] = function (block) {
   return `${timer}.loop(${delay}, ${callback});\n`;
 };
 
+/**
+ * Adds an event to the timer, to be called continuously after the given amount of time, once the timer has started running. The delay applies only after the timer has started.
+ * @method timer_loop_event_complex
+ * @param delay {Number} the number of milliseconds before the timer function is called
+ * @param callback the function to call
+ * @param timer timer to add the function call event to
+ * @param arguments (optional) arguments to use in the function that gets called
+ * @returns {} timer.add(delay, callback, arguments[if any]);
+ * @block
+ */
 Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4218,6 +5802,11 @@ Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
   return `${timer}.loop(${delay}, ${callback}, ${code});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['timer_repeat_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const repeatCount = Blockly.JavaScript.valueToCode(block, 'REPEAT_COUNT', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -4226,6 +5815,17 @@ Blockly.JavaScript['timer_repeat_event'] = function (block) {
   return `${timer}.repeat(${delay}, ${repeatCount}, ${callback});\n`;
 };
 
+/**
+ * Adds an event to the timer, to be called continuously after the given amount of time for the given number of times, once the timer has started running. The delay applies only after the timer has started.
+ * @method timer_loop_event_complex
+ * @param delay {Number} the number of milliseconds before the timer function is called
+ * @param repeatCount {Number} the number of times to call the event
+ * @param callback the function to call
+ * @param timer timer to add the function call event to
+ * @param arguments (optional) arguments to use in the function that gets called
+ * @returns {} timer.add(delay, repeatCount, callback, arguments[if any]);
+ * @block
+ */
 Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
   const repeatCount = Blockly.JavaScript.valueToCode(block, 'REPEAT_COUNT', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -4237,32 +5837,74 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
   return `${timer}.repeat(${delay}, ${repeatCount}, ${callback}, ${code});\n`;
 };
 
+/**
+ * Destroy the timer and stops any future related events from happening.
+ * @method timer_destroy
+ * @param timer timer to destroy
+ * @returns {} timer.destroy();
+ * @block
+ */
 Blockly.JavaScript['timer_destroy'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   return `${timer}.destroy();\n`;
 };
 
+/**
+ * Pause the timer and all future related events.
+ * @method timer_pause
+ * @param timer timer to pause
+ * @returns {} timer.pause();
+ * @block
+ */
 Blockly.JavaScript['timer_pause'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   return `${timer}.pause();\n`;
 };
 
+/**
+ * Resumes the timer and all future related events.
+ * @method timer_resume
+ * @param timer timer to resume
+ * @returns {} timer.resume();
+ * @block
+ */
 Blockly.JavaScript['timer_resume'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   return `${timer}.resume();\n`;
 };
 
+/**
+ * Stops the timer, with the option to clear the related events.
+ * @method timer_stop
+ * @param timer timer to stop
+ * @param clearEvents {Boolean} option to keep or remove events related to the timer
+ * @returns {} timer.stop(clearEvents);
+ * @block
+ */
 Blockly.JavaScript['timer_stop'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const clearEvents = block.getFieldValue('CLEAR_EVENTS') === 'TRUE';
   return `${timer}.stop(${clearEvents});\n`;
 };
 
+/**
+ * @deprecated
+ * @param block
+ * @returns {}
+ */
 Blockly.JavaScript['timer_duration'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${timer}.duration`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Call the given function once the timer has completed and has no other events to call.
+ * @method timer_set_on_complete_callback
+ * @param timer timer to use
+ * @param callback function to call
+ * @returns {} timer.onComplete.add(callback);
+ * @block
+ */
 Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
   const callback = block.getFieldValue('CALLBACK');
@@ -4271,20 +5913,47 @@ Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {
 //endregion
 
 //region EASING
+/**
+ * Returns the chosen easing method in the given direction.
+ * @method phaser_easing
+ * @param ease easing method to return
+ * @param direction direction for the easing method to use
+ * @returns {} Phasser.ease.direction
+ * @block
+ */
 Blockly.JavaScript['phaser_easing'] = function (block) {
   const ease = block.getFieldValue('EASING');
   const direction = block.getFieldValue('DIRECTION');
   return [`Phaser.${ease}.${direction}`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Returns the linear easing method.
+ * @method phaser_easing_linear
+ * @returns {} Phaser.Easing.Linear.None
+ * @block
+ */
 Blockly.JavaScript['phaser_easing_linear'] = function (block) {
-  const ease = block.getFieldValue('EASING');
   return [`Phaser.Easing.Linear.None`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 //endregion
 
 //region TWEEN
-Blockly.JavaScript['phaser_game_add_tween_to'] = Blockly.JavaScript['phaser_game_add_tween_from'] = function (block) {
+/**
+ * Creates and returns a tween with the given properties. It will start at the current value and tween to the destination value.
+ * @method phaser_game_add_tween_to
+ * @param target the object to add the tween to
+ * @param duration {Number} duration of the tween
+ * @param ease the easing function to use on the tween
+ * @param autostart {Boolean} option to automatically start the tween instead of manually calling tween.start()
+ * @param delay {Number} delay before the tween will start, in milliseconds
+ * @param repeat {Number} how many times the tween should repeat. Set to -1 to run forever
+ * @param yoyo {Boolean} option for the tween to reverse itself and play backwards
+ * @param properties (optional) optional properties to add to the tween
+ * @returns {} game.add.tween(target).to(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
+ * @block
+ */
+Blockly.JavaScript['phaser_game_add_tween_to'] = function (block) {
   const target = Blockly.JavaScript.valueToCode(block, 'TARGET', Blockly.JavaScript.ORDER_ATOMIC);
   const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC);
   const ease = Blockly.JavaScript.valueToCode(block, 'EASE', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4299,27 +5968,95 @@ Blockly.JavaScript['phaser_game_add_tween_to'] = Blockly.JavaScript['phaser_game
   return [`game.add.tween(${target}).to({${objectProperties}}, ${duration}, ${ease}, ${autostart}, ${delay}, ${repeat}, ${yoyo})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+/**
+ * Creates and returns a tween with the given properties. It will set the target to the destination value and tween to it's current value.
+ * @method phaser_game_add_tween_from
+ * @param target the object to add the tween to
+ * @param duration {Number} duration of the tween
+ * @param ease the easing function to use on the tween
+ * @param autostart {Boolean} option to automatically start the tween instead of manually calling tween.start()
+ * @param delay {Number} delay before the tween will start, in milliseconds
+ * @param repeat {Number} how many times the tween should repeat. Set to -1 to run forever
+ * @param yoyo {Boolean} option for the tween to reverse itself and play backwards
+ * @param properties (optional) optional properties to add to the tween
+ * @returns {} game.add.tween(target).from(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
+ * @block
+ */
+Blockly.JavaScript['phaser_game_add_tween_from'] = function (block) {
+  const target = Blockly.JavaScript.valueToCode(block, 'TARGET', Blockly.JavaScript.ORDER_ATOMIC);
+  const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC);
+  const ease = Blockly.JavaScript.valueToCode(block, 'EASE', Blockly.JavaScript.ORDER_ATOMIC);
+  const autostart = block.getFieldValue('AUTOSTART') === 'TRUE';
+  const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC);
+  const repeat = Blockly.JavaScript.valueToCode(block, 'REPEAT', Blockly.JavaScript.ORDER_ATOMIC);
+  const yoyo = block.getFieldValue('YOYO') === 'TRUE';
+  let objectProperties = '';
+  for (let i = 0; i < block.properties_.length; ++i) {
+    objectProperties += `${block.properties_[i]}: ${Blockly.JavaScript.valueToCode(block, 'PROP' + i, Blockly.JavaScript.ORDER_COMMA)},`;
+  }
+  return [`game.add.tween(${target}).from({${objectProperties}}, ${duration}, ${ease}, ${autostart}, ${delay}, ${repeat}, ${yoyo})`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+/**
+ * Stop the chosen tween.
+ * @method phaser_stop_tween
+ * @param tween tween to stop
+ * @param complete {Boolean} if true, dispatches the onComplete signal
+ * @returns {} tween.stop(complete);
+ * @block
+ */
 Blockly.JavaScript['phaser_stop_tween'] = function (block) {
   const tween = Blockly.JavaScript.valueToCode(block, 'TWEEN', Blockly.JavaScript.ORDER_ATOMIC);
   const complete = block.getFieldValue('COMPLETE') === 'TRUE';
   return `${tween}.stop(${complete});\n`;
 };
 
+/**
+ * Pauses the chosen tween.
+ * @method phaser.pause.tween
+ * @param tween tween to pause
+ * @returns {} tween.pause();
+ * @block
+ */
 Blockly.JavaScript['phaser_pause_tween'] = function (block) {
   const tween = Blockly.JavaScript.valueToCode(block, 'TWEEN', Blockly.JavaScript.ORDER_ATOMIC);
   return `${tween}.pause();\n`;
 };
 
+/**
+ * Resumes the chosen tween.
+ * @method phaser_resume_tween
+ * @param tween tween to resume
+ * @returns {} tween.resume();
+ * @block
+ */
 Blockly.JavaScript['phaser_resume_tween'] = function (block) {
   const tween = Blockly.JavaScript.valueToCode(block, 'TWEEN', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${tween}.pause();\n`;
+  return `${tween}.resume();\n`;
 };
 
+/**
+ * Start the chosen tween object.
+ * @method phaser_start_tween
+ * @param tween tween to start
+ * @returns {} tween.start();
+ * @block
+ */
 Blockly.JavaScript['phaser_start_tween'] = function (block) {
   const tween = Blockly.JavaScript.valueToCode(block, 'TWEEN', Blockly.JavaScript.ORDER_ATOMIC);
-  return `${tween}.pause();\n`;
+  return `${tween}.start();\n`;
 };
 
+/**
+ * Make the chosen tween run through the starting values and then play back in reverse.
+ * @method phaser_yoyo_tween
+ * @param tween tween to yoyo
+ * @param enable {Boolean} enable/disable yoyoing on the tween
+ * @param delay {Number} the amount of time to wait until the yoyo will start
+ * @param index {Number} choose the object index on the tween to apply this to
+ * @returns {} tween.yoyo(enable, delay, index);
+ * @block
+ */
 Blockly.JavaScript['phaser_yoyo_tween'] = function (block) {
   const tween = Blockly.JavaScript.valueToCode(block, 'TWEEN', Blockly.JavaScript.ORDER_ATOMIC);
   const enable = block.getFieldValue('ENABLE') === 'TRUE';
@@ -4330,28 +6067,82 @@ Blockly.JavaScript['phaser_yoyo_tween'] = function (block) {
 //endregion
 
 //region POINTER
+/**
+ * Returns the chosen button from the mouse.
+ * @method pointer_get_device_buttons_field
+ * @param object pointer to get the buttons from
+ * @param field which button to return
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
 //endregion
 
 //region DEVICE_BUTTON
+/**
+ * Returns the chosen boolean field value of the chosen button on the pointer.
+ * @method device_button_get_boolean_field
+ * @param object button to get the values from
+ * @param field the value to get
+ * @returns {} object.field
+ * @block
+ */
+/**
+ * Returns the chosen numeric field value of the chosen button on the pointer.
+ * @method device_button_get_numeric_field
+ * @param object button to get the values from
+ * @param field the value to get
+ * @returns {} object.field
+ * @block
+ */
 Blockly.JavaScript['device_button_get_boolean_field'] = Blockly.JavaScript['device_button_get_numeric_field'] = getField;
 
+/**
+ * Returns true/false if the chosen button on the pointer was released within the last 250 milliseconds.
+ * @method device_button_just_released
+ * @param object button to check
+ * @returns {} object.justReleased()
+ * @block
+ */
 Blockly.JavaScript['device_button_just_released'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.justReleased()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the chosen button on the pointer was pressed within the last 250 milliseconds.
+ * @method device_button_just_pressed
+ * @param object button to check
+ * @returns {} object.justPressed()
+ * @block
+ */
 Blockly.JavaScript['device_button_just_pressed'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.justPressed()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the chosen button on the pointer was released within the given amount of time.
+ * @method device_button_just_released_complex
+ * @param object button to check
+ * @param duration {Number} the duration to check
+ * @returns {} object.justReleased(duration)
+ * @block
+ */
 Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC);
   return [`${object}.justReleased(${duration})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
+/**
+ * Returns true/false if the chosen button on the pointer was pressed within the given amount of time.
+ * @method device_button_just_pressed_complex
+ * @param object button to check
+ * @param duration {Number} the duration to check
+ * @returns {} object.justPressed(duration)
+ * @block
+ */
 Blockly.JavaScript['device_button_just_pressed_complex'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const duration = Blockly.JavaScript.valueToCode(block, 'DURATION', Blockly.JavaScript.ORDER_ATOMIC);
