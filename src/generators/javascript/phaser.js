@@ -1,5 +1,6 @@
 /**
  * @author Luke Powell
+ * @author Aeon Williams
  * @file Generates JavaScript for phaser blocks
  * @copyright DigiPen Institute of Technology 2016
  * @block
@@ -11,6 +12,7 @@
  * @param block A block containing two value inputs OBJECT and VALUE representing the object the member is on and the value to set it to and a field ELEMENT to determine the member
  * @block
  */
+
 function getMember (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   const element = block.getFieldValue('ELEMENT');
@@ -306,7 +308,8 @@ Blockly.JavaScript['add_animation'] = function (block) {
 
 /**
  * Add an animation to a sprite object.
- * @method add_animation
+ * @ignore
+ * @method add_animation_vi
  * @param object {Sprite} sprite to apply the animation to
  * @param name {String} name of the tag for the animation
  * @param frames array of numbers or strings that correspond to frames to add to the animation
@@ -315,6 +318,7 @@ Blockly.JavaScript['add_animation'] = function (block) {
  * @returns {} object.animations.add(name, frames, fps, loop);
  * @block
  */
+
 // These blocks move towards using value input verus variable fields, this allows the students to for example loop through
 // a list of objects they want an animation to start playing on
 Blockly.JavaScript['add_animation_vi'] = function (block) {
@@ -361,7 +365,7 @@ Blockly.JavaScript['add_child'] = function (block) {
 
 /**
  * Adds a child to the given object.
- * @method add_child
+ * @method add_child_vi
  * @param object the object to add a child to
  * @param child the child to add to the object
  * @returns {} object.addChild(child);
@@ -392,7 +396,7 @@ Blockly.JavaScript['add_child_at'] = function (block) {
 
 /**
  * Adds a child to the given object at the given index.
- * @method add_child_at
+ * @method add_child_at_vi
  * @param object the object to add a child to
  * @param child the child to add to the object
  * @param index {Number} the index to add the child to
@@ -490,7 +494,7 @@ Blockly.JavaScript['contains'] = function (block) {
 
 /**
  * Checks if an object contains the given child.
- * @method contains
+ * @method contains_vi
  * @param object object to check
  * @param child child to check
  * @returns {} object.contains(child);
@@ -559,7 +563,7 @@ Blockly.JavaScript['get_child_at'] = function (block) {
 
 /**
  * Get the child at the given index.
- * @method get_child_at
+ * @method get_child_at_vi
  * @param object object to get the child from
  * @param index {Number} index the child is located at
  * @returns {} object.getChildAt(index);
@@ -588,7 +592,7 @@ Blockly.JavaScript['get_child_index'] = function (block) {
 
 /**
  * Get the index of the given child.
- * @method get_child_index
+ * @method get_child_index_vi
  * @param object object to get the child from
  * @param child child to get the index from
  * @returns {} object.getChildIndex(child);
@@ -712,7 +716,7 @@ Blockly.JavaScript['remove_children'] = function (block) {
 
 /**
  * Removes the given child from the object.
- * @method remove_child
+ * @method remove_child_vi
  * @param object object to remove the child from
  * @param child child to remove from the object
  * @returns {} object.removeChild(child);
@@ -726,7 +730,7 @@ Blockly.JavaScript['remove_child_vi'] = function (block) {
 
 /**
  * Removes the child at the given index from the object.
- * @method remove_child_at
+ * @method remove_child_at_vi
  * @param object object to remove the child from
  * @param index index of the child to remove from the object
  * @returns {} object.removeChildAt(index);
@@ -740,7 +744,7 @@ Blockly.JavaScript['remove_child_at_vi'] = function (block) {
 
 /**
  * Removes all children from the object.
- * @method remove_children
+ * @method remove_children_vi
  * @params object object to remove children from
  * @returns {} object.removeChildren();
  * @block
@@ -805,7 +809,7 @@ Blockly.JavaScript['set_child_index'] = function (block) {
 
 /**
  * Sets the position of the child in the object's list of children.
- * @method set_child_index
+ * @method set_child_index_vi
  * @param object object that contains the child
  * @param child child to change the position of
  * @param index {Number} index to set the child's position to
@@ -925,7 +929,7 @@ Blockly.JavaScript['create_object_in_group_with_frame'] = function (block) {
 
 /**
  * Creates a new object from the tag and adds it to the front of the group. Assign to a variable for future use.
- * @method create_object_in_group_with_frame
+ * @method create_object_in_group_with_frame_vi
  * @param x {Number} the x position for the object to be displayed at
  * @param y {Number} the y position for the object to be displayed at
  * @param frame {Number} the frame of the sprite sheet to display at the start
@@ -1438,7 +1442,7 @@ Blockly.JavaScript['enable_body_group'] = function (block) {
 
 /**
  * Enables physics body for all objects in the group. This allows the objects to collide with other physics bodies and use other physics functionality.
- * @method enable_body_group
+ * @method enable_body_group_vi
  * @param group group to enable physics on
  * @returns {} group.enableBody = true;
  * @block
