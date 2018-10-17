@@ -5,7 +5,7 @@
  * @copyright DigiPen Institute of Technology 2018
  */
 
-//region DRAWPRIMITIVES
+//region GRAPHICS
 Blockly.Blocks['create_graphics_object'] = {
   init: function () {
     this.appendDummyInput()

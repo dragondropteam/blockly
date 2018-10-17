@@ -212,7 +212,6 @@ Blockly.Blocks['rectangle_random'] = {
   }
 };
 //endregion
-
 //region POINT
 Blockly.Blocks['point_create'] = {
   init: function () {
