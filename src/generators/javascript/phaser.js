@@ -3,13 +3,16 @@
  * @author Aeon Williams
  * @file Generates JavaScript for phaser blocks
  * @copyright DigiPen Institute of Technology 2016
+ * ```
  * @block
  */
 
 //region MEMBER_FUNCTIONS
 /**
+ * @ignore
  * Generic method to translate a block for a set_<object>_<type>_member block
  * @param block A block containing two value inputs OBJECT and VALUE representing the object the member is on and the value to set it to and a field ELEMENT to determine the member
+ * ```
  * @block
  */
 
@@ -26,9 +29,11 @@ function getField (block) {
 }
 
 /**
+ * @ignore
  * Generic method to translate a block for a get_<object>_<type>_member block
  * @param block A block containing a value input OBJECT representing the object the member is on and a field ELEMENT to determine the member
  * @return {String}
+ * ```
  * @block
  */
 function setMember (block) {
@@ -54,8 +59,11 @@ function setPointField (block) {
  * [Check the game engine documentation for more details.]{@link http://dragondrop.digipen.edu/docs/Phaser.Timer.html}
  * @param width {Number} The width of the game world
  * @param height {Number} The height of the game world
- * @returns {} var game = new Phaser.Game([width], [height], Phaser.AUTO, '', {preload: preload, create: create, update: update});
+ * @returns {}
+ * ```javascript
+ * var game = new Phaser.Game([width], [height], Phaser.AUTO, '', {preload: preload, create: create, update: update});
 
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_simple_init'] = function (block) {
@@ -79,7 +87,10 @@ Blockly.JavaScript['phaser_simple_init'] = function (block) {
  * @method start_phaser_for_states
  * @param width {Number} The width of the game world
  * @param height {Number} The height of the game world
- * @returns {} var game = new Phaser.Game(${number_width}, ${number_height}, Phaser.AUTO, '');
+ * @returns {}
+ * ```javascript
+ * var game = new Phaser.Game(${number_width}, ${number_height}, Phaser.AUTO, '');
+ * ```
  * @block
  */
 Blockly.JavaScript['start_phaser_for_states'] = function (block) {
@@ -91,11 +102,16 @@ Blockly.JavaScript['start_phaser_for_states'] = function (block) {
 /**
  * Stretch the stuff
  * @method center_and_stretch
- * @returns {} game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+ * @returns {}
+ * ```javascript
+ *
+ * ```javascript
+ * game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
  this.scale.pageAlignHorizontally = true;
  this.scale.pageAlignVertically = true;
  this.scale.updateLayout( true );
-
+ ```
+ * ```
  * @block
  */
 Blockly.JavaScript['center_and_stretch'] = function (block) {
@@ -107,7 +123,12 @@ Blockly.JavaScript['center_and_stretch'] = function (block) {
 /**
  * Enables stepping through the game loop one frame at a time. Must use game.step()
  * @method enable_step
- * @returns {} game.enableStep();
+ * @returns {}
+ * ```javascript
+ *
+ * ```javascript
+ * game.enableStep();
+ * ```
  * @block
  */
 Blockly.JavaScript['enable_step'] = function (block) {
@@ -116,7 +137,10 @@ Blockly.JavaScript['enable_step'] = function (block) {
 /**
  * Disables stepping through the game loop.
  * @method disable_step
- * @returns {} game.disableStep();
+ * @returns {}
+ * ```javascript
+ * game.disableStep();
+ * ```
  * @block
  */
 Blockly.JavaScript['disable_step'] = function (block) {
@@ -125,7 +149,10 @@ Blockly.JavaScript['disable_step'] = function (block) {
 /**
  * Steps through the game loop one frame at a time.
  * @method step
- * @returns {} game.step();
+ * @returns {}
+ * ```javascript
+ * game.step();
+ * ```
  * @block
  */
 Blockly.JavaScript['step'] = function (block) {
@@ -140,7 +167,10 @@ Blockly.JavaScript['step'] = function (block) {
  * @method create_graphics_object
  * @param x {Number} x position of the new graphics object
  * @param y {Number} y position of the new graphics object
- * @returns {} game.add.graphics(x, y);
+ * @returns {}
+ * ```javascript
+ * game.add.graphics(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['create_graphics_object'] = function (block) {
@@ -156,9 +186,12 @@ Blockly.JavaScript['create_graphics_object'] = function (block) {
  * @param colour the colour to fill the shapes with
  * @param graphics the graphics object to use
  * @returns {}
+ * ```javascript
+ *
  * graphics.beginFill(toHexColor(colour));
  * (shapes to fill)
  * graphics.endFill();
+ * ```
  * @block
  */
 Blockly.JavaScript['draw_shapes_with_colour'] = function (block) {
@@ -184,7 +217,10 @@ ${variable_graphics_object_name}.endFill();\n`;
  * @param y {Number} y position of the rectangle
  * @param width {Number} the width of the rectangle
  * @param height {Number} the height of the rectangle
- * @returns {} graphicsVar.drawRect(x, y, width, height);
+ * @returns {}
+ * ```javascript
+ * graphicsVar.drawRect(x, y, width, height);
+ * ```
  * @block
  */
 Blockly.JavaScript['draw_rectangle'] = function (block) {
@@ -203,7 +239,10 @@ Blockly.JavaScript['draw_rectangle'] = function (block) {
  * @param x {Number} x position of the rectangle
  * @param y {Number} y position of the rectangle
  * @param diameter {Number} the diameter of the rectangle
- * @returns {} graphicsVar.drawCircle(x, y, diameter);
+ * @returns {}
+ * ```javascript
+ * graphicsVar.drawCircle(x, y, diameter);
+ * ```
  * @block
  */
 Blockly.JavaScript['draw_circle'] = function (block) {
@@ -224,7 +263,10 @@ Blockly.JavaScript['draw_circle'] = function (block) {
  * @method create_image
  * @param tag {String} the tag that defines the image
  * @param source {String} the file path of the image
- * @returns {} game.load.image(tag, source);
+ * @returns {}
+ * ```javascript
+ * game.load.image(tag, source);
+ * ```
  * @block
  */
 Blockly.JavaScript['create_image'] = function (block) {
@@ -240,7 +282,10 @@ Blockly.JavaScript['create_image'] = function (block) {
  * @param tag {String} the tag that defines the image
  * @param source {String} the file path of the image
  * @param xml {String} the file path of the xml file
- * @returns {} game.load.atlasXML(tag, source, xml);
+ * @returns {}
+ * ```javascript
+ * game.load.atlasXML(tag, source, xml);
+ * ```
  * @block
  */
 Blockly.JavaScript['addspritewithatlas'] = function (block) {
@@ -257,7 +302,10 @@ Blockly.JavaScript['addspritewithatlas'] = function (block) {
  * @param y {Number} y position of the sprite
  * @param tag {String} the tag of the image to use for the sprite
  * @param id {String} the id of the xml texture to use for the sprite
- * @returns {} game.add.sprite(x, y, tag, id);
+ * @returns {}
+ * ```javascript
+ * game.add.sprite(x, y, tag, id);
+ * ```
  * @block
  */
 Blockly.JavaScript['imagesubtextureatlas'] = function (block) {
@@ -274,7 +322,10 @@ Blockly.JavaScript['imagesubtextureatlas'] = function (block) {
  * @param x {Number} x position of the sprite
  * @param y {Number} y position of the sprite
  * @param tag {String} the tag of the image to use for the sprite
- * @returns {} game.add.sprite(x, y, tag);
+ * @returns {}
+ * ```javascript
+ * game.add.sprite(x, y, tag);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_image'] = function (block) {
@@ -294,7 +345,10 @@ Blockly.JavaScript['add_image'] = function (block) {
  * @param frames array of numbers or strings that correspond to frames to add to the animation
  * @param fps {Number} the speed the animation should play
  * @param loop {Boolean} whether or not the animation should loop or play once
- * @returns {} object.animations.add(name, frames, fps, loop);
+ * @returns {}
+ * ```javascript
+ * object.animations.add(name, frames, fps, loop);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_animation'] = function (block) {
@@ -315,7 +369,10 @@ Blockly.JavaScript['add_animation'] = function (block) {
  * @param frames array of numbers or strings that correspond to frames to add to the animation
  * @param fps {Number} the speed the animation should play
  * @param loop {Boolean} whether or not the animation should loop or play once
- * @returns {} object.animations.add(name, frames, fps, loop);
+ * @returns {}
+ * ```javascript
+ * object.animations.add(name, frames, fps, loop);
+ * ```
  * @block
  */
 
@@ -337,7 +394,10 @@ Blockly.JavaScript['add_animation_vi'] = function (block) {
  * @param source {String} the file path of the image
  * @param width {Number} the width of each frame
  * @param height {Number} the height of each frame
- * @returns {} game.load.spritesheet(tag, source, width, height);
+ * @returns {}
+ * ```javascript
+ * game.load.spritesheet(tag, source, width, height);
+ * ```
  * @block
  */
 Blockly.JavaScript['create_sprite_sheet'] = function (block) {
@@ -354,7 +414,10 @@ Blockly.JavaScript['create_sprite_sheet'] = function (block) {
  * @method add_child
  * @param object the object to add a child to
  * @param child the child to add to the object
- * @returns {} object.addChild(child);
+ * @returns {}
+ * ```javascript
+ * object.addChild(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_child'] = function (block) {
@@ -368,7 +431,10 @@ Blockly.JavaScript['add_child'] = function (block) {
  * @method add_child_vi
  * @param object the object to add a child to
  * @param child the child to add to the object
- * @returns {} object.addChild(child);
+ * @returns {}
+ * ```javascript
+ * object.addChild(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_child_vi'] = function (block) {
@@ -384,7 +450,10 @@ Blockly.JavaScript['add_child_vi'] = function (block) {
  * @param object the object to add a child to
  * @param child the child to add to the object
  * @param index {Number} the index to add the child to
- * @returns {} object.addChildAt(child, index);
+ * @returns {}
+ * ```javascript
+ * object.addChildAt(child, index);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_child_at'] = function (block) {
@@ -400,7 +469,10 @@ Blockly.JavaScript['add_child_at'] = function (block) {
  * @param object the object to add a child to
  * @param child the child to add to the object
  * @param index {Number} the index to add the child to
- * @returns {} object.addChildAt(child, index);
+ * @returns {}
+ * ```javascript
+ * object.addChildAt(child, index);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_child_at_vi'] = function (block) {
@@ -418,7 +490,10 @@ Blockly.JavaScript['add_child_at_vi'] = function (block) {
  * @param position {Number} position to justify the alignment to
  * @param offset_x {Number} horizontal adjustment of the alignment
  * @param offset_y {Number} vertical adjustment of the alignment
- * @returns {} object.alignIn(container, Phaser.position, offset_x, offset_y);
+ * @returns {}
+ * ```javascript
+ * object.alignIn(container, Phaser.position, offset_x, offset_y);
+ * ```
  * @block
  */
 Blockly.JavaScript['align_in'] = function (block) {
@@ -438,8 +513,12 @@ Blockly.JavaScript['align_in'] = function (block) {
  * @param position {Number} position to justify the alignment to
  * @param offset_x {Number} horizontal adjustment of the alignment
  * @param offset_y {Number} vertical adjustment of the alignment
- * @returns {} object.alignTo(container, Phaser.position, offset_x, offset_y);
+ * @returns {}
+ * ```javascript
+ * object.alignTo(container, Phaser.position, offset_x, offset_y);
+ * ```
  * @block
+ * ```
  * @block
  */
 Blockly.JavaScript['align_to'] = function (block) {
@@ -455,7 +534,10 @@ Blockly.JavaScript['align_to'] = function (block) {
  * Render an object on top of all other objects.
  * @method bring_to_top
  * @param object object to render
- * @returns {} object.bringToTop();
+ * @returns {}
+ * ```javascript
+ * object.bringToTop();
+ * ```
  * @block
  */
 Blockly.JavaScript['bring_to_top'] = function (block) {
@@ -468,7 +550,10 @@ Blockly.JavaScript['bring_to_top'] = function (block) {
  * @method check_world_bounds
  * @param object object to check
  * @param bool {Boolean} enables/disables checking world bounds
- * @returns {} object.checkWorldBounds = bool;
+ * @returns {}
+ * ```javascript
+ * object.checkWorldBounds = bool;
+ * ```
  * @block
  */
 Blockly.JavaScript['check_world_bounds'] = function (block) {
@@ -483,7 +568,10 @@ Blockly.JavaScript['check_world_bounds'] = function (block) {
  * @method contains
  * @param object object to check
  * @param child child to check
- * @returns {} object.contains(child);
+ * @returns {}
+ * ```javascript
+ * object.contains(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['contains'] = function (block) {
@@ -497,7 +585,10 @@ Blockly.JavaScript['contains'] = function (block) {
  * @method contains_vi
  * @param object object to check
  * @param child child to check
- * @returns {} object.contains(child);
+ * @returns {}
+ * ```javascript
+ * object.contains(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['contains_vi'] = function (block) {
@@ -511,7 +602,10 @@ Blockly.JavaScript['contains_vi'] = function (block) {
  * @method crop
  * @param object object whose image is getting cropped
  * @param rectangle {Phaser.Rectangle} the rectangle bounds and properites to use for the crop
- * @returns {} object.crop(rectangle);
+ * @returns {}
+ * ```javascript
+ * object.crop(rectangle);
+ * ```
  * @block
  */
 Blockly.JavaScript['crop'] = function (block) {
@@ -524,7 +618,10 @@ Blockly.JavaScript['crop'] = function (block) {
  * Clear the cropping on an object's image.
  * @method clear_cropping
  * @param object object whose image is cropped
- * @returns {} object.crop();
+ * @returns {}
+ * ```javascript
+ * object.crop();
+ * ```
  * @block
  */
 Blockly.JavaScript['clear_cropping'] = function (block) {
@@ -537,7 +634,10 @@ Blockly.JavaScript['clear_cropping'] = function (block) {
  * @method destroy_sprite
  * @param object object to destroy
  * @param bool {Boolean} whether or not the sprite's children should also be destroyed
- * @returns {} object.destroy(bool);
+ * @returns {}
+ * ```javascript
+ * object.destroy(bool);
+ * ```
  * @block
  */
 Blockly.JavaScript['destroy_sprite'] = function (block) {
@@ -552,7 +652,10 @@ Blockly.JavaScript['destroy_sprite'] = function (block) {
  * @method get_child_at
  * @param object object to retrieve the child from
  * @param index {Number} index the child is located at
- * @returns {} object.getChildAt(index);
+ * @returns {}
+ * ```javascript
+ * object.getChildAt(index);
+ * ```
  * @block
  */
 Blockly.JavaScript['get_child_at'] = function (block) {
@@ -566,7 +669,10 @@ Blockly.JavaScript['get_child_at'] = function (block) {
  * @method get_child_at_vi
  * @param object object to get the child from
  * @param index {Number} index the child is located at
- * @returns {} object.getChildAt(index);
+ * @returns {}
+ * ```javascript
+ * object.getChildAt(index);
+ * ```
  * @block
  */
 Blockly.JavaScript['get_child_at_vi'] = function (block) {
@@ -581,7 +687,10 @@ Blockly.JavaScript['get_child_at_vi'] = function (block) {
  * @method get_child_index
  * @param object object to get the child from
  * @param child child to get the index from
- * @returns {} object.getChildIndex(child);
+ * @returns {}
+ * ```javascript
+ * object.getChildIndex(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['get_child_index'] = function (block) {
@@ -595,7 +704,10 @@ Blockly.JavaScript['get_child_index'] = function (block) {
  * @method get_child_index_vi
  * @param object object to get the child from
  * @param child child to get the index from
- * @returns {} object.getChildIndex(child);
+ * @returns {}
+ * ```javascript
+ * object.getChildIndex(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['get_child_index_vi'] = function (block) {
@@ -609,7 +721,10 @@ Blockly.JavaScript['get_child_index_vi'] = function (block) {
  * @method load_texture
  * @param object object whose image is getting changed
  * @param tag {String} the tag of the texture to change the image to
- * @returns {} object.loadTexture(tag);
+ * @returns {}
+ * ```javascript
+ * object.loadTexture(tag);
+ * ```
  * @block
  */
 Blockly.JavaScript['load_texture'] = function (block) {
@@ -622,7 +737,10 @@ Blockly.JavaScript['load_texture'] = function (block) {
  * Moves the object down one layer in the display list.
  * @method move_down
  * @param object object to render
- * @returns {} object.moveDown();
+ * @returns {}
+ * ```javascript
+ * object.moveDown();
+ * ```
  * @block
  */
 Blockly.JavaScript['move_down'] = function (block) {
@@ -634,7 +752,10 @@ Blockly.JavaScript['move_down'] = function (block) {
  * Moves the object up one layer in the display list.
  * @method move_up
  * @param object object to render
- * @returns {} object.moveUp();
+ * @returns {}
+ * ```javascript
+ * object.moveUp();
+ * ```
  * @block
  */
 Blockly.JavaScript['move_up'] = function (block) {
@@ -646,6 +767,7 @@ Blockly.JavaScript['move_up'] = function (block) {
  * @deprecated
  * Checks to see if two objects overlap.
  * @method sprite_overlap
+ * ```
  * @block
  */
 Blockly.JavaScript['sprite_overlap'] = function (block) {
@@ -657,6 +779,7 @@ Blockly.JavaScript['sprite_overlap'] = function (block) {
 /**
  * @deprecated
  * @method out_of_bounds_kill
+ * ```
  * @block
  */
 Blockly.JavaScript['out_of_bounds_kill'] = function (block) {
@@ -670,7 +793,10 @@ Blockly.JavaScript['out_of_bounds_kill'] = function (block) {
  * @method out_of_bounds_faint
  * @param object object that gets deleted
  * @param boolean {Boolean} sets the action to true or false
- * @returns {} object.outOfBoundsFaint = boolean;
+ * @returns {}
+ * ```javascript
+ * object.outOfBoundsFaint = boolean;
+ * ```
  * @block
  */
 Blockly.JavaScript['out_of_bounds_faint'] = function (block) {
@@ -683,6 +809,7 @@ Blockly.JavaScript['out_of_bounds_faint'] = function (block) {
  * @deprecated
  * @param block
  * @return {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_child'] = function (block) {
@@ -695,6 +822,7 @@ Blockly.JavaScript['remove_child'] = function (block) {
  * @deprecated
  * @param block
  * @return {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_child_at'] = function (block) {
@@ -707,6 +835,7 @@ Blockly.JavaScript['remove_child_at'] = function (block) {
  * @deprecated
  * @param block
  * @return {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_children'] = function (block) {
@@ -719,7 +848,10 @@ Blockly.JavaScript['remove_children'] = function (block) {
  * @method remove_child_vi
  * @param object object to remove the child from
  * @param child child to remove from the object
- * @returns {} object.removeChild(child);
+ * @returns {}
+ * ```javascript
+ * object.removeChild(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_child_vi'] = function (block) {
@@ -733,7 +865,10 @@ Blockly.JavaScript['remove_child_vi'] = function (block) {
  * @method remove_child_at_vi
  * @param object object to remove the child from
  * @param index index of the child to remove from the object
- * @returns {} object.removeChildAt(index);
+ * @returns {}
+ * ```javascript
+ * object.removeChildAt(index);
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_child_at_vi'] = function (block) {
@@ -746,7 +881,10 @@ Blockly.JavaScript['remove_child_at_vi'] = function (block) {
  * Removes all children from the object.
  * @method remove_children_vi
  * @params object object to remove children from
- * @returns {} object.removeChildren();
+ * @returns {}
+ * ```javascript
+ * object.removeChildren();
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_children_vi'] = function (block) {
@@ -759,7 +897,10 @@ Blockly.JavaScript['remove_children_vi'] = function (block) {
  * Resets the dimensions of the frame the Game Object uses for rendering.
  * @method reset_frame
  * @param object object to reset
- * @returns {} object.resetFrame();
+ * @returns {}
+ * ```javascript
+ * object.resetFrame();
+ * ```
  * @block
  */
 Blockly.JavaScript['reset_frame'] = function (block) {
@@ -772,6 +913,9 @@ Blockly.JavaScript['reset_frame'] = function (block) {
  * @method resize_frame
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['resize_frame'] = function (block) {
@@ -786,7 +930,10 @@ Blockly.JavaScript['resize_frame'] = function (block) {
  * Render an object below all other objects.
  * @method send_to_back
  * @param object object to render
- * @returns {} object.sendToBack();
+ * @returns {}
+ * ```javascript
+ * object.sendToBack();
+ * ```
  * @block
  */
 Blockly.JavaScript['send_to_back'] = function (block) {
@@ -798,6 +945,7 @@ Blockly.JavaScript['send_to_back'] = function (block) {
  * @deprecated
  * @param block
  * @return {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['set_child_index'] = function (block) {
@@ -813,7 +961,10 @@ Blockly.JavaScript['set_child_index'] = function (block) {
  * @param object object that contains the child
  * @param child child to change the position of
  * @param index {Number} index to set the child's position to
- * @returns {} object.setChildIndex(child, index);
+ * @returns {}
+ * ```javascript
+ * object.setChildIndex(child, index);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_child_index_vi'] = function (block) {
@@ -828,7 +979,10 @@ Blockly.JavaScript['set_child_index_vi'] = function (block) {
  * @method set_sprite_frame
  * @param object object to set the frame for
  * @param frame frame to set the texture to
- * @returns {} object.setFrame(frame);
+ * @returns {}
+ * ```javascript
+ * object.setFrame(frame);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_sprite_frame'] = function (block) {
@@ -845,7 +999,10 @@ Blockly.JavaScript['set_sprite_frame'] = function (block) {
  * @param minY {Number} the minimum vertical scale the Game Object can scale down to
  * @param maxX {Number} the maximum horizontal scale the Game Object can scale down to
  * @param maxY {Number} the maximum vertical scale the Game Object can scale down to
- * @returns {} object.setScaleMinMax(minX, minY, maxX, maxY);
+ * @returns {}
+ * ```javascript
+ * object.setScaleMinMax(minX, minY, maxX, maxY);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_scale_min_max'] = function (block) {
@@ -861,7 +1018,10 @@ Blockly.JavaScript['set_scale_min_max'] = function (block) {
  * Clears all scale constraints set on the object.
  * @method clear_scale_min_max
  * @param object object to clear scale constraints from
- * @returns {} object.setScaleMinMax();
+ * @returns {}
+ * ```javascript
+ * object.setScaleMinMax();
+ * ```
  * @block
  */
 Blockly.JavaScript['clear_scale_min_max'] = function (block) {
@@ -875,6 +1035,9 @@ Blockly.JavaScript['clear_scale_min_max'] = function (block) {
  * @param
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['set_texture'] = function (block) {
@@ -889,7 +1052,10 @@ Blockly.JavaScript['set_texture'] = function (block) {
  * @param parent parent of the children who are being swapped
  * @param child to be swapped with child2
  * @param child2 to be swapped with cihld
- * @returns {} parent.swapChildren(child, child2);
+ * @returns {}
+ * ```javascript
+ * parent.swapChildren(child, child2);
+ * ```
  * @block
  */
 Blockly.JavaScript['swap_children'] = function (block) {
@@ -905,7 +1071,10 @@ Blockly.JavaScript['swap_children'] = function (block) {
 /**
  * Creates a container to hold multiple sprites. Assign to a variable for future use.
  * @method create_group
- * @returns {} game.add.group();
+ * @returns {}
+ * ```javascript
+ * game.add.group();
+ * ```
  * @block
  */
 Blockly.JavaScript['create_group'] = function (block) {
@@ -916,6 +1085,9 @@ Blockly.JavaScript['create_group'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['create_object_in_group_with_frame'] = function (block) {
@@ -935,7 +1107,10 @@ Blockly.JavaScript['create_object_in_group_with_frame'] = function (block) {
  * @param frame {Number} the frame of the sprite sheet to display at the start
  * @param tag {String} the sprite to display on the object
  * @param group the group to add the object to
- * @returns {} group.create(x, y, tag, frame);
+ * @returns {}
+ * ```javascript
+ * group.create(x, y, tag, frame);
+ * ```
  * @block
  */
 Blockly.JavaScript['create_object_in_group_with_frame_vi'] = function (block) {
@@ -951,6 +1126,7 @@ Blockly.JavaScript['create_object_in_group_with_frame_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['call_function_on_group'] = function (block) {
@@ -965,7 +1141,10 @@ Blockly.JavaScript['call_function_on_group'] = function (block) {
  * @method add_to_group
  * @param object object that gets added to the group
  * @param group group that the object is getting added to
- * @returns {} group.add(object);
+ * @returns {}
+ * ```javascript
+ * group.add(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_to_group'] = function (block) {
@@ -980,7 +1159,10 @@ Blockly.JavaScript['add_to_group'] = function (block) {
  * @param object object that gets removed from the group
  * @param group group that the object is getting removed from
  * @param destroy {Boolean} option to remove the object from the game
- * @returns {} group.remove(object, destroy);
+ * @returns {}
+ * ```javascript
+ * group.remove(object, destroy);
+ * ```
  * @block
  */
 Blockly.JavaScript['remove_from_group'] = function (block) {
@@ -995,7 +1177,10 @@ Blockly.JavaScript['remove_from_group'] = function (block) {
  * @method group_contains
  * @param group group to check
  * @param object object to check
- * @returns {} group.contains(child);
+ * @returns {}
+ * ```javascript
+ * group.contains(child);
+ * ```
  * @block
  */
 Blockly.JavaScript['group_contains'] = function (block) {
@@ -1009,7 +1194,10 @@ Blockly.JavaScript['group_contains'] = function (block) {
  * @method group_count_alive_dead
  * @param group group to check
  * @param state determines if you are checking alive or fainted.
- * @returns {} group.count(state);
+ * @returns {}
+ * ```javascript
+ * group.count(state);
+ * ```
  * @block
  */
 Blockly.JavaScript['group_count_alive_dead'] = function (block) {
@@ -1022,7 +1210,10 @@ Blockly.JavaScript['group_count_alive_dead'] = function (block) {
  * @method destroy_group
  * @param group group to destroy
  * @param handleChildren option to delete all containing objects
- * @returns {} group.destroy(handleChildren);
+ * @returns {}
+ * ```javascript
+ * group.destroy(handleChildren);
+ * ```
  * @block
  */
 Blockly.JavaScript['destroy_group'] = function (block) {
@@ -1035,7 +1226,10 @@ Blockly.JavaScript['destroy_group'] = function (block) {
  * Returns all objects in the group, to make changes or get information from them all at the same time.
  * @method group_get_all
  * @param group group to get all objects from
- * @returns {} group.getAll();
+ * @returns {}
+ * ```javascript
+ * group.getAll();
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_all'] = function (block) {
@@ -1048,7 +1242,10 @@ Blockly.JavaScript['group_get_all'] = function (block) {
  * @method group_get_at
  * @param group group to get the object from
  * @param index {Number} position of the object in the group
- * @returns {} group.getAt(index);
+ * @returns {}
+ * ```javascript
+ * group.getAt(index);
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_at'] = function (block) {
@@ -1062,7 +1259,10 @@ Blockly.JavaScript['group_get_at'] = function (block) {
  * @method group_get_closest_to
  * @param group group to get the object from
  * @param object object to base the position from
- * @returns {} group.getClosestTo(object);
+ * @returns {}
+ * ```javascript
+ * group.getClosestTo(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_closest_to'] = function (block) {
@@ -1075,6 +1275,9 @@ Blockly.JavaScript['group_get_closest_to'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_first_alive_dead'] = function (block) {
@@ -1085,10 +1288,13 @@ Blockly.JavaScript['group_get_first_alive_dead'] = function (block) {
 
 /**
  * Returns the first object closest to the front of the group that is alive/fainted.
- * @method group_get_first_alive_dead
+ * @method group_get_first_alive_fainted
  * @param group group to get the object from
  * @param mode determines if you are checking for an alive or fainted object
- * @returns {} group.getFirstMode();
+ * @returns {}
+ * ```javascript
+ * group.getFirstMode();
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_first_alive_fainted'] = function (block) {
@@ -1101,7 +1307,10 @@ Blockly.JavaScript['group_get_first_alive_fainted'] = function (block) {
  * Returns a randomly chosen object from the group.
  * @method group_get_random
  * @param group group to get the object from
- * @returns {} group.getRandom();
+ * @returns {}
+ * ```javascript
+ * group.getRandom();
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_random'] = function (block) {
@@ -1113,7 +1322,10 @@ Blockly.JavaScript['group_get_random'] = function (block) {
  * Returns a randomly chosen object from the group that has exists set to true.
  * @method group_get_random_exists
  * @param group group to get the object from
- * @returns {} group.getRandomExists();
+ * @returns {}
+ * ```javascript
+ * group.getRandomExists();
+ * ```
  * @block
  */
 Blockly.JavaScript['group_get_random_exists'] = function (block) {
@@ -1126,7 +1338,10 @@ Blockly.JavaScript['group_get_random_exists'] = function (block) {
  * @method group_remove_all
  * @param group group to remove the objects from
  * @param deleteObjects {Boolean} option to delete the objects after removing them from the group
- * @returns {} group.removeAll(deleteObjects);
+ * @returns {}
+ * ```javascript
+ * group.removeAll(deleteObjects);
+ * ```
  * @block
  */
 Blockly.JavaScript['group_remove_all'] = function (block) {
@@ -1139,7 +1354,10 @@ Blockly.JavaScript['group_remove_all'] = function (block) {
  * Adds the object to the top of the World group.
  * @method add_to_world
  * @param object object to add to the group
- * @returns {} game.world.add(object);
+ * @returns {}
+ * ```javascript
+ * game.world.add(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['add_to_world'] = function (block) {
@@ -1159,7 +1377,10 @@ Blockly.JavaScript['add_to_world'] = function (block) {
  * @param y {Number} y position of the location to move to
  * @param speed {Number} the speed the object will move at
  * @param time {Number} maximum time for the object to reach the location
- * @returns {} game.physics.arcade.moveToXY(object, x, y, speed, time);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.moveToXY(object, x, y, speed, time);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_move_to_location'] = function (block) {
@@ -1179,7 +1400,10 @@ Blockly.JavaScript['physics_move_to_location'] = function (block) {
  * @param pointer the mouse pointer to move to
  * @param speed {Number} the speed the object will move at
  * @param time {Number} maximum time for the object to reach the location
- * @returns {} game.physics.arcade.moveToPointer(object, speed, pointer, time);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.moveToPointer(object, speed, pointer, time);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_move_to_pointer'] = function (block) {
@@ -1193,14 +1417,17 @@ Blockly.JavaScript['physics_move_to_pointer'] = function (block) {
 
 /**
  * Accelerates the object to the given location at the given speed, with the maximum given velocity. The object will start at the given speed, and accelerate up to the maximum velocity towards the location.
- * @method physics_acclereate_to_location
+ * @method physics_accelerate_to_location
  * @param object object to move
  * @param x {Number} x position of the location to move to
  * @param y {Number} y position of the location to move to
  * @param speed {Number} the speed the object will move at
  * @param x_max {Number} the maximum velocity in the x direction the object can reach
  * @param y_max {Number} the maximum velocity in the y direction the object can reach
- * @returns {} game.physics.arcade.accelerateToXY(object, x, y, speed, x_max, y_max);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.accelerateToXY(object, x, y, speed, x_max, y_max);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_accelerate_to_location'] = function (block) {
@@ -1216,13 +1443,16 @@ Blockly.JavaScript['physics_accelerate_to_location'] = function (block) {
 
 /**
  * Accelerates the object to the mouse pointer at the given speed, with the maximum given velocity. The object will start at the given speed, and accelerate up to the maximum velocity towards the location.
- * @method physics_acclereate_to_pointer
+ * @method physics_accelerate_to_pointer
  * @param object object to move
  * @param pointer the mouse pointer to move to
  * @param speed {Number} the speed the object will move at
  * @param x_max {Number} the maximum velocity in the x direction the object can reach
  * @param y_max {Number} the maximum velocity in the y direction the object can reach
- * @returns {} game.physics.arcade.accelerateToPointer(object, pointer, speed, x_max, y_max);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.accelerateToPointer(object, pointer, speed, x_max, y_max);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_accelerate_to_pointer'] = function (block) {
@@ -1237,13 +1467,16 @@ Blockly.JavaScript['physics_accelerate_to_pointer'] = function (block) {
 
 /**
  * Accelerates the object to the given object's location at the given speed, with the maximum given velocity. The object will start at the given speed, and accelerate up to the maximum velocity towards the location.
- * @method physics_acclereate_to_object
+ * @method physics_accelerate_to_object
  * @param object object to move
  * @param target the target object to move to
  * @param speed {Number} the speed the object will move at
  * @param x_max {Number} the maximum velocity in the x direction the object can reach
  * @param y_max {Number} the maximum velocity in the y direction the object can reach
- * @returns {} game.physics.arcade.accelerateToObject(object, target, speed, x_max, y_max);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.accelerateToObject(object, target, speed, x_max, y_max);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_accelerate_to_object'] = function (block) {
@@ -1261,7 +1494,10 @@ Blockly.JavaScript['physics_accelerate_to_object'] = function (block) {
  * @method set_physics_boolean_field
  * @param field the field to set
  * @param value {Boolean} value to set the field to
- * @returns {} game.physics.arcade.field = value;
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_physics_boolean_field'] = function (block) {
@@ -1275,7 +1511,10 @@ Blockly.JavaScript['set_physics_boolean_field'] = function (block) {
  * @method set_physics_point_field
  * @param field the field to set
  * @param value value to set the field to
- * @returns {} game.physics.arcade.field.copyFrom(value);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.field.copyFrom(value);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_physics_point_field'] = function (block) {
@@ -1289,14 +1528,20 @@ Blockly.JavaScript['set_physics_point_field'] = function (block) {
  * Returns the chosen Boolean field value of the game's physics.
  * @method get_physics_boolean_field
  * @param field the field to get the value of
- * @returns {} game.physics.arcade.field
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.field
+ * ```
  * @block
  */
 /**
  * Returns the chosen point field value of the game's physics.
  * @method get_physics_point_field
  * @param field the field to get the value of
- * @returns {} game.physics.arcade.field
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_physics_boolean_field']
@@ -1313,7 +1558,10 @@ Blockly.JavaScript['get_physics_boolean_field']
  * @method check_collision
  * @param direction direction to set the property for
  * @param collide {Boolean} sets collision in the direction to true or false
- * @returns {} game.physics.arcade.checkCollision.direction = collide;
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.checkCollision.direction = collide;
+ * ```
  * @block
  */
 Blockly.JavaScript['check_collision'] = function (block) {
@@ -1328,7 +1576,10 @@ Blockly.JavaScript['check_collision'] = function (block) {
  * @method get_objects_under_pointer
  * @param pointer mouse pointer to check
  * @param group group to check
- * @returns {} game.physics.arcade.getObectsUnderPointer(pointer, group);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.getObectsUnderPointer(pointer, group);
+ * ```
  * @block
  */
 Blockly.JavaScript['get_objects_under_pointer'] = function (block) {
@@ -1343,6 +1594,9 @@ Blockly.JavaScript['get_objects_under_pointer'] = function (block) {
  * @method
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['collide_with_arrow_function'] = function (block) {
@@ -1360,7 +1614,10 @@ Blockly.JavaScript['collide_with_arrow_function'] = function (block) {
  * @param group group to check
  * @param x {Number} x location to check
  * @param y {Number} y location to check
- * @returns {} game.physics.arcade.getObjectsAtLocation(x, y, group);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.getObjectsAtLocation(x, y, group);
+ * ```
  * @block
  */
 Blockly.JavaScript['get_objects_at_location'] = function (block) {
@@ -1377,7 +1634,10 @@ Blockly.JavaScript['get_objects_at_location'] = function (block) {
  * @param x {Number} x location to check
  * @param y {Number} y location to check
  * @param functionName function to call
- * @returns {} game.physics.arcade.getObjectsAtLocation(x, y, group, functionName);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.getObjectsAtLocation(x, y, group, functionName);
+ * ```
  * @block
  */
 Blockly.JavaScript['collision_get_objects_at_location_function'] = function (block) {
@@ -1394,7 +1654,10 @@ Blockly.JavaScript['collision_get_objects_at_location_function'] = function (blo
  * @method physics_intersects
  * @param lhs object to check
  * @param rhs object to check
- * @returns {} game.physics.arcade.intersects(lhs, rhs);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.intersects(lhs, rhs);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_intersects'] = function (block) {
@@ -1410,6 +1673,9 @@ Blockly.JavaScript['physics_intersects'] = function (block) {
  * @deprecated
  * @method
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['start_physics'] = function (block) {
@@ -1420,7 +1686,10 @@ Blockly.JavaScript['start_physics'] = function (block) {
 /**
  * Enables the Phaser Arcade phyiscs to be used in the game.
  * @method start_arcade_physics
- * @returns {} game.physics.startSystem(Phaser.Physics.ARCADE);
+ * @returns {}
+ * ```javascript
+ * game.physics.startSystem(Phaser.Physics.ARCADE);
+ * ```
  * @block
  */
 Blockly.JavaScript['start_arcade_physics'] = function () {
@@ -1433,6 +1702,9 @@ Blockly.JavaScript['start_arcade_physics'] = function () {
  * @method enable_body_group
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['enable_body_group'] = function (block) {
@@ -1444,7 +1716,10 @@ Blockly.JavaScript['enable_body_group'] = function (block) {
  * Enables physics body for all objects in the group. This allows the objects to collide with other physics bodies and use other physics functionality.
  * @method enable_body_group_vi
  * @param group group to enable physics on
- * @returns {} group.enableBody = true;
+ * @returns {}
+ * ```javascript
+ * group.enableBody = true;
+ * ```
  * @block
  */
 Blockly.JavaScript['enable_body_group_vi'] = function (block) {
@@ -1458,6 +1733,9 @@ Blockly.JavaScript['enable_body_group_vi'] = function (block) {
  * @method enable_arcade_phy
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['enable_arcade_physics_for_object'] = function (block) {
@@ -1469,7 +1747,10 @@ Blockly.JavaScript['enable_arcade_physics_for_object'] = function (block) {
  * Adds a physics body to the object. This allows the object to collide with other physics bodies and use other physics functionality.
  * @method enable_arcade_physics_for_object_vi
  * @param object object to enable physics on
- * @returns {} game.physics.arcade.enable(object);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.enable(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['enable_arcade_physics_for_object_vi'] = function (block) {
@@ -1484,6 +1765,9 @@ Blockly.JavaScript['enable_arcade_physics_for_object_vi'] = function (block) {
  * @method
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_closest'] = function (block) {
@@ -1498,6 +1782,9 @@ Blockly.JavaScript['physics_closest'] = function (block) {
  * @method
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_farthest'] = function (block) {
@@ -1512,7 +1799,10 @@ Blockly.JavaScript['physics_farthest'] = function (block) {
  * @method physics_distance_between
  * @param source object to check from
  * @param target object to check to
- * @returns {} game.physics.arcade.distanceBetween(source, target);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.distanceBetween(source, target);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_distance_between'] = function (block) {
@@ -1526,7 +1816,10 @@ Blockly.JavaScript['physics_distance_between'] = function (block) {
  * @method physics_distance_to_pointer
  * @param source object to check from
  * @param pointer mouse pointer to check to
- * @returns {} game.physics.arcade.distanceToPointer(source, pointer);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.distanceToPointer(source, pointer);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_distance_to_pointer'] = function (block) {
@@ -1541,7 +1834,10 @@ Blockly.JavaScript['physics_distance_to_pointer'] = function (block) {
  * @param object object to check from
  * @param x {Number} x location to check
  * @param y {Number} y location to check
- * @returns {} game.physics.aracde.distanceToXY(object, x, y);
+ * @returns {}
+ * ```javascript
+ * game.physics.aracde.distanceToXY(object, x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['physics_distance_to_location'] = function (block) {
@@ -1557,7 +1853,10 @@ Blockly.JavaScript['physics_distance_to_location'] = function (block) {
  * Renders a visual for the physics body of the object. Will appear as a semi transparent filled green rectangle.
  * @method debug_body
  * @param object object to render the body for
- * @returns {} game.debug.body(object);
+ * @returns {}
+ * ```javascript
+ * game.debug.body(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_body'] = function (block) {
@@ -1570,7 +1869,10 @@ Blockly.JavaScript['debug_body'] = function (block) {
  * Sets the object's acceleration, velocity, and speed to 0.
  * @method stop_body
  * @param object object to set values for
- * @returns {} object.body.stop();
+ * @returns {}
+ * ```javascript
+ * object.body.stop();
+ * ```
  * @block
  */
 Blockly.JavaScript['stop_body'] = function (block) {
@@ -1585,7 +1887,10 @@ Blockly.JavaScript['stop_body'] = function (block) {
  * @method set_body_field_point
  * @param field the field to set
  * @param value value to set the field to
- * @returns {} game.physics.arcade.field.copyFrom(value);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.field.copyFrom(value);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_body_field_point'] = function (block) {
@@ -1603,7 +1908,10 @@ Blockly.JavaScript['set_body_field_point'] = function (block) {
  * @param element choose to assign the x or y element of the point
  * @object object to assign values for
  * @param value value to set the field to
- * @returns {} object.body.field.element = value;
+ * @returns {}
+ * ```javascript
+ * object.body.field.element = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_body_field_point_vi'] = function (block) {
@@ -1620,7 +1928,10 @@ Blockly.JavaScript['set_body_field_point_vi'] = function (block) {
  * @param field the field to set
  * @param object object to assign values for
  * @param point point to set the field to
- * @returns {} object.body.field = point;
+ * @returns {}
+ * ```javascript
+ * object.body.field = point;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_body_field_point_class_vi'] = function (block) {
@@ -1635,7 +1946,10 @@ Blockly.JavaScript['set_body_field_point_class_vi'] = function (block) {
  * @method get_body_field_point_class
  * @param field the field to get the value of
  * @param object object to get values from
- * @returns {} object.body.field
+ * @returns {}
+ * ```javascript
+ * object.body.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_body_field_point_class'] = function (block) {
@@ -1648,6 +1962,8 @@ Blockly.JavaScript['get_body_field_point_class'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_body_boolean_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -1662,7 +1978,10 @@ Blockly.JavaScript['set_body_boolean_field'] = function (block) {
  * @param field the field to set
  * @param object object to assign values for
  * @param boolean value to set the field to
- * @returns {} object.body.field = point;
+ * @returns {}
+ * ```javascript
+ * object.body.field = point;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_body_boolean_field_vi'] = function (block) {
@@ -1677,7 +1996,10 @@ Blockly.JavaScript['set_body_boolean_field_vi'] = function (block) {
  * @method get_body_boolean_field
  * @param element the value to get
  * @param object object to get values from
- * @returns {} object.body.element
+ * @returns {}
+ * ```javascript
+ * object.body.element
+ * ```
  * @block
  */
 Blockly.JavaScript['get_body_boolean_field'] = function (block) {
@@ -1692,7 +2014,10 @@ Blockly.JavaScript['get_body_boolean_field'] = function (block) {
  * @param element the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.body.element = value;
+ * @returns {}
+ * ```javascript
+ * object.body.element = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_body_numeric_field'] = function (block) {
@@ -1707,7 +2032,10 @@ Blockly.JavaScript['set_body_numeric_field'] = function (block) {
  * @method get_body_numeric_field
  * @param element the value to get
  * @param object object to get values from
- * @returns {} object.body.element
+ * @returns {}
+ * ```javascript
+ * object.body.element
+ * ```
  * @block
  */
 Blockly.JavaScript['get_body_numeric_field'] = function (block) {
@@ -1722,7 +2050,10 @@ Blockly.JavaScript['get_body_numeric_field'] = function (block) {
  * @param object object to set the body of
  * @param width {Number} width to set the body to
  * @param height {Number} height to set the body to
- * @returns {} object.body.setSize(width, height);
+ * @returns {}
+ * ```javascript
+ * object.body.setSize(width, height);
+ * ```
  * @block
  */
 Blockly.JavaScript['body_set_size'] = function (block) {
@@ -1741,7 +2072,10 @@ Blockly.JavaScript['body_set_size'] = function (block) {
  * @param height {Number} height to set the body to
  * @param offset_x {Number} the amount to move the physics body by in the x direction, based on the object's position and anchor
  * @param offset_y {Number} the amount to move the physics body by in the y direction, based on the object's position and anchor
- * @returns {} object.body.setSize(width, height, offset_x, offset_y);
+ * @returns {}
+ * ```javascript
+ * object.body.setSize(width, height, offset_x, offset_y);
+ * ```
  * @block
  */
 Blockly.JavaScript['body_set_size_complex'] = function (block) {
@@ -1762,6 +2096,9 @@ Blockly.JavaScript['body_set_size_complex'] = function (block) {
  * @method
  * @param
  * @returns {}
+ * ```javascript
+ *
+ * ```
  * @block
  */
 Blockly.JavaScript['create_object_in_group'] = function (block) {
@@ -1778,7 +2115,10 @@ Blockly.JavaScript['create_object_in_group'] = function (block) {
  * @param x {Number} the x coordinate to display the new object at, relative to the position of the group
  * @param y {Number} the y coordinate to display the new object at, relative to the position of the group
  * @param tag {String} the tag of the image to assign to the object
- * @returns {} group.create(x, y, tag);
+ * @returns {}
+ * ```javascript
+ * group.create(x, y, tag);
+ * ```
  * @block
  */
 Blockly.JavaScript['create_object_in_group_vi'] = function (block) {
@@ -1793,6 +2133,8 @@ Blockly.JavaScript['create_object_in_group_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['collide'] = function (block) {
   const variable_lhs = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('LHS'), Blockly.Variables.NAME_TYPE);
@@ -1805,7 +2147,10 @@ Blockly.JavaScript['collide'] = function (block) {
  * @method collide_vi
  * @param object1 first object to check
  * @param object2 second object to check
- * @returns {} game.physics.arcade.collide(object1, object2);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.collide(object1, object2);
+ * ```
  * @block
  */
 Blockly.JavaScript['collide_vi'] = function (block) {
@@ -1818,6 +2163,8 @@ Blockly.JavaScript['collide_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_immovable'] = function (block) {
   const body = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('BODY'), Blockly.Variables.NAME_TYPE);
@@ -1828,6 +2175,7 @@ Blockly.JavaScript['set_immovable'] = function (block) {
 /**
  * @deprecated
  * @param block
+ * ```
  * @block
  */
 Blockly.JavaScript['is_body_touching'] = function (block) {
@@ -1841,7 +2189,10 @@ Blockly.JavaScript['is_body_touching'] = function (block) {
  * @method is_body_touching_vi
  * @param object object to check
  * @param direction direction to check
- * @returns {} object.body.touching.direction
+ * @returns {}
+ * ```javascript
+ * object.body.touching.direction
+ * ```
  * @block
  */
 Blockly.JavaScript['is_body_touching_vi'] = function (block) {
@@ -1854,6 +2205,7 @@ Blockly.JavaScript['is_body_touching_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['collide_with_world_bounds'] = function (block) {
@@ -1867,7 +2219,10 @@ Blockly.JavaScript['collide_with_world_bounds'] = function (block) {
  * @method collide_with_world_bounds_vi
  * @param object object to set collision for
  * @param collide {Boolean} enables/disables the collision
- * @returns {} object.body.collideWorldBounds = collide;
+ * @returns {}
+ * ```javascript
+ * object.body.collideWorldBounds = collide;
+ * ```
  * @block
  */
 Blockly.JavaScript['collide_with_world_bounds_vi'] = function (block) {
@@ -1880,6 +2235,8 @@ Blockly.JavaScript['collide_with_world_bounds_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['check_overlap'] = function (block) {
   const lhs = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('LHS'), Blockly.Variables.NAME_TYPE);
@@ -1892,6 +2249,8 @@ Blockly.JavaScript['check_overlap'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['check_overlap_vi'] = function (block) {
   const lhs = Blockly.JavaScript.valueToCode(block, 'LHS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -1906,7 +2265,10 @@ Blockly.JavaScript['check_overlap_vi'] = function (block) {
  * @param object1 first object to check
  * @param object2 second object to check
  * @param functionName function to call if the objects are overlapping
- * @returns {} game.physics.arcade.overlap(object1, object2, functionName);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.overlap(object1, object2, functionName);
+ * ```
  * @block
  */
 Blockly.JavaScript['check_overlap_vi_procedure_field'] = function (block) {
@@ -1921,7 +2283,10 @@ Blockly.JavaScript['check_overlap_vi_procedure_field'] = function (block) {
  * @method overlap_boolean
  * @param object1 first object to check
  * @param object2 second object to check
- * @returns {} game.physics.arcade.overlap(object1, object2)
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.overlap(object1, object2)
+ * ```
  * @block
  */
 Blockly.JavaScript['overlap_boolean'] = function (block) {
@@ -1936,7 +2301,10 @@ Blockly.JavaScript['overlap_boolean'] = function (block) {
  * @param object1 first object to check
  * @param object2 second object to check
  * @param functionName function to call if the objects are colliding
- * @returns {} game.physics.arcade.collide(object1, object2, functionName);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.collide(object1, object2, functionName);
+ * ```
  * @block
  */
 Blockly.JavaScript['collide_function_field'] = function (block) {
@@ -1951,7 +2319,10 @@ Blockly.JavaScript['collide_function_field'] = function (block) {
  * @method collide_boolean
  * @param object1 first object to check
  * @param object2 second object to check
- * @returns {} game.physics.arcade.collide(object1, object2)
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.collide(object1, object2)
+ * ```
  * @block
  */
 Blockly.JavaScript['collide_boolean'] = function (block) {
@@ -1966,7 +2337,8 @@ Blockly.JavaScript['collide_boolean'] = function (block) {
     const pointer = Blockly.JavaScript.valueToCode(block, 'POINTER', Blockly.JavaScript.ORDER_ATOMIC);
 
   return `game.physics.arcade.moveToPointer(${value_gameobject}, ${value_speed}, ${pointer});\n`;
-};* @block
+};* ```
+ * @block
  */
 
 /*Blockly.JavaScript['move_to_pointer_extended'] = function (block) {
@@ -1974,7 +2346,8 @@ Blockly.JavaScript['collide_boolean'] = function (block) {
     const speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
     const maximumTime = Blockly.JavaScript.valueToCode(block, 'MAXIMUM_TIME', Blockly.JavaScript.ORDER_ATOMIC);
     return `game.physics.arcade.moveToPointer(${gameobject}, ${speed}, game.input.mousePointer, ${maximumTime});\n`;
-};* @block
+};* ```
+ * @block
  */
 
 /**
@@ -1984,7 +2357,10 @@ Blockly.JavaScript['collide_boolean'] = function (block) {
  * @param destinationObject object to move to
  * @param speed {Number} speed for the object to move at
  * @param maximumTime {Number} maximum amount of time to take to move
- * @returns {} game.physics.arcade.moveToObject(object, destinationObject, speed, maximumTime);
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.moveToObject(object, destinationObject, speed, maximumTime);
+ * ```
  * @block
  */
 Blockly.JavaScript['move_to_object'] = function (block) {
@@ -2000,7 +2376,10 @@ Blockly.JavaScript['move_to_object'] = function (block) {
  * @method acceleration_from_rotation
  * @param rotation {Number} the angle in radians
  * @param speed {Number} the speed the object will move
- * @returns {} game.physics.arcade.accelerationFromRotation(rotation, speed)
+ * @returns {}
+ * ```javascript
+ * game.physics.arcade.accelerationFromRotation(rotation, speed)
+ * ```
  * @block
  */
 Blockly.JavaScript['acceleration_from_rotation'] = function (block) {
@@ -2016,6 +2395,8 @@ Blockly.JavaScript['acceleration_from_rotation'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['play_animation'] = function (block) {
   const animation = Blockly.JavaScript.valueToCode(block, 'ANIMATION', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2028,7 +2409,10 @@ Blockly.JavaScript['play_animation'] = function (block) {
  * @method play_animation_vi
  * @param animation {String} the name of the animation to play
  * @param object object to play the animation on
- * @returns {} object.animations.play(animation);
+ * @returns {}
+ * ```javascript
+ * object.animations.play(animation);
+ * ```
  * @block
  */
 Blockly.JavaScript['play_animation_vi'] = function (block) {
@@ -2041,6 +2425,8 @@ Blockly.JavaScript['play_animation_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['stop_animation'] = function (block) {
   const object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -2051,7 +2437,10 @@ Blockly.JavaScript['stop_animation'] = function (block) {
  * Stops the current animation on the object.
  * @method stop_animation_vi
  * @param object object to stop the animations on
- * @returns {} object.animations.stop();
+ * @returns {}
+ * ```javascript
+ * object.animations.stop();
+ * ```
  * @block
  */
 Blockly.JavaScript['stop_animation_vi'] = function (block) {
@@ -2063,6 +2452,8 @@ Blockly.JavaScript['stop_animation_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_frame'] = function (block) {
   const frameNumber = Blockly.JavaScript.valueToCode(block, 'FRAME_NUMBER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2075,7 +2466,10 @@ Blockly.JavaScript['set_frame'] = function (block) {
  * @method set_frame_vi
  * @param object object to set the animation frame for
  * @param frameNumber {Number} frame to set the animation to
- * @returns {} object.frame = frameNumber;
+ * @returns {}
+ * ```javascript
+ * object.frame = frameNumber;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_frame_vi'] = function (block) {
@@ -2088,6 +2482,8 @@ Blockly.JavaScript['set_frame_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['animation_get_animation'] = function (block) {
   const value_sprite = Blockly.JavaScript.valueToCode(block, 'Sprite', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2099,6 +2495,7 @@ Blockly.JavaScript['animation_get_animation'] = function (block) {
  * @deprecated
  * @param block
  * @return {}
+ * ```
  * @block
  */
 Blockly.JavaScript['animation_next'] = function (block) {
@@ -2111,6 +2508,7 @@ Blockly.JavaScript['animation_next'] = function (block) {
  * @deprecated
  * @param block
  * @return {}
+ * ```
  * @block
  */
 Blockly.JavaScript['animation_previous'] = function (block) {
@@ -2124,7 +2522,10 @@ Blockly.JavaScript['animation_previous'] = function (block) {
  * @method animation_next_vi
  * @param framecount {Number} number of frames to advance
  * @param objet object with the animation to change
- * @returns {} object.animations.next(framecount);
+ * @returns {}
+ * ```javascript
+ * object.animations.next(framecount);
+ * ```
  * @block
  */
 Blockly.JavaScript['animation_next_vi'] = function (block) {
@@ -2138,7 +2539,10 @@ Blockly.JavaScript['animation_next_vi'] = function (block) {
  * @method animation_next_vi
  * @param framecount {Number} number of frames to move back
  * @param objet object with the animation to change
- * @returns {} object.animations.previous(framecount);
+ * @returns {}
+ * ```javascript
+ * object.animations.previous(framecount);
+ * ```
  * @block
  */
 Blockly.JavaScript['animation_previous_vi'] = function (block) {
@@ -2151,6 +2555,8 @@ Blockly.JavaScript['animation_previous_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['refresh_frame'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -2161,6 +2567,8 @@ Blockly.JavaScript['refresh_frame'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['animation_update'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -2170,6 +2578,7 @@ Blockly.JavaScript['animation_update'] = function (block) {
 /**
  * @deprecated
  * @param block
+ * ```
  * @block
  */
 Blockly.JavaScript['validate_frames'] = function (block) {
@@ -2183,7 +2592,10 @@ Blockly.JavaScript['validate_frames'] = function (block) {
  * @method validate_frames_vi
  * @param object object to check the animation of
  * @param frames {Array} frames to check
- * @returns {} object.animations.validateFrames(frames, true)
+ * @returns {}
+ * ```javascript
+ * object.animations.validateFrames(frames, true)
+ * ```
  * @block
  */
 Blockly.JavaScript['validate_frames_vi'] = function (block) {
@@ -2196,6 +2608,7 @@ Blockly.JavaScript['validate_frames_vi'] = function (block) {
  * @deprecated
  * @param block
  * @return {String}
+ * ```
  * @block
  */
 Blockly.JavaScript['animation_destroy'] = function (block) {
@@ -2207,7 +2620,10 @@ Blockly.JavaScript['animation_destroy'] = function (block) {
  * Destroy all animations on an object.
  * @method animation_destroy_vi
  * @param object object to destroy the animations of
- * @returns {} object.animations.destroy();
+ * @returns {}
+ * ```javascript
+ * object.animations.destroy();
+ * ```
  * @block
  */
 Blockly.JavaScript['animation_destroy_vi'] = function (block) {
@@ -2219,6 +2635,8 @@ Blockly.JavaScript['animation_destroy_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_animation_property'] = function (block) {
   const value_sprite = Blockly.JavaScript.valueToCode(block, 'SPRITE', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2230,6 +2648,8 @@ Blockly.JavaScript['get_animation_property'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_animation_property'] = function (block) {
   const dropdown_field = block.getFieldValue('FIELD');
@@ -2242,6 +2662,8 @@ Blockly.JavaScript['set_animation_property'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_animation_property_vi'] = function (block) {
   const field = block.getFieldValue('FIELD');
@@ -2258,7 +2680,10 @@ Blockly.JavaScript['set_animation_property_vi'] = function (block) {
  * @param field the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.animations.currentAnim.field = value;
+ * @returns {}
+ * ```javascript
+ * object.animations.currentAnim.field = value;
+ * ```
  * @block
  */
 /**
@@ -2267,7 +2692,10 @@ Blockly.JavaScript['set_animation_property_vi'] = function (block) {
  * @param field the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.animations.currentAnim.field = value;
+ * @returns {}
+ * ```javascript
+ * object.animations.currentAnim.field = value;
+ * ```
  * @block
  */
 
@@ -2277,7 +2705,10 @@ Blockly.JavaScript['set_animation_property_vi'] = function (block) {
  * @param field the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.animations.currentAnim.field = value;
+ * @returns {}
+ * ```javascript
+ * object.animations.currentAnim.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_animation_boolean_field_vi']
@@ -2297,15 +2728,21 @@ Blockly.JavaScript['set_animation_boolean_field_vi']
 * @method get_animation_boolean_field_vi
 * @param field the value to get
 * @param object object to get values from
-* @returns {} object.animations.currentAnim.field
-* @block
+* @returns {}
+ * ```javascript
+ * object.animations.currentAnim.field
+* ```
+ * @block
 */
 /**
  * Returns the chosen numeric field value of the object.
  * @method get_animation_numeric_field
  * @param field the value to get
  * @param object object to get values from
- * @returns {} object.animations.currentAnim.field
+ * @returns {}
+ * ```javascript
+ * object.animations.currentAnim.field
+ * ```
  * @block
  */
 /**
@@ -2313,7 +2750,10 @@ Blockly.JavaScript['set_animation_boolean_field_vi']
  * @method get_animation_string_field
  * @param field the value to get
  * @param object object to get values from
- * @returns {} object.animations.currentAnim.field
+ * @returns {}
+ * ```javascript
+ * object.animations.currentAnim.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_animation_boolean_field_vi']
@@ -2334,7 +2774,10 @@ Blockly.JavaScript['get_animation_boolean_field_vi']
  * Returns the specified coordinate value of the mouse position.
  * @method get_current_mouse_position
  * @param direction which coordinate of the mouse position to get
- * @returns {} game.input.direction
+ * @returns {}
+ * ```javascript
+ * game.input.direction
+ * ```
  * @block
  */
 Blockly.JavaScript['get_current_mouse_position'] = function (block) {
@@ -2345,7 +2788,10 @@ Blockly.JavaScript['get_current_mouse_position'] = function (block) {
 /**
  * Returns the mouse position as a point that contains the x/y values of the coordinates.
  * @method get_mouse_position_point
- * @returns {} New Phaser.Point(game.input.x, game.input.y)
+ * @returns {}
+ * ```javascript
+ * New Phaser.Point(game.input.x, game.input.y)
+ * ```
  * @block
  */
 Blockly.JavaScript['get_mouse_position_point'] = function (block) {
@@ -2355,7 +2801,10 @@ Blockly.JavaScript['get_mouse_position_point'] = function (block) {
 /**
  * Returns true/false if the specified mouse button is currently being clicked.
  * @method is_mouse_button_clicked
- * @returns {} game.input.mousePointer.button.isDown
+ * @returns {}
+ * ```javascript
+ * game.input.mousePointer.button.isDown
+ * ```
  * @block
  */
 Blockly.JavaScript['is_mouse_button_clicked'] = function (block) {
@@ -2365,7 +2814,10 @@ Blockly.JavaScript['is_mouse_button_clicked'] = function (block) {
 /**
  * Returns the active game pointer.
  * @method get_active_pointer
- * @returns {} game.input.activePointer
+ * @returns {}
+ * ```javascript
+ * game.input.activePointer
+ * ```
  * @block
  */
 Blockly.JavaScript['get_active_pointer'] = function (block) {
@@ -2378,6 +2830,8 @@ Blockly.JavaScript['get_active_pointer'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['create_cursor_keys'] = function (block) {
   return ['game.input.keyboard.createCursorKeys()', Blockly.JavaScript.ORDER_NONE];
@@ -2387,7 +2841,10 @@ Blockly.JavaScript['create_cursor_keys'] = function (block) {
  * Returns true/false about whether or not the given key is currently being pressed down.
  * @method is_key_down
  * @param key key to check
- * @returns {} game.input.keyboard.isDown(Phaser.Keyboard.key)
+ * @returns {}
+ * ```javascript
+ * game.input.keyboard.isDown(Phaser.Keyboard.key)
+ * ```
  * @block
  */
 Blockly.JavaScript['is_key_down'] = function (block) {
@@ -2399,7 +2856,10 @@ Blockly.JavaScript['is_key_down'] = function (block) {
  * Creates a Phaser key object.
  * @method add_key
  * @param key keycode of the key to create
- * @returns {} game.input.keyboard.addKey(Phaser.Keyboard.key)
+ * @returns {}
+ * ```javascript
+ * game.input.keyboard.addKey(Phaser.Keyboard.key)
+ * ```
  * @block
  */
 Blockly.JavaScript['add_key'] = function (block) {
@@ -2412,7 +2872,10 @@ Blockly.JavaScript['add_key'] = function (block) {
  * @method get_key_boolean_field
  * @param field the value to get
  * @param key key to get values from
- * @returns {} key.field
+ * @returns {}
+ * ```javascript
+ * key.field
+ * ```
  * @block
  */
 /**
@@ -2420,7 +2883,10 @@ Blockly.JavaScript['add_key'] = function (block) {
  * @method get_key_numeric_field
  * @param field the value to get
  * @param key key to get values from
- * @returns {} key.field
+ * @returns {}
+ * ```javascript
+ * key.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_key_boolean_field']
@@ -2435,7 +2901,10 @@ Blockly.JavaScript['get_key_boolean_field']
  * Returns true/false if the given key was pressed down this update tick.
  * @method key_just_pressed
  * @param key key to check
- * @returns {} key.justPressed()
+ * @returns {}
+ * ```javascript
+ * key.justPressed()
+ * ```
  * @block
  */
 Blockly.JavaScript['key_just_pressed'] = function (block) {
@@ -2447,7 +2916,10 @@ Blockly.JavaScript['key_just_pressed'] = function (block) {
  * Returns true/false if the given key was released down this update tick.
  * @method key_just_released
  * @param key key to check
- * @returns {} key.justReleased()
+ * @returns {}
+ * ```javascript
+ * key.justReleased()
+ * ```
  * @block
  */
 Blockly.JavaScript['key_just_released'] = function (block) {
@@ -2460,7 +2932,10 @@ Blockly.JavaScript['key_just_released'] = function (block) {
  * @method key_reset
  * @param key key to reset
  * @param hard {Boolean} whether or not to hard reset the key
- * @returns {} key.reset(hard)
+ * @returns {}
+ * ```javascript
+ * key.reset(hard)
+ * ```
  * @block
  */
 Blockly.JavaScript['key_reset'] = function (block) {
@@ -2474,7 +2949,10 @@ Blockly.JavaScript['key_reset'] = function (block) {
  * @method key_up_duration
  * @param key key to check
  * @param duration {Number} duration within which the key is considered as just released
- * @returns {} key.upDuration(duration);
+ * @returns {}
+ * ```javascript
+ * key.upDuration(duration);
+ * ```
  * @block
  */
 Blockly.JavaScript['key_up_duration'] = function (block) {
@@ -2488,7 +2966,10 @@ Blockly.JavaScript['key_up_duration'] = function (block) {
  * @method key_up_duration
  * @param key key to check
  * @param duration {Number} duration within which the key is considered as just pressed
- * @returns {} key.downDuration(duration);
+ * @returns {}
+ * ```javascript
+ * key.downDuration(duration);
+ * ```
  * @block
  */
 Blockly.JavaScript['key_down_duration'] = function (block) {
@@ -2503,7 +2984,10 @@ Blockly.JavaScript['key_down_duration'] = function (block) {
  * Enables an object to use input handler methods and events.
  * @method input_handler_enable
  * @param object object to enable the input handler on
- * @returns {} object.inputEnabled = true;
+ * @returns {}
+ * ```javascript
+ * object.inputEnabled = true;
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_enable'] = function (block) {
@@ -2517,7 +3001,10 @@ Blockly.JavaScript['input_handler_enable'] = function (block) {
  * @param field the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.input.field = value;
+ * @returns {}
+ * ```javascript
+ * object.input.field = value;
+ * ```
  * @block
  */
 /**
@@ -2526,7 +3013,10 @@ Blockly.JavaScript['input_handler_enable'] = function (block) {
  * @param field the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.input.field = value;
+ * @returns {}
+ * ```javascript
+ * object.input.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_input_handler_boolean_field']
@@ -2544,7 +3034,10 @@ Blockly.JavaScript['set_input_handler_boolean_field']
  * @param field the value to set
  * @param object object to assign values for
  * @param value value to set the field to
- * @returns {} object.input.field.copyFrom(value);
+ * @returns {}
+ * ```javascript
+ * object.input.field.copyFrom(value);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
@@ -2556,26 +3049,35 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
 
 /**
  * Returns the chosen boolean field value of the object.
- * @method get_key_boolean_field
+ * @method get_input_handler_boolean_field
  * @param field the value to get
  * @param object object to get values from
- * @returns {} object.input.field
+ * @returns {}
+ * ```javascript
+ * object.input.field
+ * ```
  * @block
  */
 /**
  * Returns the chosen numeric field value of the object.
- * @method get_key_numeric_field
+ * @method get_input_handler_numeric_field
  * @param field the value to get
  * @param object object to get values from
- * @returns {} object.input.field
+ * @returns {}
+ * ```javascript
+ * object.input.field
+ * ```
  * @block
  */
 /**
  * Returns the chosen point field value of the object.
- * @method get_key_point_field
+ * @method get_input_handler_point_field
  * @param field the value to get
  * @param object object to get values from
- * @returns {} object.input.field
+ * @returns {}
+ * ```javascript
+ * object.input.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_input_handler_boolean_field']
@@ -2592,7 +3094,10 @@ Blockly.JavaScript['get_input_handler_boolean_field']
  * @method input_handler_bounds_rect_set
  * @param object object to set the boundary for
  * @param rect rectangle that defines the boundary
- * @returns {} object.input.boundsRect = rect;
+ * @returns {}
+ * ```javascript
+ * object.input.boundsRect = rect;
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_bounds_rect_set'] = function (block) {
@@ -2605,7 +3110,10 @@ Blockly.JavaScript['input_handler_bounds_rect_set'] = function (block) {
  * Allows the object to be clicked and dragged by the mouse.
  * @method input_handler_enable_drag
  * @param object object to enable dragging on
- * @returns {} object.input.enableDrag();
+ * @returns {}
+ * ```javascript
+ * object.input.enableDrag();
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_enable_drag'] = function (block) {
@@ -2621,7 +3129,10 @@ Blockly.JavaScript['input_handler_enable_drag'] = function (block) {
  * @param top {Boolean} If true the object will be displayed on top of everything else
  * @param pixel {Boolean} If true it will use a pixel perfect test to see if you clicked the object. False uses the bounding box
  * @param alpha {Boolean} If pixel perfect is true, this specifies the alpha level needed for collision to be processed
- * @returns {} object.input.enableDrag(center, top, pixel, alpha);
+ * @returns {}
+ * ```javascript
+ * object.input.enableDrag(center, top, pixel, alpha);
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_enable_drag_complex'] = function (block) {
@@ -2638,7 +3149,10 @@ Blockly.JavaScript['input_handler_enable_drag_complex'] = function (block) {
  * @method input_handler_check_pointer_down
  * @param pointer pointer to check
  * @param object object to check
- * @returns {} input.checkPointerDown(pointer)
+ * @returns {}
+ * ```javascript
+ * input.checkPointerDown(pointer)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_check_pointer_down'] = function (block) {
@@ -2652,7 +3166,10 @@ Blockly.JavaScript['input_handler_check_pointer_down'] = function (block) {
  * @method input_handler_check_pointer_over
  * @param pointer pointer to check
  * @param object object to check
- * @returns {} object.input.checkPointerOver(pointer)
+ * @returns {}
+ * ```javascript
+ * object.input.checkPointerOver(pointer)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_check_pointer_over'] = function (block) {
@@ -2665,7 +3182,10 @@ Blockly.JavaScript['input_handler_check_pointer_over'] = function (block) {
  * Stops the object from being dragged. If it is currently being dragged, it will be stopped immediately.
  * @method input_handler_disable_drag
  * @param object object to disable drag on
- * @returns {} object.input.disableDrag();
+ * @returns {}
+ * ```javascript
+ * object.input.disableDrag();
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_disable_drag'] = function (block) {
@@ -2679,7 +3199,10 @@ Blockly.JavaScript['input_handler_disable_drag'] = function (block) {
  * @param object object to snap
  * @param x {Number} the width of the grid to snap to
  * @param y {Number} the height of the grid to snap to
- * @returns {} object.input.enableSnap(x, y);
+ * @returns {}
+ * ```javascript
+ * object.input.enableSnap(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_enable_snap'] = function (block) {
@@ -2700,7 +3223,10 @@ Blockly.JavaScript['input_handler_enable_snap'] = function (block) {
  * @param release {Boolean} makes the object snap to the grid when released
  * @param offset_x {Number} offsets the top left starting point of the grid
  * @param offset_y {Number} offsets the top left starting point of the grid
- * @returns {} object.input.enableSnap(x, y, drag, release, offset_x, offset_y);
+ * @returns {}
+ * ```javascript
+ * object.input.enableSnap(x, y, drag, release, offset_x, offset_y);
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_enable_snap_complex'] = function (block) {
@@ -2719,7 +3245,10 @@ Blockly.JavaScript['input_handler_enable_snap_complex'] = function (block) {
  * Stops the object from snapping to a grid while being dragged and released.
  * @method input_handler_disable_snap
  * @param object object to disable snap for
- * @returns {} object.input.disableSnap();
+ * @returns {}
+ * ```javascript
+ * object.input.disableSnap();
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_disable_snap'] = function (block) {
@@ -2733,7 +3262,10 @@ Blockly.JavaScript['input_handler_disable_snap'] = function (block) {
  * @param x {Number} x coordinate to check
  * @param y {Number} y coordinate to check
  * @param object object to check
- * @returns {} object.input.checkPixel(x, y)
+ * @returns {}
+ * ```javascript
+ * object.input.checkPixel(x, y)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_check_pixel'] = function (block) {
@@ -2747,7 +3279,10 @@ Blockly.JavaScript['input_handler_check_pixel'] = function (block) {
  * Returns true/false if the object is using pixel perfect checking.
  * @method input_handler_is_pixel_perfect
  * @param object object to check
- * @returns {} object.input.isPixelPerfect()
+ * @returns {}
+ * ```javascript
+ * object.input.isPixelPerfect()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_is_pixel_perfect'] = function (block) {
@@ -2760,7 +3295,10 @@ Blockly.JavaScript['input_handler_is_pixel_perfect'] = function (block) {
  * @method input_handler_just_pressed
  * @param object object to check
  * @param time {Number} the duration to check
- * @returns {} object.input.justPressed(0, time)
+ * @returns {}
+ * ```javascript
+ * object.input.justPressed(0, time)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_just_pressed'] = function (block) {
@@ -2774,7 +3312,10 @@ Blockly.JavaScript['input_handler_just_pressed'] = function (block) {
  * @method input_handler_just_released
  * @param object object to check
  * @param time {Number} the duration to check
- * @returns {} object.input.justReleased(0, time)
+ * @returns {}
+ * ```javascript
+ * object.input.justReleased(0, time)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_just_released'] = function (block) {
@@ -2787,7 +3328,10 @@ Blockly.JavaScript['input_handler_just_released'] = function (block) {
  * Returns the number of milliseconds the mouse has been hovering over the object.
  * @method input_handler_over_duration
  * @param object object to check
- * @returns {} object.input.overDuration()
+ * @returns {}
+ * ```javascript
+ * object.input.overDuration()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_over_duration'] = function (block) {
@@ -2799,6 +3343,8 @@ Blockly.JavaScript['input_handler_over_duration'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['input_handler_pointer_over'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -2810,7 +3356,10 @@ Blockly.JavaScript['input_handler_pointer_over'] = function (block) {
  * @method input_handler_just_over
  * @param object object to check
  * @param time {Number} time to check
- * @returns {} object.input.justOver(0, time)
+ * @returns {}
+ * ```javascript
+ * object.input.justOver(0, time)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_just_over'] = function (block) {
@@ -2823,7 +3372,10 @@ Blockly.JavaScript['input_handler_just_over'] = function (block) {
  * Returns the number of milliseconds the mouse has been clicking on the object.
  * @method input_handler_down_duration
  * @param object object to check
- * @returns {} object.input.downDuration()
+ * @returns {}
+ * ```javascript
+ * object.input.downDuration()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_down_duration'] = function (block) {
@@ -2835,7 +3387,10 @@ Blockly.JavaScript['input_handler_down_duration'] = function (block) {
  * Returns true/false if the pointer is up.
  * @method input_handler_pointer_up
  * @param object object to check
- * @returns {} object.input.pointerUp()
+ * @returns {}
+ * ```javascript
+ * object.input.pointerUp()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
@@ -2847,12 +3402,15 @@ Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
  * Returns true/false if the pointer is down.
  * @method input_handler_pointer_down
  * @param object object to check
- * @returns {} object.input.pointerDown()
+ * @returns {}
+ * ```javascript
+ * object.input.pointerDown()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
-  return [`${object}.input.pointerUp()`, Blockly.JavaScript.ORDER_ATOMIC];
+  return [`${object}.input.pointerDown()`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 /**
@@ -2860,7 +3418,10 @@ Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
  * @method input_handler_start
  * @param object object to start input handler for
  * @param priority {Number} the priority of the object
- * @returns {} object.input.start(priority);
+ * @returns {}
+ * ```javascript
+ * object.input.start(priority);
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_start'] = function (block) {
@@ -2873,7 +3434,10 @@ Blockly.JavaScript['input_handler_start'] = function (block) {
  * Stops the Input Handler from running on the object.
  * @method input_handler_stop
  * @param object object to affect
- * @returns {} object.input.stop();
+ * @returns {}
+ * ```javascript
+ * object.input.stop();
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_stop'] = function (block) {
@@ -2886,7 +3450,10 @@ Blockly.JavaScript['input_handler_stop'] = function (block) {
  * @method input_handler_just_out
  * @param object object to check
  * @param time {Number} duration to check
- * @returns {} object.input.justOut(0, time)
+ * @returns {}
+ * ```javascript
+ * object.input.justOut(0, time)
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_just_out'] = function (block) {
@@ -2899,7 +3466,10 @@ Blockly.JavaScript['input_handler_just_out'] = function (block) {
  * Returns true/false if the pointer is outside of the object's bounds.
  * @method input_handler_pointer_out
  * @param object object to check
- * @returns {} object.input.pointerOut()
+ * @returns {}
+ * ```javascript
+ * object.input.pointerOut()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_out'] = function (block) {
@@ -2911,7 +3481,10 @@ Blockly.JavaScript['input_handler_pointer_out'] = function (block) {
  * Returns the x coordinate of the pointer, relative to the top-left of anchor of the object.
  * @method input_handler_pointer_x
  * @param object object to check
- * @returns {} object.input.pointerX()
+ * @returns {}
+ * ```javascript
+ * object.input.pointerX()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_x'] = function (block) {
@@ -2923,7 +3496,10 @@ Blockly.JavaScript['input_handler_pointer_x'] = function (block) {
  * Returns the y coordinate of the pointer, relative to the top-left of anchor of the object.
  * @method input_handler_pointer_y
  * @param object object to check
- * @returns {} object.input.pointerY()
+ * @returns {}
+ * ```javascript
+ * object.input.pointerY()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_y'] = function (block) {
@@ -2935,7 +3511,10 @@ Blockly.JavaScript['input_handler_pointer_y'] = function (block) {
  * Returns a point containing the x & y coordinates of the pointer, relative to the top-left of the anchor of the object.
  * @method input_handler_pointer_position
  * @param object object to check
- * @returns {} new Phaser.Point(object.input.pointerX(), object.input.pointerY())
+ * @returns {}
+ * ```javascript
+ * new Phaser.Point(object.input.pointerX(), object.input.pointerY())
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_position'] = function (block) {
@@ -2948,7 +3527,10 @@ Blockly.JavaScript['input_handler_pointer_position'] = function (block) {
  * Resets the input handler for the object, and disables it.
  * @method input_handler_reset
  * @param object object to reset the input handler for
- * @returns {} object.input.reset();
+ * @returns {}
+ * ```javascript
+ * object.input.reset();
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_reset'] = function (block) {
@@ -2960,7 +3542,10 @@ Blockly.JavaScript['input_handler_reset'] = function (block) {
  * Destroys the input handler for the object.
  * @method input_handler_destroy
  * @param object object to destroy the handler for
- * @returns {} object.input.destroy();
+ * @returns {}
+ * ```javascript
+ * object.input.destroy();
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_destroy'] = function (block) {
@@ -2972,7 +3557,10 @@ Blockly.JavaScript['input_handler_destroy'] = function (block) {
  * Returns true/false if the object is currently being dragged.
  * @method input_handler_pointer_dragged
  * @param object object to check
- * @returns {} object.input.pointerDragged()
+ * @returns {}
+ * ```javascript
+ * object.input.pointerDragged()
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_dragged'] = function (block) {
@@ -2986,7 +3574,10 @@ Blockly.JavaScript['input_handler_pointer_dragged'] = function (block) {
  * @param object object to lock dragging for
  * @param horizontal {Boolean} enables/disables the object from being dragged horizontally
  * @param vertical {Boolean} enables/disables the object from being dragged vertically
- * @returns {} object.input.setDragLock(horizontal, vertical);
+ * @returns {}
+ * ```javascript
+ * object.input.setDragLock(horizontal, vertical);
+ * ```
  * @block
  */
 Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
@@ -3003,7 +3594,10 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
  * Returns the property of the object.
  * @method get_world_property
  * @param property property to get values from
- * @returns {} game.world.property
+ * @returns {}
+ * ```javascript
+ * game.world.property
+ * ```
  * @block
  */
 Blockly.JavaScript['get_world_property'] = function (block) {
@@ -3018,7 +3612,10 @@ Blockly.JavaScript['get_world_property'] = function (block) {
  * @param y {Number} the y coordinate of the top-left corner of the world
  * @param w {Number} the width of the game world
  * @param h {Number} the height of the game world
- * @returns {} game.world.setBounds(x, y, w, h);
+ * @returns {}
+ * ```javascript
+ * game.world.setBounds(x, y, w, h);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_world_bounds'] = function (block) {
@@ -3033,6 +3630,8 @@ Blockly.JavaScript['set_world_bounds'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['create_point'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3044,6 +3643,8 @@ Blockly.JavaScript['create_point'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_scale'] = function (block) {
   const xScale = Blockly.JavaScript.valueToCode(block, 'SCALE_X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3058,7 +3659,10 @@ Blockly.JavaScript['set_scale'] = function (block) {
  * @param x {Number} amount to scale the object in the x direction
  * @param y {Number} amount to scale the object in the y direction
  * @param object object to scale
- * @returns {} object.scale.setTo(x, y);
+ * @returns {}
+ * ```javascript
+ * object.scale.setTo(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_scale_vi'] = function (block) {
@@ -3072,6 +3676,8 @@ Blockly.JavaScript['set_scale_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_pos'] = function (block) {
   const param_name = block.getFieldValue('PARAM');
@@ -3085,6 +3691,8 @@ Blockly.JavaScript['set_pos'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_velocity'] = function (block) {
   const param_name = block.getFieldValue('PARAM');
@@ -3098,6 +3706,8 @@ Blockly.JavaScript['set_velocity'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_param'] = function (block) {
   const param_name = block.getFieldValue('PARAM');
@@ -3110,6 +3720,8 @@ Blockly.JavaScript['get_param'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_world_reference'] = function (block) {
   return [`game.world`, Blockly.JavaScript.ORDER_NONE];
@@ -3119,7 +3731,10 @@ Blockly.JavaScript['get_world_reference'] = function (block) {
  * Pauses/unpauses the game.
  * @method set_game_pause
  * @param paused {Boolean} sets the game paused to true or false
- * @returns {} game.paused = paused;
+ * @returns {}
+ * ```javascript
+ * game.paused = paused;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_game_pause'] = function (block) {
@@ -3131,7 +3746,10 @@ Blockly.JavaScript['set_game_pause'] = function (block) {
 /**
  * Returns whether or not the game is paused.
  * @method get_game_pause
- * @returns {} game.paused
+ * @returns {}
+ * ```javascript
+ * game.paused
+ * ```
  * @block
  */
 Blockly.JavaScript['get_game_pause'] = function (block) {
@@ -3147,7 +3765,8 @@ Blockly.JavaScript['get_game_pause'] = function (block) {
     const field = block.getFieldValue('PROPERTY');
     const point = Blockly.JavaScript.valueToCode(block, 'POINT', Blockly.JavaScript.ORDER_ATOMIC);
     return `${object}.${field}.copyFrom(${point});\n`;
-};* @block
+};* ```
+ * @block
  */
 /**
  * Assigns the chosen point field for the game object.
@@ -3155,7 +3774,10 @@ Blockly.JavaScript['get_game_pause'] = function (block) {
  * @param field the field to set
  * @param point point to set the field to
  * @param object object to set the field for
- * @returns {} object.field.copyFrom(point);
+ * @returns {}
+ * ```javascript
+ * object.field.copyFrom(point);
+ * ```
  * @block
  */
 Blockly.JavaScript['set_game_object_point_field'] = setPointField;
@@ -3165,7 +3787,10 @@ Blockly.JavaScript['set_game_object_point_field'] = setPointField;
  * @method get_physics_point_field
  * @param object object to get values from
  * @param field the field to get the value of
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_game_object_point_field'] = function (block) {
@@ -3178,6 +3803,8 @@ Blockly.JavaScript['get_game_object_point_field'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_game_object_boolean_field'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3188,11 +3815,14 @@ Blockly.JavaScript['set_game_object_boolean_field'] = function (block) {
 
 /**
  * Assigns the chosen boolean field for the game object.
- * @method set_game_object_boolean_field
+ * @method set_game_object_boolean_field_vi
  * @param object object to set the field for
  * @param field the field to set
  * @param value value to set the field to
- * @returns {} object.field = value;
+ * @returns {}
+ * ```javascript
+ * object.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_game_object_boolean_field_vi'] = function (block) {
@@ -3207,7 +3837,10 @@ Blockly.JavaScript['set_game_object_boolean_field_vi'] = function (block) {
  * @method get_game_object_boolean_field
  * @param object object to get values from
  * @param field the field to get the value of
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_game_object_boolean_field'] = function (block) {
@@ -3222,7 +3855,10 @@ Blockly.JavaScript['get_game_object_boolean_field'] = function (block) {
  * @param object object to set the field for
  * @param field the field to set
  * @param value value to set the field to
- * @returns {} object.field = value;
+ * @returns {}
+ * ```javascript
+ * object.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_game_object_numeric_field'] = function (block) {
@@ -3237,7 +3873,10 @@ Blockly.JavaScript['set_game_object_numeric_field'] = function (block) {
  * @method get_game_object_numeric_field
  * @param object object to get the values from
  * @param field the field to get the value of
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_game_object_numeric_field'] = function (block) {
@@ -3250,6 +3889,8 @@ Blockly.JavaScript['get_game_object_numeric_field'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_object_anchor'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_NONE);
@@ -3262,6 +3903,8 @@ Blockly.JavaScript['set_object_anchor'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['kill_object'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3272,7 +3915,10 @@ Blockly.JavaScript['kill_object'] = function (block) {
  * Sets the values of game object alive, exists, and visible to false. Does not actually destroy the object or free it from memory.
  * @method faint_object
  * @param object object to faint
- * @returns {} object.faint();
+ * @returns {}
+ * ```javascript
+ * object.faint();
+ * ```
  * @block
  */
 Blockly.JavaScript['faint_object'] = function (block) {
@@ -3284,7 +3930,10 @@ Blockly.JavaScript['faint_object'] = function (block) {
  * Deletes everything about the game object.
  * @method destroy_object
  * @param object object to destroy
- * @returns {} object.destroy();
+ * @returns {}
+ * ```javascript
+ * object.destroy();
+ * ```
  * @block
  */
 Blockly.JavaScript['destroy_object'] = function (block) {
@@ -3296,6 +3945,8 @@ Blockly.JavaScript['destroy_object'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['object_inCamera'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3306,6 +3957,8 @@ Blockly.JavaScript['object_inCamera'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['camera_follow'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -3318,7 +3971,10 @@ Blockly.JavaScript['camera_follow'] = function (block) {
  * Makes the game camera follow the object.
  * @method camera_follow_vi
  * @param object object for the camera to follow
- * @returns {} game.camera.follow(object);
+ * @returns {}
+ * ```javascript
+ * game.camera.follow(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_follow_vi'] = function (block) {
@@ -3330,6 +3986,8 @@ Blockly.JavaScript['camera_follow_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3341,7 +3999,10 @@ Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
  * @method camera_follow_vi_styled
  * @param object object for the camera to follow
  * @param style the style of the camera following
- * @returns {} game.camera.follow(object, Phaser.Camera.style);
+ * @returns {}
+ * ```javascript
+ * game.camera.follow(object, Phaser.Camera.style);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_follow_vi_styled'] = function (block) {
@@ -3357,7 +4018,10 @@ Blockly.JavaScript['camera_follow_vi_styled'] = function (block) {
  * @param lerpX {Number} linear interpolation in the x direction
  * @param lerpY {Number} linear interpolation in the y direction
  * @param style the style of the camera following
- * @returns {} game.camera.follow(object, style, lerpX, lerpY);
+ * @returns {}
+ * ```javascript
+ * game.camera.follow(object, style, lerpX, lerpY);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
@@ -3372,6 +4036,8 @@ Blockly.JavaScript['camera_follow_vi_complex'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_camera'] = function (block) {
   return [`game.camera`, Blockly.JavaScript.ORDER_ATOMIC];
@@ -3381,6 +4047,8 @@ Blockly.JavaScript['get_camera'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['object_set_to'] = function (block) {
   const variable_object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -3402,7 +4070,10 @@ Blockly.JavaScript['object_set_to'] = function (block) {
  * @param initial_text {String} the text to display
  * @param size {Number} the font size to display the text with
  * @param colour the colour to display the text with
- * @returns {} game.add.text(x, y, initial_text, {fontSize: `${size}px`, fill: 'colour'})
+ * @returns {}
+ * ```javascript
+ * game.add.text(x, y, initial_text, {fontSize: `${size}px`, fill: 'colour'})
+ * ```
  * @block
  */
 Blockly.JavaScript['add_text_input'] = function (block) {
@@ -3418,6 +4089,8 @@ Blockly.JavaScript['add_text_input'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['add_text'] = function (block) {
   const value_x_pos = Blockly.JavaScript.valueToCode(block, 'X_POS', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3432,6 +4105,8 @@ Blockly.JavaScript['add_text'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_text'] = function (block) {
   const object = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('OBJECT'), Blockly.Variables.NAME_TYPE);
@@ -3441,10 +4116,13 @@ Blockly.JavaScript['set_text'] = function (block) {
 
 /**
  * Sets the text to display on the text object.
- * @method set_text
+ * @method set_text_vi
  * @param object text object to set the text for
  * @param text_string {String} text to display on the object
- * @returns {} object.text = text_string;
+ * @returns {}
+ * ```javascript
+ * object.text = text_string;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_text_vi'] = function (block) {
@@ -3457,6 +4135,8 @@ Blockly.JavaScript['set_text_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_bounds'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3467,6 +4147,8 @@ Blockly.JavaScript['get_bounds'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_rotation'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3478,7 +4160,10 @@ Blockly.JavaScript['get_rotation'] = function (block) {
  * @method rotate
  * @param object object to rotate
  * @param value_angle {Number} number of degrees to rotate by
- * @returns {} object.angle += value_angle;
+ * @returns {}
+ * ```javascript
+ * object.angle += value_angle;
+ * ```
  * @block
  */
 Blockly.JavaScript['rotate'] = function (block) {
@@ -3491,6 +4176,8 @@ Blockly.JavaScript['rotate'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_rotation'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3502,6 +4189,8 @@ Blockly.JavaScript['set_rotation'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_local_bounds'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3514,7 +4203,10 @@ Blockly.JavaScript['get_local_bounds'] = function (block) {
  * @param object object to reset
  * @param x {Number} x position to move the object to
  * @param y {Number} y position to move the object to
- * @returns {} object.reset(x, y);
+ * @returns {}
+ * ```javascript
+ * object.reset(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['reset'] = function (block) {
@@ -3528,7 +4220,10 @@ Blockly.JavaScript['reset'] = function (block) {
  * Brings a fainted object back to "life". Sets alive, exists, and visible to true.
  * @method revive
  * @param object object to revive
- * @returns {} object.revive();
+ * @returns {}
+ * ```javascript
+ * object.revive();
+ * ```
  * @block
  */
 Blockly.JavaScript['revive'] = function (block) {
@@ -3540,6 +4235,8 @@ Blockly.JavaScript['revive'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['create_bitmapFont'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_NONE);
@@ -3555,7 +4252,10 @@ Blockly.JavaScript['create_bitmapFont'] = function (block) {
  * @param object object to move
  * @param x {Number} number of pixels in the x direction to move
  * @param y {Number} number of pixels in the y direction to move
- * @returns {} object.position.add(x, y);
+ * @returns {}
+ * ```javascript
+ * object.position.add(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['move_by'] = function (block) {
@@ -3571,6 +4271,8 @@ Blockly.JavaScript['move_by'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['drawcircle'] = function (block) {
   const value_x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3588,6 +4290,8 @@ Blockly.JavaScript['drawcircle'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['get_object_width'] = function (block) {
   const variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
@@ -3599,6 +4303,8 @@ Blockly.JavaScript['get_object_width'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_object_width'] = function (block) {
   const variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
@@ -3614,7 +4320,10 @@ Blockly.JavaScript['set_object_width'] = function (block) {
  * @param x {Number} the x location of the emitter
  * @param y {Number} the y location of the emitter
  * @param maxparticles {Number} the total number of particles in the emitter
- * @returns {} game.add.emitter(x, y, maxparticles)
+ * @returns {}
+ * ```javascript
+ * game.add.emitter(x, y, maxparticles)
+ * ```
  * @block
  */
 Blockly.JavaScript['addemitter'] = function (block) {
@@ -3629,6 +4338,8 @@ Blockly.JavaScript['addemitter'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_make_particles'] = function (block) {
   const emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
@@ -3645,7 +4356,10 @@ Blockly.JavaScript['emitters_make_particles'] = function (block) {
  * @param quantity {Number} the number of particles to generate
  * @param collide {Boolean} whether or not the particles should collide with physics bodies
  * @param collideWorldBounds {Boolean} whether or not the particles should collide with the world bounds
- * @returns {} emitter.makeParticles(keys, frames, quantity, collide, collideWorldBounds);
+ * @returns {}
+ * ```javascript
+ * emitter.makeParticles(keys, frames, quantity, collide, collideWorldBounds);
+ * ```
  * @block
  */
 Blockly.JavaScript['emitter_make_particles'] = function (block) {
@@ -3662,6 +4376,8 @@ Blockly.JavaScript['emitter_make_particles'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_set_rotation'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
@@ -3674,6 +4390,8 @@ Blockly.JavaScript['emitters_set_rotation'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_set_rotation_vi'] = function (block) {
   const emitter = Blockly.JavaScript.valueToCode(block, 'EMITTER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3686,6 +4404,7 @@ Blockly.JavaScript['emitters_set_rotation_vi'] = function (block) {
  * @deprecated
  * @param block
  * @return {}
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_set_alpha'] = function (block) {
@@ -3703,7 +4422,10 @@ Blockly.JavaScript['emitters_set_alpha'] = function (block) {
  * @param min {Number} the minimum value the alpha of the particles can reach
  * @param max {Number} the maximum value the alpha of the particles can reach
  * @param rate {Number} the rate the particles will change between min and max
- * @returns {} emitter.setAlpha(min, max, rate);
+ * @returns {}
+ * ```javascript
+ * emitter.setAlpha(min, max, rate);
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_set_alpha_vi'] = function (block) {
@@ -3718,6 +4440,8 @@ Blockly.JavaScript['emitters_set_alpha_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_set_scale'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
@@ -3738,7 +4462,10 @@ Blockly.JavaScript['emitters_set_scale'] = function (block) {
  * @param miny {Number} the minimum y value the scale the particles can reach
  * @param maxy {Number} the maximum y value the scale the particles can reach
  * @param rate {Number} the rate the particles will change between min and max
- * @returns {} emitter.setScale(minx, maxx, miny, maxy, rate);
+ * @returns {}
+ * ```javascript
+ * emitter.setScale(minx, maxx, miny, maxy, rate);
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_set_scale_vi'] = function (block) {
@@ -3755,6 +4482,7 @@ Blockly.JavaScript['emitters_set_scale_vi'] = function (block) {
  * @deprecated
  * @param block
  * @return {}
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_set_speed'] = function (block) {
@@ -3777,7 +4505,10 @@ Blockly.JavaScript['emitters_set_speed'] = function (block) {
  * @param maxx {Number} the maximum speed for the particles to move in the x direction
  * @param miny {Number} the minimum speed for the particles to move in the y direction
  * @param maxy {Number} the maximum speed for the particles to move in the y direction
- * @returns {} emitter.minParticleSpeed.set(minx, miny); emitter.maxParticleSpeed.set(maxx, maxy);
+ * @returns {}
+ * ```javascript
+ * emitter.minParticleSpeed.set(minx, miny); emitter.maxParticleSpeed.set(maxx, maxy);
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_set_speed_vi'] = function (block) {
@@ -3797,6 +4528,8 @@ Blockly.JavaScript['emitters_set_speed_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_set_gravity'] = function (block) {
   const emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
@@ -3809,7 +4542,10 @@ Blockly.JavaScript['emitters_set_gravity'] = function (block) {
  * @method emitters_set_gravity
  * @param emitter emitter to set the gravity of the particles for
  * @param particle_gravity {Number} the gravity each particle will have
- * @returns {} emitter.gravity = particle_gravity;
+ * @returns {}
+ * ```javascript
+ * emitter.gravity = particle_gravity;
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_set_gravity_vi'] = function (block) {
@@ -3822,6 +4558,8 @@ Blockly.JavaScript['emitters_set_gravity_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_set_width'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
@@ -3833,6 +4571,8 @@ Blockly.JavaScript['emitters_set_width'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['emitters_start'] = function (block) {
   const variable_emitter = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('EMITTER'), Blockly.Variables.NAME_TYPE);
@@ -3851,7 +4591,10 @@ Blockly.JavaScript['emitters_start'] = function (block) {
  * @param lifespan {Number} how long each particle lives once emitted
  * @param frequency {Number} the interval between the release of each particle
  * @param quantity {Number} how many particles to emit before turning off
- * @returns {} emitter.start(explode, lifespan, frequncy, quantity);
+ * @returns {}
+ * ```javascript
+ * emitter.start(explode, lifespan, frequncy, quantity);
+ * ```
  * @block
  */
 Blockly.JavaScript['emitters_start_vi'] = function (block) {
@@ -3867,6 +4610,8 @@ Blockly.JavaScript['emitters_start_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['set_emit_from'] = function (block) {
   const value_object = Blockly.JavaScript.valueToCode(block, 'Object', Blockly.JavaScript.ORDER_ATOMIC);
@@ -3883,7 +4628,10 @@ Blockly.JavaScript['set_emit_from'] = function (block) {
  * @param object object to render
  * @param colour colour to render the object with
  * @param filled {Boolean} whether or not to leave the object filled or stroked
- * @returns {} game.debug.geom(object, colour, filled);
+ * @returns {}
+ * ```javascript
+ * game.debug.geom(object, colour, filled);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_geom'] = function (block) {
@@ -3900,7 +4648,10 @@ Blockly.JavaScript['debug_geom'] = function (block) {
  * @param object object to display information about
  * @param x {Number} x coordiante to display the information at
  * @param y {Number} y coordinate to display the information at
- * @returns {} game.debug.spriteInfo(object, x, y);
+ * @returns {}
+ * ```javascript
+ * game.debug.spriteInfo(object, x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_sprite'] = function (block) {
@@ -3914,7 +4665,8 @@ Blockly.JavaScript['debug_sprite'] = function (block) {
 /*Blockly.JavaScript['debug_body_info'] = function(block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.debug.bodyInfo(${object},${0},${20});\n`;
-};* @block
+};* ```
+ * @block
  */
 /**
  *
@@ -3923,7 +4675,10 @@ Blockly.JavaScript['debug_sprite'] = function (block) {
  * @param x {Number} x coordiante to display the information at
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
- * @returns {} game.debug.bodyInfo(object, x, y, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.bodyInfo(object, x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_body_info'] = function (block) {
@@ -3941,7 +4696,10 @@ Blockly.JavaScript['debug_body_info'] = function (block) {
  * @param object object to display the body of
  * @param colour colour to display the body with
  * @param filled {Boolean} whether or not the body should display as stroked or filled
- * @returns {} game.debug.body(object, colour, filled);
+ * @returns {}
+ * ```javascript
+ * game.debug.body(object, colour, filled);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_body_render'] = function (block) {
@@ -3957,7 +4715,10 @@ Blockly.JavaScript['debug_body_render'] = function (block) {
  * @method debug_camera
  * @param camera camera to display properties of
  * @param colour colour to display the properties with
- * @returns {} game.debug.camera(camera, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.camera(camera, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_camera'] = function (block) {
@@ -3972,7 +4733,10 @@ Blockly.JavaScript['debug_camera'] = function (block) {
  * @param x {Number} x coordinate to display the information at
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
- * @returns {} game.debug.cameraInfo(game.camera, x, y, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.cameraInfo(game.camera, x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_camera_info'] = function (block) {
@@ -3989,7 +4753,10 @@ Blockly.JavaScript['debug_camera_info'] = function (block) {
  * @param x {Number} x coordinate to display the information at
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
- * @returns {} game.debug.inputInfo(x, y, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.inputInfo(x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_input_info'] = function (block) {
@@ -4007,7 +4774,10 @@ Blockly.JavaScript['debug_input_info'] = function (block) {
  * @param x {Number} x coordinate to display the information at
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
- * @returns {} game.debug.key(game.input.keyboard.addKey(Phaser.Keyboard.dropdown_key), x, y);
+ * @returns {}
+ * ```javascript
+ * game.debug.key(game.input.keyboard.addKey(Phaser.Keyboard.dropdown_key), x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_key'] = function (block) {
@@ -4023,6 +4793,8 @@ Blockly.JavaScript['debug_key'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['debug_physics_group'] = function (block) {
   const group = Blockly.JavaScript.valueToCode(block, 'GROUP', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4036,7 +4808,10 @@ Blockly.JavaScript['debug_physics_group'] = function (block) {
  * @method debug_rectangle
  * @param rect rectangle to display
  * @param colour colour to display the rectangle with
- * @returns {} game.debug.rectangle(rect, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.rectangle(rect, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_rectangle'] = function (block) {
@@ -4050,6 +4825,8 @@ Blockly.JavaScript['debug_rectangle'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['debug_sound'] = function (block) {
   const x_pos = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -4066,7 +4843,10 @@ Blockly.JavaScript['debug_sound'] = function (block) {
  * @param x {Number} x coordinate to display the information at
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
- * @returns {} game.debug.soundInfo(sound, x, y, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.soundInfo(sound, x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_sound_info'] = function (block) {
@@ -4086,6 +4866,9 @@ Blockly.JavaScript['debug_sound_info'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @parm colour colour to display the coordinates with
  * @returns {}
+ * ```javascript
+ * game.debug.spriteCoords(sprite, x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_sprite_coords'] = function (block) {
@@ -4104,7 +4887,10 @@ Blockly.JavaScript['debug_sprite_coords'] = function (block) {
  * @param x {Number} x coordinate to display the information at
  * @param y {Number} y coordinate to display the information at
  * @parm colour colour to display the information with
- * @returns {} game.debug.spriteInfo(sprite, x, y, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.spriteInfo(sprite, x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_sprite_info'] = function (block) {
@@ -4123,7 +4909,10 @@ Blockly.JavaScript['debug_sprite_info'] = function (block) {
  * @param x {Number} x coordinate to display the information at
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
- * @returns {} game.debug.text(text, x, y, colour);
+ * @returns {}
+ * ```javascript
+ * game.debug.text(text, x, y, colour);
+ * ```
  * @block
  */
 Blockly.JavaScript['debug_text'] = function (block) {
@@ -4142,7 +4931,10 @@ Blockly.JavaScript['debug_text'] = function (block) {
  * @method statemanager_add_state
  * @param name {String} name of the new state
  * @param key tag to use for the state
- * @returns {} game.state.add(key, name);
+ * @returns {}
+ * ```javascript
+ * game.state.add(key, name);
+ * ```
  * @block
  */
 Blockly.JavaScript['statemanager_add_state'] = function (block) {
@@ -4156,7 +4948,10 @@ Blockly.JavaScript['statemanager_add_state'] = function (block) {
  * Start the state with the given tag.
  * @method statemanager_start_state
  * @param tag tag of the state to start
- * @returns {} game.start.state(tag);
+ * @returns {}
+ * ```javascript
+ * game.start.state(tag);
+ * ```
  * @block
  */
 Blockly.JavaScript['statemanager_start_state'] = function (block) {
@@ -4168,7 +4963,10 @@ Blockly.JavaScript['statemanager_start_state'] = function (block) {
 /**
  * Returns the state that is currently running.
  * @method statemanager_get_current_state
- * @returns {} game.state.getCurrentState()
+ * @returns {}
+ * ```javascript
+ * game.state.getCurrentState()
+ * ```
  * @block
  */
 Blockly.JavaScript['statemanager_get_current_state'] = function (block) {
@@ -4178,7 +4976,10 @@ Blockly.JavaScript['statemanager_get_current_state'] = function (block) {
 /**
  * Restarts the current state.
  * @method statemanager_restart_state
- * @returns {} game.state.restart();
+ * @returns {}
+ * ```javascript
+ * game.state.restart();
+ * ```
  * @block
  */
 Blockly.JavaScript['statemanager_restart_state'] = function (block) {
@@ -4189,7 +4990,10 @@ Blockly.JavaScript['statemanager_restart_state'] = function (block) {
  * Returns true or false if the state with the given tag is valid.
  * @method statemanager_check_state
  * @param key {String} tag of the state to check
- * @returns {} game.state.checkState(key)
+ * @returns {}
+ * ```javascript
+ * game.state.checkState(key)
+ * ```
  * @block
  */
 Blockly.JavaScript['statemanager_check_state'] = function (block) {
@@ -4208,7 +5012,10 @@ Blockly.JavaScript['statemanager_check_state'] = function (block) {
  * @param y {Number} y coordinate for the new rectangle
  * @param width {Number} width of the rectangle
  * @param height {Number} height of the rectangle
- * @returns {} new Phaser.Rectangle(x, y, width, height)
+ * @returns {}
+ * ```javascript
+ * new Phaser.Rectangle(x, y, width, height)
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_create'] = function (block) {
@@ -4224,7 +5031,10 @@ Blockly.JavaScript['rectangle_create'] = function (block) {
  * @method rectangle_intersects
  * @param rectA first rectangle to check
  * @param rectB second rectangle to check
- * @returns {} Phaser.Rectangle.intersects(rectA, rectB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Rectangle.intersects(rectA, rectB)
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_intersects'] = function (block) {
@@ -4238,7 +5048,10 @@ Blockly.JavaScript['rectangle_intersects'] = function (block) {
  * @method rectangle_get_numeric_field
  * @param object object to get values from
  * @param field the field to get values of
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 /**
@@ -4246,7 +5059,10 @@ Blockly.JavaScript['rectangle_intersects'] = function (block) {
  * @method rectangle_get_point_field
  * @param object object to get values from
  * @param field the field to get values of
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_get_numeric_field']
@@ -4263,7 +5079,10 @@ Blockly.JavaScript['rectangle_get_numeric_field']
  * @param object object to set the value for
  * @param field the field to set
  * @param value {Number} value to set the field to
- * @returns {} object.field = value;
+ * @returns {}
+ * ```javascript
+ * object.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
@@ -4279,7 +5098,10 @@ Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
  * @param object object to set the point for
  * @param field the field to set
  * @param point point to set the field to
- * @returns {} object.field.copyFrom(point);
+ * @returns {}
+ * ```javascript
+ * object.field.copyFrom(point);
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_set_point_field'] = setPointField;
@@ -4289,7 +5111,10 @@ Blockly.JavaScript['rectangle_set_point_field'] = setPointField;
  * @method rectangle_contains_point
  * @param rectangle rectangle to check
  * @param point point to check
- * @returns {} Phaser.Rectangle.containsPoint(rectangle, point)
+ * @returns {}
+ * ```javascript
+ * Phaser.Rectangle.containsPoint(rectangle, point)
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_contains_point'] = function (block) {
@@ -4304,7 +5129,10 @@ Blockly.JavaScript['rectangle_contains_point'] = function (block) {
  * @param rectangle rectangle to check
  * @param x {Number} x coordinate to check
  * @param y {Number} y coordinate to check
- * @returns {} Phaser.Rectangle.contains(rectangle, x, y)
+ * @returns {}
+ * ```javascript
+ * Phaser.Rectangle.contains(rectangle, x, y)
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_contains'] = function (block) {
@@ -4318,7 +5146,10 @@ Blockly.JavaScript['rectangle_contains'] = function (block) {
  * @method rectangle_contains_rect
  * @param rectangle_a the first rectangle to check
  * @param rectangle_b the second rectangle to check
- * @returns {} Phaser.Rectangle.containsRect(rectangle_a, rectangle_b)
+ * @returns {}
+ * ```javascript
+ * Phaser.Rectangle.containsRect(rectangle_a, rectangle_b)
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_contains_rect'] = function (block) {
@@ -4331,7 +5162,10 @@ Blockly.JavaScript['rectangle_contains_rect'] = function (block) {
  * Returns a new rectangle with the same x, y, width, and height properties of the original.
  * @method rectangle_clone
  * @param rectangle rectangle to clone
- * @returns {} rectangle.clone()
+ * @returns {}
+ * ```javascript
+ * rectangle.clone()
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_clone'] = function (block) {
@@ -4344,7 +5178,10 @@ Blockly.JavaScript['rectangle_clone'] = function (block) {
  * Returns a random x/y coordinate point from the rectangle.
  * @method rectangle_random
  * @param rectangle rectangle to get values from
- * @returns {} rectangle.random()
+ * @returns {}
+ * ```javascript
+ * rectangle.random()
+ * ```
  * @block
  */
 Blockly.JavaScript['rectangle_random'] = function (block) {
@@ -4358,7 +5195,10 @@ Blockly.JavaScript['rectangle_random'] = function (block) {
  * @method point_create
  * @param x {Number} x value for the point
  * @param y {Number} y value for the point
- * @returns {} new Phaser.Point(x, y)
+ * @returns {}
+ * ```javascript
+ * new Phaser.Point(x, y)
+ * ```
  * @block
  */
 Blockly.JavaScript['point_create'] = function (block) {
@@ -4372,7 +5212,10 @@ Blockly.JavaScript['point_create'] = function (block) {
  * @method point_get_element
  * @param element which value to return
  * @param point point to get the value from
- * @returns {} point.element
+ * @returns {}
+ * ```javascript
+ * point.element
+ * ```
  * @block
  */
 Blockly.JavaScript['point_get_element'] = function (block) {
@@ -4387,7 +5230,10 @@ Blockly.JavaScript['point_get_element'] = function (block) {
  * @param element which value to set
  * @param point point to set the value for
  * @param value {Number} value to set the element to
- * @returns {} point.element = value;
+ * @returns {}
+ * ```javascript
+ * point.element = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['point_set_element'] = function (block) {
@@ -4402,7 +5248,10 @@ Blockly.JavaScript['point_set_element'] = function (block) {
  * @method point_set_magnitude
  * @param point point to set the magnitude for
  * @param value {Number} value to set the magnitude to
- * @returns {} point.setMagnitude(value);
+ * @returns {}
+ * ```javascript
+ * point.setMagnitude(value);
+ * ```
  * @block
  */
 Blockly.JavaScript['point_set_magnitude'] = function (block) {
@@ -4416,7 +5265,10 @@ Blockly.JavaScript['point_set_magnitude'] = function (block) {
  * @method points_add
  * @param pointA first point to add
  * @param pointB second point to add
- * @returns {} Phaser.Point.add(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.add(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_add'] = function (block) {
@@ -4430,7 +5282,10 @@ Blockly.JavaScript['points_add'] = function (block) {
  * @method points_subtract
  * @param pointA first point to subtract
  * @param pointB second point to subtract
- * @returns {} Phaser.Point.subtract(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.subtract(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_subtract'] = function (block) {
@@ -4444,7 +5299,10 @@ Blockly.JavaScript['points_subtract'] = function (block) {
  * @method points_angle_between
  * @param pointA first angle to calculate
  * @param pointB second angle to calculate
- * @returns {} Phaser.Point.angle(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.angle(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_angle_between'] = function (block) {
@@ -4458,7 +5316,10 @@ Blockly.JavaScript['points_angle_between'] = function (block) {
  * @method points_distance
  * @param pointA first angle to calculate
  * @param pointB second angle to calculate
- * @returns {} Phaser.Point.distance(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.distance(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_distance'] = function (block) {
@@ -4472,7 +5333,10 @@ Blockly.JavaScript['points_distance'] = function (block) {
  * @method points_divide
  * @param pointA first point to divide
  * @param pointB second point to divide
- * @returns {} Phaser.Point.divide(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.divide(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_divide'] = function (block) {
@@ -4483,10 +5347,13 @@ Blockly.JavaScript['points_divide'] = function (block) {
 
 /**
  * Returns true/false if one point has the same x/y values as another.
- * @method points_equal
+ * @method points_equals
  * @param pointA first point to check
  * @param pointB second point to check
- * @returns {} Phaser.Point.equals(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.equals(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_equals'] = function (block) {
@@ -4501,7 +5368,10 @@ Blockly.JavaScript['points_equals'] = function (block) {
  * @param pointA first point
  * @param pointB second point
  * @param f {Number} the level of interpolation between the two points
- * @returns {} Phaser.Point.interpolate(pointA, pointB, f)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.interpolate(pointA, pointB, f)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_interpolate'] = function (block) {
@@ -4516,7 +5386,10 @@ Blockly.JavaScript['points_interpolate'] = function (block) {
  * @method points_multiply
  * @param pointA first point to multiply
  * @param pointB second point to multiply
- * @returns {} Phaser.Point.multiply(pointA, pointB)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.multiply(pointA, pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_multiply'] = function (block) {
@@ -4529,7 +5402,10 @@ Blockly.JavaScript['points_multiply'] = function (block) {
  * Creates a new point with negative values of the original point.
  * @method points_negate
  * @param pointA point to get the values from
- * @returns {} Phaser.Point.negative(pointA)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.negative(pointA)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_negate'] = function (block) {
@@ -4541,7 +5417,10 @@ Blockly.JavaScript['points_negate'] = function (block) {
  * Returns a new point of the normalized values of the original.
  * @method points_normalize
  * @param pointA point to normalize
- * @returns {} Phaser.Point.normalize(pointA)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.normalize(pointA)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_normalize'] = function (block) {
@@ -4553,7 +5432,10 @@ Blockly.JavaScript['points_normalize'] = function (block) {
  * Returns a new point with the perpendicular vector to the original point.
  * @method points_perpendicular
  * @param pointA point to get the vector from
- * @returns {} Phaser.Point.perp(pointA)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.perp(pointA)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_perpendicular'] = function (block) {
@@ -4565,7 +5447,10 @@ Blockly.JavaScript['points_perpendicular'] = function (block) {
  * Returns a new point with the centroid of the list of points.
  * @method points_centroid
  * @param array {Array} list of points to calculate the centroid from
- * @returns {} Phaser.Point.centroid(array)
+ * @returns {}
+ * ```javascript
+ * Phaser.Point.centroid(array)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_centroid'] = function (block) {
@@ -4579,7 +5464,10 @@ Blockly.JavaScript['points_centroid'] = function (block) {
  * @param point point to clamp
  * @param min {Number} the minimum value to clamp the point to
  * @param max {Number} the maximum value to clamp the point to
- * @returns {} point.clamp(min, max);
+ * @returns {}
+ * ```javascript
+ * point.clamp(min, max);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_clamp'] = function (block) {
@@ -4595,7 +5483,10 @@ Blockly.JavaScript['points_clamp'] = function (block) {
  * @param point point to clamp
  * @param min {Number} the minimum value to clamp the value to
  * @param max {Number} the maximum value to lcmap the value to
- * @returns {} point.clampX(min, max);
+ * @returns {}
+ * ```javascript
+ * point.clampX(min, max);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_clamp_x'] = function (block) {
@@ -4611,7 +5502,10 @@ Blockly.JavaScript['points_clamp_x'] = function (block) {
  * @param point point to clamp
  * @param min {Number} the minimum value to clamp the value to
  * @param max {Number} the maximum value to lcmap the value to
- * @returns {} point.clampY(min, max);
+ * @returns {}
+ * ```javascript
+ * point.clampY(min, max);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_clamp_y'] = function (block) {
@@ -4625,7 +5519,10 @@ Blockly.JavaScript['points_clamp_y'] = function (block) {
  * Returns a new point with the same properties as the original point.
  * @method points_clone
  * @param point point to clone
- * @returns {} point.clone()
+ * @returns {}
+ * ```javascript
+ * point.clone()
+ * ```
  * @block
  */
 Blockly.JavaScript['points_clone'] = function (block) {
@@ -4638,7 +5535,10 @@ Blockly.JavaScript['points_clone'] = function (block) {
  * @method points_copy_from
  * @param source point to get the values from
  * @param target point to copy the values to
- * @returns {} target.copyFrom(source);
+ * @returns {}
+ * ```javascript
+ * target.copyFrom(source);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_copy_from'] = function (block) {
@@ -4652,7 +5552,10 @@ Blockly.JavaScript['points_copy_from'] = function (block) {
  * @method points_cross
  * @param pointA left-hand side
  * @param pointB right-hand side
- * @returns {} pointA.cross(pointB)
+ * @returns {}
+ * ```javascript
+ * pointA.cross(pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_cross'] = function (block) {
@@ -4666,7 +5569,10 @@ Blockly.JavaScript['points_cross'] = function (block) {
  * @method points_dot
  * @param pointA left-hand side
  * @param pointB right-hand side
- * @returns {} pointA.dot(pointB)
+ * @returns {}
+ * ```javascript
+ * pointA.dot(pointB)
+ * ```
  * @block
  */
 Blockly.JavaScript['points_dot'] = function (block) {
@@ -4681,7 +5587,10 @@ Blockly.JavaScript['points_dot'] = function (block) {
  * @param point point to add values to
  * @param x {Number} x value to add to the point
  * @param y {Number} y value to add to the point
- * @returns {} point.add(x, y);
+ * @returns {}
+ * ```javascript
+ * point.add(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_add_member'] = function (block) {
@@ -4697,7 +5606,10 @@ Blockly.JavaScript['points_add_member'] = function (block) {
  * @param point point to subtract values from
  * @param x {Number} x value to subtract from the point
  * @param y {Number} y value to subtract from the point
- * @returns {} point.subtract(x, y);
+ * @returns {}
+ * ```javascript
+ * point.subtract(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_subtract_member'] = function (block) {
@@ -4713,7 +5625,10 @@ Blockly.JavaScript['points_subtract_member'] = function (block) {
  * @param point point to divide
  * @param x {Number} x value to divide the point by
  * @param y {Number} y value to divide the point by
- * @returns {} point.divide(x, y);
+ * @returns {}
+ * ```javascript
+ * point.divide(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_divide_member'] = function (block) {
@@ -4729,7 +5644,10 @@ Blockly.JavaScript['points_divide_member'] = function (block) {
  * @param point point to multiply
  * @param x {Number} x value to multiply the point by
  * @param y {Number} y value to multiply the point by
- * @returns {} point.multiply(x, y);
+ * @returns {}
+ * ```javascript
+ * point.multiply(x, y);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_multiply_member'] = function (block) {
@@ -4743,7 +5661,10 @@ Blockly.JavaScript['points_multiply_member'] = function (block) {
  * Applies Math.ceil() to the x and y values of the point.
  * @method points_ceil
  * @param point point to change the values of
- * @returns {} point.ceil();
+ * @returns {}
+ * ```javascript
+ * point.ceil();
+ * ```
  * @block
  */
 Blockly.JavaScript['points_ceil'] = function (block) {
@@ -4755,7 +5676,10 @@ Blockly.JavaScript['points_ceil'] = function (block) {
  * Applies Math.floor() to the x and y values of the point.
  * @method points_floor
  * @param point point to change the values of
- * @returns {} point.floor();
+ * @returns {}
+ * ```javascript
+ * point.floor();
+ * ```
  * @block
  */
 Blockly.JavaScript['points_floor'] = function (block) {
@@ -4767,7 +5691,10 @@ Blockly.JavaScript['points_floor'] = function (block) {
  * Returns the length of the point object.
  * @method points_get_magnitude
  * @param point point to get the magnitude of
- * @returns {} point.getMagnitude()
+ * @returns {}
+ * ```javascript
+ * point.getMagnitude()
+ * ```
  * @block
  */
 Blockly.JavaScript['points_get_magnitude'] = function (block) {
@@ -4779,7 +5706,10 @@ Blockly.JavaScript['points_get_magnitude'] = function (block) {
  * Returns the length squared of the point object.
  * @method points_get_magnitude_squared
  * @param point point to get the magnitude squared of
- * @returns {} point.getMagnitudeSq()
+ * @returns {}
+ * ```javascript
+ * point.getMagnitudeSq()
+ * ```
  * @block
  */
 Blockly.JavaScript['points_get_magnitude_squared'] = function (block) {
@@ -4791,7 +5721,10 @@ Blockly.JavaScript['points_get_magnitude_squared'] = function (block) {
  * Inverts the x and y values of the point.
  * @method points_invert
  * @param point point to invert
- * @returns {} point.invert();
+ * @returns {}
+ * ```javascript
+ * point.invert();
+ * ```
  * @block
  */
 Blockly.JavaScript['points_invert'] = function (block) {
@@ -4803,7 +5736,10 @@ Blockly.JavaScript['points_invert'] = function (block) {
  * Returns true/false if the point has the values 0,0.
  * @method points_is_zero
  * @param point point to check
- * @returns {} point.isZero()
+ * @returns {}
+ * ```javascript
+ * point.isZero()
+ * ```
  * @block
  */
 Blockly.JavaScript['points_is_zero'] = function (block) {
@@ -4816,7 +5752,10 @@ Blockly.JavaScript['points_is_zero'] = function (block) {
  * @method points_limit
  * @param point point to change
  * @param max {Number} the value to set the maximum to
- * @returns {} point.limit(max);
+ * @returns {}
+ * ```javascript
+ * point.limit(max);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_limit'] = function (block) {
@@ -4831,7 +5770,10 @@ Blockly.JavaScript['points_limit'] = function (block) {
  * @param point point to change the values of
  * @param degrees {Number} degrees of the polar coordinate
  * @param radius {Number} radius of the polar coordinate
- * @returns {} point.setToPolar(degrees, radius, true);
+ * @returns {}
+ * ```javascript
+ * point.setToPolar(degrees, radius, true);
+ * ```
  * @block
  */
 Blockly.JavaScript['points_set_to_polar'] = function (block) {
@@ -4848,7 +5790,10 @@ Blockly.JavaScript['points_set_to_polar'] = function (block) {
  * @param x {Number} x coordinate to create the circle at
  * @param y {Number} y coordinate to create the circle at
  * @param diameter {Number} diameter of the circle
- * @returns {} new Phaser.Circle(x, y, diameter)
+ * @returns {}
+ * ```javascript
+ * new Phaser.Circle(x, y, diameter)
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_create'] = function (block) {
@@ -4863,7 +5808,10 @@ Blockly.JavaScript['circle_create'] = function (block) {
  * @method circle_get_numeric_field
  * @param object object to get values from
  * @param field the field to get values of
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_get_numeric_field'] = function (block) {
@@ -4878,7 +5826,10 @@ Blockly.JavaScript['circle_get_numeric_field'] = function (block) {
  * @param object object to set the value for
  * @param field the field to set
  * @param value {Number} value to set the field to
- * @returns {} object.field = value;
+ * @returns {}
+ * ```javascript
+ * object.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
@@ -4893,7 +5844,10 @@ Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
  * @method circle_intersects
  * @param circle_a first circle to check
  * @param circle_b second circle to check
- * @returns {} Phaser.Circle.intersects(circle_a, circle_b)
+ * @returns {}
+ * ```javascript
+ * Phaser.Circle.intersects(circle_a, circle_b)
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_intersects'] = function (block) {
@@ -4907,7 +5861,10 @@ Blockly.JavaScript['circle_intersects'] = function (block) {
  * @method circle_intersects_rectangle
  * @param circle circle to check
  * @param rectangle rectangle to check
- * @returns {} Phaser.Circle.intersectsRectangle(circle, rectangle)
+ * @returns {}
+ * ```javascript
+ * Phaser.Circle.intersectsRectangle(circle, rectangle)
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_intersects_rectangle'] = function (block) {
@@ -4920,7 +5877,10 @@ Blockly.JavaScript['circle_intersects_rectangle'] = function (block) {
  * Returns a new circle object with the same properties as the original.
  * @method circle_clone
  * @param circle circle to clone
- * @returns {} circle.clone()
+ * @returns {}
+ * ```javascript
+ * circle.clone()
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_clone'] = function (block) {
@@ -4934,7 +5894,10 @@ Blockly.JavaScript['circle_clone'] = function (block) {
  * @param circle circle to check
  * @param x {Number} the x value to check
  * @param y {Number} the y value to check
- * @returns {} circle.contains(x, y)
+ * @returns {}
+ * ```javascript
+ * circle.contains(x, y)
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_contains'] = function (block) {
@@ -4948,7 +5911,10 @@ Blockly.JavaScript['circle_contains'] = function (block) {
  * Returns a point containing random values of x and y found within the circle.
  * @method cirlce_random
  * @param circle circle to get values from
- * @returns {} circle.random()
+ * @returns {}
+ * ```javascript
+ * circle.random()
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_random'] = function (block) {
@@ -4960,7 +5926,10 @@ Blockly.JavaScript['circle_random'] = function (block) {
  * Returns the circumference of the circle.
  * @method circle_circumference
  * @param circle circle to get circumference of
- * @returns {} circle.circumference()
+ * @returns {}
+ * ```javascript
+ * circle.circumference()
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_circumference'] = function (block) {
@@ -4973,7 +5942,10 @@ Blockly.JavaScript['circle_circumference'] = function (block) {
  * @method circle_circumference_point
  * @param circle circle to get values from
  * @param degrees {Number} angle to get the point at
- * @returns {} circle_circumference_point
+ * @returns {}
+ * ```javascript
+ * circle_circumference_point
+ * ```
  * @block
  */
 Blockly.JavaScript['circle_circumference_point'] = function (block) {
@@ -4990,7 +5962,10 @@ Blockly.JavaScript['circle_circumference_point'] = function (block) {
  * @method load_sound
  * @param tag {String} tag to name the sound
  * @param source {String} file path of the sound
- * @returns {} game.load.audio(tag, source);
+ * @returns {}
+ * ```javascript
+ * game.load.audio(tag, source);
+ * ```
  * @block
  */
 Blockly.JavaScript['load_sound'] = function (block) {
@@ -5003,6 +5978,8 @@ Blockly.JavaScript['load_sound'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['play_sound'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
@@ -5017,7 +5994,10 @@ Blockly.JavaScript['play_sound'] = function (block) {
  * @param tag {String} the tag of the sound to add
  * @param volume {Number} volume to play the sound at
  * @param looping {Boolean} whether or not to loop the sound when it's played
- * @returns {} game.add.audio(tag, volume, looping)
+ * @returns {}
+ * ```javascript
+ * game.add.audio(tag, volume, looping)
+ * ```
  * @block
  */
 Blockly.JavaScript['add_sound'] = function (block) {
@@ -5031,6 +6011,8 @@ Blockly.JavaScript['add_sound'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['remove_sound'] = function (block) {
   const tag = Blockly.JavaScript.valueToCode(block, 'TAG', Blockly.JavaScript.ORDER_ATOMIC);
@@ -5041,7 +6023,10 @@ Blockly.JavaScript['remove_sound'] = function (block) {
  * Stop, pause, or remove all sounds in the game.
  * @method stop_pause_resume_sounds
  * @param option which option to do
- * @returns {} game.sound.optionAll();
+ * @returns {}
+ * ```javascript
+ * game.sound.optionAll();
+ * ```
  * @block
  */
 Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
@@ -5055,7 +6040,10 @@ Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
  * @param element the field to set
  * @param object sound to assign values for
  * @param value value to set the field to
- * @returns {} object.element = value;
+ * @returns {}
+ * ```javascript
+ * object.element = value;
+ * ```
  * @block
  */
 /**
@@ -5064,7 +6052,10 @@ Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
  * @param element the field to set
  * @param object sound to assign values for
  * @param value value to set the field to
- * @returns {} object.element = value;
+ * @returns {}
+ * ```javascript
+ * object.element = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_numeric_member'] = setMember;
@@ -5074,7 +6065,10 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * @method get_sound_boolean_member
  * @param object object to get values from
  * @param element the element to get values of
- * @returns {} object.element
+ * @returns {}
+ * ```javascript
+ * object.element
+ * ```
  * @block
  */
 /**
@@ -5082,7 +6076,10 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * @method get_sound_numeric_member
  * @param object object to get values from
  * @param element the element to get values of
- * @returns {} object.element
+ * @returns {}
+ * ```javascript
+ * object.element
+ * ```
  * @block
  */
 /**
@@ -5090,7 +6087,10 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * @method get_sound_string_member
  * @param object object to get values from
  * @param element the element to get values of
- * @returns {} object.element
+ * @returns {}
+ * ```javascript
+ * object.element
+ * ```
  * @block
  */
 Blockly.JavaScript['get_sound_boolean_member'] = Blockly.JavaScript['get_sound_numeric_member'] = Blockly.JavaScript['get_sound_string_member'] = getMember;
@@ -5101,7 +6101,10 @@ Blockly.JavaScript['get_sound_boolean_member'] = Blockly.JavaScript['get_sound_n
  * @param sound_object sound to play
  * @param duration {Number} the time it takes for the sound to reach maximum volume
  * @param loop {Boolean} whether or not the sound should loop
- * @returns {} sound_object.fadeIn(duration, loop);
+ * @returns {}
+ * ```javascript
+ * sound_object.fadeIn(duration, loop);
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_fade_in'] = function (block) {
@@ -5116,7 +6119,10 @@ Blockly.JavaScript['sound_fade_in'] = function (block) {
  * @method sound_fade_out
  * @param sound_object sound to stop
  * @param duration {Number} the time it takes for the sound to reach 0
- * @returns {} sound_object.fadeOut(duration);
+ * @returns {}
+ * ```javascript
+ * sound_object.fadeOut(duration);
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_fade_out'] = function (block) {
@@ -5131,7 +6137,10 @@ Blockly.JavaScript['sound_fade_out'] = function (block) {
  * @param sound_object sound to change
  * @param duration {Number} the time it takes for the sound to reach the new volume
  * @param volume {Number} the volume to change the sound to
- * @returns {} sound_object.fadeTo(duration, volume);
+ * @returns {}
+ * ```javascript
+ * sound_object.fadeTo(duration, volume);
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_fade_to'] = function (block) {
@@ -5146,7 +6155,10 @@ Blockly.JavaScript['sound_fade_to'] = function (block) {
  * @method sound_loop_full
  * @param sound_object sound to loop
  * @param volume {Number} volume to play the sound at
- * @returns {} sound_object.loopFull(volume);
+ * @returns {}
+ * ```javascript
+ * sound_object.loopFull(volume);
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_loop_full'] = function (block) {
@@ -5159,7 +6171,10 @@ Blockly.JavaScript['sound_loop_full'] = function (block) {
  * Stop the sound playing.
  * @method sound_stop
  * @param sound_object sound to stop
- * @returns {} sound_object.stop();
+ * @returns {}
+ * ```javascript
+ * sound_object.stop();
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_stop'] = function (block) {
@@ -5171,7 +6186,10 @@ Blockly.JavaScript['sound_stop'] = function (block) {
  * Pause the sound.
  * @method sound_pause
  * @param sound_object sound to pause
- * @returns {} sound_object.pause();
+ * @returns {}
+ * ```javascript
+ * sound_object.pause();
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_pause'] = function (block) {
@@ -5183,7 +6201,10 @@ Blockly.JavaScript['sound_pause'] = function (block) {
  * Resume the sound.
  * @method sound_resume
  * @param sound_object sound to resume
- * @returns {} sound_object.resume();
+ * @returns {}
+ * ```javascript
+ * sound_object.resume();
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_resume'] = function (block) {
@@ -5199,7 +6220,10 @@ Blockly.JavaScript['sound_resume'] = function (block) {
  * @param volume {Number} volume to play the sound at
  * @param loop {Boolean} whether or not the sound should loop
  * @param restart {Boolean} option to force the sound to restart from the beginning
- * @returns {} sound_object.play('', position, volume, loop, restart);
+ * @returns {}
+ * ```javascript
+ * sound_object.play('', position, volume, loop, restart);
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_play'] = function (block) {
@@ -5219,7 +6243,10 @@ Blockly.JavaScript['sound_play'] = function (block) {
  * @param position {Number} the starting position to play the sound from
  * @param volume {Number} the volume to play the sound at
  * @param loop {Boolean} whether or not the sound should loop
- * @returns {} sound_object.play('', position, volume loop);
+ * @returns {}
+ * ```javascript
+ * sound_object.play('', position, volume loop);
+ * ```
  * @block
  */
 Blockly.JavaScript['sound_restart'] = function (block) {
@@ -5236,7 +6263,10 @@ Blockly.JavaScript['sound_restart'] = function (block) {
 /**
  * Returns the game camera.
  * @method game_camera
- * @returns {} game.camera
+ * @returns {}
+ * ```javascript
+ * game.camera
+ * ```
  * @block
  */
 Blockly.JavaScript['game_camera'] = function () {
@@ -5248,7 +6278,10 @@ Blockly.JavaScript['game_camera'] = function () {
  * @method camera_fade
  * @param colour colour to fade the screen to
  * @param time {Number} how long to take to fade
- * @returns {} function toHexColor(color) { return color.replace("#", "0x"); } game.camera.fade(toHexColorFunc(colour), time, true);
+ * @returns {}
+ * ```javascript
+ * function toHexColor(color) { return color.replace("#", "0x"); } game.camera.fade(toHexColorFunc(colour), time, true);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_fade'] = function (block) {
@@ -5269,7 +6302,10 @@ Blockly.JavaScript['camera_fade'] = function (block) {
  * @method camera_flash
  * @param colour colour to show
  * @param time {Number} how long to take to fade the colour away
- * @returns {} function toHexColor(color) { return color.replace("#", "0x"); } game.camera.flash(toHexColorFunc(colour), time, true);
+ * @returns {}
+ * ```javascript
+ * function toHexColor(color) { return color.replace("#", "0x"); } game.camera.flash(toHexColorFunc(colour), time, true);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_flash'] = function (block) {
@@ -5289,7 +6325,10 @@ Blockly.JavaScript['camera_flash'] = function (block) {
  * Focus the camera on the given object.
  * @method camera_focus_on
  * @param object object to focus on
- * @returns {} game.camera.focusOn(object);
+ * @returns {}
+ * ```javascript
+ * game.camera.focusOn(object);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_focus_on'] = function (block) {
@@ -5302,7 +6341,10 @@ Blockly.JavaScript['camera_focus_on'] = function (block) {
  * @method camera_focus_on_xy
  * @param posX {Number} x position to focus on
  * @param posY {Number} y position to focus on
- * @returns {} game.camera.focusOnXY(posX, posY);
+ * @returns {}
+ * ```javascript
+ * game.camera.focusOnXY(posX, posY);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_focus_on_xy'] = function (block) {
@@ -5314,7 +6356,10 @@ Blockly.JavaScript['camera_focus_on_xy'] = function (block) {
 /**
  * Resets the camera by making it focus back to 0,0 and unfollowing all objects. Also resets any camera effects.
  * @method camera_reset
- * @returns {} game.camera.reset();
+ * @returns {}
+ * ```javascript
+ * game.camera.reset();
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_reset'] = function (block) {
@@ -5325,6 +6370,7 @@ Blockly.JavaScript['camera_reset'] = function (block) {
  * Resets any active camera effects.
  * @method camera_reset_fx
  * @return {} game.camera.resetFX();
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_reset_fx'] = function (block) {
@@ -5334,7 +6380,10 @@ Blockly.JavaScript['camera_reset_fx'] = function (block) {
 /**
  * Updates the camera bounds to match the game world bounds.
  * @method camera_set_bounds_to_world
- * @returns {} game.camera.setBoundsToWorld();
+ * @returns {}
+ * ```javascript
+ * game.camera.setBoundsToWorld();
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_set_bounds_to_world'] = function (block) {
@@ -5346,7 +6395,10 @@ Blockly.JavaScript['camera_set_bounds_to_world'] = function (block) {
  * @method camera_set_position
  * @param posX {Number} x position for the camera
  * @param posY {Number} y position for the camera
- * @returns {} game.camera.setPosition(posX, posY);
+ * @returns {}
+ * ```javascript
+ * game.camera.setPosition(posX, posY);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_set_position'] = function (block) {
@@ -5360,7 +6412,10 @@ Blockly.JavaScript['camera_set_position'] = function (block) {
  * @method camera_set_size
  * @param width {Number} the width of the camera view port
  * @param height {Number} the height of the camera view port
- * @returns {} game.camera.setSize(width, height);
+ * @returns {}
+ * ```javascript
+ * game.camera.setSize(width, height);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_set_size'] = function (block) {
@@ -5375,7 +6430,10 @@ Blockly.JavaScript['camera_set_size'] = function (block) {
  * @param intensity {Number} how much the camera should move while shaking
  * @param direction which direction the camera should shake
  * @param duration {Number} how long the camera should shake
- * @returns {} game.camera.shake(intensity, duration, true, Phaser.Camera.direction);
+ * @returns {}
+ * ```javascript
+ * game.camera.shake(intensity, duration, true, Phaser.Camera.direction);
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_shake'] = function (block) {
@@ -5388,7 +6446,10 @@ Blockly.JavaScript['camera_shake'] = function (block) {
 /**
  * Stops the camera from following all objects.
  * @method camera_unfollow
- * @returns {} game.camera.unfollow();
+ * @returns {}
+ * ```javascript
+ * game.camera.unfollow();
+ * ```
  * @block
  */
 Blockly.JavaScript['camera_unfollow'] = function (block) {
@@ -5402,7 +6463,10 @@ Blockly.JavaScript['camera_unfollow'] = function (block) {
  * @method list_find_closest
  * @param value {Number} the search value
  * @param array the list to search
- * @returns {} Phaser.ArrayUtils.findClosest(value, array)
+ * @returns {}
+ * ```javascript
+ * Phaser.ArrayUtils.findClosest(value, array)
+ * ```
  * @block
  */
 Blockly.JavaScript['list_find_closest'] = function (block) {
@@ -5415,7 +6479,10 @@ Blockly.JavaScript['list_find_closest'] = function (block) {
  * Returns a randomly selected item from the given list.
  * @method list_get_random
  * @param array list to get the value from
- * @returns {} Phaser.ArrayUtils.getRandomItem(array)
+ * @returns {}
+ * ```javascript
+ * Phaser.ArrayUtils.getRandomItem(array)
+ * ```
  * @block
  */
 Blockly.JavaScript['list_get_random'] = function (block) {
@@ -5428,7 +6495,10 @@ Blockly.JavaScript['list_get_random'] = function (block) {
  * @method number_list
  * @param start {Number} the minimum value the list starts with
  * @param end {Number} the maximum value the list contains
- * @returns {} Phaser.ArrayUtils.numberArray(start, end)
+ * @returns {}
+ * ```javascript
+ * Phaser.ArrayUtils.numberArray(start, end)
+ * ```
  * @block
  */
 Blockly.JavaScript['number_list'] = function (block) {
@@ -5443,7 +6513,10 @@ Blockly.JavaScript['number_list'] = function (block) {
  * @param start {Number} the minimum value the list starts with
  * @param end {Number} the maximum value the list starts with
  * @param step {Number} the value to incremement/decrement by
- * @returns {} Phaser.ArrayUtils.numberArrayStep(start, end, step)
+ * @returns {}
+ * ```javascript
+ * Phaser.ArrayUtils.numberArrayStep(start, end, step)
+ * ```
  * @block
  */
 Blockly.JavaScript['number_list_step'] = function (block) {
@@ -5457,7 +6530,10 @@ Blockly.JavaScript['number_list_step'] = function (block) {
  * Returns a random item and removes it from the list.
  * @method list_remove_random_item
  * @param array list to get the item from
- * @returns {} Phaser.ArrayUtils.removeRandomItem(array)
+ * @returns {}
+ * ```javascript
+ * Phaser.ArrayUtils.removeRandomItem(array)
+ * ```
  * @block
  */
 Blockly.JavaScript['list_remove_random_item'] = function (block) {
@@ -5469,7 +6545,10 @@ Blockly.JavaScript['list_remove_random_item'] = function (block) {
  * Shuffles the contents of the list by changing the positions of all items.
  * @method list_shuffle
  * @param array list to shuffle
- * @returns {} Phaser.ArrayUtils.shuffle(array);
+ * @returns {}
+ * ```javascript
+ * Phaser.ArrayUtils.shuffle(array);
+ * ```
  * @block
  */
 Blockly.JavaScript['list_shuffle'] = function (block) {
@@ -5483,6 +6562,8 @@ Blockly.JavaScript['list_shuffle'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['create_random_generator'] = function (block) {
   return [`new Phaser.RandomDataGenerator([new Date().getTime()])`, Blockly.JavaScript.ORDER_NONE];
@@ -5492,6 +6573,8 @@ Blockly.JavaScript['create_random_generator'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['create_random_generator_seeded'] = function (block) {
   const seed = Blockly.JavaScript.valueToCode(block, 'SEED', Blockly.JavaScript.ORDER_ATOMIC);
@@ -5501,7 +6584,10 @@ Blockly.JavaScript['create_random_generator_seeded'] = function (block) {
 /**
  * Returns a random angle between -180 and 180.
  * @method random_angle
- * @returns {} game.rnd.angle()
+ * @returns {}
+ * ```javascript
+ * game.rnd.angle()
+ * ```
  * @block
  */
 Blockly.JavaScript['random_angle'] = function (block) {
@@ -5512,7 +6598,10 @@ Blockly.JavaScript['random_angle'] = function (block) {
  * Returns a random item from the list.
  * @method random_pick
  * @param array list to pick from
- * @returns {} game.rnd.pick(array)
+ * @returns {}
+ * ```javascript
+ * game.rnd.pick(array)
+ * ```
  * @block
  */
 Blockly.JavaScript['random_pick'] = function (block) {
@@ -5524,7 +6613,10 @@ Blockly.JavaScript['random_pick'] = function (block) {
  * Returns a random item from the list, favoring items at the beginning.
  * @method random_pick_weighted
  * @param array list to pick from
- * @returns {} game.rnd.weightedPick(array)
+ * @returns {}
+ * ```javascript
+ * game.rnd.weightedPick(array)
+ * ```
  * @block
  */
 Blockly.JavaScript['random_pick_weighted'] = function (block) {
@@ -5535,7 +6627,10 @@ Blockly.JavaScript['random_pick_weighted'] = function (block) {
 /**
  * Returns a random real number between 0 and 2^32.
  * @method random_real
- * @returns {} game.rnd.real()
+ * @returns {}
+ * ```javascript
+ * game.rnd.real()
+ * ```
  * @block
  */
 Blockly.JavaScript['random_real'] = function (block) {
@@ -5547,7 +6642,10 @@ Blockly.JavaScript['random_real'] = function (block) {
  * @method random_real_in_range
  * @param min {Number} the minimum value in the range
  * @param max {Number} the maximum value in the range
- * @returns {} game.rnd.realInRange(min, max)
+ * @returns {}
+ * ```javascript
+ * game.rnd.realInRange(min, max)
+ * ```
  * @block
  */
 Blockly.JavaScript['random_real_in_range'] = function (block) {
@@ -5559,7 +6657,10 @@ Blockly.JavaScript['random_real_in_range'] = function (block) {
 /**
  * Returns a random sign to be used with multiplication. Returns -1 or +1.
  * @method random_sign
- * @returns {} game.rnd.sign()
+ * @returns {}
+ * ```javascript
+ * game.rnd.sign()
+ * ```
  * @block
  */
 Blockly.JavaScript['random_sign'] = function (block) {
@@ -5569,7 +6670,10 @@ Blockly.JavaScript['random_sign'] = function (block) {
 /**
  * Randomly returns true or false.
  * @method random_boolean
- * @returns {} game.rnd.pick([true, false])
+ * @returns {}
+ * ```javascript
+ * game.rnd.pick([true, false])
+ * ```
  * @block
  */
 Blockly.JavaScript['random_boolean'] = function () {
@@ -5582,7 +6686,10 @@ Blockly.JavaScript['random_boolean'] = function () {
  * Converts the given degrees to radians and returns the result.
  * @method math_deg_to_rad
  * @param degrees {Number} the number of degrees to convert to radians.
- * @returns {} game.math.degToRad(degrees)
+ * @returns {}
+ * ```javascript
+ * game.math.degToRad(degrees)
+ * ```
  * @block
  */
 Blockly.JavaScript['math_deg_to_rad'] = function (block) {
@@ -5594,7 +6701,10 @@ Blockly.JavaScript['math_deg_to_rad'] = function (block) {
  * Converts the given radians to degrees and returns the result.
  * @method math_rad_to_deg
  * @param radians {Number} the number of radians to convert to degrees
- * @returns {} game.math.radToDeg(radians)
+ * @returns {}
+ * ```javascript
+ * game.math.radToDeg(radians)
+ * ```
  * @block
  */
 Blockly.JavaScript['math_rad_to_deg'] = function (block) {
@@ -5609,7 +6719,10 @@ Blockly.JavaScript['math_rad_to_deg'] = function (block) {
  * Returns the chosen numeric field value of the game timer.
  * @method get_time_numeric_member
  * @param field the value to get
- * @returns {} game.time.field
+ * @returns {}
+ * ```javascript
+ * game.time.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_time_numeric_member'] = function (block) {
@@ -5622,7 +6735,10 @@ Blockly.JavaScript['get_time_numeric_member'] = function (block) {
  * @method set_time_numeric_member
  * @param field the value to set
  * @param value value to set the field to
- * @returns {} game.time.field = value;
+ * @returns {}
+ * ```javascript
+ * game.time.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_time_numeric_member'] = function (block) {
@@ -5634,7 +6750,10 @@ Blockly.JavaScript['set_time_numeric_member'] = function (block) {
 /**
  * Returns the physics update delta in seconds.
  * @method delta_time_seconds
- * @returns {} game.time.physicsElapsed
+ * @returns {}
+ * ```javascript
+ * game.time.physicsElapsed
+ * ```
  * @block
  */
 Blockly.JavaScript['delta_time_seconds'] = function (block) {
@@ -5644,7 +6763,10 @@ Blockly.JavaScript['delta_time_seconds'] = function (block) {
 /**
  * Returns the physics update delta in milliseconds.
  * @method delta_time_milliseconds
- * @returns {} game.time.physicsElapsedMS
+ * @returns {}
+ * ```javascript
+ * game.time.physicsElapsedMS
+ * ```
  * @block
  */
 Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
@@ -5658,7 +6780,10 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
  * @method get_timer_numeric_member
  * @param field the value to get
  * @param timer timer to get the values from
- * @returns {} timer.field
+ * @returns {}
+ * ```javascript
+ * timer.field
+ * ```
  * @block
  */
 /**
@@ -5666,7 +6791,10 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
  * @method get_timer_boolean_member
  * @param field the value to get
  * @param timer timer to get the values from
- * @returns {} timer.field
+ * @returns {}
+ * ```javascript
+ * timer.field
+ * ```
  * @block
  */
 Blockly.JavaScript['get_timer_numeric_member'] =
@@ -5683,7 +6811,10 @@ Blockly.JavaScript['get_timer_boolean_member'] =
  * @param field the value to set
  * @param timer timer to assign values for
  * @param value value to set the field to
- * @returns {} timer.field = value;
+ * @returns {}
+ * ```javascript
+ * timer.field = value;
+ * ```
  * @block
  */
 /**
@@ -5692,7 +6823,10 @@ Blockly.JavaScript['get_timer_boolean_member'] =
  * @param field the value to set
  * @param timer timer to assign values for
  * @param value value to set the field to
- * @returns {} timer.field = value;
+ * @returns {}
+ * ```javascript
+ * timer.field = value;
+ * ```
  * @block
  */
 Blockly.JavaScript['set_timer_numeric_member'] =
@@ -5708,7 +6842,10 @@ Blockly.JavaScript['set_timer_boolean_member'] =
  * Creates and returns a new timer.
  * @method create_timer
  * @param autoDestroy {Boolean} whether or not the timer should automatically destroy when it's done
- * @returns {} game.time.create(autoDestroy)
+ * @returns {}
+ * ```javascript
+ * game.time.create(autoDestroy)
+ * ```
  * @block
  */
 Blockly.JavaScript['create_timer'] = function (block) {
@@ -5720,7 +6857,10 @@ Blockly.JavaScript['create_timer'] = function (block) {
  * Returns the chosen constant time value.
  * @method time_constants
  * @param constant which time value to return
- * @returns {} constant
+ * @returns {}
+ * ```javascript
+ * constant
+ * ```
  * @block
  */
 Blockly.JavaScript['time_constants'] = function (block) {
@@ -5733,7 +6873,10 @@ Blockly.JavaScript['time_constants'] = function (block) {
  * @method start_timer
  * @param delay {Number} how long to wait before starting the timer
  * @param timer timer to start
- * @returns {} timer.start(delay);
+ * @returns {}
+ * ```javascript
+ * timer.start(delay);
+ * ```
  * @block
  */
 Blockly.JavaScript['start_timer'] = function (block) {
@@ -5746,6 +6889,8 @@ Blockly.JavaScript['start_timer'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['timer_add_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -5760,7 +6905,10 @@ Blockly.JavaScript['timer_add_event'] = function (block) {
  * @param callback the function to call
  * @param timer timer to add the function call event to
  * @param arguments (optional) arguments to use in the function that gets called
- * @returns {} timer.add(delay, callback, undefined, arguments[if any]);
+ * @returns {}
+ * ```javascript
+ * timer.add(delay, callback, undefined, arguments[if any]);
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_add_event_complex'] = function (block) {
@@ -5777,6 +6925,8 @@ Blockly.JavaScript['timer_add_event_complex'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['timer_loop_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -5793,7 +6943,10 @@ Blockly.JavaScript['timer_loop_event'] = function (block) {
  * @param callback the function to call
  * @param timer timer to add the function call event to
  * @param arguments (optional) arguments to use in the function that gets called
- * @returns {} timer.add(delay, callback, arguments[if any]);
+ * @returns {}
+ * ```javascript
+ * timer.add(delay, callback, arguments[if any]);
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
@@ -5810,6 +6963,8 @@ Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['timer_repeat_event'] = function (block) {
   const delay = Blockly.JavaScript.valueToCode(block, 'DELAY', Blockly.JavaScript.ORDER_ATOMIC) || '0';
@@ -5827,7 +6982,10 @@ Blockly.JavaScript['timer_repeat_event'] = function (block) {
  * @param callback the function to call
  * @param timer timer to add the function call event to
  * @param arguments (optional) arguments to use in the function that gets called
- * @returns {} timer.add(delay, repeatCount, callback, arguments[if any]);
+ * @returns {}
+ * ```javascript
+ * timer.add(delay, repeatCount, callback, arguments[if any]);
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
@@ -5845,7 +7003,10 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
  * Destroy the timer and stops any future related events from happening.
  * @method timer_destroy
  * @param timer timer to destroy
- * @returns {} timer.destroy();
+ * @returns {}
+ * ```javascript
+ * timer.destroy();
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_destroy'] = function (block) {
@@ -5857,7 +7018,10 @@ Blockly.JavaScript['timer_destroy'] = function (block) {
  * Pause the timer and all future related events.
  * @method timer_pause
  * @param timer timer to pause
- * @returns {} timer.pause();
+ * @returns {}
+ * ```javascript
+ * timer.pause();
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_pause'] = function (block) {
@@ -5869,7 +7033,10 @@ Blockly.JavaScript['timer_pause'] = function (block) {
  * Resumes the timer and all future related events.
  * @method timer_resume
  * @param timer timer to resume
- * @returns {} timer.resume();
+ * @returns {}
+ * ```javascript
+ * timer.resume();
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_resume'] = function (block) {
@@ -5882,7 +7049,10 @@ Blockly.JavaScript['timer_resume'] = function (block) {
  * @method timer_stop
  * @param timer timer to stop
  * @param clearEvents {Boolean} option to keep or remove events related to the timer
- * @returns {} timer.stop(clearEvents);
+ * @returns {}
+ * ```javascript
+ * timer.stop(clearEvents);
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_stop'] = function (block) {
@@ -5895,6 +7065,8 @@ Blockly.JavaScript['timer_stop'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
+ * ```javascript
+ *
  */
 Blockly.JavaScript['timer_duration'] = function (block) {
   const timer = Blockly.JavaScript.valueToCode(block, 'TIMER', Blockly.JavaScript.ORDER_ATOMIC);
@@ -5906,7 +7078,10 @@ Blockly.JavaScript['timer_duration'] = function (block) {
  * @method timer_set_on_complete_callback
  * @param timer timer to use
  * @param callback function to call
- * @returns {} timer.onComplete.add(callback);
+ * @returns {}
+ * ```javascript
+ * timer.onComplete.add(callback);
+ * ```
  * @block
  */
 Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {
@@ -5922,7 +7097,10 @@ Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {
  * @method phaser_easing
  * @param ease easing method to return
  * @param direction direction for the easing method to use
- * @returns {} Phasser.ease.direction
+ * @returns {}
+ * ```javascript
+ * Phasser.ease.direction
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_easing'] = function (block) {
@@ -5934,7 +7112,10 @@ Blockly.JavaScript['phaser_easing'] = function (block) {
 /**
  * Returns the linear easing method.
  * @method phaser_easing_linear
- * @returns {} Phaser.Easing.Linear.None
+ * @returns {}
+ * ```javascript
+ * Phaser.Easing.Linear.None
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_easing_linear'] = function (block) {
@@ -5954,7 +7135,10 @@ Blockly.JavaScript['phaser_easing_linear'] = function (block) {
  * @param repeat {Number} how many times the tween should repeat. Set to -1 to run forever
  * @param yoyo {Boolean} option for the tween to reverse itself and play backwards
  * @param properties (optional) optional properties to add to the tween
- * @returns {} game.add.tween(target).to(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
+ * @returns {}
+ * ```javascript
+ * game.add.tween(target).to(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_game_add_tween_to'] = function (block) {
@@ -5983,7 +7167,10 @@ Blockly.JavaScript['phaser_game_add_tween_to'] = function (block) {
  * @param repeat {Number} how many times the tween should repeat. Set to -1 to run forever
  * @param yoyo {Boolean} option for the tween to reverse itself and play backwards
  * @param properties (optional) optional properties to add to the tween
- * @returns {} game.add.tween(target).from(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
+ * @returns {}
+ * ```javascript
+ * game.add.tween(target).from(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_game_add_tween_from'] = function (block) {
@@ -6006,7 +7193,10 @@ Blockly.JavaScript['phaser_game_add_tween_from'] = function (block) {
  * @method phaser_stop_tween
  * @param tween tween to stop
  * @param complete {Boolean} if true, dispatches the onComplete signal
- * @returns {} tween.stop(complete);
+ * @returns {}
+ * ```javascript
+ * tween.stop(complete);
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_stop_tween'] = function (block) {
@@ -6019,7 +7209,10 @@ Blockly.JavaScript['phaser_stop_tween'] = function (block) {
  * Pauses the chosen tween.
  * @method phaser.pause.tween
  * @param tween tween to pause
- * @returns {} tween.pause();
+ * @returns {}
+ * ```javascript
+ * tween.pause();
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_pause_tween'] = function (block) {
@@ -6031,7 +7224,10 @@ Blockly.JavaScript['phaser_pause_tween'] = function (block) {
  * Resumes the chosen tween.
  * @method phaser_resume_tween
  * @param tween tween to resume
- * @returns {} tween.resume();
+ * @returns {}
+ * ```javascript
+ * tween.resume();
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_resume_tween'] = function (block) {
@@ -6043,7 +7239,10 @@ Blockly.JavaScript['phaser_resume_tween'] = function (block) {
  * Start the chosen tween object.
  * @method phaser_start_tween
  * @param tween tween to start
- * @returns {} tween.start();
+ * @returns {}
+ * ```javascript
+ * tween.start();
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_start_tween'] = function (block) {
@@ -6058,7 +7257,10 @@ Blockly.JavaScript['phaser_start_tween'] = function (block) {
  * @param enable {Boolean} enable/disable yoyoing on the tween
  * @param delay {Number} the amount of time to wait until the yoyo will start
  * @param index {Number} choose the object index on the tween to apply this to
- * @returns {} tween.yoyo(enable, delay, index);
+ * @returns {}
+ * ```javascript
+ * tween.yoyo(enable, delay, index);
+ * ```
  * @block
  */
 Blockly.JavaScript['phaser_yoyo_tween'] = function (block) {
@@ -6076,7 +7278,10 @@ Blockly.JavaScript['phaser_yoyo_tween'] = function (block) {
  * @method pointer_get_device_buttons_field
  * @param object pointer to get the buttons from
  * @param field which button to return
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
@@ -6088,7 +7293,10 @@ Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
  * @method device_button_get_boolean_field
  * @param object button to get the values from
  * @param field the value to get
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 /**
@@ -6096,7 +7304,10 @@ Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
  * @method device_button_get_numeric_field
  * @param object button to get the values from
  * @param field the value to get
- * @returns {} object.field
+ * @returns {}
+ * ```javascript
+ * object.field
+ * ```
  * @block
  */
 Blockly.JavaScript['device_button_get_boolean_field'] = Blockly.JavaScript['device_button_get_numeric_field'] = getField;
@@ -6105,7 +7316,10 @@ Blockly.JavaScript['device_button_get_boolean_field'] = Blockly.JavaScript['devi
  * Returns true/false if the chosen button on the pointer was released within the last 250 milliseconds.
  * @method device_button_just_released
  * @param object button to check
- * @returns {} object.justReleased()
+ * @returns {}
+ * ```javascript
+ * object.justReleased()
+ * ```
  * @block
  */
 Blockly.JavaScript['device_button_just_released'] = function (block) {
@@ -6117,7 +7331,10 @@ Blockly.JavaScript['device_button_just_released'] = function (block) {
  * Returns true/false if the chosen button on the pointer was pressed within the last 250 milliseconds.
  * @method device_button_just_pressed
  * @param object button to check
- * @returns {} object.justPressed()
+ * @returns {}
+ * ```javascript
+ * object.justPressed()
+ * ```
  * @block
  */
 Blockly.JavaScript['device_button_just_pressed'] = function (block) {
@@ -6130,7 +7347,10 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
  * @method device_button_just_released_complex
  * @param object button to check
  * @param duration {Number} the duration to check
- * @returns {} object.justReleased(duration)
+ * @returns {}
+ * ```javascript
+ * object.justReleased(duration)
+ * ```
  * @block
  */
 Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
@@ -6144,7 +7364,10 @@ Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
  * @method device_button_just_pressed_complex
  * @param object button to check
  * @param duration {Number} the duration to check
- * @returns {} object.justPressed(duration)
+ * @returns {}
+ * ```javascript
+ * object.justPressed(duration)
+ * ```
  * @block
  */
 Blockly.JavaScript['device_button_just_pressed_complex'] = function (block) {
