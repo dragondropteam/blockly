@@ -1,10 +1,206 @@
-/**
- * @file Blocks for Phaser time
- * @author Luke Powell
- * @author Aeon Williams
- * @copyright DigiPen Institute of Technology 2018
- */
+//region STARTUP
+Blockly.Blocks['phaser_simple_init'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.PHASER_SIMPLE_INIT);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WIDTH)
+      .appendField(new Blockly.FieldNumber(800), 'WIDTH')
+      .appendField(Blockly.Msg.HEIGHT)
+      .appendField(new Blockly.FieldNumber(600), 'HEIGHT');
+    this.appendStatementInput('PRELOAD')
+      .setCheck(null)
+      .appendField(Blockly.Msg.PHASER_SIMPLE_INIT_PRELOAD);
+    this.appendStatementInput('CREATE')
+      .setCheck(null)
+      .appendField(Blockly.Msg.PHASER_SIMPLE_INIT_CREATE);
+    this.appendStatementInput('UPDATE')
+      .setCheck(null)
+      .appendField(Blockly.Msg.PHASER_SIMPLE_INIT_UPDATE);
+    this.setColour(PHASER_STARTUP_COLOUR);
+    this.setTooltip(Blockly.Msg.PHASER_SIMPLE_INIT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.PHASER_SIMPLE_INIT_HELP_URL);
+  }
+};
 
+Blockly.Blocks['start_phaser_for_states'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.START_PHASER_FOR_STATES);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WIDTH)
+      .appendField(new Blockly.FieldNumber(800, 0), 'WIDTH');
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.HEIGHT)
+      .appendField(new Blockly.FieldNumber(600, 0), 'HEIGHT');
+    this.setInputsInline(true);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_STARTUP_COLOUR);
+    this.setTooltip(Blockly.Msg.START_PHASER_FOR_STATES_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.START_PHASER_FOR_STATES_HELP_URL);
+  }
+};
+//endregion
+//region WORLD
+Blockly.Blocks['get_world_property'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GET)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.HEIGHT, 'height'], [Blockly.Msg.WIDTH, 'width'], [Blockly.Msg.GET_WORLD_PROPERTY_NAME_DROPDOWN_CENTERX, 'centerX'], [Blockly.Msg.GET_WORLD_PROPERTY_NAME_DROPDOWN_CENTERY, 'centerY'], [Blockly.Msg.GET_WORLD_PROPERTY_NAME_DROPDOWN_RANDOMX, 'randomX'], [Blockly.Msg.GET_WORLD_PROPERTY_NAME_DROPDOWN_RANDOMY, 'randomY']]), 'NAME')
+      .appendField(Blockly.Msg.GET_WORLD_PROPERTY);
+    this.setOutput(true, null);
+    this.setTooltip(Blockly.Msg.GET_WORLD_PROPERTY_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GET_WORLD_PROPERTY_HELP_URL);
+    this.setColour(PHASER_WORLD_COLOUR);
+  }
+};
+
+Blockly.Blocks['set_world_bounds'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SET_WORLD_BOUNDS);
+    this.appendValueInput('X_POS')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.XCOLON);
+    this.appendValueInput('Y_POS')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.YCOLON);
+    this.appendValueInput('WIDTH')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.SET_WORLD_BOUNDS_WIDTH);
+    this.appendValueInput('HEIGHT')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.SET_WORLD_BOUNDS_HEIGHT);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.SET_WORLD_BOUNDS_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.SET_WORLD_BOUNDS_HELP_URL);
+    this.setColour(PHASER_WORLD_COLOUR);
+    this.setInputsInline(true);
+  }
+};
+
+Blockly.Blocks['create_point'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.CREATE_POINT);
+    this.appendValueInput('X_POS')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.X);
+    this.appendValueInput('Y_POS')
+      .setCheck('Number')
+      .appendField(Blockly.Msg.Y);
+    this.setOutput(true, null);
+    this.setTooltip(Blockly.Msg.CREATE_POINT_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.CREATE_POINT_HELP_URL);
+    this.setColour(PHASER_WORLD_COLOUR);
+  }
+};
+
+Blockly.Blocks['get_world_reference'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GET_WORLD_REFERENCE);
+    this.setOutput(true, null);
+    this.setColour(PHASER_WORLD_COLOUR);
+    this.setTooltip(Blockly.Msg.GET_WORLD_REFERENCE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GET_WORLD_REFERENCE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['set_game_pause'] = {
+  init: function () {
+    this.appendValueInput('PAUSED')
+      .setCheck('Boolean')
+      .appendField(Blockly.Msg.SET_GAME_PAUSE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_WORLD_COLOUR);
+    this.setTooltip(Blockly.Msg.SET_GAME_PAUSE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.SET_GAME_PAUSE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['get_game_pause'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GET_GAME_PAUSE);
+    this.setOutput(true, 'Boolean');
+    this.setColour(PHASER_WORLD_COLOUR);
+    this.setTooltip(Blockly.Msg.GET_GAME_PAUSE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.GET_GAME_PAUSE_HELP_URL);
+  }
+};
+//endregion
+//region STATES
+Blockly.Blocks['statemanager_add_state'] = {
+  init: function () {
+    this.appendValueInput('NAME')
+      .setCheck(null)
+      .appendField(Blockly.Msg.STATEMANAGER_ADD_STATE);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.TAGGED)
+      .appendField(new Blockly.FieldTextInput(Blockly.Msg.TAG), 'KEY')
+      .appendField(Blockly.Msg.STATEMANAGER_ADD_STATE_TO_MANAGER);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_STATES_COLOUR);
+    this.setTooltip(Blockly.Msg.STATEMANAGER_ADD_STATE_TOOLTIP);
+    //TODO: This will need supporting documentation on or side illustrating how to create this class with blocks
+    // this.setHelpUrl('')
+  }
+};
+
+Blockly.Blocks['statemanager_start_state'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.STATEMANAGER_START_STATE)
+      .appendField(new Blockly.FieldTextInput(Blockly.Msg.TAG), 'TAG');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_STATES_COLOUR);
+    this.setTooltip(Blockly.Msg.STATEMANAGER_START_STATE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.STATEMANAGER_START_STATE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['statemanager_get_current_state'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.STATEMANAGER_GET_CURRENT_STATE);
+    this.setOutput(true, null);
+    this.setColour(PHASER_STATES_COLOUR);
+    this.setTooltip(Blockly.Msg.STATEMANAGER_GET_CURRENT_STATE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.STATEMANAGER_GET_CURRENT_STATE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['statemanager_restart_state'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.STATEMANAGER_RESTART_STATE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(PHASER_STATES_COLOUR);
+    this.setTooltip(Blockly.Msg.STATEMANAGER_RESTART_STATE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.STATEMANAGER_RESTART_STATE_HELP_URL);
+  }
+};
+
+Blockly.Blocks['statemanager_check_state'] = {
+  init: function () {
+    this.appendValueInput('KEY')
+      .setCheck('String')
+      .appendField(Blockly.Msg.STATEMANAGER_CHECK_STATE);
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(PHASER_STATES_COLOUR);
+    this.setTooltip(Blockly.Msg.STATEMANAGER_CHECK_STATE_TOOLTIP);
+    this.setHelpUrl(Blockly.Msg.STATEMANAGER_CHECK_STATE_HELP_URL);
+  }
+};
+//endregion
+//region TIME
 //region TIME.PROPERTIES
 const TIME_FIELDS_NUMERIC_WRITABLE = ['desiredFps', 'slowMotion',];
 const TIME_FIELDS_NUMERIC_RO = ['pauseDuration', 'physicsElapsed', 'physicsElapsedMS'];
@@ -779,4 +975,5 @@ Blockly.Blocks['timer_set_on_complete_callback'] = {
     this.setHelpUrl(Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_URL);
   }
 };
+//endregion
 //endregion
