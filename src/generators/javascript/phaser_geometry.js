@@ -1,3 +1,6 @@
+/**
+ * @namespace Rectangle
+ */
 //region RECTANGLE
 /**
  * Creates a rectangle with the given properties.
@@ -10,6 +13,7 @@
  * ```javascript
  * new Phaser.Rectangle(x, y, width, height)
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_create'] = function (block) {
@@ -29,6 +33,7 @@ Blockly.JavaScript['rectangle_create'] = function (block) {
  * ```javascript
  * Phaser.Rectangle.intersects(rectA, rectB)
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_intersects'] = function (block) {
@@ -46,6 +51,7 @@ Blockly.JavaScript['rectangle_intersects'] = function (block) {
  * ```javascript
  * object.field
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 /**
@@ -57,6 +63,7 @@ Blockly.JavaScript['rectangle_intersects'] = function (block) {
  * ```javascript
  * object.field
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_get_numeric_field']
@@ -77,6 +84,7 @@ Blockly.JavaScript['rectangle_get_numeric_field']
  * ```javascript
  * object.field = value;
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
@@ -96,6 +104,7 @@ Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
  * ```javascript
  * object.field.copyFrom(point);
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_set_point_field'] = setPointField;
@@ -109,6 +118,7 @@ Blockly.JavaScript['rectangle_set_point_field'] = setPointField;
  * ```javascript
  * Phaser.Rectangle.containsPoint(rectangle, point)
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_contains_point'] = function (block) {
@@ -127,6 +137,7 @@ Blockly.JavaScript['rectangle_contains_point'] = function (block) {
  * ```javascript
  * Phaser.Rectangle.contains(rectangle, x, y)
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_contains'] = function (block) {
@@ -144,6 +155,7 @@ Blockly.JavaScript['rectangle_contains'] = function (block) {
  * ```javascript
  * Phaser.Rectangle.containsRect(rectangle_a, rectangle_b)
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_contains_rect'] = function (block) {
@@ -160,6 +172,7 @@ Blockly.JavaScript['rectangle_contains_rect'] = function (block) {
  * ```javascript
  * rectangle.clone()
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_clone'] = function (block) {
@@ -176,6 +189,7 @@ Blockly.JavaScript['rectangle_clone'] = function (block) {
  * ```javascript
  * rectangle.random()
  * ```
+ *  @memberOf Rectangle
  * @block
  */
 Blockly.JavaScript['rectangle_random'] = function (block) {
@@ -183,6 +197,9 @@ Blockly.JavaScript['rectangle_random'] = function (block) {
   return [`${rectangle}.random()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 //endregion
+/**
+ * @namespace Point
+ */
 //region POINT
 /**
  * Returns a point from the given x/y values.
@@ -193,6 +210,7 @@ Blockly.JavaScript['rectangle_random'] = function (block) {
  * ```javascript
  * new Phaser.Point(x, y)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['point_create'] = function (block) {
@@ -210,6 +228,7 @@ Blockly.JavaScript['point_create'] = function (block) {
  * ```javascript
  * point.element
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['point_get_element'] = function (block) {
@@ -228,6 +247,7 @@ Blockly.JavaScript['point_get_element'] = function (block) {
  * ```javascript
  * point.element = value;
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['point_set_element'] = function (block) {
@@ -246,6 +266,7 @@ Blockly.JavaScript['point_set_element'] = function (block) {
  * ```javascript
  * point.setMagnitude(value);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['point_set_magnitude'] = function (block) {
@@ -263,6 +284,7 @@ Blockly.JavaScript['point_set_magnitude'] = function (block) {
  * ```javascript
  * Phaser.Point.add(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_add'] = function (block) {
@@ -280,6 +302,7 @@ Blockly.JavaScript['points_add'] = function (block) {
  * ```javascript
  * Phaser.Point.subtract(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_subtract'] = function (block) {
@@ -297,6 +320,7 @@ Blockly.JavaScript['points_subtract'] = function (block) {
  * ```javascript
  * Phaser.Point.angle(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_angle_between'] = function (block) {
@@ -314,6 +338,7 @@ Blockly.JavaScript['points_angle_between'] = function (block) {
  * ```javascript
  * Phaser.Point.distance(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_distance'] = function (block) {
@@ -331,6 +356,7 @@ Blockly.JavaScript['points_distance'] = function (block) {
  * ```javascript
  * Phaser.Point.divide(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_divide'] = function (block) {
@@ -348,6 +374,7 @@ Blockly.JavaScript['points_divide'] = function (block) {
  * ```javascript
  * Phaser.Point.equals(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_equals'] = function (block) {
@@ -366,6 +393,7 @@ Blockly.JavaScript['points_equals'] = function (block) {
  * ```javascript
  * Phaser.Point.interpolate(pointA, pointB, f)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_interpolate'] = function (block) {
@@ -384,6 +412,7 @@ Blockly.JavaScript['points_interpolate'] = function (block) {
  * ```javascript
  * Phaser.Point.multiply(pointA, pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_multiply'] = function (block) {
@@ -400,6 +429,7 @@ Blockly.JavaScript['points_multiply'] = function (block) {
  * ```javascript
  * Phaser.Point.negative(pointA)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_negate'] = function (block) {
@@ -415,6 +445,7 @@ Blockly.JavaScript['points_negate'] = function (block) {
  * ```javascript
  * Phaser.Point.normalize(pointA)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_normalize'] = function (block) {
@@ -430,6 +461,7 @@ Blockly.JavaScript['points_normalize'] = function (block) {
  * ```javascript
  * Phaser.Point.perp(pointA)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_perpendicular'] = function (block) {
@@ -445,6 +477,7 @@ Blockly.JavaScript['points_perpendicular'] = function (block) {
  * ```javascript
  * Phaser.Point.centroid(array)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_centroid'] = function (block) {
@@ -462,6 +495,7 @@ Blockly.JavaScript['points_centroid'] = function (block) {
  * ```javascript
  * point.clamp(min, max);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_clamp'] = function (block) {
@@ -481,6 +515,7 @@ Blockly.JavaScript['points_clamp'] = function (block) {
  * ```javascript
  * point.clampX(min, max);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_clamp_x'] = function (block) {
@@ -500,6 +535,7 @@ Blockly.JavaScript['points_clamp_x'] = function (block) {
  * ```javascript
  * point.clampY(min, max);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_clamp_y'] = function (block) {
@@ -517,6 +553,7 @@ Blockly.JavaScript['points_clamp_y'] = function (block) {
  * ```javascript
  * point.clone()
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_clone'] = function (block) {
@@ -533,6 +570,7 @@ Blockly.JavaScript['points_clone'] = function (block) {
  * ```javascript
  * target.copyFrom(source);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_copy_from'] = function (block) {
@@ -550,6 +588,7 @@ Blockly.JavaScript['points_copy_from'] = function (block) {
  * ```javascript
  * pointA.cross(pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_cross'] = function (block) {
@@ -567,6 +606,7 @@ Blockly.JavaScript['points_cross'] = function (block) {
  * ```javascript
  * pointA.dot(pointB)
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_dot'] = function (block) {
@@ -585,6 +625,7 @@ Blockly.JavaScript['points_dot'] = function (block) {
  * ```javascript
  * point.add(x, y);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_add_member'] = function (block) {
@@ -604,6 +645,7 @@ Blockly.JavaScript['points_add_member'] = function (block) {
  * ```javascript
  * point.subtract(x, y);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_subtract_member'] = function (block) {
@@ -623,6 +665,7 @@ Blockly.JavaScript['points_subtract_member'] = function (block) {
  * ```javascript
  * point.divide(x, y);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_divide_member'] = function (block) {
@@ -642,6 +685,7 @@ Blockly.JavaScript['points_divide_member'] = function (block) {
  * ```javascript
  * point.multiply(x, y);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_multiply_member'] = function (block) {
@@ -659,6 +703,7 @@ Blockly.JavaScript['points_multiply_member'] = function (block) {
  * ```javascript
  * point.ceil();
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_ceil'] = function (block) {
@@ -674,6 +719,7 @@ Blockly.JavaScript['points_ceil'] = function (block) {
  * ```javascript
  * point.floor();
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_floor'] = function (block) {
@@ -689,6 +735,7 @@ Blockly.JavaScript['points_floor'] = function (block) {
  * ```javascript
  * point.getMagnitude()
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_get_magnitude'] = function (block) {
@@ -704,6 +751,7 @@ Blockly.JavaScript['points_get_magnitude'] = function (block) {
  * ```javascript
  * point.getMagnitudeSq()
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_get_magnitude_squared'] = function (block) {
@@ -719,6 +767,7 @@ Blockly.JavaScript['points_get_magnitude_squared'] = function (block) {
  * ```javascript
  * point.invert();
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_invert'] = function (block) {
@@ -734,6 +783,7 @@ Blockly.JavaScript['points_invert'] = function (block) {
  * ```javascript
  * point.isZero()
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_is_zero'] = function (block) {
@@ -750,6 +800,7 @@ Blockly.JavaScript['points_is_zero'] = function (block) {
  * ```javascript
  * point.limit(max);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_limit'] = function (block) {
@@ -768,6 +819,7 @@ Blockly.JavaScript['points_limit'] = function (block) {
  * ```javascript
  * point.setToPolar(degrees, radius, true);
  * ```
+ *  @memberOf Point
  * @block
  */
 Blockly.JavaScript['points_set_to_polar'] = function (block) {
@@ -777,6 +829,9 @@ Blockly.JavaScript['points_set_to_polar'] = function (block) {
   return `${point}.setToPolar(${degrees}, ${radius}, true);\n`;
 };
 //endregion
+/**
+ * @namespace Circle
+ */
 //region CIRCLE
 /**
  * Returns a circle with the given properties.
@@ -788,6 +843,7 @@ Blockly.JavaScript['points_set_to_polar'] = function (block) {
  * ```javascript
  * new Phaser.Circle(x, y, diameter)
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_create'] = function (block) {
@@ -806,6 +862,7 @@ Blockly.JavaScript['circle_create'] = function (block) {
  * ```javascript
  * object.field
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_get_numeric_field'] = function (block) {
@@ -824,6 +881,7 @@ Blockly.JavaScript['circle_get_numeric_field'] = function (block) {
  * ```javascript
  * object.field = value;
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
@@ -842,6 +900,7 @@ Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
  * ```javascript
  * Phaser.Circle.intersects(circle_a, circle_b)
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_intersects'] = function (block) {
@@ -859,6 +918,7 @@ Blockly.JavaScript['circle_intersects'] = function (block) {
  * ```javascript
  * Phaser.Circle.intersectsRectangle(circle, rectangle)
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_intersects_rectangle'] = function (block) {
@@ -875,6 +935,7 @@ Blockly.JavaScript['circle_intersects_rectangle'] = function (block) {
  * ```javascript
  * circle.clone()
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_clone'] = function (block) {
@@ -892,6 +953,7 @@ Blockly.JavaScript['circle_clone'] = function (block) {
  * ```javascript
  * circle.contains(x, y)
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_contains'] = function (block) {
@@ -909,6 +971,7 @@ Blockly.JavaScript['circle_contains'] = function (block) {
  * ```javascript
  * circle.random()
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_random'] = function (block) {
@@ -924,6 +987,7 @@ Blockly.JavaScript['circle_random'] = function (block) {
  * ```javascript
  * circle.circumference()
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_circumference'] = function (block) {
@@ -940,6 +1004,7 @@ Blockly.JavaScript['circle_circumference'] = function (block) {
  * ```javascript
  * circle_circumference_point
  * ```
+ *  @memberOf Circle
  * @block
  */
 Blockly.JavaScript['circle_circumference_point'] = function (block) {

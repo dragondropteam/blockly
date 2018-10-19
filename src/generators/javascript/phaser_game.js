@@ -1,3 +1,6 @@
+/**
+ * @namespace Startup
+ */
 //region STARTUP
 
 /**
@@ -10,6 +13,7 @@
  * ```javascript
  * var game = new Phaser.Game([width], [height], Phaser.AUTO, '', {preload: preload, create: create, update: update});
  * ```
+ *  @memberOf Startup
  * @block
  */
 Blockly.JavaScript['phaser_simple_init'] = function (block) {
@@ -37,6 +41,7 @@ Blockly.JavaScript['phaser_simple_init'] = function (block) {
  * ```javascript
  * var game = new Phaser.Game(${number_width}, ${number_height}, Phaser.AUTO, '');
  * ```
+ *  @memberOf Startup
  * @block
  */
 Blockly.JavaScript['start_phaser_for_states'] = function (block) {
@@ -55,12 +60,16 @@ Blockly.JavaScript['start_phaser_for_states'] = function (block) {
  this.scale.pageAlignVertically = true;
  this.scale.updateLayout( true );
  * ```
+ *  @memberOf Startup
  * @block
  */
 Blockly.JavaScript['center_and_stretch'] = function (block) {
   return 'game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;\n  this.scale.pageAlignHorizontally = true;\n  this.scale.pageAlignVertically = true;\n  this.scale.updateLayout( true );\n';
 };
 //endregion
+/**
+ * @namespace World
+ */
 //region WORLD
 /**
  * Returns the property of the object.
@@ -70,6 +79,7 @@ Blockly.JavaScript['center_and_stretch'] = function (block) {
  * ```javascript
  * game.world.property
  * ```
+ *  @memberOf World
  * @block
  */
 Blockly.JavaScript['get_world_property'] = function (block) {
@@ -88,6 +98,7 @@ Blockly.JavaScript['get_world_property'] = function (block) {
  * ```javascript
  * game.world.setBounds(x, y, w, h);
  * ```
+ *  @memberOf World
  * @block
  */
 Blockly.JavaScript['set_world_bounds'] = function (block) {
@@ -135,6 +146,7 @@ Blockly.JavaScript['set_scale'] = function (block) {
  * ```javascript
  * object.scale.setTo(x, y);
  * ```
+ *  @memberOf World
  * @block
  */
 Blockly.JavaScript['set_scale_vi'] = function (block) {
@@ -207,6 +219,7 @@ Blockly.JavaScript['get_world_reference'] = function (block) {
  * ```javascript
  * game.paused = paused;
  * ```
+ *  @memberOf World
  * @block
  */
 Blockly.JavaScript['set_game_pause'] = function (block) {
@@ -222,12 +235,16 @@ Blockly.JavaScript['set_game_pause'] = function (block) {
  * ```javascript
  * game.paused
  * ```
+ *  @memberOf World
  * @block
  */
 Blockly.JavaScript['get_game_pause'] = function (block) {
   return [`game.paused`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 //endregion
+/**
+ * @namespace States
+ */
 //region STATES
 /**
  * Adds a state to the game with the given name and key.
@@ -238,6 +255,7 @@ Blockly.JavaScript['get_game_pause'] = function (block) {
  * ```javascript
  * game.state.add(key, name);
  * ```
+ *  @memberOf States
  * @block
  */
 Blockly.JavaScript['statemanager_add_state'] = function (block) {
@@ -255,6 +273,7 @@ Blockly.JavaScript['statemanager_add_state'] = function (block) {
  * ```javascript
  * game.start.state(tag);
  * ```
+ *  @memberOf States
  * @block
  */
 Blockly.JavaScript['statemanager_start_state'] = function (block) {
@@ -270,6 +289,7 @@ Blockly.JavaScript['statemanager_start_state'] = function (block) {
  * ```javascript
  * game.state.getCurrentState()
  * ```
+ *  @memberOf States
  * @block
  */
 Blockly.JavaScript['statemanager_get_current_state'] = function (block) {
@@ -283,6 +303,7 @@ Blockly.JavaScript['statemanager_get_current_state'] = function (block) {
  * ```javascript
  * game.state.restart();
  * ```
+ *  @memberOf States
  * @block
  */
 Blockly.JavaScript['statemanager_restart_state'] = function (block) {
@@ -297,6 +318,7 @@ Blockly.JavaScript['statemanager_restart_state'] = function (block) {
  * ```javascript
  * game.state.checkState(key)
  * ```
+ *  @memberOf States
  * @block
  */
 Blockly.JavaScript['statemanager_check_state'] = function (block) {
@@ -305,6 +327,9 @@ Blockly.JavaScript['statemanager_check_state'] = function (block) {
 };
 
 //endregion
+/**
+ * @namespace Time
+ */
 //region TIME
 
 /**
@@ -315,6 +340,7 @@ Blockly.JavaScript['statemanager_check_state'] = function (block) {
  * ```javascript
  * game.time.field
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['get_time_numeric_member'] = function (block) {
@@ -331,6 +357,7 @@ Blockly.JavaScript['get_time_numeric_member'] = function (block) {
  * ```javascript
  * game.time.field = value;
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['set_time_numeric_member'] = function (block) {
@@ -346,6 +373,7 @@ Blockly.JavaScript['set_time_numeric_member'] = function (block) {
  * ```javascript
  * game.time.physicsElapsed
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['delta_time_seconds'] = function (block) {
@@ -359,6 +387,7 @@ Blockly.JavaScript['delta_time_seconds'] = function (block) {
  * ```javascript
  * game.time.physicsElapsedMS
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
@@ -375,6 +404,7 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
  * ```javascript
  * timer.field
  * ```
+ *  @memberOf Time
  * @block
  */
 /**
@@ -386,6 +416,7 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
  * ```javascript
  * timer.field
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['get_timer_numeric_member'] =
@@ -406,6 +437,7 @@ Blockly.JavaScript['get_timer_numeric_member'] =
  * ```javascript
  * timer.field = value;
  * ```
+ *  @memberOf Time
  * @block
  */
 /**
@@ -418,6 +450,7 @@ Blockly.JavaScript['get_timer_numeric_member'] =
  * ```javascript
  * timer.field = value;
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['set_timer_numeric_member'] =
@@ -437,6 +470,7 @@ Blockly.JavaScript['set_timer_numeric_member'] =
  * ```javascript
  * game.time.create(autoDestroy)
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['create_timer'] = function (block) {
@@ -452,6 +486,7 @@ Blockly.JavaScript['create_timer'] = function (block) {
  * ```javascript
  * constant
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['time_constants'] = function (block) {
@@ -468,6 +503,7 @@ Blockly.JavaScript['time_constants'] = function (block) {
  * ```javascript
  * timer.start(delay);
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['start_timer'] = function (block) {
@@ -500,6 +536,7 @@ Blockly.JavaScript['timer_add_event'] = function (block) {
  * ```javascript
  * timer.add(delay, callback, undefined, arguments[if any]);
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_add_event_complex'] = function (block) {
@@ -538,6 +575,7 @@ Blockly.JavaScript['timer_loop_event'] = function (block) {
  * ```javascript
  * timer.add(delay, callback, arguments[if any]);
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
@@ -577,6 +615,7 @@ Blockly.JavaScript['timer_repeat_event'] = function (block) {
  * ```javascript
  * timer.add(delay, repeatCount, callback, arguments[if any]);
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
@@ -598,6 +637,7 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
  * ```javascript
  * timer.destroy();
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_destroy'] = function (block) {
@@ -613,6 +653,7 @@ Blockly.JavaScript['timer_destroy'] = function (block) {
  * ```javascript
  * timer.pause();
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_pause'] = function (block) {
@@ -628,6 +669,7 @@ Blockly.JavaScript['timer_pause'] = function (block) {
  * ```javascript
  * timer.resume();
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_resume'] = function (block) {
@@ -644,6 +686,7 @@ Blockly.JavaScript['timer_resume'] = function (block) {
  * ```javascript
  * timer.stop(clearEvents);
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_stop'] = function (block) {
@@ -673,6 +716,7 @@ Blockly.JavaScript['timer_duration'] = function (block) {
  * ```javascript
  * timer.onComplete.add(callback);
  * ```
+ *  @memberOf Time
  * @block
  */
 Blockly.JavaScript['timer_set_on_complete_callback'] = function (block) {

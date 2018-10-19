@@ -1,3 +1,6 @@
+/**
+ * @namespace Sound
+ */
 //region SOUND
 /**
  * Creates a sound with the given tag by loading it into the audio queue.
@@ -8,6 +11,7 @@
  * ```javascript
  * game.load.audio(tag, source);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['load_sound'] = function (block) {
@@ -40,6 +44,7 @@ Blockly.JavaScript['play_sound'] = function (block) {
  * ```javascript
  * game.add.audio(tag, volume, looping)
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['add_sound'] = function (block) {
@@ -69,6 +74,7 @@ Blockly.JavaScript['remove_sound'] = function (block) {
  * ```javascript
  * game.sound.optionAll();
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
@@ -86,6 +92,7 @@ Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
  * ```javascript
  * object.element = value;
  * ```
+ *  @memberOf Sound
  * @block
  */
 /**
@@ -98,6 +105,7 @@ Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
  * ```javascript
  * object.element = value;
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_numeric_member'] = setMember;
@@ -111,6 +119,7 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * ```javascript
  * object.element
  * ```
+ *  @memberOf Sound
  * @block
  */
 /**
@@ -122,6 +131,7 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * ```javascript
  * object.element
  * ```
+ *  @memberOf Sound
  * @block
  */
 /**
@@ -133,6 +143,7 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * ```javascript
  * object.element
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['get_sound_boolean_member'] = Blockly.JavaScript['get_sound_numeric_member'] = Blockly.JavaScript['get_sound_string_member'] = getMember;
@@ -147,6 +158,7 @@ Blockly.JavaScript['get_sound_boolean_member'] = Blockly.JavaScript['get_sound_n
  * ```javascript
  * sound_object.fadeIn(duration, loop);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_fade_in'] = function (block) {
@@ -165,6 +177,7 @@ Blockly.JavaScript['sound_fade_in'] = function (block) {
  * ```javascript
  * sound_object.fadeOut(duration);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_fade_out'] = function (block) {
@@ -183,6 +196,7 @@ Blockly.JavaScript['sound_fade_out'] = function (block) {
  * ```javascript
  * sound_object.fadeTo(duration, volume);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_fade_to'] = function (block) {
@@ -201,6 +215,7 @@ Blockly.JavaScript['sound_fade_to'] = function (block) {
  * ```javascript
  * sound_object.loopFull(volume);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_loop_full'] = function (block) {
@@ -217,6 +232,7 @@ Blockly.JavaScript['sound_loop_full'] = function (block) {
  * ```javascript
  * sound_object.stop();
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_stop'] = function (block) {
@@ -232,6 +248,7 @@ Blockly.JavaScript['sound_stop'] = function (block) {
  * ```javascript
  * sound_object.pause();
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_pause'] = function (block) {
@@ -247,6 +264,7 @@ Blockly.JavaScript['sound_pause'] = function (block) {
  * ```javascript
  * sound_object.resume();
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_resume'] = function (block) {
@@ -266,6 +284,7 @@ Blockly.JavaScript['sound_resume'] = function (block) {
  * ```javascript
  * sound_object.play('', position, volume, loop, restart);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_play'] = function (block) {
@@ -289,6 +308,7 @@ Blockly.JavaScript['sound_play'] = function (block) {
  * ```javascript
  * sound_object.play('', position, volume loop);
  * ```
+ *  @memberOf Sound
  * @block
  */
 Blockly.JavaScript['sound_restart'] = function (block) {
