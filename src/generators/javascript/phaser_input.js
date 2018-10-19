@@ -1,61 +1,7 @@
-
-//region MOUSE
 /**
- * Returns the specified coordinate value of the mouse position.
- * @method get_current_mouse_position
- * @param direction which coordinate of the mouse position to get
- * @returns {}
- * ```javascript
- * game.input.direction
- * ```
- * @block
+ * @namespace Keyboard
  */
-Blockly.JavaScript['get_current_mouse_position'] = function (block) {
-  const direction = block.getFieldValue('DIRECTION');
-  return [`game.input.${direction}`, Blockly.JavaScript.ORDER_ATOMIC];
-};
-
-/**
- * Returns the mouse position as a point that contains the x/y values of the coordinates.
- * @method get_mouse_position_point
- * @returns {}
- * ```javascript
- * New Phaser.Point(game.input.x, game.input.y)
- * ```
- * @block
- */
-Blockly.JavaScript['get_mouse_position_point'] = function (block) {
-  return [`new Phaser.Point(game.input.x, game.input.y)`, Blockly.JavaScript.ORDER_ATOMIC];
-};
-
-/**
- * Returns true/false if the specified mouse button is currently being clicked.
- * @method is_mouse_button_clicked
- * @returns {}
- * ```javascript
- * game.input.mousePointer.button.isDown
- * ```
- * @block
- */
-Blockly.JavaScript['is_mouse_button_clicked'] = function (block) {
-  return [`game.input.mousePointer.${block.getFieldValue('BUTTON')}.isDown`, Blockly.JavaScript.ORDER_ATOMIC];
-};
-
-/**
- * Returns the active game pointer.
- * @method get_active_pointer
- * @returns {}
- * ```javascript
- * game.input.activePointer
- * ```
- * @block
- */
-Blockly.JavaScript['get_active_pointer'] = function (block) {
-  return [`game.input.activePointer`, Blockly.JavaScript.ORDER_ATOMIC];
-};
-//endregion
-
-//region Keyboard
+//region KEYBOARD
 /**
  * @deprecated
  * @param block
@@ -75,6 +21,7 @@ Blockly.JavaScript['create_cursor_keys'] = function (block) {
  * ```javascript
  * game.input.keyboard.isDown(Phaser.Keyboard.key)
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['is_key_down'] = function (block) {
@@ -90,6 +37,7 @@ Blockly.JavaScript['is_key_down'] = function (block) {
  * ```javascript
  * game.input.keyboard.addKey(Phaser.Keyboard.key)
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['add_key'] = function (block) {
@@ -106,6 +54,7 @@ Blockly.JavaScript['add_key'] = function (block) {
  * ```javascript
  * key.field
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 /**
@@ -117,6 +66,7 @@ Blockly.JavaScript['add_key'] = function (block) {
  * ```javascript
  * key.field
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['get_key_boolean_field']
@@ -135,6 +85,7 @@ Blockly.JavaScript['get_key_boolean_field']
  * ```javascript
  * key.justPressed()
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['key_just_pressed'] = function (block) {
@@ -150,6 +101,7 @@ Blockly.JavaScript['key_just_pressed'] = function (block) {
  * ```javascript
  * key.justReleased()
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['key_just_released'] = function (block) {
@@ -166,6 +118,7 @@ Blockly.JavaScript['key_just_released'] = function (block) {
  * ```javascript
  * key.reset(hard)
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['key_reset'] = function (block) {
@@ -183,6 +136,7 @@ Blockly.JavaScript['key_reset'] = function (block) {
  * ```javascript
  * key.upDuration(duration);
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['key_up_duration'] = function (block) {
@@ -200,6 +154,7 @@ Blockly.JavaScript['key_up_duration'] = function (block) {
  * ```javascript
  * key.downDuration(duration);
  * ```
+ *  @memberOf Keyboard
  * @block
  */
 Blockly.JavaScript['key_down_duration'] = function (block) {
@@ -208,7 +163,71 @@ Blockly.JavaScript['key_down_duration'] = function (block) {
   return [`${key}.downDuration(${duration})`, Blockly.JavaScript.ORDER_ATOMIC];
 };
 //endregion
+/**
+ * @namespace Mouse
+ */
+//region MOUSE
+/**
+ * Returns the specified coordinate value of the mouse position.
+ * @method get_current_mouse_position
+ * @param direction which coordinate of the mouse position to get
+ * @returns {}
+ * ```javascript
+ * game.input.direction
+ * ```
+ *  @memberOf Mouse
+ * @block
+ */
+Blockly.JavaScript['get_current_mouse_position'] = function (block) {
+  const direction = block.getFieldValue('DIRECTION');
+  return [`game.input.${direction}`, Blockly.JavaScript.ORDER_ATOMIC];
+};
 
+/**
+ * Returns the mouse position as a point that contains the x/y values of the coordinates.
+ * @method get_mouse_position_point
+ * @returns {}
+ * ```javascript
+ * New Phaser.Point(game.input.x, game.input.y)
+ * ```
+ *  @memberOf Mouse
+ * @block
+ */
+Blockly.JavaScript['get_mouse_position_point'] = function (block) {
+  return [`new Phaser.Point(game.input.x, game.input.y)`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+/**
+ * Returns true/false if the specified mouse button is currently being clicked.
+ * @method is_mouse_button_clicked
+ * @returns {}
+ * ```javascript
+ * game.input.mousePointer.button.isDown
+ * ```
+ *  @memberOf Mouse
+ * @block
+ */
+Blockly.JavaScript['is_mouse_button_clicked'] = function (block) {
+  return [`game.input.mousePointer.${block.getFieldValue('BUTTON')}.isDown`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+/**
+ * Returns the active game pointer.
+ * @method get_active_pointer
+ * @returns {}
+ * ```javascript
+ * game.input.activePointer
+ * ```
+ *  @memberOf Mouse
+ * @block
+ */
+Blockly.JavaScript['get_active_pointer'] = function (block) {
+  return [`game.input.activePointer`, Blockly.JavaScript.ORDER_ATOMIC];
+};
+//endregion
+/**
+ * @namespace InputHandler
+ */
 //region INPUT_HANDLER
 /**
  * Enables an object to use input handler methods and events.
@@ -218,6 +237,7 @@ Blockly.JavaScript['key_down_duration'] = function (block) {
  * ```javascript
  * object.inputEnabled = true;
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_enable'] = function (block) {
@@ -235,6 +255,7 @@ Blockly.JavaScript['input_handler_enable'] = function (block) {
  * ```javascript
  * object.input.field = value;
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 /**
@@ -247,6 +268,7 @@ Blockly.JavaScript['input_handler_enable'] = function (block) {
  * ```javascript
  * object.input.field = value;
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['set_input_handler_boolean_field']
@@ -268,6 +290,7 @@ Blockly.JavaScript['set_input_handler_boolean_field']
  * ```javascript
  * object.input.field.copyFrom(value);
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
@@ -286,6 +309,7 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
  * ```javascript
  * object.input.field
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 /**
@@ -297,6 +321,7 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
  * ```javascript
  * object.input.field
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 /**
@@ -308,6 +333,7 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
  * ```javascript
  * object.input.field
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['get_input_handler_boolean_field']
@@ -328,6 +354,7 @@ Blockly.JavaScript['get_input_handler_boolean_field']
  * ```javascript
  * object.input.boundsRect = rect;
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_bounds_rect_set'] = function (block) {
@@ -344,6 +371,7 @@ Blockly.JavaScript['input_handler_bounds_rect_set'] = function (block) {
  * ```javascript
  * object.input.enableDrag();
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_enable_drag'] = function (block) {
@@ -363,6 +391,7 @@ Blockly.JavaScript['input_handler_enable_drag'] = function (block) {
  * ```javascript
  * object.input.enableDrag(center, top, pixel, alpha);
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_enable_drag_complex'] = function (block) {
@@ -383,6 +412,7 @@ Blockly.JavaScript['input_handler_enable_drag_complex'] = function (block) {
  * ```javascript
  * input.checkPointerDown(pointer)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_check_pointer_down'] = function (block) {
@@ -400,6 +430,7 @@ Blockly.JavaScript['input_handler_check_pointer_down'] = function (block) {
  * ```javascript
  * object.input.checkPointerOver(pointer)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_check_pointer_over'] = function (block) {
@@ -416,6 +447,7 @@ Blockly.JavaScript['input_handler_check_pointer_over'] = function (block) {
  * ```javascript
  * object.input.disableDrag();
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_disable_drag'] = function (block) {
@@ -433,6 +465,7 @@ Blockly.JavaScript['input_handler_disable_drag'] = function (block) {
  * ```javascript
  * object.input.enableSnap(x, y);
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_enable_snap'] = function (block) {
@@ -457,6 +490,7 @@ Blockly.JavaScript['input_handler_enable_snap'] = function (block) {
  * ```javascript
  * object.input.enableSnap(x, y, drag, release, offset_x, offset_y);
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_enable_snap_complex'] = function (block) {
@@ -479,6 +513,7 @@ Blockly.JavaScript['input_handler_enable_snap_complex'] = function (block) {
  * ```javascript
  * object.input.disableSnap();
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_disable_snap'] = function (block) {
@@ -496,6 +531,7 @@ Blockly.JavaScript['input_handler_disable_snap'] = function (block) {
  * ```javascript
  * object.input.checkPixel(x, y)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_check_pixel'] = function (block) {
@@ -513,6 +549,7 @@ Blockly.JavaScript['input_handler_check_pixel'] = function (block) {
  * ```javascript
  * object.input.isPixelPerfect()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_is_pixel_perfect'] = function (block) {
@@ -529,6 +566,7 @@ Blockly.JavaScript['input_handler_is_pixel_perfect'] = function (block) {
  * ```javascript
  * object.input.justPressed(0, time)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_just_pressed'] = function (block) {
@@ -546,6 +584,7 @@ Blockly.JavaScript['input_handler_just_pressed'] = function (block) {
  * ```javascript
  * object.input.justReleased(0, time)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_just_released'] = function (block) {
@@ -562,6 +601,7 @@ Blockly.JavaScript['input_handler_just_released'] = function (block) {
  * ```javascript
  * object.input.overDuration()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_over_duration'] = function (block) {
@@ -590,6 +630,7 @@ Blockly.JavaScript['input_handler_pointer_over'] = function (block) {
  * ```javascript
  * object.input.justOver(0, time)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_just_over'] = function (block) {
@@ -606,6 +647,7 @@ Blockly.JavaScript['input_handler_just_over'] = function (block) {
  * ```javascript
  * object.input.downDuration()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_down_duration'] = function (block) {
@@ -621,6 +663,7 @@ Blockly.JavaScript['input_handler_down_duration'] = function (block) {
  * ```javascript
  * object.input.pointerUp()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
@@ -636,6 +679,7 @@ Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
  * ```javascript
  * object.input.pointerDown()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
@@ -652,6 +696,7 @@ Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
  * ```javascript
  * object.input.start(priority);
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_start'] = function (block) {
@@ -668,6 +713,7 @@ Blockly.JavaScript['input_handler_start'] = function (block) {
  * ```javascript
  * object.input.stop();
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_stop'] = function (block) {
@@ -684,6 +730,7 @@ Blockly.JavaScript['input_handler_stop'] = function (block) {
  * ```javascript
  * object.input.justOut(0, time)
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_just_out'] = function (block) {
@@ -700,6 +747,7 @@ Blockly.JavaScript['input_handler_just_out'] = function (block) {
  * ```javascript
  * object.input.pointerOut()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_out'] = function (block) {
@@ -715,6 +763,7 @@ Blockly.JavaScript['input_handler_pointer_out'] = function (block) {
  * ```javascript
  * object.input.pointerX()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_x'] = function (block) {
@@ -730,6 +779,7 @@ Blockly.JavaScript['input_handler_pointer_x'] = function (block) {
  * ```javascript
  * object.input.pointerY()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_y'] = function (block) {
@@ -745,6 +795,7 @@ Blockly.JavaScript['input_handler_pointer_y'] = function (block) {
  * ```javascript
  * new Phaser.Point(object.input.pointerX(), object.input.pointerY())
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_position'] = function (block) {
@@ -761,6 +812,7 @@ Blockly.JavaScript['input_handler_pointer_position'] = function (block) {
  * ```javascript
  * object.input.reset();
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_reset'] = function (block) {
@@ -776,6 +828,7 @@ Blockly.JavaScript['input_handler_reset'] = function (block) {
  * ```javascript
  * object.input.destroy();
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_destroy'] = function (block) {
@@ -791,6 +844,7 @@ Blockly.JavaScript['input_handler_destroy'] = function (block) {
  * ```javascript
  * object.input.pointerDragged()
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_pointer_dragged'] = function (block) {
@@ -808,6 +862,7 @@ Blockly.JavaScript['input_handler_pointer_dragged'] = function (block) {
  * ```javascript
  * object.input.setDragLock(horizontal, vertical);
  * ```
+ *  @memberOf InputHandler
  * @block
  */
 Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
@@ -817,6 +872,9 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
   return `${object}.input.setDragLock(${horizontal}, ${vertical});\n`;
 };
 //endregion
+/**
+ * @namespace Pointer
+ */
 //region POINTER
 /**
  * Returns the chosen button from the mouse.
@@ -827,10 +885,14 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
  * ```javascript
  * object.field
  * ```
+ *  @memberOf Pointer
  * @block
  */
 Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
 //endregion
+/**
+ * @namespace DeviceButton
+ */
 //region DEVICE_BUTTON
 /**
  * Returns the chosen boolean field value of the chosen button on the pointer.
@@ -841,6 +903,7 @@ Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
  * ```javascript
  * object.field
  * ```
+ *  @memberOf DeviceButton
  * @block
  */
 /**
@@ -852,6 +915,7 @@ Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
  * ```javascript
  * object.field
  * ```
+ *  @memberOf DeviceButton
  * @block
  */
 Blockly.JavaScript['device_button_get_boolean_field'] = Blockly.JavaScript['device_button_get_numeric_field'] = getField;
@@ -864,6 +928,7 @@ Blockly.JavaScript['device_button_get_boolean_field'] = Blockly.JavaScript['devi
  * ```javascript
  * object.justReleased()
  * ```
+ *  @memberOf DeviceButton
  * @block
  */
 Blockly.JavaScript['device_button_just_released'] = function (block) {
@@ -879,6 +944,7 @@ Blockly.JavaScript['device_button_just_released'] = function (block) {
  * ```javascript
  * object.justPressed()
  * ```
+ *  @memberOf DeviceButton
  * @block
  */
 Blockly.JavaScript['device_button_just_pressed'] = function (block) {
@@ -895,6 +961,7 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
  * ```javascript
  * object.justReleased(duration)
  * ```
+ *  @memberOf DeviceButton
  * @block
  */
 Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
@@ -912,6 +979,7 @@ Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
  * ```javascript
  * object.justPressed(duration)
  * ```
+ *  @memberOf DeviceButton
  * @block
  */
 Blockly.JavaScript['device_button_just_pressed_complex'] = function (block) {

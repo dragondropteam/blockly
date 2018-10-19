@@ -1,3 +1,6 @@
+/**
+ * @namespace Camera
+ */
 //region CAMERA
 /**
  * Returns the game camera.
@@ -6,6 +9,7 @@
  * ```javascript
  * game.camera
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['game_camera'] = function () {
@@ -21,6 +25,7 @@ Blockly.JavaScript['game_camera'] = function () {
  * ```javascript
  * function toHexColor(color) { return color.replace("#", "0x"); } game.camera.fade(toHexColorFunc(colour), time, true);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_fade'] = function (block) {
@@ -45,6 +50,7 @@ Blockly.JavaScript['camera_fade'] = function (block) {
  * ```javascript
  * function toHexColor(color) { return color.replace("#", "0x"); } game.camera.flash(toHexColorFunc(colour), time, true);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_flash'] = function (block) {
@@ -68,6 +74,7 @@ Blockly.JavaScript['camera_flash'] = function (block) {
  * ```javascript
  * game.camera.focusOn(object);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_focus_on'] = function (block) {
@@ -84,6 +91,7 @@ Blockly.JavaScript['camera_focus_on'] = function (block) {
  * ```javascript
  * game.camera.focusOnXY(posX, posY);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_focus_on_xy'] = function (block) {
@@ -99,6 +107,7 @@ Blockly.JavaScript['camera_focus_on_xy'] = function (block) {
  * ```javascript
  * game.camera.reset();
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_reset'] = function (block) {
@@ -110,6 +119,7 @@ Blockly.JavaScript['camera_reset'] = function (block) {
  * @method camera_reset_fx
  * @return {} game.camera.resetFX();
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_reset_fx'] = function (block) {
@@ -123,6 +133,7 @@ Blockly.JavaScript['camera_reset_fx'] = function (block) {
  * ```javascript
  * game.camera.setBoundsToWorld();
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_set_bounds_to_world'] = function (block) {
@@ -138,6 +149,7 @@ Blockly.JavaScript['camera_set_bounds_to_world'] = function (block) {
  * ```javascript
  * game.camera.setPosition(posX, posY);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_set_position'] = function (block) {
@@ -155,6 +167,7 @@ Blockly.JavaScript['camera_set_position'] = function (block) {
  * ```javascript
  * game.camera.setSize(width, height);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_set_size'] = function (block) {
@@ -173,6 +186,7 @@ Blockly.JavaScript['camera_set_size'] = function (block) {
  * ```javascript
  * game.camera.shake(intensity, duration, true, Phaser.Camera.direction);
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_shake'] = function (block) {
@@ -189,6 +203,7 @@ Blockly.JavaScript['camera_shake'] = function (block) {
  * ```javascript
  * game.camera.unfollow();
  * ```
+ *  @memberOf Camera
  * @block
  */
 Blockly.JavaScript['camera_unfollow'] = function (block) {

@@ -1,3 +1,4 @@
+
 //region SPRITES AND IMAGES
 Blockly.Blocks['create_image'] = {
   init: function () {
