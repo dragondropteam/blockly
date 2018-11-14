@@ -6,9 +6,9 @@
  * Enables stepping through the game loop one frame at a time. Must use game.step()
  * @method enable_step
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.enableStep();
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -19,9 +19,9 @@ Blockly.JavaScript['enable_step'] = function (block) {
  * Disables stepping through the game loop.
  * @method disable_step
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.disableStep();
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -32,9 +32,9 @@ Blockly.JavaScript['disable_step'] = function (block) {
  * Steps through the game loop one frame at a time.
  * @method step
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.step();
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -49,9 +49,9 @@ Blockly.JavaScript['step'] = function (block) {
  * @param colour colour to render the object with
  * @param filled {Boolean} whether or not to leave the object filled or stroked
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.geom(object, colour, filled);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -70,9 +70,9 @@ Blockly.JavaScript['debug_geom'] = function (block) {
  * @param x {Number} x coordiante to display the information at
  * @param y {Number} y coordinate to display the information at
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.spriteInfo(object, x, y);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -87,7 +87,7 @@ Blockly.JavaScript['debug_sprite'] = function (block) {
 /*Blockly.JavaScript['debug_body_info'] = function(block) {
   const object = Blockly.JavaScript.valueToCode(block, 'OBJECT', Blockly.JavaScript.ORDER_ATOMIC);
   return `game.debug.bodyInfo(${object},${0},${20});\n`;
-};* ```
+};* </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -99,9 +99,9 @@ Blockly.JavaScript['debug_sprite'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.bodyInfo(object, x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -121,9 +121,9 @@ Blockly.JavaScript['debug_body_info'] = function (block) {
  * @param colour colour to display the body with
  * @param filled {Boolean} whether or not the body should display as stroked or filled
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.body(object, colour, filled);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -141,9 +141,9 @@ Blockly.JavaScript['debug_body_render'] = function (block) {
  * @param camera camera to display properties of
  * @param colour colour to display the properties with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.camera(camera, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -160,9 +160,9 @@ Blockly.JavaScript['debug_camera'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.cameraInfo(game.camera, x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -181,9 +181,9 @@ Blockly.JavaScript['debug_camera_info'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.inputInfo(x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -203,9 +203,9 @@ Blockly.JavaScript['debug_input_info'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.key(game.input.keyboard.addKey(Phaser.Keyboard.dropdown_key), x, y);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -222,7 +222,7 @@ Blockly.JavaScript['debug_key'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['debug_physics_group'] = function (block) {
@@ -238,9 +238,9 @@ Blockly.JavaScript['debug_physics_group'] = function (block) {
  * @param rect rectangle to display
  * @param colour colour to display the rectangle with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.rectangle(rect, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -255,7 +255,7 @@ Blockly.JavaScript['debug_rectangle'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['debug_sound'] = function (block) {
@@ -274,9 +274,9 @@ Blockly.JavaScript['debug_sound'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.soundInfo(sound, x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -297,9 +297,9 @@ Blockly.JavaScript['debug_sound_info'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @parm colour colour to display the coordinates with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.spriteCoords(sprite, x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -320,9 +320,9 @@ Blockly.JavaScript['debug_sprite_coords'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @parm colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.spriteInfo(sprite, x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -343,9 +343,9 @@ Blockly.JavaScript['debug_sprite_info'] = function (block) {
  * @param y {Number} y coordinate to display the information at
  * @param colour colour to display the information with
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.text(text, x, y, colour);
- * ```
+ * </code></pre>
  *  @memberOf Debug
  * @block
  */
@@ -367,9 +367,9 @@ Blockly.JavaScript['debug_text'] = function (block) {
  * @method math_deg_to_rad
  * @param degrees {Number} the number of degrees to convert to radians.
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.math.degToRad(degrees)
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -383,9 +383,9 @@ Blockly.JavaScript['math_deg_to_rad'] = function (block) {
  * @method math_rad_to_deg
  * @param radians {Number} the number of radians to convert to degrees
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.math.radToDeg(radians)
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -404,9 +404,9 @@ Blockly.JavaScript['math_rad_to_deg'] = function (block) {
  * @param value {Number} the search value
  * @param array the list to search
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.ArrayUtils.findClosest(value, array)
- * ```
+ * </code></pre>
  *  @memberOf PhaserList
  * @block
  */
@@ -421,9 +421,9 @@ Blockly.JavaScript['list_find_closest'] = function (block) {
  * @method list_get_random
  * @param array list to get the value from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.ArrayUtils.getRandomItem(array)
- * ```
+ * </code></pre>
  *  @memberOf PhaserList
  * @block
  */
@@ -438,9 +438,9 @@ Blockly.JavaScript['list_get_random'] = function (block) {
  * @param start {Number} the minimum value the list starts with
  * @param end {Number} the maximum value the list contains
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.ArrayUtils.numberArray(start, end)
- * ```
+ * </code></pre>
  *  @memberOf PhaserList
  * @block
  */
@@ -457,9 +457,9 @@ Blockly.JavaScript['number_list'] = function (block) {
  * @param end {Number} the maximum value the list starts with
  * @param step {Number} the value to incremement/decrement by
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.ArrayUtils.numberArrayStep(start, end, step)
- * ```
+ * </code></pre>
  *  @memberOf PhaserList
  * @block
  */
@@ -475,9 +475,9 @@ Blockly.JavaScript['number_list_step'] = function (block) {
  * @method list_remove_random_item
  * @param array list to get the item from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.ArrayUtils.removeRandomItem(array)
- * ```
+ * </code></pre>
  *  @memberOf PhaserList
  * @block
  */
@@ -491,9 +491,9 @@ Blockly.JavaScript['list_remove_random_item'] = function (block) {
  * @method list_shuffle
  * @param array list to shuffle
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.ArrayUtils.shuffle(array);
- * ```
+ * </code></pre>
  *  @memberOf PhaserList
  * @block
  */
@@ -510,7 +510,7 @@ Blockly.JavaScript['list_shuffle'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['create_random_generator'] = function (block) {
@@ -521,7 +521,7 @@ Blockly.JavaScript['create_random_generator'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['create_random_generator_seeded'] = function (block) {
@@ -533,9 +533,9 @@ Blockly.JavaScript['create_random_generator_seeded'] = function (block) {
  * Returns a random angle between -180 and 180.
  * @method random_angle
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.angle()
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -548,9 +548,9 @@ Blockly.JavaScript['random_angle'] = function (block) {
  * @method random_pick
  * @param array list to pick from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.pick(array)
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -564,9 +564,9 @@ Blockly.JavaScript['random_pick'] = function (block) {
  * @method random_pick_weighted
  * @param array list to pick from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.weightedPick(array)
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -579,9 +579,9 @@ Blockly.JavaScript['random_pick_weighted'] = function (block) {
  * Returns a random real number between 0 and 2^32.
  * @method random_real
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.real()
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -595,9 +595,9 @@ Blockly.JavaScript['random_real'] = function (block) {
  * @param min {Number} the minimum value in the range
  * @param max {Number} the maximum value in the range
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.realInRange(min, max)
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -611,9 +611,9 @@ Blockly.JavaScript['random_real_in_range'] = function (block) {
  * Returns a random sign to be used with multiplication. Returns -1 or +1.
  * @method random_sign
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.sign()
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -625,9 +625,9 @@ Blockly.JavaScript['random_sign'] = function (block) {
  * Randomly returns true or false.
  * @method random_boolean
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.rnd.pick([true, false])
- * ```
+ * </code></pre>
  *  @memberOf Random
  * @block
  */
@@ -642,9 +642,9 @@ Blockly.JavaScript['random_boolean'] = function () {
  * @param ease easing method to return
  * @param direction direction for the easing method to use
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phasser.ease.direction
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -658,9 +658,9 @@ Blockly.JavaScript['phaser_easing'] = function (block) {
  * Returns the linear easing method.
  * @method phaser_easing_linear
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Easing.Linear.None
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -681,9 +681,9 @@ Blockly.JavaScript['phaser_easing_linear'] = function (block) {
  * @param yoyo {Boolean} option for the tween to reverse itself and play backwards
  * @param properties (optional) optional properties to add to the tween
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.add.tween(target).to(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -714,9 +714,9 @@ Blockly.JavaScript['phaser_game_add_tween_to'] = function (block) {
  * @param yoyo {Boolean} option for the tween to reverse itself and play backwards
  * @param properties (optional) optional properties to add to the tween
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.add.tween(target).from(properties[if used], duration, ease, autostart, delay, repeat, yoyo)
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -741,9 +741,9 @@ Blockly.JavaScript['phaser_game_add_tween_from'] = function (block) {
  * @param tween tween to stop
  * @param complete {Boolean} if true, dispatches the onComplete signal
  * @returns {}
- * ```javascript
+ * <pre><code>
  * tween.stop(complete);
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -758,9 +758,9 @@ Blockly.JavaScript['phaser_stop_tween'] = function (block) {
  * @method phaser.pause.tween
  * @param tween tween to pause
  * @returns {}
- * ```javascript
+ * <pre><code>
  * tween.pause();
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -774,9 +774,9 @@ Blockly.JavaScript['phaser_pause_tween'] = function (block) {
  * @method phaser_resume_tween
  * @param tween tween to resume
  * @returns {}
- * ```javascript
+ * <pre><code>
  * tween.resume();
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -790,9 +790,9 @@ Blockly.JavaScript['phaser_resume_tween'] = function (block) {
  * @method phaser_start_tween
  * @param tween tween to start
  * @returns {}
- * ```javascript
+ * <pre><code>
  * tween.start();
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */
@@ -809,9 +809,9 @@ Blockly.JavaScript['phaser_start_tween'] = function (block) {
  * @param delay {Number} the amount of time to wait until the yoyo will start
  * @param index {Number} choose the object index on the tween to apply this to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * tween.yoyo(enable, delay, index);
- * ```
+ * </code></pre>
  *  @memberOf Math
  * @block
  */

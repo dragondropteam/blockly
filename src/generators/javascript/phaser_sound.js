@@ -8,9 +8,9 @@
  * @param tag {String} tag to name the sound
  * @param source {String} file path of the sound
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.load.audio(tag, source);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -24,7 +24,7 @@ Blockly.JavaScript['load_sound'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['play_sound'] = function (block) {
@@ -41,9 +41,9 @@ Blockly.JavaScript['play_sound'] = function (block) {
  * @param volume {Number} volume to play the sound at
  * @param looping {Boolean} whether or not to loop the sound when it's played
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.add.audio(tag, volume, looping)
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -58,7 +58,7 @@ Blockly.JavaScript['add_sound'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['remove_sound'] = function (block) {
@@ -71,9 +71,9 @@ Blockly.JavaScript['remove_sound'] = function (block) {
  * @method stop_pause_resume_sounds
  * @param option which option to do
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.sound.optionAll();
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -89,9 +89,9 @@ Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
  * @param object sound to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.element = value;
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -102,9 +102,9 @@ Blockly.JavaScript['stop_pause_resume_sounds'] = function (block) {
  * @param object sound to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.element = value;
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -116,9 +116,9 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * @param object object to get values from
  * @param element the element to get values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.element
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -128,9 +128,9 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * @param object object to get values from
  * @param element the element to get values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.element
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -140,9 +140,9 @@ Blockly.JavaScript['set_sound_boolean_member'] = Blockly.JavaScript['set_sound_n
  * @param object object to get values from
  * @param element the element to get values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.element
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -155,9 +155,9 @@ Blockly.JavaScript['get_sound_boolean_member'] = Blockly.JavaScript['get_sound_n
  * @param duration {Number} the time it takes for the sound to reach maximum volume
  * @param loop {Boolean} whether or not the sound should loop
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.fadeIn(duration, loop);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -174,9 +174,9 @@ Blockly.JavaScript['sound_fade_in'] = function (block) {
  * @param sound_object sound to stop
  * @param duration {Number} the time it takes for the sound to reach 0
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.fadeOut(duration);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -193,9 +193,9 @@ Blockly.JavaScript['sound_fade_out'] = function (block) {
  * @param duration {Number} the time it takes for the sound to reach the new volume
  * @param volume {Number} the volume to change the sound to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.fadeTo(duration, volume);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -212,9 +212,9 @@ Blockly.JavaScript['sound_fade_to'] = function (block) {
  * @param sound_object sound to loop
  * @param volume {Number} volume to play the sound at
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.loopFull(volume);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -229,9 +229,9 @@ Blockly.JavaScript['sound_loop_full'] = function (block) {
  * @method sound_stop
  * @param sound_object sound to stop
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.stop();
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -245,9 +245,9 @@ Blockly.JavaScript['sound_stop'] = function (block) {
  * @method sound_pause
  * @param sound_object sound to pause
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.pause();
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -261,9 +261,9 @@ Blockly.JavaScript['sound_pause'] = function (block) {
  * @method sound_resume
  * @param sound_object sound to resume
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.resume();
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -281,9 +281,9 @@ Blockly.JavaScript['sound_resume'] = function (block) {
  * @param loop {Boolean} whether or not the sound should loop
  * @param restart {Boolean} option to force the sound to restart from the beginning
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.play('', position, volume, loop, restart);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */
@@ -305,9 +305,9 @@ Blockly.JavaScript['sound_play'] = function (block) {
  * @param volume {Number} the volume to play the sound at
  * @param loop {Boolean} whether or not the sound should loop
  * @returns {}
- * ```javascript
+ * <pre><code>
  * sound_object.play('', position, volume loop);
- * ```
+ * </code></pre>
  *  @memberOf Sound
  * @block
  */

@@ -10,9 +10,9 @@
  * @param width {Number} width of the rectangle
  * @param height {Number} height of the rectangle
  * @returns {}
- * ```javascript
+ * <pre><code>
  * new Phaser.Rectangle(x, y, width, height)
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -30,9 +30,9 @@ Blockly.JavaScript['rectangle_create'] = function (block) {
  * @param rectA first rectangle to check
  * @param rectB second rectangle to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Rectangle.intersects(rectA, rectB)
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -48,9 +48,9 @@ Blockly.JavaScript['rectangle_intersects'] = function (block) {
  * @param object object to get values from
  * @param field the field to get values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -60,9 +60,9 @@ Blockly.JavaScript['rectangle_intersects'] = function (block) {
  * @param object object to get values from
  * @param field the field to get values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -81,9 +81,9 @@ Blockly.JavaScript['rectangle_get_numeric_field']
  * @param field the field to set
  * @param value {Number} value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field = value;
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -101,9 +101,9 @@ Blockly.JavaScript['rectangle_set_numeric_field'] = function (block) {
  * @param field the field to set
  * @param point point to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field.copyFrom(point);
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -115,9 +115,9 @@ Blockly.JavaScript['rectangle_set_point_field'] = setPointField;
  * @param rectangle rectangle to check
  * @param point point to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Rectangle.containsPoint(rectangle, point)
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -134,9 +134,9 @@ Blockly.JavaScript['rectangle_contains_point'] = function (block) {
  * @param x {Number} x coordinate to check
  * @param y {Number} y coordinate to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Rectangle.contains(rectangle, x, y)
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -152,9 +152,9 @@ Blockly.JavaScript['rectangle_contains'] = function (block) {
  * @param rectangle_a the first rectangle to check
  * @param rectangle_b the second rectangle to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Rectangle.containsRect(rectangle_a, rectangle_b)
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -169,9 +169,9 @@ Blockly.JavaScript['rectangle_contains_rect'] = function (block) {
  * @method rectangle_clone
  * @param rectangle rectangle to clone
  * @returns {}
- * ```javascript
+ * <pre><code>
  * rectangle.clone()
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -186,9 +186,9 @@ Blockly.JavaScript['rectangle_clone'] = function (block) {
  * @method rectangle_random
  * @param rectangle rectangle to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * rectangle.random()
- * ```
+ * </code></pre>
  *  @memberOf Rectangle
  * @block
  */
@@ -207,9 +207,9 @@ Blockly.JavaScript['rectangle_random'] = function (block) {
  * @param x {Number} x value for the point
  * @param y {Number} y value for the point
  * @returns {}
- * ```javascript
+ * <pre><code>
  * new Phaser.Point(x, y)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -225,9 +225,9 @@ Blockly.JavaScript['point_create'] = function (block) {
  * @param element which value to return
  * @param point point to get the value from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.element
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -244,9 +244,9 @@ Blockly.JavaScript['point_get_element'] = function (block) {
  * @param point point to set the value for
  * @param value {Number} value to set the element to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.element = value;
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -263,9 +263,9 @@ Blockly.JavaScript['point_set_element'] = function (block) {
  * @param point point to set the magnitude for
  * @param value {Number} value to set the magnitude to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.setMagnitude(value);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -281,9 +281,9 @@ Blockly.JavaScript['point_set_magnitude'] = function (block) {
  * @param pointA first point to add
  * @param pointB second point to add
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.add(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -299,9 +299,9 @@ Blockly.JavaScript['points_add'] = function (block) {
  * @param pointA first point to subtract
  * @param pointB second point to subtract
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.subtract(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -317,9 +317,9 @@ Blockly.JavaScript['points_subtract'] = function (block) {
  * @param pointA first angle to calculate
  * @param pointB second angle to calculate
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.angle(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -335,9 +335,9 @@ Blockly.JavaScript['points_angle_between'] = function (block) {
  * @param pointA first angle to calculate
  * @param pointB second angle to calculate
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.distance(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -353,9 +353,9 @@ Blockly.JavaScript['points_distance'] = function (block) {
  * @param pointA first point to divide
  * @param pointB second point to divide
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.divide(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -371,9 +371,9 @@ Blockly.JavaScript['points_divide'] = function (block) {
  * @param pointA first point to check
  * @param pointB second point to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.equals(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -390,9 +390,9 @@ Blockly.JavaScript['points_equals'] = function (block) {
  * @param pointB second point
  * @param f {Number} the level of interpolation between the two points
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.interpolate(pointA, pointB, f)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -409,9 +409,9 @@ Blockly.JavaScript['points_interpolate'] = function (block) {
  * @param pointA first point to multiply
  * @param pointB second point to multiply
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.multiply(pointA, pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -426,9 +426,9 @@ Blockly.JavaScript['points_multiply'] = function (block) {
  * @method points_negate
  * @param pointA point to get the values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.negative(pointA)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -442,9 +442,9 @@ Blockly.JavaScript['points_negate'] = function (block) {
  * @method points_normalize
  * @param pointA point to normalize
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.normalize(pointA)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -458,9 +458,9 @@ Blockly.JavaScript['points_normalize'] = function (block) {
  * @method points_perpendicular
  * @param pointA point to get the vector from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.perp(pointA)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -474,9 +474,9 @@ Blockly.JavaScript['points_perpendicular'] = function (block) {
  * @method points_centroid
  * @param array {Array} list of points to calculate the centroid from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Point.centroid(array)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -492,9 +492,9 @@ Blockly.JavaScript['points_centroid'] = function (block) {
  * @param min {Number} the minimum value to clamp the point to
  * @param max {Number} the maximum value to clamp the point to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.clamp(min, max);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -512,9 +512,9 @@ Blockly.JavaScript['points_clamp'] = function (block) {
  * @param min {Number} the minimum value to clamp the value to
  * @param max {Number} the maximum value to lcmap the value to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.clampX(min, max);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -532,9 +532,9 @@ Blockly.JavaScript['points_clamp_x'] = function (block) {
  * @param min {Number} the minimum value to clamp the value to
  * @param max {Number} the maximum value to lcmap the value to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.clampY(min, max);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -550,9 +550,9 @@ Blockly.JavaScript['points_clamp_y'] = function (block) {
  * @method points_clone
  * @param point point to clone
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.clone()
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -567,9 +567,9 @@ Blockly.JavaScript['points_clone'] = function (block) {
  * @param source point to get the values from
  * @param target point to copy the values to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * target.copyFrom(source);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -585,9 +585,9 @@ Blockly.JavaScript['points_copy_from'] = function (block) {
  * @param pointA left-hand side
  * @param pointB right-hand side
  * @returns {}
- * ```javascript
+ * <pre><code>
  * pointA.cross(pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -603,9 +603,9 @@ Blockly.JavaScript['points_cross'] = function (block) {
  * @param pointA left-hand side
  * @param pointB right-hand side
  * @returns {}
- * ```javascript
+ * <pre><code>
  * pointA.dot(pointB)
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -622,9 +622,9 @@ Blockly.JavaScript['points_dot'] = function (block) {
  * @param x {Number} x value to add to the point
  * @param y {Number} y value to add to the point
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.add(x, y);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -642,9 +642,9 @@ Blockly.JavaScript['points_add_member'] = function (block) {
  * @param x {Number} x value to subtract from the point
  * @param y {Number} y value to subtract from the point
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.subtract(x, y);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -662,9 +662,9 @@ Blockly.JavaScript['points_subtract_member'] = function (block) {
  * @param x {Number} x value to divide the point by
  * @param y {Number} y value to divide the point by
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.divide(x, y);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -682,9 +682,9 @@ Blockly.JavaScript['points_divide_member'] = function (block) {
  * @param x {Number} x value to multiply the point by
  * @param y {Number} y value to multiply the point by
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.multiply(x, y);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -700,9 +700,9 @@ Blockly.JavaScript['points_multiply_member'] = function (block) {
  * @method points_ceil
  * @param point point to change the values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.ceil();
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -716,9 +716,9 @@ Blockly.JavaScript['points_ceil'] = function (block) {
  * @method points_floor
  * @param point point to change the values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.floor();
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -732,9 +732,9 @@ Blockly.JavaScript['points_floor'] = function (block) {
  * @method points_get_magnitude
  * @param point point to get the magnitude of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.getMagnitude()
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -748,9 +748,9 @@ Blockly.JavaScript['points_get_magnitude'] = function (block) {
  * @method points_get_magnitude_squared
  * @param point point to get the magnitude squared of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.getMagnitudeSq()
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -764,9 +764,9 @@ Blockly.JavaScript['points_get_magnitude_squared'] = function (block) {
  * @method points_invert
  * @param point point to invert
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.invert();
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -780,9 +780,9 @@ Blockly.JavaScript['points_invert'] = function (block) {
  * @method points_is_zero
  * @param point point to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.isZero()
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -797,9 +797,9 @@ Blockly.JavaScript['points_is_zero'] = function (block) {
  * @param point point to change
  * @param max {Number} the value to set the maximum to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.limit(max);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -816,9 +816,9 @@ Blockly.JavaScript['points_limit'] = function (block) {
  * @param degrees {Number} degrees of the polar coordinate
  * @param radius {Number} radius of the polar coordinate
  * @returns {}
- * ```javascript
+ * <pre><code>
  * point.setToPolar(degrees, radius, true);
- * ```
+ * </code></pre>
  *  @memberOf Point
  * @block
  */
@@ -840,9 +840,9 @@ Blockly.JavaScript['points_set_to_polar'] = function (block) {
  * @param y {Number} y coordinate to create the circle at
  * @param diameter {Number} diameter of the circle
  * @returns {}
- * ```javascript
+ * <pre><code>
  * new Phaser.Circle(x, y, diameter)
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -859,9 +859,9 @@ Blockly.JavaScript['circle_create'] = function (block) {
  * @param object object to get values from
  * @param field the field to get values of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -878,9 +878,9 @@ Blockly.JavaScript['circle_get_numeric_field'] = function (block) {
  * @param field the field to set
  * @param value {Number} value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field = value;
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -897,9 +897,9 @@ Blockly.JavaScript['circle_set_numeric_field'] = function (block) {
  * @param circle_a first circle to check
  * @param circle_b second circle to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Circle.intersects(circle_a, circle_b)
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -915,9 +915,9 @@ Blockly.JavaScript['circle_intersects'] = function (block) {
  * @param circle circle to check
  * @param rectangle rectangle to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * Phaser.Circle.intersectsRectangle(circle, rectangle)
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -932,9 +932,9 @@ Blockly.JavaScript['circle_intersects_rectangle'] = function (block) {
  * @method circle_clone
  * @param circle circle to clone
  * @returns {}
- * ```javascript
+ * <pre><code>
  * circle.clone()
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -950,9 +950,9 @@ Blockly.JavaScript['circle_clone'] = function (block) {
  * @param x {Number} the x value to check
  * @param y {Number} the y value to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * circle.contains(x, y)
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -968,9 +968,9 @@ Blockly.JavaScript['circle_contains'] = function (block) {
  * @method cirlce_random
  * @param circle circle to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * circle.random()
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -984,9 +984,9 @@ Blockly.JavaScript['circle_random'] = function (block) {
  * @method circle_circumference
  * @param circle circle to get circumference of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * circle.circumference()
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */
@@ -1001,9 +1001,9 @@ Blockly.JavaScript['circle_circumference'] = function (block) {
  * @param circle circle to get values from
  * @param degrees {Number} angle to get the point at
  * @returns {}
- * ```javascript
+ * <pre><code>
  * circle_circumference_point
- * ```
+ * </code></pre>
  *  @memberOf Circle
  * @block
  */

@@ -10,9 +10,9 @@
  * @param width {Number} The width of the game world
  * @param height {Number} The height of the game world
  * @returns {}
- * ```javascript
+ * <pre><code>
  * var game = new Phaser.Game([width], [height], Phaser.AUTO, '', {preload: preload, create: create, update: update});
- * ```
+ * </code></pre>
  *  @memberOf Startup
  * @block
  */
@@ -38,9 +38,9 @@ Blockly.JavaScript['phaser_simple_init'] = function (block) {
  * @param width {Number} The width of the game world
  * @param height {Number} The height of the game world
  * @returns {}
- * ```javascript
+ * <pre><code>
  * var game = new Phaser.Game(${number_width}, ${number_height}, Phaser.AUTO, '');
- * ```
+ * </code></pre>
  *  @memberOf Startup
  * @block
  */
@@ -54,12 +54,12 @@ Blockly.JavaScript['start_phaser_for_states'] = function (block) {
  * Stretch the stuff
  * @method center_and_stretch
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
  this.scale.pageAlignHorizontally = true;
  this.scale.pageAlignVertically = true;
  this.scale.updateLayout( true );
- * ```
+ * </code></pre>
  *  @memberOf Startup
  * @block
  */
@@ -76,9 +76,9 @@ Blockly.JavaScript['center_and_stretch'] = function (block) {
  * @method get_world_property
  * @param property property to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.world.property
- * ```
+ * </code></pre>
  *  @memberOf World
  * @block
  */
@@ -95,9 +95,9 @@ Blockly.JavaScript['get_world_property'] = function (block) {
  * @param w {Number} the width of the game world
  * @param h {Number} the height of the game world
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.world.setBounds(x, y, w, h);
- * ```
+ * </code></pre>
  *  @memberOf World
  * @block
  */
@@ -113,7 +113,7 @@ Blockly.JavaScript['set_world_bounds'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['create_point'] = function (block) {
@@ -126,7 +126,7 @@ Blockly.JavaScript['create_point'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['set_scale'] = function (block) {
@@ -143,9 +143,9 @@ Blockly.JavaScript['set_scale'] = function (block) {
  * @param y {Number} amount to scale the object in the y direction
  * @param object object to scale
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.scale.setTo(x, y);
- * ```
+ * </code></pre>
  *  @memberOf World
  * @block
  */
@@ -160,7 +160,7 @@ Blockly.JavaScript['set_scale_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['set_pos'] = function (block) {
@@ -175,7 +175,7 @@ Blockly.JavaScript['set_pos'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['set_velocity'] = function (block) {
@@ -190,7 +190,7 @@ Blockly.JavaScript['set_velocity'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['get_param'] = function (block) {
@@ -204,7 +204,7 @@ Blockly.JavaScript['get_param'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['get_world_reference'] = function (block) {
@@ -216,9 +216,9 @@ Blockly.JavaScript['get_world_reference'] = function (block) {
  * @method set_game_pause
  * @param paused {Boolean} sets the game paused to true or false
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.paused = paused;
- * ```
+ * </code></pre>
  *  @memberOf World
  * @block
  */
@@ -232,9 +232,9 @@ Blockly.JavaScript['set_game_pause'] = function (block) {
  * Returns whether or not the game is paused.
  * @method get_game_pause
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.paused
- * ```
+ * </code></pre>
  *  @memberOf World
  * @block
  */
@@ -252,9 +252,9 @@ Blockly.JavaScript['get_game_pause'] = function (block) {
  * @param name {String} name of the new state
  * @param key tag to use for the state
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.state.add(key, name);
- * ```
+ * </code></pre>
  *  @memberOf States
  * @block
  */
@@ -270,9 +270,9 @@ Blockly.JavaScript['statemanager_add_state'] = function (block) {
  * @method statemanager_start_state
  * @param tag tag of the state to start
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.start.state(tag);
- * ```
+ * </code></pre>
  *  @memberOf States
  * @block
  */
@@ -286,9 +286,9 @@ Blockly.JavaScript['statemanager_start_state'] = function (block) {
  * Returns the state that is currently running.
  * @method statemanager_get_current_state
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.state.getCurrentState()
- * ```
+ * </code></pre>
  *  @memberOf States
  * @block
  */
@@ -300,9 +300,9 @@ Blockly.JavaScript['statemanager_get_current_state'] = function (block) {
  * Restarts the current state.
  * @method statemanager_restart_state
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.state.restart();
- * ```
+ * </code></pre>
  *  @memberOf States
  * @block
  */
@@ -315,9 +315,9 @@ Blockly.JavaScript['statemanager_restart_state'] = function (block) {
  * @method statemanager_check_state
  * @param key {String} tag of the state to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.state.checkState(key)
- * ```
+ * </code></pre>
  *  @memberOf States
  * @block
  */
@@ -337,9 +337,9 @@ Blockly.JavaScript['statemanager_check_state'] = function (block) {
  * @method get_time_numeric_member
  * @param field the value to get
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.time.field
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -354,9 +354,9 @@ Blockly.JavaScript['get_time_numeric_member'] = function (block) {
  * @param field the value to set
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.time.field = value;
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -370,9 +370,9 @@ Blockly.JavaScript['set_time_numeric_member'] = function (block) {
  * Returns the physics update delta in seconds.
  * @method delta_time_seconds
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.time.physicsElapsed
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -384,9 +384,9 @@ Blockly.JavaScript['delta_time_seconds'] = function (block) {
  * Returns the physics update delta in milliseconds.
  * @method delta_time_milliseconds
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.time.physicsElapsedMS
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -401,9 +401,9 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
  * @param field the value to get
  * @param timer timer to get the values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.field
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -413,9 +413,9 @@ Blockly.JavaScript['delta_time_milliseconds'] = function (block) {
  * @param field the value to get
  * @param timer timer to get the values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.field
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -434,9 +434,9 @@ Blockly.JavaScript['get_timer_numeric_member'] =
  * @param timer timer to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.field = value;
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -447,9 +447,9 @@ Blockly.JavaScript['get_timer_numeric_member'] =
  * @param timer timer to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.field = value;
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -467,9 +467,9 @@ Blockly.JavaScript['set_timer_numeric_member'] =
  * @method create_timer
  * @param autoDestroy {Boolean} whether or not the timer should automatically destroy when it's done
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.time.create(autoDestroy)
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -483,9 +483,9 @@ Blockly.JavaScript['create_timer'] = function (block) {
  * @method time_constants
  * @param constant which time value to return
  * @returns {}
- * ```javascript
+ * <pre><code>
  * constant
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -500,9 +500,9 @@ Blockly.JavaScript['time_constants'] = function (block) {
  * @param delay {Number} how long to wait before starting the timer
  * @param timer timer to start
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.start(delay);
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -516,7 +516,7 @@ Blockly.JavaScript['start_timer'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['timer_add_event'] = function (block) {
@@ -533,9 +533,9 @@ Blockly.JavaScript['timer_add_event'] = function (block) {
  * @param timer timer to add the function call event to
  * @param arguments (optional) arguments to use in the function that gets called
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.add(delay, callback, undefined, arguments[if any]);
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -553,7 +553,7 @@ Blockly.JavaScript['timer_add_event_complex'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['timer_loop_event'] = function (block) {
@@ -572,9 +572,9 @@ Blockly.JavaScript['timer_loop_event'] = function (block) {
  * @param timer timer to add the function call event to
  * @param arguments (optional) arguments to use in the function that gets called
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.add(delay, callback, arguments[if any]);
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -592,7 +592,7 @@ Blockly.JavaScript['timer_loop_event_complex'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['timer_repeat_event'] = function (block) {
@@ -612,9 +612,9 @@ Blockly.JavaScript['timer_repeat_event'] = function (block) {
  * @param timer timer to add the function call event to
  * @param arguments (optional) arguments to use in the function that gets called
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.add(delay, repeatCount, callback, arguments[if any]);
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -634,9 +634,9 @@ Blockly.JavaScript['timer_repeat_event_complex'] = function (block) {
  * @method timer_destroy
  * @param timer timer to destroy
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.destroy();
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -650,9 +650,9 @@ Blockly.JavaScript['timer_destroy'] = function (block) {
  * @method timer_pause
  * @param timer timer to pause
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.pause();
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -666,9 +666,9 @@ Blockly.JavaScript['timer_pause'] = function (block) {
  * @method timer_resume
  * @param timer timer to resume
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.resume();
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -683,9 +683,9 @@ Blockly.JavaScript['timer_resume'] = function (block) {
  * @param timer timer to stop
  * @param clearEvents {Boolean} option to keep or remove events related to the timer
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.stop(clearEvents);
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */
@@ -699,7 +699,7 @@ Blockly.JavaScript['timer_stop'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['timer_duration'] = function (block) {
@@ -713,9 +713,9 @@ Blockly.JavaScript['timer_duration'] = function (block) {
  * @param timer timer to use
  * @param callback function to call
  * @returns {}
- * ```javascript
+ * <pre><code>
  * timer.onComplete.add(callback);
- * ```
+ * </code></pre>
  *  @memberOf Time
  * @block
  */

@@ -7,9 +7,9 @@
  * @deprecated
  * @method
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
- * ```
+ * </code></pre>
  *  @memberOf Setup
  * @block
  */
@@ -22,9 +22,9 @@ Blockly.JavaScript['start_physics'] = function (block) {
  * Enables the Phaser Arcade phyiscs to be used in the game.
  * @method start_arcade_physics
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.startSystem(Phaser.Physics.ARCADE);
- * ```
+ * </code></pre>
  *  @memberOf Setup
  * @block
  */
@@ -38,9 +38,9 @@ Blockly.JavaScript['start_arcade_physics'] = function () {
  * @method enable_body_group
  * @param
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
- * ```
+ * </code></pre>
  *  @memberOf Setup
  * @block
  */
@@ -54,9 +54,9 @@ Blockly.JavaScript['enable_body_group'] = function (block) {
  * @method enable_body_group_vi
  * @param group group to enable physics on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * group.enableBody = true;
- * ```
+ * </code></pre>
  *  @memberOf Setup
  * @block
  */
@@ -71,9 +71,9 @@ Blockly.JavaScript['enable_body_group_vi'] = function (block) {
  * @method enable_arcade_phy
  * @param
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
- * ```
+ * </code></pre>
  *  @memberOf Setup
  * @block
  */
@@ -87,9 +87,9 @@ Blockly.JavaScript['enable_arcade_physics_for_object'] = function (block) {
  * @method enable_arcade_physics_for_object_vi
  * @param object object to enable physics on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.enable(object);
- * ```
+ * </code></pre>
  *  @memberOf Setup
  * @block
  */
@@ -107,9 +107,9 @@ Blockly.JavaScript['enable_arcade_physics_for_object_vi'] = function (block) {
  * @method debug_body
  * @param object object to render the body for
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.debug.body(object);
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -124,9 +124,9 @@ Blockly.JavaScript['debug_body'] = function (block) {
  * @method stop_body
  * @param object object to set values for
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.stop();
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -143,9 +143,9 @@ Blockly.JavaScript['stop_body'] = function (block) {
  * @param field the field to set
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.field.copyFrom(value);
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -165,9 +165,9 @@ Blockly.JavaScript['set_body_field_point'] = function (block) {
  * @object object to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.field.element = value;
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -186,9 +186,9 @@ Blockly.JavaScript['set_body_field_point_vi'] = function (block) {
  * @param object object to assign values for
  * @param point point to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.field = point;
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -205,9 +205,9 @@ Blockly.JavaScript['set_body_field_point_class_vi'] = function (block) {
  * @param field the field to get the value of
  * @param object object to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.field
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -221,7 +221,7 @@ Blockly.JavaScript['get_body_field_point_class'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['set_body_boolean_field'] = function (block) {
@@ -238,9 +238,9 @@ Blockly.JavaScript['set_body_boolean_field'] = function (block) {
  * @param object object to assign values for
  * @param boolean value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.field = point;
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -257,9 +257,9 @@ Blockly.JavaScript['set_body_boolean_field_vi'] = function (block) {
  * @param element the value to get
  * @param object object to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.element
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -276,9 +276,9 @@ Blockly.JavaScript['get_body_boolean_field'] = function (block) {
  * @param object object to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.element = value;
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -295,9 +295,9 @@ Blockly.JavaScript['set_body_numeric_field'] = function (block) {
  * @param element the value to get
  * @param object object to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.element
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -314,9 +314,9 @@ Blockly.JavaScript['get_body_numeric_field'] = function (block) {
  * @param width {Number} width to set the body to
  * @param height {Number} height to set the body to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.setSize(width, height);
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -337,9 +337,9 @@ Blockly.JavaScript['body_set_size'] = function (block) {
  * @param offset_x {Number} the amount to move the physics body by in the x direction, based on the object's position and anchor
  * @param offset_y {Number} the amount to move the physics body by in the y direction, based on the object's position and anchor
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.setSize(width, height, offset_x, offset_y);
- * ```
+ * </code></pre>
  *  @memberOf Body
  * @block
  */
@@ -364,9 +364,9 @@ Blockly.JavaScript['body_set_size_complex'] = function (block) {
  * @method
  * @param
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
- * ```
+ * </code></pre>
  *  @memberOf Util
  * @block
  */
@@ -382,9 +382,9 @@ Blockly.JavaScript['physics_closest'] = function (block) {
  * @method
  * @param
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
- * ```
+ * </code></pre>
  *  @memberOf Util
  * @block
  */
@@ -401,9 +401,9 @@ Blockly.JavaScript['physics_farthest'] = function (block) {
  * @param source object to check from
  * @param target object to check to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.distanceBetween(source, target);
- * ```
+ * </code></pre>
  *  @memberOf Util
  * @block
  */
@@ -419,9 +419,9 @@ Blockly.JavaScript['physics_distance_between'] = function (block) {
  * @param source object to check from
  * @param pointer mouse pointer to check to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.distanceToPointer(source, pointer);
- * ```
+ * </code></pre>
  *  @memberOf Util
  * @block
  */
@@ -438,9 +438,9 @@ Blockly.JavaScript['physics_distance_to_pointer'] = function (block) {
  * @param x {Number} x location to check
  * @param y {Number} y location to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.aracde.distanceToXY(object, x, y);
- * ```
+ * </code></pre>
  *  @memberOf Util
  * @block
  */
@@ -459,7 +459,7 @@ Blockly.JavaScript['physics_distance_to_location'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['set_immovable'] = function (block) {
@@ -476,9 +476,9 @@ Blockly.JavaScript['set_immovable'] = function (block) {
  * @param speed {Number} speed for the object to move at
  * @param maximumTime {Number} maximum amount of time to take to move
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.moveToObject(object, destinationObject, speed, maximumTime);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -496,9 +496,9 @@ Blockly.JavaScript['move_to_object'] = function (block) {
  * @param rotation {Number} the angle in radians
  * @param speed {Number} the speed the object will move
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.accelerationFromRotation(rotation, speed)
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -517,9 +517,9 @@ Blockly.JavaScript['acceleration_from_rotation'] = function (block) {
  * @param speed {Number} the speed the object will move at
  * @param time {Number} maximum time for the object to reach the location
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.moveToXY(object, x, y, speed, time);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -541,9 +541,9 @@ Blockly.JavaScript['physics_move_to_location'] = function (block) {
  * @param speed {Number} the speed the object will move at
  * @param time {Number} maximum time for the object to reach the location
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.moveToPointer(object, speed, pointer, time);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -566,9 +566,9 @@ Blockly.JavaScript['physics_move_to_pointer'] = function (block) {
  * @param x_max {Number} the maximum velocity in the x direction the object can reach
  * @param y_max {Number} the maximum velocity in the y direction the object can reach
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.accelerateToXY(object, x, y, speed, x_max, y_max);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -592,9 +592,9 @@ Blockly.JavaScript['physics_accelerate_to_location'] = function (block) {
  * @param x_max {Number} the maximum velocity in the x direction the object can reach
  * @param y_max {Number} the maximum velocity in the y direction the object can reach
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.accelerateToPointer(object, pointer, speed, x_max, y_max);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -617,9 +617,9 @@ Blockly.JavaScript['physics_accelerate_to_pointer'] = function (block) {
  * @param x_max {Number} the maximum velocity in the x direction the object can reach
  * @param y_max {Number} the maximum velocity in the y direction the object can reach
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.accelerateToObject(object, target, speed, x_max, y_max);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -639,9 +639,9 @@ Blockly.JavaScript['physics_accelerate_to_object'] = function (block) {
  * @param field the field to set
  * @param value {Boolean} value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.field = value;
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -657,9 +657,9 @@ Blockly.JavaScript['set_physics_boolean_field'] = function (block) {
  * @param field the field to set
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.field.copyFrom(value);
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -675,9 +675,9 @@ Blockly.JavaScript['set_physics_point_field'] = function (block) {
  * @method get_physics_boolean_field
  * @param field the field to get the value of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.field
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -686,9 +686,9 @@ Blockly.JavaScript['set_physics_point_field'] = function (block) {
  * @method get_physics_point_field
  * @param field the field to get the value of
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.field
- * ```
+ * </code></pre>
  *  @memberOf Dynamics
  * @block
  */
@@ -706,7 +706,7 @@ Blockly.JavaScript['get_physics_boolean_field']
 /**
  * @deprecated
  * @param block
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -720,7 +720,7 @@ Blockly.JavaScript['is_body_touching'] = function (block) {
  * @deprecated
  * @param block
  * @returns {String}
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -736,9 +736,9 @@ Blockly.JavaScript['collide_with_world_bounds'] = function (block) {
  * @param object object to set collision for
  * @param collide {Boolean} enables/disables the collision
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.collideWorldBounds = collide;
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -752,7 +752,7 @@ Blockly.JavaScript['collide_with_world_bounds_vi'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['check_overlap'] = function (block) {
@@ -766,7 +766,7 @@ Blockly.JavaScript['check_overlap'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['check_overlap_vi'] = function (block) {
@@ -783,9 +783,9 @@ Blockly.JavaScript['check_overlap_vi'] = function (block) {
  * @param object2 second object to check
  * @param functionName function to call if the objects are overlapping
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.overlap(object1, object2, functionName);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -802,9 +802,9 @@ Blockly.JavaScript['check_overlap_vi_procedure_field'] = function (block) {
  * @param object1 first object to check
  * @param object2 second object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.overlap(object1, object2)
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -821,9 +821,9 @@ Blockly.JavaScript['overlap_boolean'] = function (block) {
  * @param object2 second object to check
  * @param functionName function to call if the objects are colliding
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.collide(object1, object2, functionName);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -840,9 +840,9 @@ Blockly.JavaScript['collide_function_field'] = function (block) {
  * @param object1 first object to check
  * @param object2 second object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.collide(object1, object2)
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -856,7 +856,7 @@ Blockly.JavaScript['collide_boolean'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['collide'] = function (block) {
@@ -871,9 +871,9 @@ Blockly.JavaScript['collide'] = function (block) {
  * @param object1 first object to check
  * @param object2 second object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.collide(object1, object2);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -889,9 +889,9 @@ Blockly.JavaScript['collide_vi'] = function (block) {
  * @param object object to check
  * @param direction direction to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.body.touching.direction
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -907,9 +907,9 @@ Blockly.JavaScript['is_body_touching_vi'] = function (block) {
  * @param direction direction to set the property for
  * @param collide {Boolean} sets collision in the direction to true or false
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.checkCollision.direction = collide;
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -926,9 +926,9 @@ Blockly.JavaScript['check_collision'] = function (block) {
  * @param pointer mouse pointer to check
  * @param group group to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.getObectsUnderPointer(pointer, group);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -944,9 +944,9 @@ Blockly.JavaScript['get_objects_under_pointer'] = function (block) {
  * @method
  * @param
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -966,9 +966,9 @@ Blockly.JavaScript['collide_with_arrow_function'] = function (block) {
  * @param x {Number} x location to check
  * @param y {Number} y location to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.getObjectsAtLocation(x, y, group);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -987,9 +987,9 @@ Blockly.JavaScript['get_objects_at_location'] = function (block) {
  * @param y {Number} y location to check
  * @param functionName function to call
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.getObjectsAtLocation(x, y, group, functionName);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -1008,9 +1008,9 @@ Blockly.JavaScript['collision_get_objects_at_location_function'] = function (blo
  * @param lhs object to check
  * @param rhs object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.physics.arcade.intersects(lhs, rhs);
- * ```
+ * </code></pre>
  *  @memberOf Collision
  * @block
  */
@@ -1028,7 +1028,7 @@ Blockly.JavaScript['physics_intersects'] = function (block) {
     const pointer = Blockly.JavaScript.valueToCode(block, 'POINTER', Blockly.JavaScript.ORDER_ATOMIC);
 
   return `game.physics.arcade.moveToPointer(${value_gameobject}, ${value_speed}, ${pointer});\n`;
-};* ```
+};* </code></pre>
  * @block
  */
 
@@ -1037,7 +1037,7 @@ Blockly.JavaScript['physics_intersects'] = function (block) {
     const speed = Blockly.JavaScript.valueToCode(block, 'SPEED', Blockly.JavaScript.ORDER_ATOMIC);
     const maximumTime = Blockly.JavaScript.valueToCode(block, 'MAXIMUM_TIME', Blockly.JavaScript.ORDER_ATOMIC);
     return `game.physics.arcade.moveToPointer(${gameobject}, ${speed}, game.input.mousePointer, ${maximumTime});\n`;
-};* ```
+};* </code></pre>
  * @block
  */
 

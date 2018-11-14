@@ -3,7 +3,7 @@
  * @author Aeon Williams
  * @file Generates JavaScript for phaser blocks
  * @copyright DigiPen Institute of Technology 2016
- * ```
+ * </code></pre>
  * @block
  */
 
@@ -11,7 +11,7 @@
 /**
  * Generic method to translate a block for a set_<object>_<type>_member block
  * @param block A block containing two value inputs OBJECT and VALUE representing the object the member is on and the value to set it to and a field ELEMENT to determine the member
- * ```
+ * </code></pre>
  * @block
  * @ignore
  */
@@ -32,7 +32,7 @@ function getField (block) {
  * Generic method to translate a block for a get_<object>_<type>_member block
  * @param block A block containing a value input OBJECT representing the object the member is on and a field ELEMENT to determine the member
  * @return {String}
- * ```
+ * </code></pre>
  * @block
  * @ignore
  */
@@ -58,7 +58,7 @@ function setPointField (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['get_object_width'] = function (block) {
@@ -71,7 +71,7 @@ Blockly.JavaScript['get_object_width'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['set_object_width'] = function (block) {
