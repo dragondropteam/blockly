@@ -6,9 +6,9 @@
  * Returns the game camera.
  * @method game_camera
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -22,12 +22,13 @@ Blockly.JavaScript['game_camera'] = function () {
  * @param colour colour to fade the screen to
  * @param time {Number} how long to take to fade
  * @returns {}
- * ```javascript
+ * <pre><code>
  * function toHexColor(color) { return color.replace("#", "0x"); } game.camera.fade(toHexColorFunc(colour), time, true);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
+
 Blockly.JavaScript['camera_fade'] = function (block) {
   const colour = Blockly.JavaScript.valueToCode(block, 'COLOUR', Blockly.JavaScript.ORDER_ATOMIC);
   const time = Blockly.JavaScript.valueToCode(block, 'TIME', Blockly.JavaScript.ORDER_ATOMIC);
@@ -47,9 +48,9 @@ Blockly.JavaScript['camera_fade'] = function (block) {
  * @param colour colour to show
  * @param time {Number} how long to take to fade the colour away
  * @returns {}
- * ```javascript
+ * <pre><code>
  * function toHexColor(color) { return color.replace("#", "0x"); } game.camera.flash(toHexColorFunc(colour), time, true);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -71,9 +72,9 @@ Blockly.JavaScript['camera_flash'] = function (block) {
  * @method camera_focus_on
  * @param object object to focus on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.focusOn(object);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -88,9 +89,9 @@ Blockly.JavaScript['camera_focus_on'] = function (block) {
  * @param posX {Number} x position to focus on
  * @param posY {Number} y position to focus on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.focusOnXY(posX, posY);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -104,9 +105,9 @@ Blockly.JavaScript['camera_focus_on_xy'] = function (block) {
  * Resets the camera by making it focus back to 0,0 and unfollowing all objects. Also resets any camera effects.
  * @method camera_reset
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.reset();
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -118,7 +119,7 @@ Blockly.JavaScript['camera_reset'] = function (block) {
  * Resets any active camera effects.
  * @method camera_reset_fx
  * @return {} game.camera.resetFX();
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -130,9 +131,9 @@ Blockly.JavaScript['camera_reset_fx'] = function (block) {
  * Updates the camera bounds to match the game world bounds.
  * @method camera_set_bounds_to_world
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.setBoundsToWorld();
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -146,9 +147,9 @@ Blockly.JavaScript['camera_set_bounds_to_world'] = function (block) {
  * @param posX {Number} x position for the camera
  * @param posY {Number} y position for the camera
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.setPosition(posX, posY);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -164,9 +165,9 @@ Blockly.JavaScript['camera_set_position'] = function (block) {
  * @param width {Number} the width of the camera view port
  * @param height {Number} the height of the camera view port
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.setSize(width, height);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -183,9 +184,9 @@ Blockly.JavaScript['camera_set_size'] = function (block) {
  * @param direction which direction the camera should shake
  * @param duration {Number} how long the camera should shake
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.shake(intensity, duration, true, Phaser.Camera.direction);
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */
@@ -200,9 +201,9 @@ Blockly.JavaScript['camera_shake'] = function (block) {
  * Stops the camera from following all objects.
  * @method camera_unfollow
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.camera.unfollow();
- * ```
+ * </code></pre>
  *  @memberOf Camera
  * @block
  */

@@ -6,7 +6,7 @@
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['create_cursor_keys'] = function (block) {
@@ -18,9 +18,9 @@ Blockly.JavaScript['create_cursor_keys'] = function (block) {
  * @method is_key_down
  * @param key key to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.input.keyboard.isDown(Phaser.Keyboard.key)
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -34,9 +34,9 @@ Blockly.JavaScript['is_key_down'] = function (block) {
  * @method add_key
  * @param key keycode of the key to create
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.input.keyboard.addKey(Phaser.Keyboard.key)
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -51,9 +51,9 @@ Blockly.JavaScript['add_key'] = function (block) {
  * @param field the value to get
  * @param key key to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.field
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -63,9 +63,9 @@ Blockly.JavaScript['add_key'] = function (block) {
  * @param field the value to get
  * @param key key to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.field
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -82,9 +82,9 @@ Blockly.JavaScript['get_key_boolean_field']
  * @method key_just_pressed
  * @param key key to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.justPressed()
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -98,9 +98,9 @@ Blockly.JavaScript['key_just_pressed'] = function (block) {
  * @method key_just_released
  * @param key key to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.justReleased()
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -115,9 +115,9 @@ Blockly.JavaScript['key_just_released'] = function (block) {
  * @param key key to reset
  * @param hard {Boolean} whether or not to hard reset the key
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.reset(hard)
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -133,9 +133,9 @@ Blockly.JavaScript['key_reset'] = function (block) {
  * @param key key to check
  * @param duration {Number} duration within which the key is considered as just released
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.upDuration(duration);
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -151,9 +151,9 @@ Blockly.JavaScript['key_up_duration'] = function (block) {
  * @param key key to check
  * @param duration {Number} duration within which the key is considered as just pressed
  * @returns {}
- * ```javascript
+ * <pre><code>
  * key.downDuration(duration);
- * ```
+ * </code></pre>
  *  @memberOf Keyboard
  * @block
  */
@@ -172,9 +172,9 @@ Blockly.JavaScript['key_down_duration'] = function (block) {
  * @method get_current_mouse_position
  * @param direction which coordinate of the mouse position to get
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.input.direction
- * ```
+ * </code></pre>
  *  @memberOf Mouse
  * @block
  */
@@ -187,9 +187,9 @@ Blockly.JavaScript['get_current_mouse_position'] = function (block) {
  * Returns the mouse position as a point that contains the x/y values of the coordinates.
  * @method get_mouse_position_point
  * @returns {}
- * ```javascript
+ * <pre><code>
  * New Phaser.Point(game.input.x, game.input.y)
- * ```
+ * </code></pre>
  *  @memberOf Mouse
  * @block
  */
@@ -201,9 +201,9 @@ Blockly.JavaScript['get_mouse_position_point'] = function (block) {
  * Returns true/false if the specified mouse button is currently being clicked.
  * @method is_mouse_button_clicked
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.input.mousePointer.button.isDown
- * ```
+ * </code></pre>
  *  @memberOf Mouse
  * @block
  */
@@ -215,9 +215,9 @@ Blockly.JavaScript['is_mouse_button_clicked'] = function (block) {
  * Returns the active game pointer.
  * @method get_active_pointer
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.input.activePointer
- * ```
+ * </code></pre>
  *  @memberOf Mouse
  * @block
  */
@@ -234,9 +234,9 @@ Blockly.JavaScript['get_active_pointer'] = function (block) {
  * @method input_handler_enable
  * @param object object to enable the input handler on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.inputEnabled = true;
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -252,9 +252,9 @@ Blockly.JavaScript['input_handler_enable'] = function (block) {
  * @param object object to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.field = value;
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -265,9 +265,9 @@ Blockly.JavaScript['input_handler_enable'] = function (block) {
  * @param object object to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.field = value;
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -287,9 +287,9 @@ Blockly.JavaScript['set_input_handler_boolean_field']
  * @param object object to assign values for
  * @param value value to set the field to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.field.copyFrom(value);
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -306,9 +306,9 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
  * @param field the value to get
  * @param object object to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.field
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -318,9 +318,9 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
  * @param field the value to get
  * @param object object to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.field
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -330,9 +330,9 @@ Blockly.JavaScript['set_input_handler_point_field'] = function (block) {
  * @param field the value to get
  * @param object object to get values from
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.field
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -351,9 +351,9 @@ Blockly.JavaScript['get_input_handler_boolean_field']
  * @param object object to set the boundary for
  * @param rect rectangle that defines the boundary
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.boundsRect = rect;
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -368,9 +368,9 @@ Blockly.JavaScript['input_handler_bounds_rect_set'] = function (block) {
  * @method input_handler_enable_drag
  * @param object object to enable dragging on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.enableDrag();
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -388,9 +388,9 @@ Blockly.JavaScript['input_handler_enable_drag'] = function (block) {
  * @param pixel {Boolean} If true it will use a pixel perfect test to see if you clicked the object. False uses the bounding box
  * @param alpha {Boolean} If pixel perfect is true, this specifies the alpha level needed for collision to be processed
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.enableDrag(center, top, pixel, alpha);
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -409,9 +409,9 @@ Blockly.JavaScript['input_handler_enable_drag_complex'] = function (block) {
  * @param pointer pointer to check
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * input.checkPointerDown(pointer)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -427,9 +427,9 @@ Blockly.JavaScript['input_handler_check_pointer_down'] = function (block) {
  * @param pointer pointer to check
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.checkPointerOver(pointer)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -444,9 +444,9 @@ Blockly.JavaScript['input_handler_check_pointer_over'] = function (block) {
  * @method input_handler_disable_drag
  * @param object object to disable drag on
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.disableDrag();
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -462,9 +462,9 @@ Blockly.JavaScript['input_handler_disable_drag'] = function (block) {
  * @param x {Number} the width of the grid to snap to
  * @param y {Number} the height of the grid to snap to
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.enableSnap(x, y);
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -487,9 +487,9 @@ Blockly.JavaScript['input_handler_enable_snap'] = function (block) {
  * @param offset_x {Number} offsets the top left starting point of the grid
  * @param offset_y {Number} offsets the top left starting point of the grid
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.enableSnap(x, y, drag, release, offset_x, offset_y);
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -510,9 +510,9 @@ Blockly.JavaScript['input_handler_enable_snap_complex'] = function (block) {
  * @method input_handler_disable_snap
  * @param object object to disable snap for
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.disableSnap();
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -528,9 +528,9 @@ Blockly.JavaScript['input_handler_disable_snap'] = function (block) {
  * @param y {Number} y coordinate to check
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.checkPixel(x, y)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -546,9 +546,9 @@ Blockly.JavaScript['input_handler_check_pixel'] = function (block) {
  * @method input_handler_is_pixel_perfect
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.isPixelPerfect()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -563,9 +563,9 @@ Blockly.JavaScript['input_handler_is_pixel_perfect'] = function (block) {
  * @param object object to check
  * @param time {Number} the duration to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.justPressed(0, time)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -581,9 +581,9 @@ Blockly.JavaScript['input_handler_just_pressed'] = function (block) {
  * @param object object to check
  * @param time {Number} the duration to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.justReleased(0, time)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -598,9 +598,9 @@ Blockly.JavaScript['input_handler_just_released'] = function (block) {
  * @method input_handler_over_duration
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.overDuration()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -613,7 +613,7 @@ Blockly.JavaScript['input_handler_over_duration'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['input_handler_pointer_over'] = function (block) {
@@ -627,9 +627,9 @@ Blockly.JavaScript['input_handler_pointer_over'] = function (block) {
  * @param object object to check
  * @param time {Number} time to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.justOver(0, time)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -644,9 +644,9 @@ Blockly.JavaScript['input_handler_just_over'] = function (block) {
  * @method input_handler_down_duration
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.downDuration()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -660,9 +660,9 @@ Blockly.JavaScript['input_handler_down_duration'] = function (block) {
  * @method input_handler_pointer_up
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.pointerUp()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -676,9 +676,9 @@ Blockly.JavaScript['input_handler_pointer_up'] = function (block) {
  * @method input_handler_pointer_down
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.pointerDown()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -693,9 +693,9 @@ Blockly.JavaScript['input_handler_pointer_down'] = function (block) {
  * @param object object to start input handler for
  * @param priority {Number} the priority of the object
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.start(priority);
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -710,9 +710,9 @@ Blockly.JavaScript['input_handler_start'] = function (block) {
  * @method input_handler_stop
  * @param object object to affect
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.stop();
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -727,9 +727,9 @@ Blockly.JavaScript['input_handler_stop'] = function (block) {
  * @param object object to check
  * @param time {Number} duration to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.justOut(0, time)
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -744,9 +744,9 @@ Blockly.JavaScript['input_handler_just_out'] = function (block) {
  * @method input_handler_pointer_out
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.pointerOut()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -760,9 +760,9 @@ Blockly.JavaScript['input_handler_pointer_out'] = function (block) {
  * @method input_handler_pointer_x
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.pointerX()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -776,9 +776,9 @@ Blockly.JavaScript['input_handler_pointer_x'] = function (block) {
  * @method input_handler_pointer_y
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.pointerY()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -792,9 +792,9 @@ Blockly.JavaScript['input_handler_pointer_y'] = function (block) {
  * @method input_handler_pointer_position
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * new Phaser.Point(object.input.pointerX(), object.input.pointerY())
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -809,9 +809,9 @@ Blockly.JavaScript['input_handler_pointer_position'] = function (block) {
  * @method input_handler_reset
  * @param object object to reset the input handler for
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.reset();
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -825,9 +825,9 @@ Blockly.JavaScript['input_handler_reset'] = function (block) {
  * @method input_handler_destroy
  * @param object object to destroy the handler for
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.destroy();
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -841,9 +841,9 @@ Blockly.JavaScript['input_handler_destroy'] = function (block) {
  * @method input_handler_pointer_dragged
  * @param object object to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.pointerDragged()
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -859,9 +859,9 @@ Blockly.JavaScript['input_handler_pointer_dragged'] = function (block) {
  * @param horizontal {Boolean} enables/disables the object from being dragged horizontally
  * @param vertical {Boolean} enables/disables the object from being dragged vertically
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.input.setDragLock(horizontal, vertical);
- * ```
+ * </code></pre>
  *  @memberOf InputHandler
  * @block
  */
@@ -882,9 +882,9 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
  * @param object pointer to get the buttons from
  * @param field which button to return
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field
- * ```
+ * </code></pre>
  *  @memberOf Pointer
  * @block
  */
@@ -900,9 +900,9 @@ Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
  * @param object button to get the values from
  * @param field the value to get
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field
- * ```
+ * </code></pre>
  *  @memberOf DeviceButton
  * @block
  */
@@ -912,9 +912,9 @@ Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
  * @param object button to get the values from
  * @param field the value to get
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.field
- * ```
+ * </code></pre>
  *  @memberOf DeviceButton
  * @block
  */
@@ -925,9 +925,9 @@ Blockly.JavaScript['device_button_get_boolean_field'] = Blockly.JavaScript['devi
  * @method device_button_just_released
  * @param object button to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.justReleased()
- * ```
+ * </code></pre>
  *  @memberOf DeviceButton
  * @block
  */
@@ -941,9 +941,9 @@ Blockly.JavaScript['device_button_just_released'] = function (block) {
  * @method device_button_just_pressed
  * @param object button to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.justPressed()
- * ```
+ * </code></pre>
  *  @memberOf DeviceButton
  * @block
  */
@@ -958,9 +958,9 @@ Blockly.JavaScript['device_button_just_pressed'] = function (block) {
  * @param object button to check
  * @param duration {Number} the duration to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.justReleased(duration)
- * ```
+ * </code></pre>
  *  @memberOf DeviceButton
  * @block
  */
@@ -976,9 +976,9 @@ Blockly.JavaScript['device_button_just_released_complex'] = function (block) {
  * @param object button to check
  * @param duration {Number} the duration to check
  * @returns {}
- * ```javascript
+ * <pre><code>
  * object.justPressed(duration)
- * ```
+ * </code></pre>
  *  @memberOf DeviceButton
  * @block
  */

@@ -8,9 +8,9 @@
  * @param x {Number} x position of the new graphics object
  * @param y {Number} y position of the new graphics object
  * @returns {}
- * ```javascript
+ * <pre><code>
  * game.add.graphics(x, y);
- * ```
+ * </code></pre>
  *  @memberOf Graphics
  * @block
  */
@@ -27,11 +27,11 @@ Blockly.JavaScript['create_graphics_object'] = function (block) {
  * @param colour the colour to fill the shapes with
  * @param graphics the graphics object to use
  * @returns {}
- * ```javascript
+ * <pre><code>
  * graphics.beginFill(toHexColor(colour));
  * (shapes to fill)
  * graphics.endFill();
- * ```
+ * </code></pre>
  *  @memberOf Graphics
  * @block
  */
@@ -59,9 +59,9 @@ ${variable_graphics_object_name}.endFill();\n`;
  * @param width {Number} the width of the rectangle
  * @param height {Number} the height of the rectangle
  * @returns {}
- * ```javascript
+ * <pre><code>
  * graphicsVar.drawRect(x, y, width, height);
- * ```
+ * </code></pre>
  *  @memberOf Graphics
  * @block
  */
@@ -82,9 +82,9 @@ Blockly.JavaScript['draw_rectangle'] = function (block) {
  * @param y {Number} y position of the rectangle
  * @param diameter {Number} the diameter of the rectangle
  * @returns {}
- * ```javascript
+ * <pre><code>
  * graphicsVar.drawCircle(x, y, diameter);
- * ```
+ * </code></pre>
  *  @memberOf Graphics
  * @block
  */
@@ -103,7 +103,7 @@ Blockly.JavaScript['draw_circle'] = function (block) {
  * @deprecated
  * @param block
  * @returns {}
- * ```javascript
+ * <pre><code>
  *
  */
 Blockly.JavaScript['drawcircle'] = function (block) {
