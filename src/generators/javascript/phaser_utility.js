@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Debug
  */
 //region DEBUG
@@ -359,6 +360,7 @@ Blockly.JavaScript['debug_text'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Math
  */
 //region MATH
@@ -395,6 +397,7 @@ Blockly.JavaScript['math_rad_to_deg'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace PhaserList
  */
 //region PHASERLIST
@@ -503,6 +506,7 @@ Blockly.JavaScript['list_shuffle'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Random
  */
 //region RANDOMISATION

@@ -1,10 +1,8 @@
 /**
  * @author Luke Powell
  * @author Aeon Williams
- * @file Generates JavaScript for phaser blocks
  * @copyright DigiPen Institute of Technology 2016
  * </code></pre>
- * @block
  */
 
 //region MEMBER_FUNCTIONS

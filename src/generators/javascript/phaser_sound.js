@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Sound
  */
 //region SOUND

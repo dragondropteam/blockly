@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Rectangle
  */
 //region RECTANGLE
@@ -198,6 +199,7 @@ Blockly.JavaScript['rectangle_random'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Point
  */
 //region POINT
@@ -830,6 +832,7 @@ Blockly.JavaScript['points_set_to_polar'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Circle
  */
 //region CIRCLE

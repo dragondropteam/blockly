@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Startup
  */
 //region STARTUP
@@ -68,6 +69,7 @@ Blockly.JavaScript['center_and_stretch'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace World
  */
 //region WORLD
@@ -243,6 +245,7 @@ Blockly.JavaScript['get_game_pause'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace States
  */
 //region STATES
@@ -328,6 +331,7 @@ Blockly.JavaScript['statemanager_check_state'] = function (block) {
 
 //endregion
 /**
+ * @phaser
  * @namespace Time
  */
 //region TIME

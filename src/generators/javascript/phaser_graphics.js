@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Graphics
  */
 //region DRAWPRIMITIVES
