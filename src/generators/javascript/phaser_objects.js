@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Sprite/Image
  */
 //region SPRITE/IMAGE
@@ -859,6 +860,7 @@ Blockly.JavaScript['swap_children'] = function (block) {
 
 //endregion
 /**
+ * @phaser
  * @namespace Groups
  */
 //region GROUPS
@@ -1217,6 +1219,7 @@ Blockly.JavaScript['add_to_world'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Animation
  */
 //region ANIMATION
@@ -1613,6 +1616,7 @@ Blockly.JavaScript['get_animation_boolean_field_vi']
 
 //endregion
 /**
+ * @phaser
  * @namespace PhaserText
  */
 //region PHASERTEXT
@@ -1688,6 +1692,7 @@ Blockly.JavaScript['set_text_vi'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Particles
  */
 //region PARTICLES
@@ -2007,6 +2012,7 @@ Blockly.JavaScript['set_emit_from'] = function (block) {
 };
 //endregion EMITTERS
 /**
+ * @phaser
  * @namespace GameObject
  */
 //region GAMEOBJECT

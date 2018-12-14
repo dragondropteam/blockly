@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Camera
  */
 //region CAMERA

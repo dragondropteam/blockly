@@ -1,4 +1,5 @@
 /**
+ * @phaser
  * @namespace Keyboard
  */
 //region KEYBOARD
@@ -164,6 +165,7 @@ Blockly.JavaScript['key_down_duration'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Mouse
  */
 //region MOUSE
@@ -226,6 +228,7 @@ Blockly.JavaScript['get_active_pointer'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace InputHandler
  */
 //region INPUT_HANDLER
@@ -873,6 +876,7 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Pointer
  */
 //region POINTER
@@ -891,6 +895,7 @@ Blockly.JavaScript['input_handler_set_drag_lock'] = function (block) {
 Blockly.JavaScript['pointer_get_device_buttons_field'] = getField;
 //endregion
 /**
+ * @phaser
  * @namespace DeviceButton
  */
 //region DEVICE_BUTTON

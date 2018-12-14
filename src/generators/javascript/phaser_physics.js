@@ -1,5 +1,6 @@
 //region PHYSICS
 /**
+ * @phaser
  * @namespace Setup
  */
 //region SETUP
@@ -99,6 +100,7 @@ Blockly.JavaScript['enable_arcade_physics_for_object_vi'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Body
  */
 //region BODY
@@ -356,6 +358,7 @@ Blockly.JavaScript['body_set_size_complex'] = function (block) {
 
 //endregion
 /**
+ * @phaser
  * @namespace Util
  */
 //region UTIL
@@ -452,6 +455,7 @@ Blockly.JavaScript['physics_distance_to_location'] = function (block) {
 };
 //endregion
 /**
+ * @phaser
  * @namespace Dynamics
  */
 //region DYNAMICS
@@ -700,6 +704,7 @@ Blockly.JavaScript['get_physics_boolean_field']
 };
 //endregion
 /**
+ * @phaser
  * @namespace Collision
  */
 //region COLLISION
