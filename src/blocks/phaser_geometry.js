@@ -1,3 +1,10 @@
+/**
+ * @file Blocks for Phaser geometry
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region RECTANGLE
 const RECTANGLE_NUMERIC_WRITABLE = ['x', 'y', 'width', 'height', 'bottom', 'centerX', 'centerY', 'left', 'randomX', 'randomY', 'right', 'top'];
 const RECTANGLE_NUMERIC_READABLE = ['halfHeight', 'halfWidth', 'perimeter', 'volume'];
@@ -205,7 +212,6 @@ Blockly.Blocks['rectangle_random'] = {
   }
 };
 //endregion
-
 //region POINT
 Blockly.Blocks['point_create'] = {
   init: function () {

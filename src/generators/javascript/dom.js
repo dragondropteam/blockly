@@ -1,3 +1,9 @@
+/**
+ * @author Luke Powell
+ * @fileoverview Generates JavaScript for dom blocks
+ * @copyright DigiPen Institute of Technology 2018
+ */
+
 //region document methods
 Blockly.JavaScript['getelementbyid'] = function (block) {
     const text_ID = block.getFieldValue('ID');
