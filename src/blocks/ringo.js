@@ -1,5 +1,8 @@
 /**
- * All content copyright DigiPen Institute of Technology 2016
+ * @file Blocks for Ringo bots
+ * @author Luke Powell
+ * @author Aeon Williams
+ * @copyright DigiPen Institute of Technology 2018
  */
 
 "use strict";

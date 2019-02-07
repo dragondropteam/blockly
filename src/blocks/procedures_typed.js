@@ -1,7 +1,9 @@
 /**
- * Modification of default procedures.js to integrate static typing for languages where that is a necessity
- * Copyright DigiPen Institute of Technology 2016
+ * @file Modification of default procedures.js to integrate static typing for languages where that is a necessity.
+ * @author Luke Powell
+ * @copyright Copyright DigiPen Institute of Technology 2016
  */
+
 'use strict';
 
 goog.provide('Blockly.Blocks.procedures_typed');

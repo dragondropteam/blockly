@@ -1,3 +1,5 @@
+
+
 'use strict';
 goog.provide('Blockly.C.arduino');
 
@@ -11,6 +13,22 @@ Blockly.C['hardwarestartup_arduino'] = function (block) {
 
 //region TIME
 
+/**
+ * @arduino
+ * @namespace ArduinoTime
+ */
+
+/**
+ * Delays the program for the given number of seconds.
+ * @method delayseconds
+ * @param value_seconds the number of seconds
+ * @returns {}
+ * <pre><code>
+ * delay(value_seconds * 1000);
+ * </code></pre>
+ *  @memberOf ArduinoTime
+ * @block
+ */
 Blockly.C['delayseconds'] = function (block) {
     var value_seconds = Blockly.C.valueToCode(block, 'SECONDS', Blockly.C.ORDER_ATOMIC) || '0';
     //return 'delay( ' + (value_seconds * 1000) + ' ); // Delay ' + value_seconds + ' second(s)\n';
