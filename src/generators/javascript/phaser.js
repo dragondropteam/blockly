@@ -49,7 +49,7 @@ function setPointField (block) {
 }
 
 //endregion
-
+Blockly.JavaScript['phaser_simple_init'] = function(block) {
   Blockly.JavaScript.addReservedWords('game, preload, create, update');
 
   const number_width = block.getFieldValue('WIDTH');
