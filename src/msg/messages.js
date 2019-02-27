@@ -5574,7 +5574,6 @@ Blockly.Msg.SPRITE_GET_TAG = 'get tag of sprite';
 Blockly.Msg.SPRITE_GET_TAG_TOOLTIP = 'The key of the image or texture used by this Game Object during rendering.';
 Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#key';
 
-<<<<<<< HEAD
 Blockly.Msg.PHASER_LOAD_TILEMAP = 'create tilemap';
 Blockly.Msg.PHASER_LOAD_TILEMAP_TOOLTIP = 'Adds a Tile Map data file to the current load queue.';
 Blockly.Msg.PHASER_LOAD_TILEMAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#tilemap';
@@ -5766,7 +5765,6 @@ Blockly.Msg.TILEMAP_SWAP = 'swap tiles at index';
 Blockly.Msg.TILEMAP_SWAP_WITH = 'with tiles at index';
 Blockly.Msg.TILEMAP_SWAP_TOOLTIP = 'Scans the given area for tiles with an index matching tileA and swaps them with tileB.';
 Blockly.Msg.TILEMAP_SWAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#swap';
-=======
 Blockly.Msg.STEPPER_CREATE = 'create stepper with';
 Blockly.Msg.STEPS = 'steps';
 Blockly.Msg.STEPPER_TOOLTIP = 'Creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board.';
@@ -5780,7 +5778,6 @@ Blockly.Msg.STEPPER_SET_SPEED_HELP_URL = 'https://www.arduino.cc/en/Reference/St
 Blockly.Msg.STEPPER_STEPS = 'turn stepper';
 Blockly.Msg.STEPPER_STEPS_TOOLTIP = 'Turns the motor a specific number of steps, at a speed determined by the most recent call to setSpeed().';
 Blockly.Msg.STEPPER_STEPS_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperStep';
->>>>>>> DRAG-691
 
 Blockly.Msg.SPRITE_GET_TAG = 'get tag of sprite';
 Blockly.Msg.SPRITE_GET_TAG_TOOLTIP = 'The key of the image or texture used by this Game Object during rendering.';
