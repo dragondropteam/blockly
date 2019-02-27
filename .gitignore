@@ -1,2 +1,4 @@
 
 src/generators/javascript/test\.js
+
+*.swp
