@@ -92,7 +92,7 @@ Blockly.C.ORDER_NONE = 99;             // (...)
  * @return {string}
  */
 function DefineVar(name, type){
-    return `${type} ${Blockly.C.variableDB_.getName(name, Blockly.Variables.NAME_yarTYPE)};`;
+    return `${type} ${Blockly.C.variableDB_.getName(name, Blockly.Variables.NAME_TYPE)};`;
 }
 
 Blockly.C.TYPE_CONVERSION = [];
