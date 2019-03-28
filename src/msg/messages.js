@@ -1286,37 +1286,37 @@ Blockly.Msg.PHASER_SIMPLE_INIT_UPDATE = 'on update do';
 /// auto generated
 Blockly.Msg.PHASER_SIMPLE_INIT_TOOLTIP = 'Create a Phaser Game with given width and height.';
 /// auto generated
-Blockly.Msg.PHASER_SIMPLE_INIT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html';
+Blockly.Msg.PHASER_SIMPLE_INIT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html';
 /// auto generated
 Blockly.Msg.START_PHASER_FOR_STATES = 'start phaser for states with';
 /// auto generated
 Blockly.Msg.START_PHASER_FOR_STATES_TOOLTIP = 'Create a Phaser game using explicit states.';
 /// auto generated
-Blockly.Msg.START_PHASER_FOR_STATES_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html';
+Blockly.Msg.START_PHASER_FOR_STATES_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html';
 /// auto generated
 Blockly.Msg.CENTER_AND_STRETCH = 'center and stretch phaser';
 /// auto generated
 Blockly.Msg.CENTER_AND_STRETCH_TOOLTIP = 'Tells Phaser to center and stretch the game view to fit its window.';
 /// auto generated
-Blockly.Msg.CENTER_AND_STRETCH_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ScaleManager.html#scaleMode';
+Blockly.Msg.CENTER_AND_STRETCH_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ScaleManager.html#scaleMode';
 /// auto generated
 Blockly.Msg.ENABLE_STEP = 'enable stepping';
 /// auto generated
 Blockly.Msg.ENABLE_STEP_TOOLTIP = 'Enables manually stepping through game frames. Usually for debugging purposes.';
 /// auto generated
-Blockly.Msg.ENABLE_STEP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html#enableStep';
+Blockly.Msg.ENABLE_STEP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html#enableStep';
 /// auto generated
 Blockly.Msg.DISABLE_STEP = 'disable stepping';
 /// auto generated
 Blockly.Msg.DISABLE_STEP_TOOLTIP = 'Disables manually stepping into the next game loop. This is the default behavior.';
 /// auto generated
-Blockly.Msg.DISABLE_STEP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html#disableStep';
+Blockly.Msg.DISABLE_STEP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html#disableStep';
 /// auto generated
 Blockly.Msg.STEP = 'Step';
 /// auto generated
 Blockly.Msg.STEP_TOOLTIP = 'Manually steps to the next game loop. Stepping should be enabled before using this.';
 /// auto generated
-Blockly.Msg.STEP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html#step';
+Blockly.Msg.STEP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html#step';
 /// default variale name
 Blockly.Msg.DEFAULT_GRAPHICS_OBJECT_NAME = 'graphics';
 /// auto generated
@@ -1324,25 +1324,25 @@ Blockly.Msg.CREATE_GRAPHICS_OBJECT = 'create graphics object with offsets';
 /// auto generated
 Blockly.Msg.CREATE_GRAPHICS_OBJECT_TOOLTIP = 'Returns an object that can draw shapes in the world.';
 /// auto generated
-Blockly.Msg.CREATE_GRAPHICS_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Graphics.html';
+Blockly.Msg.CREATE_GRAPHICS_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Graphics.html';
 /// auto generated
 Blockly.Msg.DRAW_SHAPES_WITH_COLOUR = 'fill shapes with ';
 /// auto generated
 Blockly.Msg.DRAW_SHAPES_WITH_COLOUR_TOOLTIP = 'Start drawing shapes in the world using a given graphics object. Use the shape drawing blocks inside this one.';
 /// auto generated
-Blockly.Msg.DRAW_SHAPES_WITH_COLOUR_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Graphics.html#beginFill';
+Blockly.Msg.DRAW_SHAPES_WITH_COLOUR_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Graphics.html#beginFill';
 /// auto generated
 Blockly.Msg.DRAW_RECTANGLE = 'draw rectangle at position';
 /// auto generated
 Blockly.Msg.DRAW_RECTANGLE_TOOLTIP = 'Draws a rectangle at a given position in the world. Doesn\'t work on its own. Put it inside the \'fill shapes with\' block.';
 /// auto generated
-Blockly.Msg.DRAW_RECTANGLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Graphics.html#drawRect';
+Blockly.Msg.DRAW_RECTANGLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Graphics.html#drawRect';
 /// auto generated
 Blockly.Msg.STOP_ANIMATION = 'stop animation on';
 /// auto generated
 Blockly.Msg.STOP_ANIMATION_TOOLTIP = 'Stops any animation from playing on the given sprite.';
 /// auto generated
-Blockly.Msg.STOP_ANIMATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#stop';
+Blockly.Msg.STOP_ANIMATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#stop';
 /// auto generated
 Blockly.Msg.PLAY_ANIMATION = 'play animation';
 /// auto generated
@@ -1354,25 +1354,25 @@ Blockly.Msg.SET_FRAME = 'Set Current Frame # For';
 /// auto generated
 Blockly.Msg.SET_FRAME_TOOLTIP = 'Jumps to a given animation frame.';
 /// auto generated
-Blockly.Msg.SET_FRAME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#frame';
+Blockly.Msg.SET_FRAME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#frame';
 /// auto generated
 Blockly.Msg.ADD_ANIMATION = 'add animation to';
 /// auto generated
 Blockly.Msg.ADD_ANIMATION_TOOLTIP = 'Add an animation to an object based on a list of frames';
 /// auto generated
-Blockly.Msg.ADD_ANIMATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#add';
+Blockly.Msg.ADD_ANIMATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#add';
 /// auto generated
 Blockly.Msg.ADD_CHILD = 'add child object';
 /// auto generated
 Blockly.Msg.ADD_CHILD_TOOLTIP = 'Add a child to a sprite. This will make them move together.';
 /// auto generated
-Blockly.Msg.ADD_CHILD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#addChild';
+Blockly.Msg.ADD_CHILD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#addChild';
 /// auto generated
 Blockly.Msg.RESET_FRAME = 'reset the frame dimensions of';
 /// auto generated
 Blockly.Msg.RESET_FRAME_TOOLTIP = 'Resets the texture frame dimensions that the sprite uses for rendering.';
 /// auto generated
-Blockly.Msg.RESET_FRAME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#resetFrame';
+Blockly.Msg.RESET_FRAME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#resetFrame';
 /// auto generated
 Blockly.Msg.RESIZE_FRAME = 'resize the frame of';
 /// auto generated
@@ -1380,13 +1380,13 @@ Blockly.Msg.RESIZE_FRAME_ACCOMODATE = 'to accomodate';
 /// auto generated
 Blockly.Msg.RESIZE_FRAME_TOOLTIP = 'Resizes the Frame dimensions that the Game Object uses for rendering. You shouldn\'t normally need to ever call this, but in the case of special texture types such as Video or BitmapData it can be useful to adjust the dimensions directly in this way.';
 /// auto generated
-Blockly.Msg.RESIZE_FRAME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#resizeFrame';
+Blockly.Msg.RESIZE_FRAME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#resizeFrame';
 /// auto generated
 Blockly.Msg.CREATE_IMAGE = 'create image';
 /// auto generated
 Blockly.Msg.CREATE_IMAGE_TOOLTIP = 'Loads an image into the game so it can be used.';
 /// auto generated
-Blockly.Msg.CREATE_IMAGE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#image';
+Blockly.Msg.CREATE_IMAGE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#image';
 /// auto generated
 Blockly.Msg.CREATE_SPRITE_SHEET = 'create sprite sheet';
 /// auto generated
@@ -1396,13 +1396,13 @@ Blockly.Msg.CREATE_SPRITE_SHEET_FRAME_HEIGHT = 'frame height';
 /// auto generated
 Blockly.Msg.CREATE_SPRITE_SHEET_TOOLTIP = 'Loads a sprite sheet, which is a collection of animation frames in a single image. See the help for more info.';
 /// auto generated
-Blockly.Msg.CREATE_SPRITE_SHEET_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#spritesheet';
+Blockly.Msg.CREATE_SPRITE_SHEET_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#spritesheet';
 /// auto generated
 Blockly.Msg.ADD_IMAGE = 'add image to game at';
 /// auto generated
 Blockly.Msg.ADD_IMAGE_TOOLTIP = 'Creates a sprite with the image specified in the tag. The tag needs to be set up with the \'create image\' or \'create sprite sheet\' blocks.';
 /// auto generated
-Blockly.Msg.ADD_IMAGE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.GameObjectFactory.html#sprite';
+Blockly.Msg.ADD_IMAGE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.GameObjectFactory.html#sprite';
 /// auto generated
 Blockly.Msg.ADDSPRITEWITHATLAS = 'load atlas image';
 /// auto generated
@@ -1412,7 +1412,7 @@ Blockly.Msg.XML = 'texture atlas xml';
 /// auto generated
 Blockly.Msg.ADDSPRITEWITHATLAS_TOOLTIP = 'Loads a texture atlas into the game. These take more effort to set up, but can contain every animation you want for a single character. See the help for more info.';
 /// auto generated
-Blockly.Msg.ADDSPRITEWITHATLAS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#atlasXML';
+Blockly.Msg.ADDSPRITEWITHATLAS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#atlasXML';
 /// auto generated
 Blockly.Msg.IMAGESUBTEXTUREATLAS = 'add sprite to game from atlas at';
 /// auto generated
@@ -1420,25 +1420,25 @@ Blockly.Msg.IMAGESUBTEXTUREATLAS_ID = 'subtexture id';
 /// auto generated
 Blockly.Msg.IMAGESUBTEXTUREATLAS_TOOLTIP = 'Adds a sprite to the game using data from a texture atlas.';
 /// auto generated
-Blockly.Msg.IMAGESUBTEXTUREATLAS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#atlasXML';
+Blockly.Msg.IMAGESUBTEXTUREATLAS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#atlasXML';
 /// auto generated
 Blockly.Msg.ADD_CHILD_VI = 'add child object';
 /// auto generated
 Blockly.Msg.ADD_CHILD_VI_TOOLTIP = 'Add a child to a sprite. This will make them move together.';
 /// auto generated
-Blockly.Msg.ADD_CHILD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#addChild';
+Blockly.Msg.ADD_CHILD_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#addChild';
 /// auto generated
 Blockly.Msg.ADD_CHILD_AT = 'add child';
 /// auto generated
 Blockly.Msg.ADD_CHILD_AT_TOOLTIP = 'Add a child to a sprite at a specific index so you can find it later. This will make them move together.';
 /// auto generated
-Blockly.Msg.ADD_CHILD_AT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#addChildAt';
+Blockly.Msg.ADD_CHILD_AT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#addChildAt';
 /// auto generated
 Blockly.Msg.ADD_CHILD_AT_VI = 'add child';
 /// auto generated
 Blockly.Msg.ADD_CHILD_AT_VI_TOOLTIP = 'Add a child to a sprite at a specific index so you can find it later. This will make them move together.';
 /// auto generated
-Blockly.Msg.ADD_CHILD_AT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#addChildAt';
+Blockly.Msg.ADD_CHILD_AT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#addChildAt';
 /// auto generated
 Blockly.Msg.ALIGN_IN_OFFSET_X = 'offset x pixels';
 /// auto generated
@@ -1446,7 +1446,7 @@ Blockly.Msg.ALIGN_IN_OFFSET_Y = 'offset y pixels';
 /// auto generated
 Blockly.Msg.ALIGN_IN_TOOLTIP = 'Aligns this Game Object within another Game Object, or Rectangle, to one of 9 possible positions.';
 /// auto generated
-Blockly.Msg.ALIGN_IN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#alignIn';
+Blockly.Msg.ALIGN_IN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#alignIn';
 /// auto generated
 Blockly.Msg.ALIGN_TO_OFFSET_X = 'offset x pixels';
 /// auto generated
@@ -1454,7 +1454,7 @@ Blockly.Msg.OFFSET_Y = 'offset y pixels';
 /// auto generated
 Blockly.Msg.ALIGN_TO_TOOLTIP = 'Aligns this Game Object to the side of another Game Object, or Rectangle, in one of 12 possible positions.';
 /// auto generated
-Blockly.Msg.ALIGN_TO_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#alignTo';
+Blockly.Msg.ALIGN_TO_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#alignTo';
 /// auto generated
 Blockly.Msg.BRING_TO_TOP = 'bring';
 /// auto generated
@@ -1462,57 +1462,57 @@ Blockly.Msg.BRING_TO_TOP_FRONT = 'to the front';
 /// auto generated
 Blockly.Msg.BRING_TO_TOP_TOOLTIP = 'Brings this sprite/image to the front of the display order. In case of overlapping sprites, this one will draw on top of everything else.';
 /// auto generated
-Blockly.Msg.BRING_TO_TOP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#bringToTop';
+Blockly.Msg.BRING_TO_TOP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#bringToTop';
 /// auto generated
 Blockly.Msg.CHECK_WORLD_BOUNDS = 'check to see if it\'s inside the world?';
 /// auto generated
 Blockly.Msg.CHECK_WORLD_BOUNDS_TOOLTIP = 'This object will start checking if it\'s inside the world every frame. This takes time, so it\'s disabled by default.';
 /// auto generated
-Blockly.Msg.CHECK_WORLD_BOUNDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#checkWorldBounds';
+Blockly.Msg.CHECK_WORLD_BOUNDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#checkWorldBounds';
 /// auto generated
 Blockly.Msg.CONTAINS_TOOLTIP = 'Checks to see if one sprite is the child of another.';
 /// auto generated
-Blockly.Msg.CONTAINS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#contains';
+Blockly.Msg.CONTAINS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#contains';
 /// auto generated
 Blockly.Msg.CONTAINS_VI_TOOLTIP = 'Checks to see if one sprite is the child of another.';
 /// auto generated
-Blockly.Msg.CONTAINS_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#contains';
+Blockly.Msg.CONTAINS_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#contains';
 /// auto generated
 Blockly.Msg.CROP = 'crop';
 /// auto generated
 Blockly.Msg.CROP_TOOLTIP = 'crop a sprite to an area defined by a rectangle or other object';
 /// auto generated
-Blockly.Msg.CROP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#crop';
+Blockly.Msg.CROP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#crop';
 /// auto generated
 Blockly.Msg.CLEAR_CROPPING = 'stop cropping';
 /// auto generated
 Blockly.Msg.CLEAR_CROPPING_TOOLTIP = 'Removes any cropping from a sprite.';
 /// auto generated
-Blockly.Msg.CLEAR_CROPPING_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#crop';
+Blockly.Msg.CLEAR_CROPPING_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#crop';
 /// auto generated
 Blockly.Msg.DESTROY_SPRITE = 'children too?';
 /// auto generated
 Blockly.Msg.DESTROY_SPRITE_TOOLTIP = 'Deletes a sprite from the game, with an option to delete its children too.';
 /// auto generated
-Blockly.Msg.DESTROY_SPRITE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#destroy';
+Blockly.Msg.DESTROY_SPRITE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#destroy';
 /// auto generated
 Blockly.Msg.GET_CHILD_AT_VI = 'get child of';
 /// auto generated
 Blockly.Msg.GET_CHILD_AT_VI_TOOLTIP = 'Finds a specific child on this sprite/image by its index.';
 /// auto generated
-Blockly.Msg.GET_CHILD_AT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#getChildAt';
+Blockly.Msg.GET_CHILD_AT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#getChildAt';
 /// auto generated
 Blockly.Msg.GET_CHILD_INDEX = 'Get index of Child';
 /// auto generated
 Blockly.Msg.GET_CHILD_INDEX_TOOLTIP = 'Finds an index that describes where on the parent this object is. ';
 /// auto generated
-Blockly.Msg.GET_CHILD_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#getChildIndex';
+Blockly.Msg.GET_CHILD_INDEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#getChildIndex';
 /// auto generated
 Blockly.Msg.GET_CHILD_INDEX_VI = 'get index of child';
 /// auto generated
 Blockly.Msg.GET_CHILD_INDEX_VI_TOOLTIP = 'Finds an index that describes where on the parent this object is. ';
 /// auto generated
-Blockly.Msg.GET_CHILD_INDEX_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#getChildIndex';
+Blockly.Msg.GET_CHILD_INDEX_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#getChildIndex';
 /// auto generated
 Blockly.Msg.LOAD_TEXTURE = 'change texture of';
 /// auto generated
@@ -1520,71 +1520,71 @@ Blockly.Msg.LOAD_TEXTURE_TAG = 'to tag';
 /// auto generated
 Blockly.Msg.LOAD_TEXTURE_TOOLTIP = 'This changes the texture of this sprite/image entirely. If it is part of a sprite sheet. Warning: slow.';
 /// auto generated
-Blockly.Msg.LOAD_TEXTURE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#loadTexture';
+Blockly.Msg.LOAD_TEXTURE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#loadTexture';
 /// auto generated
 Blockly.Msg.MOVE_DOWN = 'down';
 /// auto generated
 Blockly.Msg.MOVE_DOWN_TOOLTIP = 'Moves this sprite/image down one place in the display order. If sprites overlap, it will be more likely to display underneath others.';
 /// auto generated
-Blockly.Msg.MOVE_DOWN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#moveDown';
+Blockly.Msg.MOVE_DOWN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#moveDown';
 /// auto generated
 Blockly.Msg.MOVE_UP_TOOLTIP = 'Moves this sprite up one place in the display order. If sprites overlap, it will be more likely to display on top of others.';
 /// auto generated
-Blockly.Msg.MOVE_UP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#moveUp';
+Blockly.Msg.MOVE_UP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#moveUp';
 /// auto generated
 Blockly.Msg.SPRITE_OVERLAP = 'overlap with';
 /// auto generated
 Blockly.Msg.SPRITE_OVERLAP_TOOLTIP = 'Checks to see if the rectangular bounds of the two given sprites overlap. Not a good substitute for the physics engine, but fine for something like UI.';
 /// auto generated
-Blockly.Msg.SPRITE_OVERLAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#overlap';
+Blockly.Msg.SPRITE_OVERLAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#overlap';
 /// auto generated
 Blockly.Msg.OUT_OF_BOUNDS_KILL = 'get deleted if it leaves the world?';
 /// auto generated
 Blockly.Msg.OUT_OF_BOUNDS_KILL_TOOLTIP = 'Will automatically destroy this object if it goes outside the world bounds. Warning: this will not work on objects that are not checking to see if they are inside the world.';
 /// auto generated
-Blockly.Msg.OUT_OF_BOUNDS_KILL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#outOfBoundsKill';
+Blockly.Msg.OUT_OF_BOUNDS_KILL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#outOfBoundsKill';
 /// auto generated
 Blockly.Msg.OUT_OF_BOUNDS_FAINT = 'get deleted if it leaves the world?';
 /// auto generated
 Blockly.Msg.OUT_OF_BOUNDS_FAINT_TOOLTIP = 'Will automatically destroy this object if it goes outside the world bounds. Warning: this will not work on objects that are not checking to see if they are inside the world.';
 /// auto generated
-Blockly.Msg.OUT_OF_BOUNDS_FAINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#outOfBoundsKill';
+Blockly.Msg.OUT_OF_BOUNDS_FAINT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#outOfBoundsKill';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD = 'remove child';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_TOOLTIP = 'Makes this sprite/image stop being a child and moving with its parent.';
 /// auto generated
-Blockly.Msg.REMOVE_CHILD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#removeChild';
+Blockly.Msg.REMOVE_CHILD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#removeChild';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_VI = 'remove child';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_VI_TOOLTIP = 'Makes this sprite/image stop being a child and moving with its parent.';
 /// auto generated
-Blockly.Msg.REMOVE_CHILD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#removeChild';
+Blockly.Msg.REMOVE_CHILD_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#removeChild';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_AT_VI = 'remove the child at index';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_AT_VI_TOOLTIP = 'Finds the child at the given index and removes it from its parent. It will no longer move with the parent.';
 /// auto generated
-Blockly.Msg.REMOVE_CHILD_AT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#removeChildAt';
+Blockly.Msg.REMOVE_CHILD_AT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#removeChildAt';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_AT = 'remove the child at index';
 /// auto generated
 Blockly.Msg.REMOVE_CHILD_AT_TOOLTIP = 'Finds the child at the given index and removes it from its parent. It will no longer move with the parent.';
 /// auto generated
-Blockly.Msg.REMOVE_CHILD_AT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#removeChildAt';
+Blockly.Msg.REMOVE_CHILD_AT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#removeChildAt';
 /// auto generated
 Blockly.Msg.REMOVE_CHILDREN = 'remove all children from';
 /// auto generated
 Blockly.Msg.REMOVE_CHILDREN_TOOLTIP = 'Removes all children from the parent. They will all stop moving together.';
 /// auto generated
-Blockly.Msg.REMOVE_CHILDREN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#removeChildren';
+Blockly.Msg.REMOVE_CHILDREN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#removeChildren';
 /// auto generated
 Blockly.Msg.REMOVE_CHILDREN_VI = 'remove all children from';
 /// auto generated
 Blockly.Msg.REMOVE_CHILDREN_VI_TOOLTIP = 'Removes all children from the parent. They will all stop moving together.';
 /// auto generated
-Blockly.Msg.REMOVE_CHILDREN_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#removeChildren';
+Blockly.Msg.REMOVE_CHILDREN_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#removeChildren';
 /// auto generated
 Blockly.Msg.ADD_ANIMATION_VI = 'add animation to';
 /// auto generated
@@ -1592,49 +1592,49 @@ Blockly.Msg.DISPLAYED_AT = 'displayed at';
 /// auto generated
 Blockly.Msg.ADD_ANIMATION_VI_TOOLTIP = 'Add an animation to an object based on a list of frames';
 /// auto generated
-Blockly.Msg.ADD_ANIMATION_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#add';
+Blockly.Msg.ADD_ANIMATION_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#add';
 /// auto generated
 Blockly.Msg.PLAY_ANIMATION_VI = 'play animation';
 /// auto generated
 Blockly.Msg.PLAY_ANIMATION_VI_TOOLTIP = 'Plays an animation on the given sprite.';
 /// auto generated
-Blockly.Msg.PLAY_ANIMATION_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#play';
+Blockly.Msg.PLAY_ANIMATION_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#play';
 /// auto generated
 Blockly.Msg.ANIMATION_NEXT = 'increment current animation by';
 /// auto generated
 Blockly.Msg.ANIMATION_NEXT_TOOLTIP = 'Increment the current animation by a given amount of frames.';
 /// auto generated
-Blockly.Msg.ANIMATION_NEXT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#next';
+Blockly.Msg.ANIMATION_NEXT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#next';
 /// auto generated
 Blockly.Msg.ANIMATION_PREVIOUS = 'decrement current animation by';
 /// auto generated
 Blockly.Msg.ANIMATION_PREVIOUS_TOOLTIP = 'Decrement the current animation by a given amount of frames.';
 /// auto generated
-Blockly.Msg.ANIMATION_PREVIOUS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#previous';
+Blockly.Msg.ANIMATION_PREVIOUS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#previous';
 /// auto generated
 Blockly.Msg.ANIMATION_NEXT_VI = 'increment current animation by';
 /// auto generated
 Blockly.Msg.ANIMATION_NEXT_VI_TOOLTIP = 'Increment the current animation by a given amount of frames.';
 /// auto generated
-Blockly.Msg.ANIMATION_NEXT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#next';
+Blockly.Msg.ANIMATION_NEXT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#next';
 /// auto generated
 Blockly.Msg.ANIMATION_PREVIOUS_VI = 'decrement current animation by';
 /// auto generated
 Blockly.Msg.ANIMATION_PREVIOUS_VI_TOOLTIP = 'Decrement the current animation by a given amount of frames.';
 /// auto generated
-Blockly.Msg.ANIMATION_PREVIOUS_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#previous';
+Blockly.Msg.ANIMATION_PREVIOUS_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#previous';
 /// auto generated
 Blockly.Msg.REFRESH_FRAME = 'refresh frame of ';
 /// auto generated
 Blockly.Msg.REFRESH_FRAME_TOOLTIP = 'Refreshes the current frame data back to the parent Sprite and also resets the texture data.';
 /// auto generated
-Blockly.Msg.REFRESH_FRAME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#refreshFrame';
+Blockly.Msg.REFRESH_FRAME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#refreshFrame';
 /// auto generated
 Blockly.Msg.ANIMATION_UPDATE = 'frame update of ';
 /// auto generated
 Blockly.Msg.ANIMATION_UPDATE_TOOLTIP = 'Internal method do not call';
 /// auto generated
-Blockly.Msg.ANIMATION_UPDATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#update';
+Blockly.Msg.ANIMATION_UPDATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#update';
 /// auto generated
 Blockly.Msg.VALIDATE_FRAMES = 'validate animation frames of ';
 /// auto generated
@@ -1642,7 +1642,7 @@ Blockly.Msg.VALIDATE_FRAMES_ARRAY = 'array of frames';
 /// auto generated
 Blockly.Msg.VALIDATE_FRAMES_TOOLTIP = 'Validates the frames on the given Sprite.';
 /// auto generated
-Blockly.Msg.VALIDATE_FRAMES_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#validateFrames';
+Blockly.Msg.VALIDATE_FRAMES_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#validateFrames';
 /// auto generated
 Blockly.Msg.VALIDATE_FRAMES_VI = 'validate animation frames of ';
 /// auto generated
@@ -1650,37 +1650,37 @@ Blockly.Msg.VALIDATE_FRAMES_VI_ARRAY = 'array of frames';
 /// auto generated
 Blockly.Msg.VALIDATE_FRAMES_VI_TOOLTIP = 'Validates the frames on the given Sprite.';
 /// auto generated
-Blockly.Msg.VALIDATE_FRAMES_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#validateFrames';
+Blockly.Msg.VALIDATE_FRAMES_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#validateFrames';
 /// auto generated
 Blockly.Msg.ANIMATION_DESTROY = 'destroy all animations in animation manager of ';
 /// auto generated
 Blockly.Msg.ANIMATION_DESTROY_TOOLTIP = 'Destroy all animations on the object.';
 /// auto generated
-Blockly.Msg.ANIMATION_DESTROY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#validateFrames';
+Blockly.Msg.ANIMATION_DESTROY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#validateFrames';
 /// auto generated
 Blockly.Msg.ANIMATION_DESTROY_VI = 'destroy all animations in animation manager of ';
 /// auto generated
 Blockly.Msg.ANIMATION_DESTROY_VI_TOOLTIP = 'Destroy all animations on the object.';
 /// auto generated
-Blockly.Msg.ANIMATION_DESTROY_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#destroy';
+Blockly.Msg.ANIMATION_DESTROY_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#destroy';
 /// auto generated
 Blockly.Msg.STOP_ANIMATION_VI = 'stop animation on';
 /// auto generated
 Blockly.Msg.STOP_ANIMATION_VI_TOOLTIP = 'Stops the current animation on the specified Sprite';
 /// auto generated
-Blockly.Msg.STOP_ANIMATION_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html#stop';
+Blockly.Msg.STOP_ANIMATION_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html#stop';
 /// auto generated
 Blockly.Msg.SET_FRAME_VI = 'set current frame # to';
 /// auto generated
 Blockly.Msg.SET_FRAME_VI_TOOLTIP = 'Sets the current frame number on the specified object';
 /// auto generated
-Blockly.Msg.SET_FRAME_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html#frame';
+Blockly.Msg.SET_FRAME_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html#frame';
 /// auto generated
 Blockly.Msg.SEND_TO_BACK = 'to the back';
 /// auto generated
 Blockly.Msg.SEND_TO_BACK_TOOLTIP = 'Sends this sprite/image to the back of the display order. In case of overlapping sprites, it will draw behind everything else.';
 /// auto generated
-Blockly.Msg.SEND_TO_BACK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#sendToBack';
+Blockly.Msg.SEND_TO_BACK_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#sendToBack';
 /// auto generated
 Blockly.Msg.SET_CHILD_INDEX_CHILD = 'move the child';
 /// auto generated
@@ -1688,37 +1688,37 @@ Blockly.Msg.SET_CHILD_INDEX = 'to index';
 /// auto generated
 Blockly.Msg.SET_CHILD_INDEX_TOOLTIP = 'Moves the child to a specific index on its parent. This will affect how you find it in the future.';
 /// auto generated
-Blockly.Msg.SET_CHILD_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#setChildIndex';
+Blockly.Msg.SET_CHILD_INDEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#setChildIndex';
 /// auto generated
 Blockly.Msg.SET_CHILD_INDEX_CHILD = 'move the child';
 /// auto generated
 Blockly.Msg.SET_CHILD_INDEX_VI_TOOLTIP = 'Moves the child to a specific index on its parent. This will affect how you find it in the future.';
 /// auto generated
-Blockly.Msg.SET_CHILD_INDEX_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#setChildIndex';
+Blockly.Msg.SET_CHILD_INDEX_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#setChildIndex';
 /// auto generated
 Blockly.Msg.SET_SPRITE_FRAME = 'Set texture frame of';
 /// auto generated
 Blockly.Msg.SET_SPRITE_FRAME_TOOLTIP = 'Sets the Texture frame the Sprite uses for rendering. This is primarily an internal method used by Sprite.loadTexture, although you may call it directly.';
 /// auto generated
-Blockly.Msg.SET_SPRITE_FRAME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#setFrame';
+Blockly.Msg.SET_SPRITE_FRAME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#setFrame';
 /// auto generated
 Blockly.Msg.SET_SCALE_MIN_MAX = 'set scale constraints on';
 /// auto generated
 Blockly.Msg.SET_SCALE_MIN_MAX_TOOLTIP = 'Limits how far this sprite will scale based on its parent.';
 /// auto generated
-Blockly.Msg.SET_SCALE_MIN_MAX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#setScaleMinMax';
+Blockly.Msg.SET_SCALE_MIN_MAX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#setScaleMinMax';
 /// auto generated
 Blockly.Msg.CLEAR_SCALE_MIN_MAX = 'clear scale constraints on';
 /// auto generated
 Blockly.Msg.CLEAR_SCALE_MIN_MAX_TOOLTIP = 'If scaling constraints were set on a sprite, this removes them.';
 /// auto generated
-Blockly.Msg.CLEAR_SCALE_MIN_MAX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#setScaleMinMax';
+Blockly.Msg.CLEAR_SCALE_MIN_MAX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#setScaleMinMax';
 /// auto generated
 Blockly.Msg.SET_TEXTURE = 'Set texture of';
 /// auto generated
 Blockly.Msg.SET_TEXTURE_TOOLTIP = 'Sets the texture of the sprite. Be warned that this doesn\'t remove or destroy the previous texture this Sprite was using. Note that this takes a specific texture, not a tag.';
 /// auto generated
-Blockly.Msg.SET_TEXTURE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#setTexture';
+Blockly.Msg.SET_TEXTURE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#setTexture';
 /// auto generated
 Blockly.Msg.SWAP_CHILDREN = 'swap children of';
 /// auto generated
@@ -1728,7 +1728,7 @@ Blockly.Msg.SWAP_CHILDREN_2 = 'child 2';
 /// auto generated
 Blockly.Msg.SWAP_CHILDREN_TOOLTIP = 'Swaps the indices of the given children. They must both be on the same parent.';
 /// auto generated
-Blockly.Msg.SWAP_CHILDREN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#swapChildren';
+Blockly.Msg.SWAP_CHILDREN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#swapChildren';
 /// auto generated
 Blockly.Msg.GET_ANIMATION_PROPERTY = 'get animation.';
 /// auto generated
@@ -1754,7 +1754,7 @@ Blockly.Msg.GET_ANIMATION_PROPERTY_DROPDOWN_UPDATE = 'updateIfVisible';
 /// auto generated
 Blockly.Msg.GET_ANIMATION_PROPERTY_TOOLTIP = 'Get a property on from the animaton manager on the object';
 /// auto generated
-Blockly.Msg.GET_ANIMATION_PROPERTY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#destroy';
+Blockly.Msg.GET_ANIMATION_PROPERTY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#destroy';
 /// auto generated
 Blockly.Msg.SET_ANIMATION_PROPERTY = 'set animation.';
 /// auto generated
@@ -1766,30 +1766,30 @@ Blockly.Msg.SET_ANIMATION_PROPERTY_DROPDOWN_UPDATE = 'updateIfVisible';
 /// auto generated
 Blockly.Msg.SET_ANIMATION_PROPERTY_TOOLTIP = 'Set a property from the animation manager on the object';
 /// auto generated
-Blockly.Msg.SET_ANIMATION_PROPERTY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#destroy';
+Blockly.Msg.SET_ANIMATION_PROPERTY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#destroy';
 /// auto generated
 Blockly.Msg.SET_ANIMATION_PROPERTY_VI_TOOLTIP = 'Set a property from the animation manager on the object';
 /// auto generated
-Blockly.Msg.SET_ANIMATION_PROPERTY_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#destroy';
+Blockly.Msg.SET_ANIMATION_PROPERTY_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#destroy';
 /// SET for Boolean Types in animations
 Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_TOOLTIP = 'Sets the boolean value for the selected animation property';
-Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
-Blockly.Msg.ANIMATION_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html#%1';
+Blockly.Msg.SET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html';
+Blockly.Msg.ANIMATION_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html#%1';
 /// SET for Numeric Types in animations
 Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_TOOLTIP = 'Sets the numeric value for the selected animation property';
-Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.SET_ANIMATION_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html';
 /// SET for String Types in animations
 Blockly.Msg.SET_ANIMATION_STRING_FIELD_TOOLTIP = 'Sets the string value for the selected animation property';
-Blockly.Msg.SET_ANIMATION_STRING_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.SET_ANIMATION_STRING_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html';
 /// GET for Boolean Types in animations
 Blockly.Msg.GET_ANIMATION_BOOLEAN_FIELD_VI_TOOLTIP = 'Gets the boolean selected from the specified object.';
-Blockly.Msg.GET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.GET_ANIMATION_BOOLEAN_FIELD_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html';
 /// GET for Numeric Types in animations
 Blockly.Msg.GET_ANIMATION_NUMERIC_FIELD_TOOLTIP = 'Gets the number selected from the specified object.';
-Blockly.Msg.GET_ANIMATION_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.GET_ANIMATION_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html';
 /// SET for String Types in animations
 Blockly.Msg.GET_ANIMATION_STRING_FIELD_TOOLTIP = 'Gets the string selected from the specified object.';
-Blockly.Msg.GET_ANIMATION_STRING_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Animation.html';
+Blockly.Msg.GET_ANIMATION_STRING_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Animation.html';
 /// auto generated
 Blockly.Msg.ANIMATION_GET_ANIMATION = 'on gameobject';
 /// auto generated
@@ -1797,19 +1797,19 @@ Blockly.Msg.ANIMATION_GET_ANIMATION_NAME = 'get animation by name';
 /// auto generated
 Blockly.Msg.ANIMATION_GET_ANIMATION_TOOLTIP = 'Returns an animation that was previously added by name.';
 /// auto generated
-Blockly.Msg.ANIMATION_GET_ANIMATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.AnimationManager.html#getAnimation';
+Blockly.Msg.ANIMATION_GET_ANIMATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.AnimationManager.html#getAnimation';
 /// auto generated
 Blockly.Msg.CREATE_GROUP = 'create group';
 /// auto generated
 Blockly.Msg.CREATE_GROUP_TOOLTIP = 'Create a new group of display objects';
 /// auto generated
-Blockly.Msg.CREATE_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.GameObjectFactory.html#group';
+Blockly.Msg.CREATE_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.GameObjectFactory.html#group';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP = 'create object at';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP_TOOLTIP = 'Create a new sprite in the group';
 /// auto generated
-Blockly.Msg.CREATE_OBJECT_IN_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#create';
+Blockly.Msg.CREATE_OBJECT_IN_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#create';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME = 'create object at';
 /// auto generated
@@ -1817,23 +1817,23 @@ Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_NUMBER = 'displaying frame #';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_TOOLTIP = 'Creates a sprite in the new group using the specified frame from a sprite sheet or texture atlas';
 /// auto generated
-Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#create';
+Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#create';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP_VI_TOOLTIP = 'Create a new sprite in the group';
 /// auto generated
-Blockly.Msg.CREATE_OBJECT_IN_GROUP_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#create';
+Blockly.Msg.CREATE_OBJECT_IN_GROUP_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#create';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_VI = 'displaying frame';
 /// auto generated
 Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_VI_TOOLTIP = 'Creates a sprite in the new group using the specified frame from a sprite sheet or texture atlas';
 /// auto generated
-Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#create';
+Blockly.Msg.CREATE_OBJECT_IN_GROUP_WITH_FRAME_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#create';
 /// auto generated
 Blockly.Msg.ADD_TO_GROUP = 'to group';
 /// auto generated
 Blockly.Msg.ADD_TO_GROUP_TOOLTIP = 'Adds an existing object to a group.';
 /// auto generated
-Blockly.Msg.ADD_TO_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#add';
+Blockly.Msg.ADD_TO_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#add';
 /// auto generated
 Blockly.Msg.REMOVE_FROM_GROUP = 'from group';
 /// auto generated
@@ -1841,11 +1841,11 @@ Blockly.Msg.REMOVE_FROM_GROUP_DESTROY = 'destroy it too';
 /// auto generated
 Blockly.Msg.REMOVE_FROM_GROUP_TOOLTIP = 'Removes an object from a group. Optionally, destroy it as well.';
 /// auto generated
-Blockly.Msg.REMOVE_FROM_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#remove';
+Blockly.Msg.REMOVE_FROM_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#remove';
 /// auto generated
 Blockly.Msg.GROUP_CONTAINS_TOOLTIP = 'Returns true if a group contains a specified sprite.';
 /// auto generated
-Blockly.Msg.GROUP_CONTAINS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#contains';
+Blockly.Msg.GROUP_CONTAINS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#contains';
 /// auto generated
 Blockly.Msg.GROUP_COUNT_ALIVE_DEAD = 'number of';
 /// auto generated
@@ -1853,7 +1853,7 @@ Blockly.Msg.GROUP_COUNT_ALIVE_DEAD_OBJECTS = 'objects in group';
 /// auto generated
 Blockly.Msg.GROUP_COUNT_ALIVE_DEAD_TOOLTIP = 'Returns the number of alive/dead objects in a group.';
 /// auto generated
-Blockly.Msg.GROUP_COUNT_ALIVE_DEAD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#countLiving';
+Blockly.Msg.GROUP_COUNT_ALIVE_DEAD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#countLiving';
 /// auto generated
 Blockly.Msg.DESTROY_GROUP = 'destroy group';
 /// auto generated
@@ -1861,19 +1861,19 @@ Blockly.Msg.DESTROY_GROUP_MEMBERS = 'destroy members too';
 /// auto generated
 Blockly.Msg.DESTROY_GROUP_TOOLTIP = 'Destroys a group. Can either leave the members where they are, or destroy them too.';
 /// auto generated
-Blockly.Msg.DESTROY_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#destroy';
+Blockly.Msg.DESTROY_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#destroy';
 /// auto generated
 Blockly.Msg.GROUP_GET_ALL = 'get all members of group';
 /// auto generated
 Blockly.Msg.GROUP_GET_ALL_TOOLTIP = 'Returns a list of all members in the specified group.';
 /// auto generated
-Blockly.Msg.GROUP_GET_ALL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getAll';
+Blockly.Msg.GROUP_GET_ALL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getAll';
 /// auto generated
 Blockly.Msg.GROUP_GET_AT = 'get member of group';
 /// auto generated
 Blockly.Msg.GROUP_GET_AT_TOOLTIP = 'Returns a group member at a specified index. Indices start at 0 and go in creation order by default. Returns -1 if it fails.';
 /// auto generated
-Blockly.Msg.GROUP_GET_AT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getAt';
+Blockly.Msg.GROUP_GET_AT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getAt';
 /// auto generated
 Blockly.Msg.GROUP_GET_CLOSEST_TO_MEMBER = 'get member of group';
 /// auto generated
@@ -1881,23 +1881,23 @@ Blockly.Msg.GROUP_GET_CLOSEST_TO = 'closest to';
 /// auto generated
 Blockly.Msg.GROUP_GET_CLOSEST_TO_TOOLTIP = 'Returns the object in the group whose position is closest to the specified object.';
 /// auto generated
-Blockly.Msg.GROUP_GET_CLOSEST_TO_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getClosestTo';
+Blockly.Msg.GROUP_GET_CLOSEST_TO_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getClosestTo';
 /// auto generated
 Blockly.Msg.GROUP_GET_FIRST_ALIVE_DEAD_TOOLTIP = 'Gets the first group member that has the given value of its \'alive\' field. Returns null if no matching member is found.';
 /// auto generated
-Blockly.Msg.GROUP_GET_FIRST_ALIVE_DEAD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getFirstAlive';
+Blockly.Msg.GROUP_GET_FIRST_ALIVE_DEAD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getFirstAlive';
 /// auto generated
 Blockly.Msg.GROUP_GET_FIRST_ALIVE_FAINTED = 'get first';
 /// auto generated
 Blockly.Msg.GROUP_GET_FIRST_ALIVE_FAINTED_TOOLTIP = 'Gets the first group member that has the given value of its \'alive\' field. Returns null if no matching member is found.';
 /// auto generated
-Blockly.Msg.GROUP_GET_FIRST_ALIVE_FAINTED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getFirstAlive';
+Blockly.Msg.GROUP_GET_FIRST_ALIVE_FAINTED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getFirstAlive';
 /// auto generated
 Blockly.Msg.GROUP_GET_RANDOM = 'get random member of group';
 /// auto generated
 Blockly.Msg.GROUP_GET_RANDOM_TOOLTIP = 'Returns a member of the group at random with no bias.';
 /// auto generated
-Blockly.Msg.GROUP_GET_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getRandom';
+Blockly.Msg.GROUP_GET_RANDOM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getRandom';
 /// auto generated
 Blockly.Msg.GROUP_GET_RANDOM_EXISTS_GROUP = 'get a random member of group';
 /// auto generated
@@ -1905,7 +1905,7 @@ Blockly.Msg.GROUP_GET_RANDOM_EXISTS = 'that exists';
 /// auto generated
 Blockly.Msg.GROUP_GET_RANDOM_EXISTS_TOOLTIP = 'Returns a random member of the given group, picking from those whose \'exists\' field is set to true.';
 /// auto generated
-Blockly.Msg.GROUP_GET_RANDOM_EXISTS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#getRandomExists';
+Blockly.Msg.GROUP_GET_RANDOM_EXISTS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#getRandomExists';
 /// auto generated
 Blockly.Msg.GROUP_REMOVE_ALL = 'remove all members of group';
 /// auto generated
@@ -1913,11 +1913,11 @@ Blockly.Msg.GROUP_REMOVE_ALL_DESTROY = 'destroy them too';
 /// auto generated
 Blockly.Msg.GROUP_REMOVE_ALL_TOOLTIP = 'Empties the specified group. Can either do this by releasing its members or deleting them.';
 /// auto generated
-Blockly.Msg.GROUP_REMOVE_ALL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#removeAll';
+Blockly.Msg.GROUP_REMOVE_ALL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#removeAll';
 /// auto generated
 Blockly.Msg.ADD_TO_WORLD_TOOLTIP = 'Adds an existing object to the world group. Necessary for making an object that has been previously removed from a  group visible again.';
 /// auto generated
-Blockly.Msg.ADD_TO_WORLD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.World.html#add';
+Blockly.Msg.ADD_TO_WORLD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.World.html#add';
 /// auto generated
 Blockly.Msg.START_PHYSICS = 'start';
 /// auto generated
@@ -1929,47 +1929,47 @@ Blockly.Msg.START_PHYSICS_SYSTEM = 'physics system';
 /// auto generated
 Blockly.Msg.START_PHYSICS_TOOLTIP = 'Start physics with the specified system';
 /// auto generated
-Blockly.Msg.START_PHYSICS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.html#startSystem';
+Blockly.Msg.START_PHYSICS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.html#startSystem';
 /// auto generated
 Blockly.Msg.START_ARCADE_PHYSICS = 'start arcade physics system';
 /// auto generated
 Blockly.Msg.START_ARCADE_PHYSICS_TOOLTIP = 'Start the specified arcade physics system';
 /// auto generated
-Blockly.Msg.START_ARCADE_PHYSICS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.html#startSystem';
+Blockly.Msg.START_ARCADE_PHYSICS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.html#startSystem';
 /// auto generated
 Blockly.Msg.ENABLE_BODY_GROUP = 'Enable Body for';
 /// auto generated
 Blockly.Msg.ENABLE_BODY_GROUP_TOOLTIP = 'Enable physics body on all sprites in or added to this group.';
 /// auto generated
-Blockly.Msg.ENABLE_BODY_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#enableBody';
+Blockly.Msg.ENABLE_BODY_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#enableBody';
 /// auto generated
 Blockly.Msg.ENABLE_BODY_GROUP_VI = 'enable body for group';
 /// auto generated
 Blockly.Msg.ENABLE_BODY_GROUP_VI_TOOLTIP = 'Enable physics body on all sprites in or added to this group.';
 /// auto generated
-Blockly.Msg.ENABLE_BODY_GROUP_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#enableBody';
+Blockly.Msg.ENABLE_BODY_GROUP_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#enableBody';
 /// auto generated
 Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT = 'enable arcade physics for';
 /// auto generated
 Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_TOOLTIP = 'Enable physics for this object';
 /// auto generated
-Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#enable';
+Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#enable';
 /// auto generated
 Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_VI = 'enable arcade physics for sprite';
 /// auto generated
 Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_VI_TOOLTIP = 'Enable physics for this sprite';
 /// auto generated
-Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#enable';
+Blockly.Msg.ENABLE_ARCADE_PHYSICS_FOR_OBJECT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#enable';
 /// auto generated
 Blockly.Msg.COLLIDE_WITH_ARROW_FUNCTION = 'if collided do';
 /// auto generated
 Blockly.Msg.COLLIDE_WITH_ARROW_FUNCTION_TOOLTIP = 'Collide two objects, if they are collide do the statements in the block';
 /// auto generated
-Blockly.Msg.COLLIDE_WITH_ARROW_FUNCTION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#collide';
+Blockly.Msg.COLLIDE_WITH_ARROW_FUNCTION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#collide';
 /// auto generated
 Blockly.Msg.SET_BODY_FIELD_POINT_TOOLTIP = 'Set the x or y value of the specified field';
 /// auto generated
-Blockly.Msg.SET_BODY_FIELD_POINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.SET_BODY_FIELD_POINT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.SET_BODY_FIELD_POINT_VI = 'set point field';
 /// auto generated
@@ -1981,56 +1981,56 @@ Blockly.Msg.SET_BODY_FIELD_POINT_VI_DIRECTION = 'direction for';
 /// auto generated
 Blockly.Msg.SET_BODY_FIELD_POINT_VI_TOOLTIP = 'Set the x or y value of the specified field';
 /// auto generated
-Blockly.Msg.SET_BODY_FIELD_POINT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.SET_BODY_FIELD_POINT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.SET_BODY_FIELD_POINT_CLASS_VI = 'set point field';
 /// auto generated
 Blockly.Msg.SET_BODY_FIELD_POINT_CLASS_VI_TOOLTIP = 'Set the value of the body point field';
 /// auto generated
-Blockly.Msg.SET_BODY_FIELD_POINT_CLASS_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.SET_BODY_FIELD_POINT_CLASS_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 
 // STOP BODY
 Blockly.Msg.STOP_BODY_TEXT = 'stop body';
 Blockly.Msg.STOP_BODY_TOOLTIP = 'stops any existing movement or acceleration of the body';
-Blockly.Msg.STOP_BODY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#stop';
+Blockly.Msg.STOP_BODY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#stop';
 
 // DEBUG BODY
 Blockly.Msg.DEBUG_BODY_TEXT = 'debug body';
 Blockly.Msg.DEBUG_BODY_TOOLTIP = 'Enable debug information for the game object';
-Blockly.Msg.DEBUG_BODY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#body';
+Blockly.Msg.DEBUG_BODY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Utils.Debug.html#body';
 
 /// auto generated
-Blockly.Msg.BODY_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#%1';
+Blockly.Msg.BODY_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#%1';
 Blockly.Msg.GET_BODY_FIELD_POINT_CLASS = 'get point field';
 /// auto generated
 Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_TOOLTIP = 'Gets the value of the specified point as a point object';
 /// auto generated
-Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.GET_BODY_FIELD_POINT_CLASS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.SET_BODY_BOOLEAN_FIELD = 'set boolean field';
 /// auto generated
 Blockly.Msg.SET_BODY_BOOLEAN_FIELD_TOOLTIP = 'Set the value of the specified boolean field';
 /// auto generated
-Blockly.Msg.SET_BODY_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.SET_BODY_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.GET_BODY_BOOLEAN_DROPDOWN_MOVING = 'isMoving';
 /// auto generated
 Blockly.Msg.GET_BODY_BOOLEAN_FIELD_TOOLTIP = 'Set the value of the specified boolean field';
 /// auto generated
-Blockly.Msg.GET_BODY_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.GET_BODY_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.SET_BODY_NUMERIC_FIELD = 'set numeric field';
 /// auto generated
 Blockly.Msg.SET_BODY_NUMERIC_FIELD_TOOLTIP = 'Set the value of the specified numeric field';
 /// auto generated
-Blockly.Msg.SET_BODY_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.SET_BODY_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.GET_BODY_NUMERIC_FIELD = 'get numeric field';
 /// auto generated
 Blockly.Msg.GET_BODY_NUMERIC_FIELD_TOOLTIP = 'Get the value of the specified numeric field';
 /// auto generated
-Blockly.Msg.GET_BODY_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html';
+Blockly.Msg.GET_BODY_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html';
 /// auto generated
 Blockly.Msg.CALL_FUNCTION_ON_GROUP = 'Call function';
 /// auto generated
@@ -2038,7 +2038,7 @@ Blockly.Msg.CALL_FUNCTION_ON_GROUP_CHILDREN = 'on all children in group';
 /// auto generated
 Blockly.Msg.CALL_FUNCTION_ON_GROUP_TOOLTIP = 'Calls the specified function once for each group member, giving that child as the input.';
 /// auto generated
-Blockly.Msg.CALL_FUNCTION_ON_GROUP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Group.html#forEachAlive';
+Blockly.Msg.CALL_FUNCTION_ON_GROUP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Group.html#forEachAlive';
 /// auto generated
 Blockly.Msg.ACCELERATION_FROM_ROTATION = 'get forward acceleration from rotation';
 /// auto generated
@@ -2046,25 +2046,25 @@ Blockly.Msg.ACCELERATION_FROM_ROTATION_SPEED = 'pixels/second^2';
 /// auto generated
 Blockly.Msg.ACCELERATION_FROM_ROTATION_TOOLTIP = 'Creates an (x, y) acceleration that goes forward from the given rotation. Returns it as a point.';
 /// auto generated
-Blockly.Msg.ACCELERATION_FROM_ROTATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#accelerationFromRotation';
+Blockly.Msg.ACCELERATION_FROM_ROTATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#accelerationFromRotation';
 /// auto generated
 Blockly.Msg.SET_IMMOVABLE = 'Set Immovable for Object';
 /// auto generated
 Blockly.Msg.SET_IMMOVABLE_TOOLTIP = 'Immovable bodies don\'t recoil from impacts at all. If two immovable bodies overlap or collide, it is ignored. Yes, we\'re sidestepping the question of unstoppable force versus immovable object.';
 /// auto generated
-Blockly.Msg.SET_IMMOVABLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#immovable';
+Blockly.Msg.SET_IMMOVABLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#immovable';
 /// auto generated
 Blockly.Msg.COLLIDE_TOOLTIP = 'Collide the first group/object with the second group/object';
 /// auto generated
-Blockly.Msg.COLLIDE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#collide';
+Blockly.Msg.COLLIDE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#collide';
 /// auto generated
 Blockly.Msg.COLLIDE_VI_TOOLTIP = 'Collide the first group/object with the second group/object';
 /// auto generated
-Blockly.Msg.COLLIDE_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#collide';
+Blockly.Msg.COLLIDE_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#collide';
 /// auto generated
 Blockly.Msg.IS_BODY_TOUCHING_TOOLTIP = 'Check to see if the object is being touched in the given direction.';
 /// auto generated
-Blockly.Msg.IS_BODY_TOUCHING_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#touching';
+Blockly.Msg.IS_BODY_TOUCHING_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#touching';
 /// auto generated
 Blockly.Msg.IS_BODY_TOUCHING_VI = 'is touching';
 /// auto generated
@@ -2080,19 +2080,19 @@ Blockly.Msg.IS_BODY_TOUCHING_VI_DIRECTION_DROPDOWN_NONE = 'None';
 /// auto generated
 Blockly.Msg.IS_BODY_TOUCHING_VI_TOOLTIP = 'Check to see if the object is being touched in the given direction.';
 /// auto generated
-Blockly.Msg.IS_BODY_TOUCHING_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#touching';
+Blockly.Msg.IS_BODY_TOUCHING_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#touching';
 /// auto generated
 Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS = 'with world bounds';
 /// auto generated
 Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_TOOLTIP = 'Make this object collide with the world bounds.';
 /// auto generated
-Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Ninja.Body.html#collideWorldBounds';
+Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Ninja.Body.html#collideWorldBounds';
 /// auto generated
 Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_VI = 'collide with world bounds';
 /// auto generated
 Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_VI_TOOLTIP = 'Make this object collide with the world bounds.';
 /// auto generated
-Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Ninja.Body.html#collideWorldBounds';
+Blockly.Msg.COLLIDE_WITH_WORLD_BOUNDS_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Ninja.Body.html#collideWorldBounds';
 /// auto generated
 Blockly.Msg.CHECK_OVERLAP_VI = 'check overlap between';
 /// auto generated
@@ -2100,7 +2100,7 @@ Blockly.Msg.CHECK_OVERLAP_VI_IF = 'if overlapping';
 /// auto generated
 Blockly.Msg.CHECK_OVERLAP_VI_TOOLTIP = 'Checks for an overlap between objectA and objectB.';
 /// auto generated
-Blockly.Msg.CHECK_OVERLAP_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#overlap';
+Blockly.Msg.CHECK_OVERLAP_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#overlap';
 /// auto generated
 Blockly.Msg.CHECK_OVERLAP = 'Check Overlap Between';
 /// auto generated
@@ -2108,7 +2108,7 @@ Blockly.Msg.CHECK_OVERLAP_IF = 'if overlapping';
 /// auto generated
 Blockly.Msg.CHECK_OVERLAP_TOOLTIP = 'Checks for an overlap between objectA and objectB.';
 /// auto generated
-Blockly.Msg.CHECK_OVERLAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#overlap';
+Blockly.Msg.CHECK_OVERLAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#overlap';
 /// auto generated
 Blockly.Msg.MOVE_TO_POINTER = 'move game object';
 /// auto generated
@@ -2118,7 +2118,7 @@ Blockly.Msg.MOVE_TO_POINTER_SPEED = 'pixels per second';
 /// auto generated
 Blockly.Msg.MOVE_TO_POINTER_TOOLTIP = 'Move the object to the pointer at the given speed';
 /// auto generated
-Blockly.Msg.MOVE_TO_POINTER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#moveToPointer';
+Blockly.Msg.MOVE_TO_POINTER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#moveToPointer';
 /// auto generated
 Blockly.Msg.MOVE_TO_POINTER_EXTENDED = 'move game object';
 /// auto generated
@@ -2130,7 +2130,7 @@ Blockly.Msg.MOVE_TO_POINTER_EXTENDED_TIME = 'Max time (ms)';
 /// auto generated
 Blockly.Msg.MOVE_TO_POINTER_EXTENDED_TOOLTIP = 'Move the object to the pointer at the given speed';
 /// auto generated
-Blockly.Msg.MOVE_TO_POINTER_EXTENDED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#moveToPointer';
+Blockly.Msg.MOVE_TO_POINTER_EXTENDED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#moveToPointer';
 /// auto generated
 Blockly.Msg.MOVE_TO_OBJECT = 'move game object';
 /// auto generated
@@ -2142,7 +2142,7 @@ Blockly.Msg.MOVE_TO_OBJECT_TIME = 'max time (ms)';
 /// auto generated
 Blockly.Msg.MOVE_TO_OBJECT_TOOLTIP = 'Move the object to the given object at the given speed';
 /// auto generated
-Blockly.Msg.MOVE_TO_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#moveToObject';
+Blockly.Msg.MOVE_TO_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#moveToObject';
 /// auto generated
 Blockly.Msg.GET_CURRENT_MOUSE_POSITION = 'get mouse position';
 /// auto generated
@@ -2152,7 +2152,7 @@ Blockly.Msg.GET_CURRENT_MOUSE_POSITION_DIRECTION_DROPDOWN_WORLDY = 'worldY';
 /// auto generated
 Blockly.Msg.GET_CURRENT_MOUSE_POSITION_TOOLTIP = 'Get the position of the mouse, or last active pointer for touch screen interfaces';
 /// auto generated
-Blockly.Msg.GET_CURRENT_MOUSE_POSITION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Pointer.html#x';
+Blockly.Msg.GET_CURRENT_MOUSE_POSITION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Pointer.html#x';
 /// auto generated
 Blockly.Msg.IS_MOUSE_BUTTON_CLICKED = 'mouse button is clicked?';
 /// auto generated
@@ -2164,7 +2164,7 @@ Blockly.Msg.CREATE_CURSOR_KEYS = 'Create Cursor Keys';
 /// auto generated
 Blockly.Msg.CREATE_CURSOR_KEYS_TOOLTIP = 'Create a cursor allowing access to the UP/DOWN/LEFT/RIGHT keys';
 /// auto generated
-Blockly.Msg.CREATE_CURSOR_KEYS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Keyboard.html#createCursorKeys';
+Blockly.Msg.CREATE_CURSOR_KEYS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Keyboard.html#createCursorKeys';
 /// auto generated
 Blockly.Msg.KEY = 'key';
 /// auto generated
@@ -2172,7 +2172,7 @@ Blockly.Msg.IS_KEY_DOWN = 'is down?';
 /// auto generated
 Blockly.Msg.IS_KEY_DOWN_TOOLTIP = 'Checks if the given key is down';
 /// auto generated
-Blockly.Msg.IS_KEY_DOWN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Keyboard.html#isDown';
+Blockly.Msg.IS_KEY_DOWN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Keyboard.html#isDown';
 /// auto generated
 Blockly.Msg.GET_WORLD_PROPERTY_NAME_DROPDOWN_CENTERX = 'center x';
 /// auto generated
@@ -2186,7 +2186,7 @@ Blockly.Msg.GET_WORLD_PROPERTY = 'of the world';
 /// auto generated
 Blockly.Msg.GET_WORLD_PROPERTY_TOOLTIP = 'Get a property of the world';
 /// auto generated
-Blockly.Msg.GET_WORLD_PROPERTY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.World.html';
+Blockly.Msg.GET_WORLD_PROPERTY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.World.html';
 /// auto generated
 Blockly.Msg.SET_WORLD_BOUNDS = 'set world bounds';
 /// auto generated
@@ -2196,94 +2196,94 @@ Blockly.Msg.SET_WORLD_BOUNDS_HEIGHT = 'height:';
 /// auto generated
 Blockly.Msg.SET_WORLD_BOUNDS_TOOLTIP = 'Updates the size of the world and sets the leftmost corner';
 /// auto generated
-Blockly.Msg.SET_WORLD_BOUNDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.World.html#setBounds';
+Blockly.Msg.SET_WORLD_BOUNDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.World.html#setBounds';
 /// auto generated
 Blockly.Msg.CREATE_POINT = 'Create Point';
 /// auto generated
 Blockly.Msg.CREATE_POINT_TOOLTIP = 'Makes a point type. This is a combination of an x and y value which is used to represent either a position, or a combination of width and height.';
 /// auto generated
-Blockly.Msg.CREATE_POINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html';
+Blockly.Msg.CREATE_POINT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html';
 /// auto generated
 Blockly.Msg.GET_WORLD_REFERENCE = 'world';
 /// auto generated
 Blockly.Msg.GET_WORLD_REFERENCE_TOOLTIP = 'Returns a reference to the game world. It functions as a group.';
 /// auto generated
-Blockly.Msg.GET_WORLD_REFERENCE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.World.html';
+Blockly.Msg.GET_WORLD_REFERENCE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.World.html';
 /// auto generated
-Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#%1';
+Blockly.Msg.GAME_OBJECT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#%1';
 Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD = 'set point field';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD_TOOLTIP = 'Set a point property on the object';
 /// auto generated
-Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html';
+Blockly.Msg.SET_GAME_OBJECT_POINT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html';
 /// auto generated
 Blockly.Msg.GET_GAME_OBJECT_POINT_FIELD = 'get point field';
 /// auto generated
 Blockly.Msg.GET_GAME_OBJECT_POINT_FIELD_TOOLTIP = 'Get a point property on the object';
 /// auto generated
-Blockly.Msg.GET_GAME_OBJECT_POINT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html';
+Blockly.Msg.GET_GAME_OBJECT_POINT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD = 'set numeric field';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD_TOOLTIP = 'Set a numeric property on the object';
 /// auto generated
-Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html';
+Blockly.Msg.SET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html';
 /// auto generated
 Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD = 'get numeric field';
 /// auto generated
 Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD_TOOLTIP = 'Get a numeric property on the object';
 /// auto generated
-Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html';
+Blockly.Msg.GET_GAME_OBJECT_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD = 'set boolean field';
 /// auto generated
 Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_TOOLTIP = 'Set a boolean property on the object';
 /// auto generated
-Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html';
+Blockly.Msg.SET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html';
 /// auto generated
 Blockly.Msg.GET_GAME_OBJECT_BOOLEAN_FIELD = 'get boolean field';
 /// auto generated
 Blockly.Msg.GET_GAME_OBJECT_BOOLEAN_FIELD_TOOLTIP = 'Get a boolean property on the object';
 /// auto generated
-Blockly.Msg.GET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html';
+Blockly.Msg.GET_GAME_OBJECT_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html';
 /// auto generated
 Blockly.Msg.SET_OBJECT_ANCHOR = 'set anchor for';
 /// auto generated
 Blockly.Msg.SET_OBJECT_ANCHOR_TOOLTIP = 'Sets an object\'s anchor.';
 /// auto generated
-Blockly.Msg.SET_OBJECT_ANCHOR_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#anchor';
+Blockly.Msg.SET_OBJECT_ANCHOR_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#anchor';
 /// auto generated
 Blockly.Msg.KILL_OBJECT = 'kill';
 /// auto generated
 Blockly.Msg.KILL_OBJECT_TOOLTIP = 'Will kill the object setting making it non-existent. Reverse with revive.';
 /// auto generated
-Blockly.Msg.KILL_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#kill';
+Blockly.Msg.KILL_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#kill';
 /// auto generated
 Blockly.Msg.FAINT_OBJECT = 'faint';
 /// auto generated
 Blockly.Msg.FAINT_OBJECT_TOOLTIP = 'Will faint the object setting making it non-existent. Reverse with revive.';
 /// auto generated
-Blockly.Msg.FAINT_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#kill';
+Blockly.Msg.FAINT_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#kill';
 /// auto generated
 Blockly.Msg.DESTROY_OBJECT_TOOLTIP = 'Will remove the object from the game and memory, after which it can no longer be accessed.';
 /// auto generated
-Blockly.Msg.DESTROY_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Component.Destroy.html';
+Blockly.Msg.DESTROY_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Component.Destroy.html';
 /// auto generated
 Blockly.Msg.SET_SCALE = 'Scale';
 /// auto generated
 Blockly.Msg.SET_SCALE_TOOLTIP = 'Sets the given object\'s width and height.';
 /// auto generated
-Blockly.Msg.SET_SCALE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#scale';
+Blockly.Msg.SET_SCALE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#scale';
 /// auto generated
 Blockly.Msg.SET_SCALE_VI = 'scale';
 /// auto generated
 Blockly.Msg.SET_SCALE_VI_TOOLTIP = 'Sets the given object\'s width and height.';
 /// auto generated
-Blockly.Msg.SET_SCALE_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#scale';
+Blockly.Msg.SET_SCALE_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#scale';
 /// auto generated
 Blockly.Msg.SET_POS_TOOLTIP = 'Sets the individual x or y coordinate of an object.';
 /// auto generated
-Blockly.Msg.SET_POS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#position';
+Blockly.Msg.SET_POS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#position';
 /// auto generated
 Blockly.Msg.OBJECT_SET_TO_SETX = 'set x to';
 /// auto generated
@@ -2291,43 +2291,43 @@ Blockly.Msg.OBJECT_SET_TO_SETY = 'set y to';
 /// auto generated
 Blockly.Msg.OBJECT_SET_TO_TOOLTIP = 'Sets the x and y fields of an object.';
 /// auto generated
-Blockly.Msg.OBJECT_SET_TO_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#setTo';
+Blockly.Msg.OBJECT_SET_TO_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#setTo';
 /// auto generated
 Blockly.Msg.SET_VELOCITY = 'Set Velocity';
 /// auto generated
 Blockly.Msg.SET_VELOCITY_TOOLTIP = 'Sets an objects velocity. This is a combination of speed and direction.';
 /// auto generated
-Blockly.Msg.SET_VELOCITY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#velocity';
+Blockly.Msg.SET_VELOCITY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#velocity';
 /// auto generated
 Blockly.Msg.GET_PARAM = 'from object';
 /// auto generated
 Blockly.Msg.GET_PARAM_TOOLTIP = 'Gets a given numeric field from an object.';
 /// auto generated
-Blockly.Msg.GET_PARAM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#toc-4';
+Blockly.Msg.GET_PARAM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#toc-4';
 /// auto generated
 Blockly.Msg.OBJECT_INCAMERA = 'in camera?';
 /// auto generated
 Blockly.Msg.OBJECT_INCAMERA_TOOLTIP = 'Checks if an object is inside the boundaries of the camera.';
 /// auto generated
-Blockly.Msg.OBJECT_INCAMERA_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Component.InCamera.html';
+Blockly.Msg.OBJECT_INCAMERA_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Component.InCamera.html';
 /// auto generated
 Blockly.Msg.GET_CAMERA = 'get camera';
 /// auto generated
 Blockly.Msg.GET_CAMERA_TOOLTIP = 'Returns a reference to the camera.';
 /// auto generated
-Blockly.Msg.GET_CAMERA_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html';
+Blockly.Msg.GET_CAMERA_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html';
 /// auto generated
 Blockly.Msg.CAMERA_FOLLOW = 'make camera follow';
 /// auto generated
 Blockly.Msg.CAMERA_FOLLOW_TOOLTIP = 'Make the camera follow the specified game object';
 /// auto generated
-Blockly.Msg.CAMERA_FOLLOW_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#follow';
+Blockly.Msg.CAMERA_FOLLOW_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#follow';
 /// auto generated
 Blockly.Msg.GET_BOUNDS = 'Get bounds of';
 /// auto generated
 Blockly.Msg.GET_BOUNDS_TOOLTIP = 'Gets the rectangular bounds of most objects in the game.';
 /// auto generated
-Blockly.Msg.GET_BOUNDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#getBounds';
+Blockly.Msg.GET_BOUNDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#getBounds';
 /// auto generated
 Blockly.Msg.GET_ROTATION = 'get rotation';
 /// auto generated
@@ -2339,31 +2339,31 @@ Blockly.Msg.ROTATE = 'rotate';
 /// auto generated
 Blockly.Msg.ROTATE_TOOLTIP = 'Rotates a game object by the given angle in degrees. Negative numbers will rotate it the opposite direction.';
 /// auto generated
-Blockly.Msg.ROTATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#angle';
+Blockly.Msg.ROTATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#angle';
 /// auto generated
 Blockly.Msg.SET_ROTATION = 'set the rotation of';
 /// auto generated
 Blockly.Msg.SET_ROTATION_TOOLTIP = 'Directly sets the rotation (in degrees) of this game object to the given value.';
 /// auto generated
-Blockly.Msg.SET_ROTATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#angle';
+Blockly.Msg.SET_ROTATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#angle';
 /// auto generated
 Blockly.Msg.GET_LOCAL_BOUNDS = 'get local bounds of';
 /// auto generated
 Blockly.Msg.GET_LOCAL_BOUNDS_TOOLTIP = 'Gets the rectangular bounds of an object. Bounds are relative to the object itself instead of the world.';
 /// auto generated
-Blockly.Msg.GET_LOCAL_BOUNDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#getLocalBounds';
+Blockly.Msg.GET_LOCAL_BOUNDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#getLocalBounds';
 /// auto generated
 Blockly.Msg.RESET = 'reset object';
 /// auto generated
 Blockly.Msg.RESET_TOOLTIP = 'Gets most objects ready to play again in various ways and treats it like new. Specifically, moves it to a new position then makes sure it is visible, rendering, alive, and actually exists in the game world.';
 /// auto generated
-Blockly.Msg.RESET_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#reset';
+Blockly.Msg.RESET_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#reset';
 /// auto generated
 Blockly.Msg.REVIVE = 'revive';
 /// auto generated
 Blockly.Msg.REVIVE_TOOLTIP = 'Brings a \'dead\' Game Object back to life. Makes sure it counts as alive, existing, and visible. Will send an event named onRevived.';
 /// auto generated
-Blockly.Msg.REVIVE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#revive';
+Blockly.Msg.REVIVE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#revive';
 /// auto generated
 Blockly.Msg.ADD_TEXT = 'add text at';
 /// auto generated
@@ -2375,19 +2375,19 @@ Blockly.Msg.ADD_TEXT_FONT_COLOUR = 'font colour';
 /// auto generated
 Blockly.Msg.ADD_TEXT_TOOLTIP = 'Add text to the screen at the specified location';
 /// auto generated
-Blockly.Msg.ADD_TEXT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.GameObjectFactory.html#text';
+Blockly.Msg.ADD_TEXT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.GameObjectFactory.html#text';
 /// auto generated
 Blockly.Msg.SET_TEXT = 'set text for';
 /// auto generated
 Blockly.Msg.SET_TEXT_TOOLTIP = 'Sets what phaser text will display on the screen.';
 /// auto generated
-Blockly.Msg.SET_TEXT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Text.html#setText';
+Blockly.Msg.SET_TEXT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Text.html#setText';
 /// auto generated
 Blockly.Msg.SET_TEXT_VI = 'set text for';
 /// auto generated
 Blockly.Msg.SET_TEXT_VI_TOOLTIP = 'Sets what phaser text will display on the screen.';
 /// auto generated
-Blockly.Msg.SET_TEXT_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Text.html#setText';
+Blockly.Msg.SET_TEXT_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Text.html#setText';
 /// auto generated
 Blockly.Msg.CREATE_BITMAPFONT = 'Create Font';
 /// auto generated
@@ -2395,7 +2395,7 @@ Blockly.Msg.CREATE_BITMAPFONT_XML = 'XML';
 /// auto generated
 Blockly.Msg.CREATE_BITMAPFONT_TOOLTIP = 'Loads a font into the game. These don\'t work like normal fonts. See the help for more info.';
 /// auto generated
-Blockly.Msg.CREATE_BITMAPFONT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#bitmapFont';
+Blockly.Msg.CREATE_BITMAPFONT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#bitmapFont';
 /// auto generated
 Blockly.Msg.DRAWCIRCLE = 'draw circle at position';
 /// auto generated
@@ -2403,19 +2403,19 @@ Blockly.Msg.DRAWCIRCLE_DIAMETER = 'with diameter:';
 /// auto generated
 Blockly.Msg.DRAWCIRCLE_TOOLTIP = 'Draws a circle at a given position in the world. Doesn\'t work on its own. Put it inside the \'fill shapes with\' block.';
 /// auto generated
-Blockly.Msg.DRAWCIRCLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Graphics.html#drawCircle';
+Blockly.Msg.DRAWCIRCLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Graphics.html#drawCircle';
 /// auto generated
 Blockly.Msg.GET_OBJECT_WIDTH = 'get width of ';
 /// auto generated
 Blockly.Msg.GET_OBJECT_WIDTH_TOOLTIP = 'Gets the width of an object.';
 /// auto generated
-Blockly.Msg.GET_OBJECT_WIDTH_HELP_URL = 'http://dragondrop.digipen.edu/docs/PIXI.Sprite.html#width';
+Blockly.Msg.GET_OBJECT_WIDTH_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/PIXI.Sprite.html#width';
 /// auto generated
 Blockly.Msg.SET_OBJECT_WIDTH = 'set width of ';
 /// auto generated
 Blockly.Msg.SET_OBJECT_WIDTH_TOOLTIP = 'Sets the width of an object.';
 /// auto generated
-Blockly.Msg.SET_OBJECT_WIDTH_HELP_URL = 'http://dragondrop.digipen.edu/docs/PIXI.Sprite.html#width';
+Blockly.Msg.SET_OBJECT_WIDTH_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/PIXI.Sprite.html#width';
 /// auto generated
 Blockly.Msg.ADDEMITTER = 'add emitter';
 /// auto generated
@@ -2423,7 +2423,7 @@ Blockly.Msg.ADDEMITTER_MAXPARTICLES = 'maxParticles';
 /// auto generated
 Blockly.Msg.ADDEMITTER_TOOLTIP = 'Create a particle emitter';
 /// auto generated
-Blockly.Msg.ADDEMITTER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html';
+Blockly.Msg.ADDEMITTER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html';
 /// auto generated
 Blockly.Msg.EMITTER_MAKE_PARTICLES_EMITTER = 'on emitter';
 /// auto generated
@@ -2447,7 +2447,7 @@ Blockly.Msg.EMITTERS_MAKE_PARTICLES_TAG = 'image tag';
 /// auto generated
 Blockly.Msg.EMITTERS_MAKE_PARTICLES_TOOLTIP = 'Generate a new set of particles for this emitter';
 /// auto generated
-Blockly.Msg.EMITTERS_MAKE_PARTICLES_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#makeParticles';
+Blockly.Msg.EMITTERS_MAKE_PARTICLES_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#makeParticles';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ROTATION_EMITTER = 'on emitter,';
 /// auto generated
@@ -2455,7 +2455,7 @@ Blockly.Msg.EMITTERS_SET_ROTATION = 'set rotation:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ROTATION_TOOLTIP = 'Set the angular velocity constraints of the particles';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_ROTATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#setRotation';
+Blockly.Msg.EMITTERS_SET_ROTATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#setRotation';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ROTATION_VI_EMITTER = 'on emitter';
 /// auto generated
@@ -2463,7 +2463,7 @@ Blockly.Msg.EMITTERS_SET_ROTATION_VI = 'set min/max angular velocity';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ROTATION_VI_TOOLTIP = 'Set the angular velocity constraints of the particles.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_ROTATION_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#setRotation';
+Blockly.Msg.EMITTERS_SET_ROTATION_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#setRotation';
 /// auto generated
 Blockly.Msg.EMITTERS_START = 'start:';
 /// auto generated
@@ -2477,7 +2477,7 @@ Blockly.Msg.EMITTERS_START_QUANTITY = 'Quantity';
 /// auto generated
 Blockly.Msg.EMITTERS_START_TOOLTIP = 'Start emitting particles.';
 /// auto generated
-Blockly.Msg.EMITTERS_START_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#start';
+Blockly.Msg.EMITTERS_START_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#start';
 /// auto generated
 Blockly.Msg.EMITTERS_START_VI = 'start emitter,';
 /// auto generated
@@ -2491,67 +2491,67 @@ Blockly.Msg.EMITTERS_START_VI_QUANTITY = 'quantity';
 /// auto generated
 Blockly.Msg.EMITTERS_START_VI_TOOLTIP = 'Start emitting particles.';
 /// auto generated
-Blockly.Msg.EMITTERS_START_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#start';
+Blockly.Msg.EMITTERS_START_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#start';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ALPHA = 'set Alpha:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ALPHA_TOOLTIP = 'Set the min and max alpha values for this emitter.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_ALPHA_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#setAlpha';
+Blockly.Msg.EMITTERS_SET_ALPHA_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#setAlpha';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ALPHA_VI = 'set alpha';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_ALPHA_VI_TOOLTIP = 'Set the min and max alpha values for this emitter.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_ALPHA_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#setAlpha';
+Blockly.Msg.EMITTERS_SET_ALPHA_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#setAlpha';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SCALE = 'set Scale:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SCALE_TOOLTIP = 'Set the minimum/maximum scale for particles and the rate to go between.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_SCALE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#setScale';
+Blockly.Msg.EMITTERS_SET_SCALE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#setScale';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SCALE_VI = 'set scale';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SCALE_VI_TOOLTIP = 'Set the minimum/maximum scale for particles and the rate to go between.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_SCALE_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#setScale';
+Blockly.Msg.EMITTERS_SET_SCALE_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#setScale';
 /// auto generated
 Blockly.Msg.SET_EMIT_FROM = 'set emit from';
 /// auto generated
 Blockly.Msg.SET_EMIT_FROM_TOOLTIP = 'Set where the particles emit from, by individual coordinate.';
 /// auto generated
-Blockly.Msg.SET_EMIT_FROM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#emitX';
+Blockly.Msg.SET_EMIT_FROM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#emitX';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SPEED = 'set Speed:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SPEED_TOOLTIP = 'Sets the minimum and maximum speeds that an emitted particle will go.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_SPEED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#minParticleSpeed';
+Blockly.Msg.EMITTERS_SET_SPEED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#minParticleSpeed';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SPEED_VI = 'set speed';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_SPEED_VI_TOOLTIP = 'Sets the minimum and maximum speeds that an emitted particle will go.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_SPEED_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#minParticleSpeed';
+Blockly.Msg.EMITTERS_SET_SPEED_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#minParticleSpeed';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_GRAVITY = 'set Gravity:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_GRAVITY_TOOLTIP = 'Set the gravity of generated particles.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_GRAVITY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#gravity';
+Blockly.Msg.EMITTERS_SET_GRAVITY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#gravity';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_GRAVITY_VI = 'set gravity:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_GRAVITY_VI_TOOLTIP = 'Set the gravity of generated particles';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_GRAVITY_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#gravity';
+Blockly.Msg.EMITTERS_SET_GRAVITY_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#gravity';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_WIDTH = 'set width:';
 /// auto generated
 Blockly.Msg.EMITTERS_SET_WIDTH_TOOLTIP = 'Sets the width of the area in which particles will be emitted.';
 /// auto generated
-Blockly.Msg.EMITTERS_SET_WIDTH_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Particles.Arcade.Emitter.html#width';
+Blockly.Msg.EMITTERS_SET_WIDTH_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Particles.Arcade.Emitter.html#width';
 /// auto generated
 Blockly.Msg.DEBUG_SPRITE = 'write debug for sprite';
 /// auto generated
@@ -2559,7 +2559,7 @@ Blockly.Msg.DEBUG_SPRITE_AT_X = 'at x';
 /// auto generated
 Blockly.Msg.DEBUG_SPRITE_TOOLTIP = 'Draws various information useful for debugging about the specified sprite at the given world coordinates.';
 /// auto generated
-Blockly.Msg.DEBUG_SPRITE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#spriteInfo';
+Blockly.Msg.DEBUG_SPRITE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Utils.Debug.html#spriteInfo';
 /// auto generated
 Blockly.Msg.STATEMANAGER_ADD_STATE = 'add state';
 /// auto generated
@@ -2571,37 +2571,37 @@ Blockly.Msg.STATEMANAGER_START_STATE = 'start state with tag';
 /// auto generated
 Blockly.Msg.STATEMANAGER_START_STATE_TOOLTIP = 'Start the specified state, this should be a state that has been added to the game engine';
 /// auto generated
-Blockly.Msg.STATEMANAGER_START_STATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.StateManager.html#start';
+Blockly.Msg.STATEMANAGER_START_STATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.StateManager.html#start';
 /// auto generated
 Blockly.Msg.RECTANGLE_CREATE = 'make rectangle';
 /// auto generated
 Blockly.Msg.RECTANGLE_CREATE_TOOLTIP = 'Defines a rectangle, can be used for cropping, alignment and other tasks';
 /// auto generated
-Blockly.Msg.RECTANGLE_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html';
+Blockly.Msg.RECTANGLE_CREATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html';
 /// auto generated
 Blockly.Msg.POINT_CREATE = 'make point';
 /// auto generated
 Blockly.Msg.POINT_CREATE_TOOLTIP = 'Defines a point which represents a location in 2D';
 /// auto generated
-Blockly.Msg.POINT_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html';
+Blockly.Msg.POINT_CREATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html';
 /// auto generated
 Blockly.Msg.POINT_GET_ELEMENT = 'get point';
 /// auto generated
 Blockly.Msg.POINT_GET_ELEMENT_TOOLTIP = 'Defines a point which represents a location in 2D';
 /// auto generated
-Blockly.Msg.POINT_GET_ELEMENT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html';
+Blockly.Msg.POINT_GET_ELEMENT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html';
 /// auto generated
 Blockly.Msg.POINT_SET_ELEMENT = 'set point';
 /// auto generated
 Blockly.Msg.POINT_SET_ELEMENT_TOOLTIP = 'Defines a point which represents a location in 2D';
 /// auto generated
-Blockly.Msg.POINT_SET_ELEMENT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html';
+Blockly.Msg.POINT_SET_ELEMENT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html';
 /// auto generated
 Blockly.Msg.POINT_SET_MAGNITUDE = 'set magnitude for';
 /// auto generated
 Blockly.Msg.POINT_SET_MAGNITUDE_TOOLTIP = 'Sets the magnitude of the point';
 /// auto generated
-Blockly.Msg.POINT_SET_MAGNITUDE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#setMagnitude';
+Blockly.Msg.POINT_SET_MAGNITUDE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#setMagnitude';
 /// auto generated
 Blockly.Msg.POINTS_ADD = 'add points';
 /// auto generated
@@ -2619,25 +2619,25 @@ Blockly.Msg.POINTS_ANGLE_BETWEEN = 'angle between';
 /// auto generated
 Blockly.Msg.POINTS_ANGLE_BETWEEN_TOOLTIP = 'Returns the angle in radians between the two point objects';
 /// auto generated
-Blockly.Msg.POINTS_ANGLE_BETWEEN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.angle';
+Blockly.Msg.POINTS_ANGLE_BETWEEN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.angle';
 /// auto generated
 Blockly.Msg.POINTS_DISTANCE = 'distance between';
 /// auto generated
 Blockly.Msg.POINTS_DISTANCE_TOOLTIP = 'Returns the distance between the two point objects';
 /// auto generated
-Blockly.Msg.POINTS_DISTANCE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.distance';
+Blockly.Msg.POINTS_DISTANCE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.distance';
 /// auto generated
 Blockly.Msg.POINTS_DIVIDE = 'divide';
 /// auto generated
 Blockly.Msg.POINTS_DIVIDE_TOOLTIP = 'Returns a new point p = [a.x / b.x, a.y / b.y]';
 /// auto generated
-Blockly.Msg.POINTS_DIVIDE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.divide';
+Blockly.Msg.POINTS_DIVIDE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.divide';
 /// auto generated
 Blockly.Msg.POINTS_EQUALS = 'is equal to';
 /// auto generated
 Blockly.Msg.POINTS_EQUALS_TOOLTIP = 'Determines if two points are equal';
 /// auto generated
-Blockly.Msg.POINTS_EQUALS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.equals';
+Blockly.Msg.POINTS_EQUALS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.equals';
 /// auto generated
 Blockly.Msg.POINTS_INTERPOLATE = 'interpolate between A';
 /// auto generated
@@ -2647,43 +2647,43 @@ Blockly.Msg.POINTS_INTERPOLATE_PERCENT = 'percent to B';
 /// auto generated
 Blockly.Msg.POINTS_INTERPOLATE_TOOLTIP = 'Interpolate between two points, the percent (0.0 - 1.0) determines how far towards the second point (1 - F) * A + F * B';
 /// auto generated
-Blockly.Msg.POINTS_INTERPOLATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.interpolate';
+Blockly.Msg.POINTS_INTERPOLATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.interpolate';
 /// auto generated
 Blockly.Msg.POINTS_MULTIPLY = 'multiply';
 /// auto generated
 Blockly.Msg.POINTS_MULTIPLY_TOOLTIP = 'Multiply two points';
 /// auto generated
-Blockly.Msg.POINTS_MULTIPLY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.multiply';
+Blockly.Msg.POINTS_MULTIPLY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.multiply';
 /// auto generated
 Blockly.Msg.POINTS_NEGATE = 'negate';
 /// auto generated
 Blockly.Msg.POINTS_NEGATE_TOOLTIP = 'Negate the point';
 /// auto generated
-Blockly.Msg.POINTS_NEGATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.negative';
+Blockly.Msg.POINTS_NEGATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.negative';
 /// auto generated
 Blockly.Msg.POINTS_NORMALIZE = 'normalize';
 /// auto generated
 Blockly.Msg.POINTS_NORMALIZE_TOOLTIP = 'Normalize the point (make unit length)';
 /// auto generated
-Blockly.Msg.POINTS_NORMALIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.normalize';
+Blockly.Msg.POINTS_NORMALIZE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.normalize';
 /// auto generated
 Blockly.Msg.POINTS_PERPENDICULAR = 'find pependicular vector to';
 /// auto generated
 Blockly.Msg.POINTS_PERPENDICULAR_TOOLTIP = 'Find a perpendicular vector to this point';
 /// auto generated
-Blockly.Msg.POINTS_PERPENDICULAR_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#.perp';
+Blockly.Msg.POINTS_PERPENDICULAR_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#.perp';
 /// auto generated
 Blockly.Msg.CAMERA_FOLLOW_VI = 'make camera follow';
 /// auto generated
 Blockly.Msg.CAMERA_FOLLOW_VI_TOOLTIP = 'Make the camera follow the specified game object';
 /// auto generated
-Blockly.Msg.CAMERA_FOLLOW_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#follow';
+Blockly.Msg.CAMERA_FOLLOW_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#follow';
 /// auto generated
 Blockly.Msg.CAMERA_FADE = 'fade screen to';
 /// auto generated
 Blockly.Msg.CAMERA_FADE_TOOLTIP = 'Fades the screen to the specified colour over time. Ends with the screen completely obscured.';
 /// auto generated
-Blockly.Msg.CAMERA_FADE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#fade';
+Blockly.Msg.CAMERA_FADE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#fade';
 /// auto generated
 Blockly.Msg.CAMERA_FLASH = 'flash screen to';
 /// auto generated
@@ -2691,49 +2691,49 @@ Blockly.Msg.CAMERA_FLASH_FADE = 'then fade in over';
 /// auto generated
 Blockly.Msg.CAMERA_FLASH_TOOLTIP = 'Immediately covers the camera with the specified colour. Then fades back in over a given time. Useful for fading back in after fading out, or as a big hit effect.';
 /// auto generated
-Blockly.Msg.CAMERA_FLASH_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#flash';
+Blockly.Msg.CAMERA_FLASH_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#flash';
 /// auto generated
 Blockly.Msg.CAMERA_FOCUS_ON = 'focus camera on';
 /// auto generated
 Blockly.Msg.CAMERA_FOCUS_ON_TOOLTIP = 'Immediately centers the camera on the specified game object.';
 /// auto generated
-Blockly.Msg.CAMERA_FOCUS_ON_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#focusOn';
+Blockly.Msg.CAMERA_FOCUS_ON_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#focusOn';
 /// auto generated
 Blockly.Msg.CAMERA_FOCUS_ON_XY = 'focus camera on position at';
 /// auto generated
 Blockly.Msg.CAMERA_FOCUS_ON_XY_TOOLTIP = 'Immediately centers the camera on a given position.';
 /// auto generated
-Blockly.Msg.CAMERA_FOCUS_ON_XY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#focusOnXY';
+Blockly.Msg.CAMERA_FOCUS_ON_XY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#focusOnXY';
 /// auto generated
 Blockly.Msg.CAMERA_RESET = 'reset camera';
 /// auto generated
 Blockly.Msg.CAMERA_RESET_TOOLTIP = 'Completely resets the camera. It goes back to (0, 0), stops following anything, and removes all effects such as shake or flash.';
 /// auto generated
-Blockly.Msg.CAMERA_RESET_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#reset';
+Blockly.Msg.CAMERA_RESET_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#reset';
 /// auto generated
 Blockly.Msg.CAMERA_RESET_FX = 'reset camera effects';
 /// auto generated
 Blockly.Msg.CAMERA_RESET_FX_TOOLTIP = 'Removes visual effects from the camera such as fading in/out. Does not affect the position, follow target, or screen shake.';
 /// auto generated
-Blockly.Msg.CAMERA_RESET_FX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#resetFX';
+Blockly.Msg.CAMERA_RESET_FX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#resetFX';
 /// auto generated
 Blockly.Msg.CAMERA_SET_BOUNDS_TO_WORLD = 'set camera bounds to world bounds';
 /// auto generated
 Blockly.Msg.CAMERA_SET_BOUNDS_TO_WORLD_TOOLTIP = 'The camera bounds are not the size of what it shows, but the space it can move around in. This sets those bounds so that the camera can view the entire world, but nothing more.';
 /// auto generated
-Blockly.Msg.CAMERA_SET_BOUNDS_TO_WORLD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#setBoundsToWorld';
+Blockly.Msg.CAMERA_SET_BOUNDS_TO_WORLD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#setBoundsToWorld';
 /// auto generated
 Blockly.Msg.CAMERA_SET_POSITION = 'set camera position to';
 /// auto generated
 Blockly.Msg.CAMERA_SET_POSITION_TOOLTIP = 'Jumps the camera immediately to the given position. Note that the camera\'s position is its upper left corner, not its center.';
 /// auto generated
-Blockly.Msg.CAMERA_SET_POSITION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#setPosition';
+Blockly.Msg.CAMERA_SET_POSITION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#setPosition';
 /// auto generated
 Blockly.Msg.CAMERA_SET_SIZE = 'set camera size';
 /// auto generated
 Blockly.Msg.CAMERA_SET_SIZE_TOOLTIP = 'Sets the size of the camera\'s view window.';
 /// auto generated
-Blockly.Msg.CAMERA_SET_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#setSize';
+Blockly.Msg.CAMERA_SET_SIZE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#setSize';
 /// auto generated
 Blockly.Msg.CAMERA_SHAKE = 'shake the camera';
 /// auto generated
@@ -2747,13 +2747,13 @@ Blockly.Msg.CAMERA_SHAKE_DIRECTION_DROPDOWN_HORIZONTAL = 'horizontally';
 /// auto generated
 Blockly.Msg.CAMERA_SHAKE_TOOLTIP = 'Screen shake. Great for impact effects, or just a little extra umph, but don\'t go overboard. The intensity goes from 0 to 1. % of bounds it can move';
 /// auto generated
-Blockly.Msg.CAMERA_SHAKE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#shake';
+Blockly.Msg.CAMERA_SHAKE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#shake';
 /// auto generated
 Blockly.Msg.CAMERA_UNFOLLOW = 'stop camera follow';
 /// auto generated
 Blockly.Msg.CAMERA_UNFOLLOW_TOOLTIP = 'Makes the camera stop following anything. Equivalent to making the camera follow null.';
 /// auto generated
-Blockly.Msg.CAMERA_UNFOLLOW_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#unfollow';
+Blockly.Msg.CAMERA_UNFOLLOW_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#unfollow';
 /// auto generated
 Blockly.Msg.CAMERA_FOLLOW_VI_STYLED = 'make camera follow';
 /// auto generated
@@ -2761,51 +2761,51 @@ Blockly.Msg.CAMERA_FOLLOW_VI_STYLED_SELECTION = 'with style';
 /// auto generated
 Blockly.Msg.CAMERA_FOLLOW_VI_STYLED_TOOLTIP = 'Make the camera follow the specified game object';
 /// auto generated
-Blockly.Msg.CAMERA_FOLLOW_VI_STYLED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html#follow';
+Blockly.Msg.CAMERA_FOLLOW_VI_STYLED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html#follow';
 /// auto generated
 Blockly.Msg.SET_SOUND_BOOLEAN_MEMBER_TOOLTIP = 'Set the selected member on the Sound';
 /// auto generated
-Blockly.Msg.SET_SOUND_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html';
+Blockly.Msg.SET_SOUND_BOOLEAN_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html';
 /// auto generated
 Blockly.Msg.GET_SOUND_BOOLEAN_MEMBER_TOOLTIP = 'Get the selected member from the Sound';
 /// auto generated
-Blockly.Msg.GET_SOUND_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html';
+Blockly.Msg.GET_SOUND_BOOLEAN_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html';
 /// auto generated
 Blockly.Msg.SET_SOUND_NUMERIC_MEMBER_TOOLTIP = 'Set the selected member on the Sound';
 /// auto generated
-Blockly.Msg.SET_SOUND_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html';
+Blockly.Msg.SET_SOUND_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html';
 /// auto generated
 Blockly.Msg.GET_SOUND_NUMERIC_MEMBER_TOOLTIP = 'Get the selected member from the Sound';
 /// auto generated
-Blockly.Msg.GET_SOUND_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html';
+Blockly.Msg.GET_SOUND_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html';
 /// auto generated
 Blockly.Msg.GET_SOUND_STRING_MEMBER_TOOLTIP = 'Get the selected member from the Sound';
 /// auto generated
-Blockly.Msg.GET_SOUND_STRING_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html';
+Blockly.Msg.GET_SOUND_STRING_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html';
 /// auto generated
 Blockly.Msg.LOAD_SOUND = 'create sound';
 /// auto generated
 Blockly.Msg.LOAD_SOUND_TOOLTIP = 'Loads an audio file so you can use it later. The tag is a name you use to access it later. The source is a file path. URLs work as a source too, but this is not recommended.';
 /// auto generated
-Blockly.Msg.LOAD_SOUND_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#audio';
+Blockly.Msg.LOAD_SOUND_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#audio';
 /// auto generated
 Blockly.Msg.ADD_SOUND = 'add sound';
 /// auto generated
 Blockly.Msg.ADD_SOUND_TOOLTIP = 'Add a Sound to the game';
 /// auto generated
-Blockly.Msg.ADD_SOUND_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.GameObjectFactory.html#audio';
+Blockly.Msg.ADD_SOUND_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.GameObjectFactory.html#audio';
 /// auto generated
 Blockly.Msg.PLAY_SOUND = 'play sound';
 /// auto generated
 Blockly.Msg.PLAY_SOUND_TOOLTIP = 'Plays a sound that has been created. The volume goes from 0 to 1.';
 /// auto generated
-Blockly.Msg.PLAY_SOUND_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.SoundManager.html#play';
+Blockly.Msg.PLAY_SOUND_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.SoundManager.html#play';
 /// auto generated
 Blockly.Msg.REMOVE_SOUND = 'stop all sounds tagged';
 /// auto generated
 Blockly.Msg.REMOVE_SOUND_TOOLTIP = 'Stops all sounds with the given tag.';
 /// auto generated
-Blockly.Msg.REMOVE_SOUND_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.SoundManager.html#removeByKey';
+Blockly.Msg.REMOVE_SOUND_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.SoundManager.html#removeByKey';
 /// auto generated
 Blockly.Msg.STOP_PAUSE_RESUME_SOUNDS_OPTION_DROPDOWN_STOP = 'stop';
 /// auto generated
@@ -2817,7 +2817,7 @@ Blockly.Msg.STOP_PAUSE_RESUME_SOUNDS = 'all sounds';
 /// auto generated
 Blockly.Msg.STOP_PAUSE_RESUME_SOUNDS_TOOLTIP = 'Stop - Stop everything dead. Pause - Stop everything, but remember where you were. Resume - Start playing paused sounds from where they left off.';
 /// auto generated
-Blockly.Msg.STOP_PAUSE_RESUME_SOUNDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.SoundManager.html#stopAll';
+Blockly.Msg.STOP_PAUSE_RESUME_SOUNDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.SoundManager.html#stopAll';
 /// auto generated
 Blockly.Msg.SOUND_FADE_IN = 'fade in sound';
 /// auto generated
@@ -2825,13 +2825,13 @@ Blockly.Msg.SOUND_FADE_IN_LOOP = 'milliseconds loop';
 /// auto generated
 Blockly.Msg.SOUND_FADE_IN_TOOLTIP = 'Starts/Restarts the sound sets the volume to zero and increases from 0 to 1 over duration';
 /// auto generated
-Blockly.Msg.SOUND_FADE_IN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#fadeIn';
+Blockly.Msg.SOUND_FADE_IN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#fadeIn';
 /// auto generated
 Blockly.Msg.SOUND_FADE_OUT = 'fade out sound';
 /// auto generated
 Blockly.Msg.SOUND_FADE_OUT_TOOLTIP = 'Fades the sounds volume to 0 over the given duration';
 /// auto generated
-Blockly.Msg.SOUND_FADE_OUT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#fadeOut';
+Blockly.Msg.SOUND_FADE_OUT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#fadeOut';
 /// auto generated
 Blockly.Msg.SOUND_FADE_TO = 'fade sound';
 /// auto generated
@@ -2839,31 +2839,31 @@ Blockly.Msg.SOUND_FADE_TO_VOLUME = 'to volume';
 /// auto generated
 Blockly.Msg.SOUND_FADE_TO_TOOLTIP = 'Fades the sounds volume to a given volume over the given duration';
 /// auto generated
-Blockly.Msg.SOUND_FADE_TO_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#fadeTo';
+Blockly.Msg.SOUND_FADE_TO_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#fadeTo';
 /// auto generated
 Blockly.Msg.SOUND_LOOP_FULL = 'loop sound';
 /// auto generated
 Blockly.Msg.SOUND_LOOP_FULL_TOOLTIP = 'Loops the entire sound';
 /// auto generated
-Blockly.Msg.SOUND_LOOP_FULL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#loopFull';
+Blockly.Msg.SOUND_LOOP_FULL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#loopFull';
 /// auto generated
 Blockly.Msg.SOUND_PAUSE = 'pause sound';
 /// auto generated
 Blockly.Msg.SOUND_PAUSE_TOOLTIP = 'Pause the sound';
 /// auto generated
-Blockly.Msg.SOUND_PAUSE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#pause';
+Blockly.Msg.SOUND_PAUSE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#pause';
 /// auto generated
 Blockly.Msg.SOUND_RESUME = 'resume sound';
 /// auto generated
 Blockly.Msg.SOUND_RESUME_TOOLTIP = 'Resumes the sound';
 /// auto generated
-Blockly.Msg.SOUND_RESUME_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#resume';
+Blockly.Msg.SOUND_RESUME_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#resume';
 /// auto generated
 Blockly.Msg.SOUND_STOP = 'stop sound';
 /// auto generated
 Blockly.Msg.SOUND_STOP_TOOLTIP = 'Stops the sound';
 /// auto generated
-Blockly.Msg.SOUND_STOP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#stop';
+Blockly.Msg.SOUND_STOP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#stop';
 /// auto generated
 Blockly.Msg.SOUND_PLAY = 'play sound';
 /// auto generated
@@ -2871,7 +2871,7 @@ Blockly.Msg.SOUND_PLAY_POSITION = 'starting at position';
 /// auto generated
 Blockly.Msg.SOUND_PLAY_TOOLTIP = 'Play the sound';
 /// auto generated
-Blockly.Msg.SOUND_PLAY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#play';
+Blockly.Msg.SOUND_PLAY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#play';
 /// auto generated
 Blockly.Msg.SOUND_RESTART = 'restart sound';
 /// auto generated
@@ -2879,7 +2879,7 @@ Blockly.Msg.SOUND_RESTART_POSITION = 'starting at position';
 /// auto generated
 Blockly.Msg.SOUND_RESTART_TOOLTIP = 'Restart the entire sound';
 /// auto generated
-Blockly.Msg.SOUND_RESTART_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sound.html#restart';
+Blockly.Msg.SOUND_RESTART_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sound.html#restart';
 /// auto generated
 Blockly.Msg.LIST_FIND_CLOSEST_NUMBER = 'find the number closest to';
 /// auto generated
@@ -2887,19 +2887,19 @@ Blockly.Msg.LIST_FIND_CLOSEST = 'in the list';
 /// auto generated
 Blockly.Msg.LIST_FIND_CLOSEST_TOOLTIP = 'Returns the value closest to the given number in a sorted, numeric list. If two values are equally close, it returns the higher one.';
 /// auto generated
-Blockly.Msg.LIST_FIND_CLOSEST_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ArrayUtils.html#_findClosest';
+Blockly.Msg.LIST_FIND_CLOSEST_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ArrayUtils.html#_findClosest';
 /// auto generated
 Blockly.Msg.LIST_GET_RANDOM = 'get a random item from';
 /// auto generated
 Blockly.Msg.LIST_GET_RANDOM_TOOLTIP = 'Returns a random item from the given list.';
 /// auto generated
-Blockly.Msg.LIST_GET_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ArrayUtils.html#_getRandomItem';
+Blockly.Msg.LIST_GET_RANDOM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ArrayUtils.html#_getRandomItem';
 /// auto generated
 Blockly.Msg.NUMBER_LIST = 'create a list with every number from';
 /// auto generated
 Blockly.Msg.NUMBER_LIST_TOOLTIP = 'Creates a list of numbers, in order within the specified range, including the start and end.';
 /// auto generated
-Blockly.Msg.NUMBER_LIST_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ArrayUtils.html#_numberArray';
+Blockly.Msg.NUMBER_LIST_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ArrayUtils.html#_numberArray';
 /// auto generated
 Blockly.Msg.NUMBER_LIST_STEP = 'create a list from';
 /// auto generated
@@ -2907,55 +2907,55 @@ Blockly.Msg.NUMBER_LIST_STEP_AMOUNT = 'stepping by';
 /// auto generated
 Blockly.Msg.NUMBER_LIST_STEP_TOOLTIP = 'Creates a list in the given range, counting up by a specified value. Does NOT include the end of the range.';
 /// auto generated
-Blockly.Msg.NUMBER_LIST_STEP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ArrayUtils.html#_numberArrayStep';
+Blockly.Msg.NUMBER_LIST_STEP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ArrayUtils.html#_numberArrayStep';
 /// auto generated
 Blockly.Msg.LIST_REMOVE_RANDOM_ITEM = 'get and remove a random item from';
 /// auto generated
 Blockly.Msg.LIST_REMOVE_RANDOM_ITEM_TOOLTIP = 'Removes a random item from a list and returns it. Note that this modifies the list.';
 /// auto generated
-Blockly.Msg.LIST_REMOVE_RANDOM_ITEM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ArrayUtils.html#_removeRandomItem';
+Blockly.Msg.LIST_REMOVE_RANDOM_ITEM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ArrayUtils.html#_removeRandomItem';
 /// auto generated
 Blockly.Msg.LIST_SHUFFLE = 'shuffle';
 /// auto generated
 Blockly.Msg.LIST_SHUFFLE_TOOLTIP = 'Randomly rearranges the order of items in a list. Works for more than just cards.';
 /// auto generated
-Blockly.Msg.LIST_SHUFFLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.ArrayUtils.html#_shuffle';
+Blockly.Msg.LIST_SHUFFLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.ArrayUtils.html#_shuffle';
 /// auto generated
 Blockly.Msg.RANDOM_ANGLE = 'get random angle';
 /// auto generated
 Blockly.Msg.RANDOM_ANGLE_TOOLTIP = 'Returns a random angle between -180 and 180.';
 /// auto generated
-Blockly.Msg.RANDOM_ANGLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.RandomDataGenerator.html#angle';
+Blockly.Msg.RANDOM_ANGLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.RandomDataGenerator.html#angle';
 /// auto generated
 Blockly.Msg.RANDOM_PICK = 'get random item from list';
 /// auto generated
 Blockly.Msg.RANDOM_PICK_TOOLTIP = 'Returns a random member in a given list.';
 /// auto generated
-Blockly.Msg.RANDOM_PICK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.RandomDataGenerator.html#pick';
+Blockly.Msg.RANDOM_PICK_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.RandomDataGenerator.html#pick';
 /// auto generated
 Blockly.Msg.RANDOM_PICK_WEIGHTED = 'get random item from list (weighted)';
 /// auto generated
 Blockly.Msg.RANDOM_PICK_WEIGHTED_TOOLTIP = 'Returns a random member in a given list. This version chooses items close to the start of the list more frequently.';
 /// auto generated
-Blockly.Msg.RANDOM_PICK_WEIGHTED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.RandomDataGenerator.html#weightedPick';
+Blockly.Msg.RANDOM_PICK_WEIGHTED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.RandomDataGenerator.html#weightedPick';
 /// auto generated
 Blockly.Msg.RANDOM_REAL = 'get random number';
 /// auto generated
 Blockly.Msg.RANDOM_REAL_TOOLTIP = 'Returns a random real number. This can be anywhere between 0 and 2^32 (about 4 billion).';
 /// auto generated
-Blockly.Msg.RANDOM_REAL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.RandomDataGenerator.html#real';
+Blockly.Msg.RANDOM_REAL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.RandomDataGenerator.html#real';
 /// auto generated
 Blockly.Msg.RANDOM_REAL_IN_RANGE = 'get random number between';
 /// auto generated
 Blockly.Msg.RANDOM_REAL_IN_RANGE_TOOLTIP = 'Returns a random real number in the specified range.';
 /// auto generated
-Blockly.Msg.RANDOM_REAL_IN_RANGE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.RandomDataGenerator.html#realInRange';
+Blockly.Msg.RANDOM_REAL_IN_RANGE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.RandomDataGenerator.html#realInRange';
 /// auto generated
 Blockly.Msg.RANDOM_SIGN = 'get random sign';
 /// auto generated
 Blockly.Msg.RANDOM_SIGN_TOOLTIP = 'Returns either +1 or -1. For deciding if something needs to be positive or negative.';
 /// auto generated
-Blockly.Msg.RANDOM_SIGN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.RandomDataGenerator.html#sign';
+Blockly.Msg.RANDOM_SIGN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.RandomDataGenerator.html#sign';
 /// auto generated
 Blockly.Msg.MATH_DEG_TO_RAD = 'convert degrees';
 /// auto generated
@@ -2963,7 +2963,7 @@ Blockly.Msg.MATH_DEG_TO_RAD_RESULT = 'to radians';
 /// auto generated
 Blockly.Msg.MATH_DEG_TO_RAD_TOOLTIP = 'Converts a value in degrees to an equivalent in radians.';
 /// auto generated
-Blockly.Msg.MATH_DEG_TO_RAD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Math.html#degToRad';
+Blockly.Msg.MATH_DEG_TO_RAD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Math.html#degToRad';
 /// auto generated
 Blockly.Msg.MATH_RAD_TO_DEG = 'convert radians';
 /// auto generated
@@ -2971,7 +2971,7 @@ Blockly.Msg.MATH_RAD_TO_DEG_RESULT = 'to degrees';
 /// auto generated
 Blockly.Msg.MATH_RAD_TO_DEG_TOOLTIP = 'Converts an angle in degrees to an equivalent in radians.';
 /// auto generated
-Blockly.Msg.MATH_RAD_TO_DEG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Math.html#radToDeg';
+Blockly.Msg.MATH_RAD_TO_DEG_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Math.html#radToDeg';
 /// auto generated
 Blockly.Msg.HARDWARESTARTUP_ARDUINO_TOOLTIP = '';
 /// auto generated
@@ -4124,19 +4124,19 @@ Blockly.Msg.DELTA_TIME_SECONDS_TITLE = 'delta time in seconds';
 /// tooltip - Explains the concept of delta time and notes that this version is in seconds.
 Blockly.Msg.DELTA_TIME_SECONDS_TOOLTIP = 'Get the time elapsed since the last frame in seconds.';
 /// url - Phaser documentation for game.time.physicsElapsed.
-Blockly.Msg.DELTA_TIME_SECONDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Time.html#physicsElapsed';
+Blockly.Msg.DELTA_TIME_SECONDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Time.html#physicsElapsed';
 /// block text - Label that this block returns the time since the last frame in milliseconds.
 Blockly.Msg.DELTA_TIME_MILLISECONDS_TITLE = 'delta time in milliseconds';
 /// tooltip - Explains the concept of delta time and notes that this version is in milliseconds.
 Blockly.Msg.DELTA_TIME_MILLISECONDS_TOOLTIP = 'Get the time elapsed since the last frame in milliseconds.';
 /// url - Phaser documentation for game.time.physicsElapsed.
-Blockly.Msg.DELTA_TIME_MILLISECONDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Time.html#physicsElapsedMS';
+Blockly.Msg.DELTA_TIME_MILLISECONDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Time.html#physicsElapsedMS';
 /// block text - Label that this block lets users get the value of members of game.time.
 Blockly.Msg.GET_TIME_NUMERIC_MEMBER_TITLE = 'get';
 /// tooltip - Specify that you are reading variables from game time and that they are numeric types.
 Blockly.Msg.GET_TIME_NUMERIC_MEMBER_TOOLTIP = 'Read numeric fields of game time.';
 /// url - Phaser documentation for game.time.
-Blockly.Msg.GET_TIME_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Time.html';
+Blockly.Msg.GET_TIME_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Time.html';
 /// block text - Label that this block lets users get the value of members of game.time.
 Blockly.Msg.SET_TIME_NUMERIC_MEMBER_TITLE = 'set';
 /// block text - Grammatical connection between the member variable and what it will be set to.
@@ -4144,13 +4144,13 @@ Blockly.Msg.SET_TIME_NUMERIC_MEMBER_TO = 'to';
 /// tooltip - Specify that you are writing values to game.time and that they are numeric types.
 Blockly.Msg.SET_TIME_NUMERIC_MEMBER_TOOLTIP = 'Write to one of the game time\'s numeric fields.';
 /// url - Phaser documentation for game.time.
-Blockly.Msg.SET_TIME_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Time.html';
+Blockly.Msg.SET_TIME_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Time.html';
 /// block text - Creates a new timer object
 Blockly.Msg.CREATE_TIMER_TITLE = 'create new timer';
 /// block text - True if the object should destroy itself after all events have been dispatched barring looping events
 Blockly.Msg.AUTO_DESTROY = 'auto destroy';
 /// url - Phaser documentation for Timer
-Blockly.Msg.CREATE_TIMER_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#Timer';
+Blockly.Msg.CREATE_TIMER_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#Timer';
 /// tooltip - create a new timer
 Blockly.Msg.CREATE_TIMER_TOOLTIP = 'Create a new timer, if auto destroy is true this timer will be destoryed after all events are dispatched';
 /// block text - Half a second
@@ -4182,23 +4182,23 @@ Blockly.Msg.TIMER_CONSTANTS_TOOLTIP = 'Constants for some common values in milli
 /// tooltip - Start the timer
 Blockly.Msg.START_TIMER_TOOLTIP = 'Start timer after a given delay in milliseconds';
 /// url - Phaser documentation for Timer.start
-Blockly.Msg.START_TIMER_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#start';
+Blockly.Msg.START_TIMER_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#start';
 /// tooltip - Clarify this delay
 Blockly.Msg.TIMER_ADD_EVENT_TOOLTIP = 'Fire the event after the specified delay after the start of the timer';
 /// url - Phaser documentation for Timer.add
-Blockly.Msg.TIMER_ADD_EVENT_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#add';
+Blockly.Msg.TIMER_ADD_EVENT_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#add';
 /// block text - Destroy the timer taking all events with it
 Blockly.Msg.DESTROY_TIMER = 'destroy timer';
 /// tooltip - destroys the timer
 Blockly.Msg.DESTROY_TIMER_TOOLTIP = 'destroys the timer andy pending events are not dispatched';
 /// url - Phaser documentation for Timer.Destroy
-Blockly.Msg.DESTROY_TIMER_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#destroy';
+Blockly.Msg.DESTROY_TIMER_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#destroy';
 /// block text - Loop an event a given number of times
 Blockly.Msg.TIMER_LOOP_EVENT = 'loop event on timer';
 /// tooltip - loop an event repeat times
 Blockly.Msg.TIMER_LOOP_EVENT_TOOLTIP = 'Loops the given event forever or until the timer is stopped or destroyed';
 /// url - Phaser documentation for
-Blockly.Msg.TIMER_LOOP_EVENT_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#loop';
+Blockly.Msg.TIMER_LOOP_EVENT_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#loop';
 /// block text - Loop an event a given number of times
 Blockly.Msg.TIMER_REPEAT_EVENT = 'repeat event on timer';
 /// block text - repeat count
@@ -4206,25 +4206,25 @@ Blockly.Msg.TIMER_REPEAT_EVENT_COUNT = 'times';
 /// tooltip - loop an event repeat times
 Blockly.Msg.TIMER_REPEAT_EVENT_TOOLTIP = 'Loops the given event forever or until the timer is stopped or destroyed';
 /// url - Phaser documentation for
-Blockly.Msg.TIMER_REPEAT_EVENT_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#loop';
+Blockly.Msg.TIMER_REPEAT_EVENT_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#loop';
 /// block text - Pause a running timer
 Blockly.Msg.PAUSE_TIMER = 'pause timer';
 /// tooltip - Pauses all events in the queue
 Blockly.Msg.PAUSE_TIMER_TOOLTIP = 'Pauses the timer and all events in the queue';
 /// url - Documentation for Phaser.
-Blockly.Msg.PAUSE_TIMER_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#pause';
+Blockly.Msg.PAUSE_TIMER_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#pause';
 /// block text - Resume a paused timer
 Blockly.Msg.RESUME_TIMER = 'resume timer';
 /// tooltip - Resumes all events in the queue
 Blockly.Msg.RESUME_TIMER_TOOLTIP = 'Resumes the timer and all events in the queue';
 /// url - Documentation for Timer.resume
-Blockly.Msg.RESUME_TIMER_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#resume';
+Blockly.Msg.RESUME_TIMER_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#resume';
 /// block text - Stop a paused timer
 Blockly.Msg.STOP_TIMER = 'stop timer';
 /// tooltip - Resumes all events in the queue
 Blockly.Msg.STOP_TIMER_TOOLTIP = 'Stops the timer and all events in the queue, if auto destroy is true this will not cause it to be destroyed';
 /// url - Documentation for Timer.Stop
-Blockly.Msg.STOP_TIMER_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#stop';
+Blockly.Msg.STOP_TIMER_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#stop';
 /// block text - Stops a timer, does not destroy
 Blockly.Msg.STOP_TIMER_CLEAR_EVENTS = 'clear events';
 /// block text - Called when a timer completes all events in its queue
@@ -4234,9 +4234,9 @@ Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_COMPLETED = 'completes call';
 /// tooltip - This method is not always called explain a few of those conditions
 Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_TOOLTIP = 'Called when the timer completes all of the actions in its queue. This will not be called if the timer is stopped or destroyed before it completes its queue.';
 /// url - Timer.onComplete
-Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#onComplete';
+Blockly.Msg.TIMER_SET_ON_COMPLETE_CALLBACK_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#onComplete';
 /// url - Phaser.Easing prebuilt easing functions
-Blockly.Msg.PHASER_EASING_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Easing.html';
+Blockly.Msg.PHASER_EASING_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Easing.html';
 /// tooltip - Predefined easing functions
 Blockly.Msg.PHASER_EASING_TOOLTIP = 'Prebuilt easing functions you can utilize through out your code';
 /// block text - tween from the current value to a new value
@@ -4244,13 +4244,13 @@ Blockly.Msg.PHASER_GAME_ADD_TWEEN_TO_TITLE = 'create tween to';
 /// tooltip - PHASER_GAME_ADD_TWEEN_TO_TOOLTIP
 Blockly.Msg.PHASER_GAME_ADD_TWEEN_TO_TOOLTIP = 'Create a tween from the current value to the end values';
 /// url - Phaser.Tween.To
-Blockly.Msg.PHASER_GAME_ADD_TWEEN_TO_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#to';
+Blockly.Msg.PHASER_GAME_ADD_TWEEN_TO_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#to';
 /// block text - tween from the given value to the current value
 Blockly.Msg.PHASER_GAME_ADD_TWEEN_FROM_TITLE = 'create tween from';
 /// tooltip - PHASER_GAME_ADD_TWEEN_FROM_TOOLTIP
 Blockly.Msg.PHASER_GAME_ADD_TWEEN_FROM_TOOLTIP = 'Create a tween from the end value to the current values, setting the values to end first';
 /// url - Phaser.Tween.To
-Blockly.Msg.PHASER_GAME_ADD_TWEEN_FROM_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#from';
+Blockly.Msg.PHASER_GAME_ADD_TWEEN_FROM_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#from';
 /// block text - target of a tween
 Blockly.Msg.PHASER_TWEEN_TARGET = 'target';
 /// block text - duration of the tween
@@ -4280,31 +4280,31 @@ Blockly.Msg.PHASER_STOP_TWEEN = 'stop tween';
 ///tooltip -
 Blockly.Msg.PHASER_STOP_TWEEN_TOOLTIP = 'Stop the tween dispatching onComplete if complete is checked';
 ///url - Phaser.Tween.stop
-Blockly.Msg.PHASER_STOP_TWEEN_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#stop';
+Blockly.Msg.PHASER_STOP_TWEEN_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#stop';
 ///block text - pause the tween dispatching complete if it is checked
 Blockly.Msg.PHASER_PAUSE_TWEEN = 'pause tween';
 ///tooltip -
 Blockly.Msg.PHASER_PAUSE_TWEEN_TOOLTIP = 'pause the tween dispatching onComplete if complete is checked';
 ///url - Phaser.Tween.PAUSE
-Blockly.Msg.PHASER_PAUSE_TWEEN_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#pause';
+Blockly.Msg.PHASER_PAUSE_TWEEN_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#pause';
 ///block text - start the tween dispatching complete if it is checked
 Blockly.Msg.PHASER_START_TWEEN = 'start tween';
 ///tooltip -
 Blockly.Msg.PHASER_START_TWEEN_TOOLTIP = 'start the tween dispatching onComplete if complete is checked';
 ///url - Phaser.Tween.START
-Blockly.Msg.PHASER_START_TWEEN_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#start';
+Blockly.Msg.PHASER_START_TWEEN_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#start';
 ///block text - start the tween dispatching complete if it is checked
 Blockly.Msg.PHASER_RESUME_TWEEN = 'resume tween';
 ///tooltip -
 Blockly.Msg.PHASER_RESUME_TWEEN_TOOLTIP = 'resume the tween dispatching onComplete if complete is checked';
 ///url - Phaser.Tween.RESUME
-Blockly.Msg.PHASER_RESUME_TWEEN_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#resume';
+Blockly.Msg.PHASER_RESUME_TWEEN_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#resume';
 ///block text - start the tween dispatching complete if it is checked
 Blockly.Msg.PHASER_YOYO_TWEEN = 'yoyo tween';
 ///tooltip -
 Blockly.Msg.PHASER_YOYO_TWEEN_TOOLTIP = 'enable or disable yoyoing for this tween';
 ///url - Phaser.Tween.YOYO
-Blockly.Msg.PHASER_YOYO_TWEEN_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tween.html#yoyo';
+Blockly.Msg.PHASER_YOYO_TWEEN_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tween.html#yoyo';
 ///block text - delay to the start of the yoyo if enabling
 Blockly.Msg.PHASER_YOYO_TWEEN_DELAY = 'delay';
 ///block text - index of the child tween
@@ -4458,7 +4458,7 @@ Blockly.Msg.GAME_CAMERA = 'camera';
 /// tooltip
 Blockly.Msg.GAME_CAMERA_TOOLTIP = 'reference to the current games camera';
 /// url
-Blockly.Msg.GAME_CAMERA_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Camera.html';
+Blockly.Msg.GAME_CAMERA_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Camera.html';
 
 //states;
 Blockly.Msg.STATEMANAGER_GET_CURRENT_STATE = 'get current state';
@@ -4472,23 +4472,23 @@ Blockly.Msg.STATEMANAGER_CHECK_STATE_TOOLTIP = 'Returns if a given phaser state 
 Blockly.Msg.STATEMANAGER_CHECK_STATE_HELP_URL = 'http://phaser.io/docs/2.6.2/Phaser.StateManager.html#checkState';
 
 Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_TOOLTIP = 'Sets the boolean value for the selected physics property';
-Blockly.Msg.PHYSICS_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#%1';
-Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
+Blockly.Msg.PHYSICS_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#%1';
+Blockly.Msg.SET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html';
 Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_TOOLTIP = 'Gets the boolean value for the selected physics property';
-Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
+Blockly.Msg.GET_PHYSICS_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html';
 Blockly.Msg.SET_PHYSICS_POINT_FIELD_TOOLTIP = 'Sets the point value for the selected physics property';
-Blockly.Msg.SET_PHYSICS_POINT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
+Blockly.Msg.SET_PHYSICS_POINT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html';
 Blockly.Msg.GET_PHYSICS_POINT_FIELD_TOOLTIP = 'Gets the point value for the selected physics property';
-Blockly.Msg.GET_PHYSICS_POINT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html';
+Blockly.Msg.GET_PHYSICS_POINT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html';
 Blockly.Msg.MAKE = 'make';
 Blockly.Msg.ACCELERATE = 'accelerate';
 Blockly.Msg.PHYSICS_ACCELERATE_TO_OBJECT = 'pixels/second with max velocity';
 Blockly.Msg.PHYSICS_ACCELERATE_TO_OBJECT_TOOLTIP = 'Sets the acceleration.x/y property on the object so it will move towards the target at the given speed. The object will not continuously track the target, or stop moving when it reaches the destination.';
-Blockly.Msg.PHYSICS_ACCELERATE_TO_OBJECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#accelerateToObject';
+Blockly.Msg.PHYSICS_ACCELERATE_TO_OBJECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#accelerateToObject';
 Blockly.Msg.PHYSICS_ACCELERATE_TO_LOCATION_TOOLTIP = 'Sets the acceleration.x/y property on the object so it will move towards the x/y coordinates at the given speed. The object will not continuously track the target, or stop moving when it reaches the destination.';
-Blockly.Msg.PHYSICS_ACCELERATE_TO_LOCATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#accelerateToXY';
+Blockly.Msg.PHYSICS_ACCELERATE_TO_LOCATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#accelerateToXY';
 Blockly.Msg.PHYSICS_ACCELERATE_TO_POINTER_TOOLTIP = 'Sets the acceleration.x/y property on the object so it will move towards the pointer at the given speed. The object will not continuously track the target, or stop moving when it reaches the destination.';
-Blockly.Msg.PHYSICS_ACCELERATE_TO_POINTER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#accelerateToPointer';
+Blockly.Msg.PHYSICS_ACCELERATE_TO_POINTER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#accelerateToPointer';
 Blockly.Msg.XCOLON = 'x:';
 Blockly.Msg.YCOLON = 'y:';
 Blockly.Msg.AT = 'at';
@@ -4496,33 +4496,33 @@ Blockly.Msg.AND = 'and';
 Blockly.Msg.OR = 'or';
 Blockly.Msg.PHYSICS_DISTANCE_BETWEEN = 'distance between';
 Blockly.Msg.PHYSICS_DISTANCE_BETWEEN_TOOLTIP = 'Find the distance between two display objects (like Sprites).';
-Blockly.Msg.PHYSICS_DISTANCE_BETWEEN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#distanceBetween';
+Blockly.Msg.PHYSICS_DISTANCE_BETWEEN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#distanceBetween';
 Blockly.Msg.PHYSICS_DISTANCE_TO_POINTER = 'and pointer';
 Blockly.Msg.PHYSICS_DISTANCE_TO_POINTER_TOOLTIP = 'Find the distance between the object and a Pointer.';
-Blockly.Msg.PHYSICS_DISTANCE_TO_POINTER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#distanceToPointer';
+Blockly.Msg.PHYSICS_DISTANCE_TO_POINTER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#distanceToPointer';
 Blockly.Msg.PHYSICS_DISTANCE_TO_LOCATION_TOOLTIP = 'Find the distance between the object and an (x,y) location.';
-Blockly.Msg.PHYSICS_DISTANCE_TO_LOCATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#distanceToXY';
+Blockly.Msg.PHYSICS_DISTANCE_TO_LOCATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#distanceToXY';
 Blockly.Msg.GET_OBJECTS_AT_LOCATION = 'objects from group';
 Blockly.Msg.GET_OBJECTS_AT_LOCATION_OVERLAP = 'that overlap with';
 Blockly.Msg.GET_OBJECTS_AT_LOCATION_TOOLTIP = 'Given a Group and a location this will check to see which Group children overlap with the coordinates.';
-Blockly.Msg.GET_OBJECTS_AT_LOCATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#getObjectsAtLocation';
+Blockly.Msg.GET_OBJECTS_AT_LOCATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#getObjectsAtLocation';
 Blockly.Msg.COLLISION_GET_OBJECTS_AT_LOCATION_FUNCTION = 'check overlap between objects from group';
 Blockly.Msg.COLLISION_GET_OBJECTS_AT_LOCATION_FUNCTION_TOOLTIP = 'Given a Group and a location this will check to see which Group children overlap with the coordinates.';
-Blockly.Msg.COLLISION_GET_OBJECTS_AT_LOCATION_FUNCTION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#getObjectsAtLocation';
+Blockly.Msg.COLLISION_GET_OBJECTS_AT_LOCATION_FUNCTION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#getObjectsAtLocation';
 Blockly.Msg.CALLING = 'calling';
 Blockly.Msg.IF_OVERLAPPING = 'if overlapping';
 Blockly.Msg.MOVE = 'move';
 Blockly.Msg.PHYSICS_MOVE_TO_POINTER = 'to pointer';
 Blockly.Msg.PHYSICS_MOVE_TO_POINTER_TOOLTIP = 'Move the given display object towards the pointer at a steady velocity.';
-Blockly.Msg.PHYSICS_MOVE_TO_POINTER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#moveToPointer';
+Blockly.Msg.PHYSICS_MOVE_TO_POINTER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#moveToPointer';
 Blockly.Msg.PIXELS_PER_SECOND = 'pixels per second';
 Blockly.Msg.MAX_TIME_MS = 'max time (ms):';
 Blockly.Msg.PHYSICS_MOVE_TO_LOCATION_TOOLTIP = 'Move the given display object towards the x/y coordinates at a steady velocity.';
-Blockly.Msg.PHYSICS_MOVE_TO_LOCATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#moveToXY';
+Blockly.Msg.PHYSICS_MOVE_TO_LOCATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#moveToXY';
 Blockly.Msg.GET_OBJECTS_UNDER_POINTER = 'objects from group';
 Blockly.Msg.GET_OBJECTS_UNDER_POINTER_OVERLAP = 'that overlap with';
 Blockly.Msg.GET_OBJECTS_UNDER_POINTER_TOOLTIP = 'Given a Group and a Pointer this will check to see which Group children overlap with the Pointer coordinates.';
-Blockly.Msg.GET_OBJECTS_UNDER_POINTER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#getObjectsUnderPointer';
+Blockly.Msg.GET_OBJECTS_UNDER_POINTER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#getObjectsUnderPointer';
 Blockly.Msg.PHYSICS_CLOSEST = 'object closest to';
 Blockly.Msg.PHYSICS_CLOSEST_TOOLTIP = '';
 Blockly.Msg.PHYSICS_CLOSEST_HELP_URL = '';
@@ -4533,14 +4533,14 @@ Blockly.Msg.ACCELERATION_FROM_ROTATION = 'get forward acceleration from rotation
 Blockly.Msg.RADIANS = 'radians';
 Blockly.Msg.PIXELS_PER_SECOND_SQUARED = 'pixels per second squared';
 Blockly.Msg.ACCELERATION_FROM_ROTATION_TOOLTIP = 'Given the rotation (in radians) and speed, calculate the acceleration and return it as a Point object.';
-Blockly.Msg.ACCELERATION_FROM_ROTATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#accelerationFromRotation';
+Blockly.Msg.ACCELERATION_FROM_ROTATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#accelerationFromRotation';
 Blockly.Msg.UP = 'up';
 Blockly.Msg.DOWN = 'down';
 Blockly.Msg.LEFT = 'left';
 Blockly.Msg.RIGHT = 'right';
 Blockly.Msg.CHECK_COLLISION = 'allow world collisions in direction';
 Blockly.Msg.CHECK_COLLISION_TOOLTIP = 'Which edges of the World bounds Bodies can collide against when collideWorldBounds is true. For example checkCollision.down = false means Bodies cannot collide with the World.bounds.bottom.';
-Blockly.Msg.CHECK_COLLISION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#checkCollision';
+Blockly.Msg.CHECK_COLLISION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#checkCollision';
 
 Blockly.Msg.GET_ACTIVE_POINTER = 'active game pointer';
 Blockly.Msg.GET_ACTIVE_POINTER_TOOLTIP = '';
@@ -4614,11 +4614,11 @@ Blockly.Msg.GET_SUPER_HELPURL = 'https://developer.mozilla.org/en-US/docs/Web/Ja
 
 Blockly.Msg.SET_GAME_PAUSE = 'set game paused to';
 Blockly.Msg.SET_GAME_PAUSE_TOOLTIP = 'Gets and sets the paused state of the Game.';
-Blockly.Msg.SET_GAME_PAUSE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html#paused';
+Blockly.Msg.SET_GAME_PAUSE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html#paused';
 
 Blockly.Msg.GET_GAME_PAUSE = 'get game paused value';
 Blockly.Msg.GET_GAME_PAUSE_TOOLTIP = 'Returns the value of the paused state of the Game.';
-Blockly.Msg.GET_GAME_PAUSE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Game.html#paused';
+Blockly.Msg.GET_GAME_PAUSE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Game.html#paused';
 
 Blockly.Msg.GAME_CAMERA_URL = 'https://photonstorm.github.io/phaser-ce/Phaser.Camera.html';
 Blockly.Msg.WIDTH = 'width';
@@ -4745,28 +4745,28 @@ Blockly.Msg.ADD_TO_WORLD = 'to the world';
 Blockly.Msg.UP = 'up';
 Blockly.Msg.ADD_KEY = 'add key from keycode';
 Blockly.Msg.ADD_KEY_TOOLTIP = 'Create a new Phaser.Key that can be polled, have events attached to it, etc.';
-Blockly.Msg.ADD_KEY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Keyboard.html#addKey';
-Blockly.Msg.KEY_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#%1';
+Blockly.Msg.ADD_KEY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Keyboard.html#addKey';
+Blockly.Msg.KEY_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html#%1';
 Blockly.Msg.GET_KEY_BOOLEAN_FIELD_TOOLTIP = 'Read the boolean values of the given key.';
-Blockly.Msg.GET_KEY_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html';
-Blockly.Msg.GET_KEY_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html';
+Blockly.Msg.GET_KEY_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html';
+Blockly.Msg.GET_KEY_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html';
 Blockly.Msg.GET_KEY_NUMERIC_FIELD_TOOLTIP = 'Read the numeric values of the given key.';
 Blockly.Msg.KEY_JUST_PRESSED = 'just pressed?';
 Blockly.Msg.KEY_JUST_PRESSED_TOOLTIP = 'Returns true if the Key was just pressed down this update tick, or false if it either isn\'t down, or was pressed down on a previous update tick.';
-Blockly.Msg.KEY_JUST_PRESSED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#justPressed';
+Blockly.Msg.KEY_JUST_PRESSED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html#justPressed';
 Blockly.Msg.KEY_JUST_RELEASED = 'just released?';
 Blockly.Msg.KEY_JUST_RELEASED_TOOLTIP = 'Returns true if the Key was just pressed down this update tick, or false if it either isn\'t down, or was pressed down on a previous update tick.';
-Blockly.Msg.KEY_JUST_RELEASED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#justReleased';
+Blockly.Msg.KEY_JUST_RELEASED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html#justReleased';
 Blockly.Msg.RESET = 'reset';
 Blockly.Msg.KEY_RESET_TOOLTIP = 'Resets the state of this Key.';
-Blockly.Msg.KEY_RESET_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#reset';
+Blockly.Msg.KEY_RESET_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html#reset';
 Blockly.Msg.HARD = 'hard?';
 Blockly.Msg.KEY_UP_DURATION = 'has been up for';
 Blockly.Msg.KEY_UP_DURATION_TOOLTIP = 'Returns true if the Key was pressed down within the duration value given, or false if it either isn\'t down, or was pressed down longer ago than then given duration.';
-Blockly.Msg.KEY_UP_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#upDuration';
+Blockly.Msg.KEY_UP_DURATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html#upDuration';
 Blockly.Msg.KEY_DOWN_DURATION = 'has been down for';
 Blockly.Msg.KEY_DOWN_DURATION_TOOLTIP = 'Returns true if the Key was pressed down within the duration value given, or false if it either isn\'t down, or was pressed down longer ago than then given duration.';
-Blockly.Msg.KEY_DOWN_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Key.html#downDuration';
+Blockly.Msg.KEY_DOWN_DURATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Key.html#downDuration';
 Blockly.Msg.ARDUINO_RANDOM_SEED = 'generate random seed from';
 Blockly.Msg.ARDUINO_RANDOM_SEED_TOOLTIP = 'Shuffles the random function.';
 Blockly.Msg.ARDUINO_RANDOM_SEED_HELP_URL = 'https://www.arduino.cc/reference/en/language/functions/random-numbers/random/';
@@ -4776,21 +4776,21 @@ Blockly.Msg.ARDUINO_RANDOM_TOOLTIP = 'The random function generates pseudo-rando
 Blockly.Msg.ARDUINO_RANDOM_HELP_URL = 'https://www.arduino.cc/reference/en/language/functions/random-numbers/random/';
 Blockly.Msg.AND = 'and';
 
-Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#%1';
+Blockly.Msg.DEVICE_BUTTON_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.DeviceButton.html#%1';
 Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected DeviceButton';
-Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html';
+Blockly.Msg.GET_DEVICE_BUTTON_FIELD_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.DeviceButton.html';
 
 Blockly.Msg.GET_POINTER_FIELD_VI_TOOLTIP = 'Get the %1 field for the selected Pointer';
-Blockly.Msg.GET_POINTER_FIELD_VI_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Pointer.html';
+Blockly.Msg.GET_POINTER_FIELD_VI_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Pointer.html';
 
 Blockly.Msg.DEVICE_BUTTON = 'device button';
 Blockly.Msg.JUST_PRESSED = 'just pressed';
 Blockly.Msg.JUST_RELEASED = 'just released';
 Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_TOOLTIP = 'True if the device button was released within 250ms';
-Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#justReleased';
+Blockly.Msg.DEVICE_BUTTON_JUST_RELEASED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.DeviceButton.html#justReleased';
 
 Blockly.Msg.DEVICE_BUTTON_JUST_PRESSED_TOOLTIP = 'True if the device button was pressed within 250ms';
-Blockly.Msg.DEVICE_BUTTON_JUST_PRESSED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.DeviceButton.html#justPressed';
+Blockly.Msg.DEVICE_BUTTON_JUST_PRESSED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.DeviceButton.html#justPressed';
 
 Blockly.Msg.ROTATE = 'rotate';
 Blockly.Msg.DEGREES = 'degrees';
@@ -4864,185 +4864,185 @@ Blockly.Msg.ARDUINO_SRAND_TOOLTIP = '';
 Blockly.Msg.ARDUINO_SRAND_HELP_URL = 'http://www.cplusplus.com/reference/cstdlib/srand/';
 Blockly.Msg.COLLIDE_BOOLEAN = 'and return result';
 Blockly.Msg.COLLIDE_BOOLEAN_TOOLTIP = 'Checks for collision between two objects, and separates them if they are colliding. Returns true or false based on if they are colliding.';
-Blockly.Msg.COLLIDE_BOOLEAN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#collide';
+Blockly.Msg.COLLIDE_BOOLEAN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#collide';
 
 Blockly.Msg.OVERLAP_BOOLEAN = 'is overlapping with';
 Blockly.Msg.OVERLAP_BOOLEAN_TOOLTIP = 'Checks for overlaps between two game objects, returning true if they are overlapping, and false if they are not.';
-Blockly.Msg.OVERLAP_BOOLEAN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#overlap';
+Blockly.Msg.OVERLAP_BOOLEAN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#overlap';
 
 Blockly.Msg.PHYSICS_INTERSECTS = 'intersects with';
 Blockly.Msg.PHYSICS_INTERSECTS_TOOLTIP = 'Check for intersection against two bodies and returns true or false.';
-Blockly.Msg.PHYSICS_INTERSECTS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.html#intersects';
+Blockly.Msg.PHYSICS_INTERSECTS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.html#intersects';
 Blockly.Msg.POINTS_CENTROID = 'get centroid of';
 Blockly.Msg.POINTS_CENTROID_TOOLTIP = 'Calculates centroid (or midpoint) from an array of points. If only one point is provided, that point is returned.';
-Blockly.Msg.POINTS_CENTROID_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#_centroid';
+Blockly.Msg.POINTS_CENTROID_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#_centroid';
 
 Blockly.Msg.POINTS_CLAMP = 'clamp';
 Blockly.Msg.POINTS_CLAMP_TOOLTIP = 'Clamps this Point object values to be between the given min and max.';
-Blockly.Msg.POINTS_CLAMP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#clamp';
+Blockly.Msg.POINTS_CLAMP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#clamp';
 
 Blockly.Msg.POINTS_CLAMP_X = 'clamp the x value of';
 Blockly.Msg.POINTS_CLAMP_X_TOOLTIP = 'Clamps the x value of this Point to be between the given min and max.';
-Blockly.Msg.POINTS_CLAMP_X_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#clampX';
+Blockly.Msg.POINTS_CLAMP_X_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#clampX';
 
 Blockly.Msg.POINTS_CLAMP_Y = 'clamp the y value of';
 Blockly.Msg.POINTS_CLAMP_Y_TOOLTIP = 'Clamps the y value of this Point to be between the given min and max.';
-Blockly.Msg.POINTS_CLAMP_Y_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#clampY';
+Blockly.Msg.POINTS_CLAMP_Y_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#clampY';
 
 Blockly.Msg.POINTS_CLONE = 'create clone of';
 Blockly.Msg.POINTS_CLONE_TOOLTIP = 'Creates a copy of the given Point.';
-Blockly.Msg.POINTS_CLONE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#clone';
+Blockly.Msg.POINTS_CLONE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#clone';
 
 Blockly.Msg.POINTS_COPY_FROM = 'copy values from';
 Blockly.Msg.POINTS_COPY_FROM_TOOLTIP = 'Copies the x and y properties from one object to a Point.';
-Blockly.Msg.POINTS_COPY_FROM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#copyFrom';
+Blockly.Msg.POINTS_COPY_FROM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#copyFrom';
 
 Blockly.Msg.POINTS_CROSS = 'cross product of';
 Blockly.Msg.POINTS_CROSS_TOOLTIP = 'he cross product of two Point objects';
-Blockly.Msg.POINTS_CROSS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#cross';
+Blockly.Msg.POINTS_CROSS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#cross';
 
 Blockly.Msg.POINTS_ADD_MEMBER_TOOLTIP = 'Adds the given x and y values to this Point.';
-Blockly.Msg.POINTS_ADD_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#add';
+Blockly.Msg.POINTS_ADD_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#add';
 
 Blockly.Msg.POINTS_DIVIDE_MEMBER_TOOLTIP = 'Divides Point.x and Point.y by the given x and y values.';
-Blockly.Msg.POINTS_DIVIDE_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#divide';
+Blockly.Msg.POINTS_DIVIDE_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#divide';
 
 Blockly.Msg.POINTS_SUBTRACT_MEMBER_TOOLTIP = 'Subtracts the given x and y values from this Point.';
-Blockly.Msg.POINTS_SUBTRACT_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#subtract';
+Blockly.Msg.POINTS_SUBTRACT_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#subtract';
 
 Blockly.Msg.SUBTRACT = 'subtract';
 
 Blockly.Msg.POINTS_MULTIPLY_MEMBER_TOOLTIP = 'Multiplies Point.x and Point.y by the given x and y values.';
-Blockly.Msg.POINTS_MULTIPLY_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#multiply';
+Blockly.Msg.POINTS_MULTIPLY_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#multiply';
 
 Blockly.Msg.POINTS_DOT = 'dot product of';
 Blockly.Msg.POINTS_DOT_TOOLTIP = 'The dot product of two Point objects.';
-Blockly.Msg.POINTS_DOT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#dot';
+Blockly.Msg.POINTS_DOT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#dot';
 
 Blockly.Msg.POINTS_CEIL = 'ceiling';
 Blockly.Msg.POINTS_CEIL_TOOLTIP = 'Convert the x and y values to their ceiling values.';
-Blockly.Msg.POINTS_CEIL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#ceil';
+Blockly.Msg.POINTS_CEIL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#ceil';
 
 Blockly.Msg.POINTS_FLOOR = 'floor';
 Blockly.Msg.POINTS_FLOOR_TOOLTIP = 'Convert the x and y values to their floor values.';
-Blockly.Msg.POINTS_FLOOR_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#floor';
+Blockly.Msg.POINTS_FLOOR_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#floor';
 
 Blockly.Msg.POINTS_GET_MAGNITUDE = 'get magnitude of';
 Blockly.Msg.POINTS_GET_MAGNITUDE_TOOLTIP = 'Calculates the length of the Point object.';
-Blockly.Msg.POINTS_GET_MAGNITUDE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#getMagnitude';
+Blockly.Msg.POINTS_GET_MAGNITUDE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#getMagnitude';
 
 Blockly.Msg.POINTS_GET_MAGNITUDE_SQUARED = 'get magnitude squared of';
 Blockly.Msg.POINTS_GET_MAGNITUDE_SQUARED_TOOLTIP = 'Calculates the length squared of the Point object.';
-Blockly.Msg.POINTS_GET_MAGNITUDE_SQUARED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#getMagnitudeSq';
+Blockly.Msg.POINTS_GET_MAGNITUDE_SQUARED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#getMagnitudeSq';
 
 Blockly.Msg.POINTS_INVERT = 'invert x and y of';
 Blockly.Msg.POINTS_INVERT_TOOLTIP = 'Inverts the x and y values of this Point.';
-Blockly.Msg.POINTS_INVERT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#invert';
+Blockly.Msg.POINTS_INVERT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#invert';
 
 Blockly.Msg.POINTS_IS_ZERO = 'is at (0,0)?';
 Blockly.Msg.POINTS_IS_ZERO_TOOLTIP = 'Determine if this point is at 0,0 and return true or false.';
-Blockly.Msg.POINTS_IS_ZERO_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#isZero';
+Blockly.Msg.POINTS_IS_ZERO_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#isZero';
 
 Blockly.Msg.POINTS_LIMIT = 'limit magnitude of';
 Blockly.Msg.POINTS_LIMIT_TOOLTIP = 'Alters the Point object so it\'s magnitude is at most the max value.';
-Blockly.Msg.POINTS_LIMIT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#limit';
+Blockly.Msg.POINTS_LIMIT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#limit';
 
 Blockly.Msg.POINTS_SET_TO_POLAR_POINT = 'convert values of';
 Blockly.Msg.POINTS_SET_TO_POLAR = 'to polar with';
 Blockly.Msg.POINTS_SET_TO_POLAR_TOOLTIP = 'Sets the x and y values of this Point object from a given polar coordinate.';
-Blockly.Msg.POINTS_SET_TO_POLAR_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Point.html#setToPolar';
+Blockly.Msg.POINTS_SET_TO_POLAR_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Point.html#setToPolar';
 Blockly.Msg.RADIUS = 'radius';
 Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_TOOLTIP = 'Get numeric fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_SET_NUMERIC_FIELDS_TOOLTIP = 'Set numeric fields of a Rectangle object.';
-Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#toc-3';
-Blockly.Msg.RECTANGLE_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#%1';
+Blockly.Msg.RECTANGLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#toc-3';
+Blockly.Msg.RECTANGLE_FIELDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#%1';
 
 Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_TOOLTIP = 'Get point fields of a Rectangle object.';
 Blockly.Msg.RECTANGLE_SET_POINT_FIELDS_TOOLTIP = 'Set point fields of a Rectangle object.';
-Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#toc-3';
+Blockly.Msg.RECTANGLE_GET_POINT_FIELDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#toc-3';
 
 Blockly.Msg.RECTANGLE_CONTAINS_POINT = 'contains point';
 Blockly.Msg.RECTANGLE_CONTAINS_POINT_TOOLTIP = 'Determines whether the specified point is contained within the rectangular region defined by this Rectangle object.';
-Blockly.Msg.RECTANGLE_CONTAINS_POINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#_containsPoint';
+Blockly.Msg.RECTANGLE_CONTAINS_POINT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#_containsPoint';
 
 Blockly.Msg.RECTANGLE_CONTAINS_TOOLTIP = 'Determines whether the specified coordinates are contained within the region defined by this Rectangle object.';
-Blockly.Msg.RECTANGLE_CONTAINS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#_contains';
+Blockly.Msg.RECTANGLE_CONTAINS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#_contains';
 
 Blockly.Msg.RECTANGLE_CONTAINS_RECT_TOOLTIP = 'Determines whether the first Rectangle object is fully contained within the second Rectangle object.';
-Blockly.Msg.RECTANGLE_CONTAINS_RECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#_containsRect';
+Blockly.Msg.RECTANGLE_CONTAINS_RECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#_containsRect';
 
 Blockly.Msg.CIRCLE_CREATE = 'make circle';
 Blockly.Msg.CIRCLE_CREATE_TOOLTIP = 'Creates a new Circle object with the center coordinate specified by the x and y parameters and the diameter specified by the diameter parameter.';
-Blockly.Msg.CIRCLE_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#Circle';
+Blockly.Msg.CIRCLE_CREATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#Circle';
 Blockly.Msg.DIAMETER = 'diameter';
-Blockly.Msg.CIRCLE_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#%1';
+Blockly.Msg.CIRCLE_FIELDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#%1';
 Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_TOOLTIP = 'Get numeric fields of a Circle object.';
 Blockly.Msg.CIRCLE_SET_NUMERIC_FIELDS_TOOLTIP = 'Set numeric fields of a Circle object.';
-Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#toc-3';
+Blockly.Msg.CIRCLE_GET_NUMERIC_FIELDS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#toc-3';
 
 Blockly.Msg.INTERSECTS = 'intersects';
 Blockly.Msg.CIRCLE_INTERSECTS_TOOLTIP = 'Determines whether the two Circle objects intersect based on the radius distances.';
-Blockly.Msg.CIRCLE_INTERSECTS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#_intersects';
+Blockly.Msg.CIRCLE_INTERSECTS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#_intersects';
 
 Blockly.Msg.CIRCLE_INTERSECTS_RECTANGLE_TOOLTIP = 'Checks if the given Circle and Rectangle objects intersect.';
-Blockly.Msg.CIRCLE_INTERSECTS_RECTANGLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#_intersectsRectangle';
+Blockly.Msg.CIRCLE_INTERSECTS_RECTANGLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#_intersectsRectangle';
 
 Blockly.Msg.CLONE = 'clone';
 Blockly.Msg.RECTANGLE_CLONE_TOOLTIP = 'Returns a new Rectangle object with the same values for the x, y, width, and height properties as the original Rectangle object.';
-Blockly.Msg.RECTANGLE_CLONE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#clone';
+Blockly.Msg.RECTANGLE_CLONE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#clone';
 
 Blockly.Msg.CIRCLE_CLONE_TOOLTIP = 'Returns a new Circle object with the same values for the x, y, width, and height properties as this Circle object.';
-Blockly.Msg.CIRCLE_CLONE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#clone';
+Blockly.Msg.CIRCLE_CLONE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#clone';
 
 Blockly.Msg.CIRCLE_CONTAINS_TOOLTIP = 'Return true if the given x/y coordinates are within this Circle object.';
-Blockly.Msg.CIRCLE_CONTAINS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#contains';
+Blockly.Msg.CIRCLE_CONTAINS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#contains';
 
 Blockly.Msg.CIRCLE_RANDOM = 'random point in';
 Blockly.Msg.CIRCLE_RANDOM_TOOLTIP = 'Returns a uniformly distributed random point from anywhere within this Circle.';
-Blockly.Msg.CIRCLE_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#random';
+Blockly.Msg.CIRCLE_RANDOM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#random';
 
 Blockly.Msg.CIRCLE_CIRCUMFERENCE = 'circumference of';
 Blockly.Msg.CIRCLE_CIRCUMFERENCE_TOOLTIP = 'The circumference of the circle.';
-Blockly.Msg.CIRCLE_CIRCUMFERENCE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#circumference';
+Blockly.Msg.CIRCLE_CIRCUMFERENCE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#circumference';
 
 Blockly.Msg.CIRCLE_CIRCUMFERENCE_POINT = 'point from';
 Blockly.Msg.CIRCLE_CIRCUMFERENCE_POINT_TOOLTIP = 'Returns a Point object containing the coordinates of a point on the circumference of the Circle based on the given angle.';
-Blockly.Msg.CIRCLE_CIRCUMFERENCE_POINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Circle.html#circumferencePoint';
+Blockly.Msg.CIRCLE_CIRCUMFERENCE_POINT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Circle.html#circumferencePoint';
 
 Blockly.Msg.RECTANGLE_RANDOM = 'random point in';
 Blockly.Msg.RECTANGLE_RANDOM_TOOLTIP = 'Returns a uniformly distributed random point from anywhere within this Rectangle.';
-Blockly.Msg.RECTANGLE_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Rectangle.html#random';
+Blockly.Msg.RECTANGLE_RANDOM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Rectangle.html#random';
 
-Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#%1';
+Blockly.Msg.INPUT_HANDLER_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#%1';
 Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_TOOLTIP = 'Sets the boolean fields of the input handler';
-Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
+Blockly.Msg.SET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#toc-3';
 
 Blockly.Msg.GET_INPUT_HANDLER_BOOLEAN_FIELD_TOOLTIP = 'Gets the boolean fields of the input handler';
-Blockly.Msg.GET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
+Blockly.Msg.GET_INPUT_HANDLER_BOOLEAN_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#toc-3';
 
 Blockly.Msg.INPUT_HANDLER_ENABLE = 'enable input handler for';
 Blockly.Msg.INPUT_HANDLER_ENABLE_TOOLTIP = 'Makes an input handler for a Sprite and is responsible for managing all Input events on that Sprite.';
-Blockly.Msg.INPUT_HANDLER_ENABLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html';
+Blockly.Msg.INPUT_HANDLER_ENABLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html';
 
 Blockly.Msg.SET_INPUT_HANDLER_NUMERIC_FIELD_TOOLTIP = 'Sets the numeric fields of the input handler';
-Blockly.Msg.SET_INPUT_HANDLER_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
+Blockly.Msg.SET_INPUT_HANDLER_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#toc-3';
 
 Blockly.Msg.GET_INPUT_HANDLER_NUMERIC_FIELD_TOOLTIP = 'Gets the numeric fields of the input handler';
-Blockly.Msg.GET_INPUT_HANDLER_NUMERIC_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
+Blockly.Msg.GET_INPUT_HANDLER_NUMERIC_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#toc-3';
 
 Blockly.Msg.GET_INPUT_HANDLER_POINT_FIELD_TOOLTIP = 'Gets the point fields of the input handler';
-Blockly.Msg.GET_INPUT_HANDLER_POINT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
+Blockly.Msg.GET_INPUT_HANDLER_POINT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#toc-3';
 
 Blockly.Msg.SET_INPUT_HANDLER_POINT_FIELD_TOOLTIP = 'Sets the point fields of the input handler';
-Blockly.Msg.SET_INPUT_HANDLER_POINT_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#toc-3';
+Blockly.Msg.SET_INPUT_HANDLER_POINT_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#toc-3';
 
 Blockly.Msg.INPUT_HANDLER_BOUNDS_RECT = 'set drag bounds of';
 Blockly.Msg.INPUT_HANDLER_BOUNDS_RECT_TOOLTIP = 'A region of the game world within which the sprite is restricted during drag.';
-Blockly.Msg.INPUT_HANDLER_BOUNDS_RECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#boundsRect';
+Blockly.Msg.INPUT_HANDLER_BOUNDS_RECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#boundsRect';
 
 Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG = 'enable drag for';
 Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG_TOOLTIP = 'Allow this Sprite to be dragged by any valid pointer.';
-Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#enableDrag';
+Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#enableDrag';
 
 Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG_COMPLEX_CENTER = 'lock to center of pointer';
 Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG_COMPLEX_TOP = 'bring to top';
@@ -5052,99 +5052,99 @@ Blockly.Msg.INPUT_HANDLER_ENABLE_DRAG_COMPLEX_RECT = 'within the bounds of';
 
 Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_DOWN = 'clicking on';
 Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_DOWN_TOOLTIP = 'Checks if the given pointer is both down and over the Sprite this InputHandler belongs to.';
-Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_DOWN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#checkPointerDown';
+Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_DOWN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#checkPointerDown';
 
 Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_OVER = 'hovering over';
 Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_OVER_TOOLTIP = 'Checks if the given pointer is over the Sprite this InputHandler belongs to.';
-Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_OVER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#checkPointerOver';
+Blockly.Msg.INPUT_HANDLER_CHECK_POINTER_OVER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#checkPointerOver';
 
 Blockly.Msg.INPUT_HANDLER_DISABLE_DRAG = 'disable drag for';
 Blockly.Msg.INPUT_HANDLER_DISABLE_DRAG_TOOLTIP = 'Stops this sprite from being able to be dragged. If it is currently the target of an active drag it will be stopped immediately; also disables any set callbacks.';
-Blockly.Msg.INPUT_HANDLER_DISABLE_DRAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#disableDrag';
+Blockly.Msg.INPUT_HANDLER_DISABLE_DRAG_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#disableDrag';
 
 Blockly.Msg.SNAP = 'snap';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_TOOLTIP = 'Make this Sprite snap to the given grid either during drag or when it\'s released.';
-Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#enableSnap';
+Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#enableSnap';
 
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_DRAG = 'on drag';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_RELEASE = 'on release';
 Blockly.Msg.OFFSET_X = 'offset x';
 Blockly.Msg.OFFSET_Y = 'offset y';
 Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_TOOLTIP = 'Make this Sprite snap to the given grid either during drag or when it\'s released.';
-Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#enableSnap';
+Blockly.Msg.INPUT_HANDLER_ENABLE_SNAP_COMPLEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#enableSnap';
 
 Blockly.Msg.INPUT_HANDLER_DISABLE_SNAP = 'disable snap for';
 Blockly.Msg.INPUT_HANDLER_DISABLE_SNAP_TOOLTIP = 'Stops the sprite from snapping to a grid during drag or release.';
-Blockly.Msg.INPUT_HANDLER_DISABLE_SNAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#disableSnap';
+Blockly.Msg.INPUT_HANDLER_DISABLE_SNAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#disableSnap';
 
 Blockly.Msg.INPUT_HANDLER_CHECK_PIXEL = 'pixel alpha at';
 Blockly.Msg.INPUT_HANDLER_CHECK_PIXEL_MIDDLE = 'is >=?';
 Blockly.Msg.INPUT_HANDLER_CHECK_PIXEL_END = 'pixelPerfectAlpha ?';
 Blockly.Msg.INPUT_HANDLER_CHECK_PIXEL_TOOLTIP = 'Compares the alpha value of the pixel at (x,y) and the Sprite pixelPerfectAlpha.';
-Blockly.Msg.INPUT_HANDLER_CHECK_PIXEL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#checkPixel';
+Blockly.Msg.INPUT_HANDLER_CHECK_PIXEL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#checkPixel';
 
 Blockly.Msg.INPUT_HANDLER_IS_PIXEL_PERFECT = 'input handler is pixel perfect?';
 Blockly.Msg.INPUT_HANDLER_IS_PIXEL_PERFECT_TOOLTIP = 'Is this object using pixel perfect checking?';
-Blockly.Msg.INPUT_HANDLER_IS_PIXEL_PERFECT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#isPixelPerfect';
+Blockly.Msg.INPUT_HANDLER_IS_PIXEL_PERFECT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#isPixelPerfect';
 
 Blockly.Msg.INPUT_HANDLER_JUST_PRESSED = 'was pressed within';
 Blockly.Msg.INPUT_HANDLER_JUST_PRESSED_TOOLTIP = 'Returns true if the pointer has touched or clicked on the Sprite within the specified delay time.';
-Blockly.Msg.INPUT_HANDLER_JUST_PRESSED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#justPressed';
+Blockly.Msg.INPUT_HANDLER_JUST_PRESSED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#justPressed';
 
 Blockly.Msg.INPUT_HANDLER_JUST_RELEASED = 'was released within';
 Blockly.Msg.INPUT_HANDLER_JUST_RELEASED_TOOLTIP = 'Returns true if the pointer was touching this Sprite, but has been released within the specified delay time.';
-Blockly.Msg.INPUT_HANDLER_JUST_RELEASED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#justReleased';
+Blockly.Msg.INPUT_HANDLER_JUST_RELEASED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#justReleased';
 
 Blockly.Msg.INPUT_HANDLER_OVER_DURATION = 'how many milliseconds pointer has hovered over';
 Blockly.Msg.INPUT_HANDLER_OVER_DURATION_TOOLTIP = 'If the pointer is currently over this Sprite this returns how long it has been there for in milliseconds.';
-Blockly.Msg.INPUT_HANDLER_OVER_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#overDuration';
+Blockly.Msg.INPUT_HANDLER_OVER_DURATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#overDuration';
 
 Blockly.Msg.INPUT_POINTER_OVER = 'pointer is over';
 Blockly.Msg.INPUT_POINTER_OVER_TOOLTIP = 'Is the Pointer over this Sprite?';
-Blockly.Msg.INPUT_POINTER_OVER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerOver';
+Blockly.Msg.INPUT_POINTER_OVER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerOver';
 
 Blockly.Msg.INPUT_HANDLER_JUST_OVER = 'pointer entered';
 Blockly.Msg.INPUT_HANDLER_JUST_OVER_TOOLTIP = 'Returns true if the pointer has entered the Sprite within the specified delay time.';
-Blockly.Msg.INPUT_HANDLER_JUST_OVER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#justOver';
+Blockly.Msg.INPUT_HANDLER_JUST_OVER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#justOver';
 Blockly.Msg.WITHIN = 'within';
 
 Blockly.Msg.INPUT_HANDLER_DOWN_DURATION = 'how many milliseconds pointer has clicked on';
 Blockly.Msg.INPUT_HANDLER_DOWN_DURATION_TOOLTIP = 'If the pointer is currently over this Sprite this returns how long it has been pressed for in milliseconds.';
-Blockly.Msg.INPUT_HANDLER_DOWN_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#downDuration';
+Blockly.Msg.INPUT_HANDLER_DOWN_DURATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#downDuration';
 
 Blockly.Msg.INPUT_HANDLER_POINTER_UP = 'pointer is up?';
 Blockly.Msg.INPUT_HANDLER_POINTER_UP_TOOLTIP = 'If the Pointer is up this returns true.';
-Blockly.Msg.INPUT_HANDLER_POINTER_UP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerUp';
+Blockly.Msg.INPUT_HANDLER_POINTER_UP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerUp';
 
 Blockly.Msg.INPUT_HANDLER_POINTER_DOWN = 'pointer is down?';
 Blockly.Msg.INPUT_HANDLER_POINTER_DOWN_TOOLTIP = 'If the Pointer is down this returns true.';
-Blockly.Msg.INPUT_HANDLER_POINTER_DOWN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerDown';
+Blockly.Msg.INPUT_HANDLER_POINTER_DOWN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerDown';
 
 Blockly.Msg.INPUT_HANDLER_START = 'start input handler for';
 Blockly.Msg.INPUT_HANDLER_START_PRIORITY = 'with priority';
 Blockly.Msg.INPUT_HANDLER_START_TOOLTIP = 'Starts the Input Handler running. This is called automatically when you enable input on a Sprite, or can be called directly if you need to set a specific priority.';
-Blockly.Msg.INPUT_HANDLER_START_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#start';
+Blockly.Msg.INPUT_HANDLER_START_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#start';
 
 Blockly.Msg.INPUT_HANDLER_STOP = 'stop input handler for';
 Blockly.Msg.INPUT_HANDLER_STOP_TOOLTIP = 'Stops the Input Handler from running.';
-Blockly.Msg.INPUT_HANDLER_STOP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#stop';
+Blockly.Msg.INPUT_HANDLER_STOP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#stop';
 
 Blockly.Msg.INPUT_HANDLER_JUST_OUT = 'pointer left';
 Blockly.Msg.INPUT_HANDLER_JUST_OUT_TOOLTIP = 'Returns true if the pointer has left the Sprite within the specified delay time.';
-Blockly.Msg.INPUT_HANDLER_JUST_OUT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#justOut';
+Blockly.Msg.INPUT_HANDLER_JUST_OUT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#justOut';
 Blockly.Msg.WITHIN = 'within';
 
 Blockly.Msg.INPUT_POINTER_OUT = 'pointer is outside of';
 Blockly.Msg.INPUT_POINTER_OUT_TOOLTIP = 'Is the Pointer out this Sprite?';
-Blockly.Msg.INPUT_POINTER_OUT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerOut';
+Blockly.Msg.INPUT_POINTER_OUT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerOut';
 
 Blockly.Msg.INPUT_HANDLER_POINTER_X = 'x coordinate of pointer relative to';
 Blockly.Msg.INPUT_HANDLER_POINTER_X_TOOLTIP = 'The x coordinate of the Input pointer, relative to the top-left of the parent Sprite.';
-Blockly.Msg.INPUT_HANDLER_POINTER_X_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerX';
+Blockly.Msg.INPUT_HANDLER_POINTER_X_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerX';
 
 Blockly.Msg.INPUT_HANDLER_POINTER_Y = 'y coordinate of pointer relative to';
 Blockly.Msg.INPUT_HANDLER_POINTER_Y_TOOLTIP = 'The y coordinate of the Input pointer, relative to the top-left of the parent Sprite.';
-Blockly.Msg.INPUT_HANDLER_POINTER_Y_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerY';
+Blockly.Msg.INPUT_HANDLER_POINTER_Y_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerY';
 
 Blockly.Msg.INPUT_HANDLER_POINTER_POSITION = 'position of pointer relative to';
 Blockly.Msg.INPUT_HANDLER_POINTER_POSITION_TOOLTIP = 'The position of the Input pointer, relative to the top-left of the parent Sprite.';
@@ -5152,30 +5152,30 @@ Blockly.Msg.INPUT_HANDLER_POINTER_POSITION_HELP_URL = '';
 
 Blockly.Msg.INPUT_HANDLER_RESET = 'reset input handler for';
 Blockly.Msg.INPUT_HANDLER_RESET_TOOLTIP = 'Resets the Input Handler and disables it.';
-Blockly.Msg.INPUT_HANDLER_RESET_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#reset';
+Blockly.Msg.INPUT_HANDLER_RESET_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#reset';
 
 Blockly.Msg.INPUT_HANDLER_DESTROY = 'destroy input handler for';
 Blockly.Msg.INPUT_HANDLER_DESTROY_TOOLTIP = 'Clean up memory.';
-Blockly.Msg.INPUT_HANDLER_DESTROY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#destroy';
+Blockly.Msg.INPUT_HANDLER_DESTROY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#destroy';
 
 Blockly.Msg.INPUT_HANDLER_POINTER_DRAGGED = 'pointer is currently dragging';
 Blockly.Msg.INPUT_HANDLER_POINTER_DRAGGED_TOOLTIP = 'Is this sprite being dragged by the mouse or not?';
-Blockly.Msg.INPUT_HANDLER_POINTER_DRAGGED_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#pointerDragged';
+Blockly.Msg.INPUT_HANDLER_POINTER_DRAGGED_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#pointerDragged';
 
 Blockly.Msg.INPUT_HANDLER_SET_DRAG_LOCK = 'to be dragged in directions:';
 Blockly.Msg.INPUT_HANDLER_SET_DRAG_LOCK_TOOLTIP = 'Restricts this sprite to drag movement only on the given axis.';
-Blockly.Msg.INPUT_HANDLER_SET_DRAG_LOCK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.InputHandler.html#setDragLock';
+Blockly.Msg.INPUT_HANDLER_SET_DRAG_LOCK_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.InputHandler.html#setDragLock';
 Blockly.Msg.HORIZONTAL = 'horizontal';
 Blockly.Msg.VERTICAL = 'vertical';
 Blockly.Msg.ALLOW = 'allow';
 
 Blockly.Msg.MOUSE_POSITION_POINT = 'get current mouse position';
 Blockly.Msg.MOUSE_POSITION_POINT_TOOLTIP = 'Returns a Point with the mouse position.';
-Blockly.Msg.MOUSE_POSITION_POINT_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Mouse.html';
+Blockly.Msg.MOUSE_POSITION_POINT_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Mouse.html';
 
 Blockly.Msg.DEBUG_GEOM = 'draw shape';
 Blockly.Msg.DEBUG_GEOM_TOOLTIP = 'Renders a Phaser geometry object including Rectangle, Circle, Point or Line.';
-Blockly.Msg.DEBUG_GEOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Utils.Debug.html#geom';
+Blockly.Msg.DEBUG_GEOM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Utils.Debug.html#geom';
 Blockly.Msg.FILLED = 'filled';
 
 Blockly.Msg.LOGIC_OPERATION_AND_TOOLTIP = 'Returns true if all inputs are true.';
@@ -5321,11 +5321,11 @@ Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard
 
 Blockly.Msg.BODY_SET_SIZE = 'set body size for';
 Blockly.Msg.BODY_SET_SIZE_TOOLTIP = 'Modify the physics Body to be any dimension.';
-Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#setSize';
+Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#setSize';
 
 Blockly.Msg.DEBUG_BODY_RENDER = 'render body for';
 Blockly.Msg.DEBUG_BODY_RENDER_TOOLTIP = 'Render Sprite Body.';
-Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#render';
+Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#render';
 
 Blockly.Msg.TYPE_CHARACTER = 'character';
 Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
@@ -5385,14 +5385,14 @@ Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard
 
 Blockly.Msg.TIMER_DURATION = 'remaining duration of';
 Blockly.Msg.TIMER_DURATION_TOOLTIP = 'The duration in ms remaining until the next event will occur.';
-Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#duration';
+Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#duration';
 
 /// block text - Label that this block lets users get the value of members of game.timer.
 Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TITLE = 'get';
 /// tooltip - Specify that you are reading variables from game timer and that they are numeric types.
 Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Read numeric fields of game timer.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 /// block text - Label that this block lets users get the value of members of game.timer.
 Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TITLE = 'set';
 /// block text - Grammatical connection between the member variable and what it will be set to.
@@ -5400,12 +5400,12 @@ Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TO = 'to';
 /// tooltip - Specify that you are writing values to game.timer and that they are numeric types.
 Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Write to one of the game timer\'s numeric fields.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TITLE = 'get';
 /// tooltip - Specify that you are reading variables from game timer and that they are boolean types.
 Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Read boolean fields of game timer.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 /// block text - Label that this block lets users get the value of members of game.timer.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TITLE = 'set';
 /// block text - Grammatical connection between the member variable and what it will be set to.
@@ -5413,7 +5413,7 @@ Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
 /// tooltip - Specify that you are writing values to game.timer and that they are boolean types.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 Blockly.Msg.FOR_START_VALUE = 'starting at';
 Blockly.Msg.INCREMENT = 'increment by';
 Blockly.Msg.UNTIL = 'until';
@@ -5476,11 +5476,11 @@ Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard
 
 Blockly.Msg.BODY_SET_SIZE = 'set body size for';
 Blockly.Msg.BODY_SET_SIZE_TOOLTIP = 'Modify the physics Body to be any dimension.';
-Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#setSize';
+Blockly.Msg.BODY_SET_SIZE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#setSize';
 
 Blockly.Msg.DEBUG_BODY_RENDER = 'render body for';
 Blockly.Msg.DEBUG_BODY_RENDER_TOOLTIP = 'Render Sprite Body.';
-Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Physics.Arcade.Body.html#render';
+Blockly.Msg.DEBUG_BODY_RENDER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Physics.Arcade.Body.html#render';
 
 Blockly.Msg.TYPE_CHARACTER = 'character';
 Blockly.Msg.CHAR_INPUT_TOOLTIP = 'character input';
@@ -5540,14 +5540,14 @@ Blockly.Msg.CHAR_IS_XDIGIT_HELP_URL = 'https://www.tutorialspoint.com/c_standard
 
 Blockly.Msg.TIMER_DURATION = 'remaining duration of';
 Blockly.Msg.TIMER_DURATION_TOOLTIP = 'The duration in ms remaining until the next event will occur.';
-Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html#duration';
+Blockly.Msg.TIMER_DURATION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html#duration';
 
 /// block text - Label that this block lets users get the value of members of game.timer.
 Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TITLE = 'get';
 /// tooltip - Specify that you are reading variables from game timer and that they are numeric types.
 Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Read numeric fields of game timer.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 /// block text - Label that this block lets users get the value of members of game.timer.
 Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TITLE = 'set';
 /// block text - Grammatical connection between the member variable and what it will be set to.
@@ -5555,12 +5555,12 @@ Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TO = 'to';
 /// tooltip - Specify that you are writing values to game.timer and that they are numeric types.
 Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_TOOLTIP = 'Write to one of the game timer\'s numeric fields.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.SET_TIMER_NUMERIC_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TITLE = 'get';
 /// tooltip - Specify that you are reading variables from game timer and that they are boolean types.
 Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Read boolean fields of game timer.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.GET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 /// block text - Label that this block lets users get the value of members of game.timer.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TITLE = 'set';
 /// block text - Grammatical connection between the member variable and what it will be set to.
@@ -5568,44 +5568,44 @@ Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TO = 'to';
 /// tooltip - Specify that you are writing values to game.timer and that they are boolean types.
 Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_TOOLTIP = 'Write to one of the game timer\'s boolean fields.';
 /// url - Phaser documentation for game.timer.
-Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Timer.html';
+Blockly.Msg.SET_TIMER_BOOLEAN_MEMBER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Timer.html';
 
 Blockly.Msg.SPRITE_GET_TAG = 'get tag of sprite';
 Blockly.Msg.SPRITE_GET_TAG_TOOLTIP = 'The key of the image or texture used by this Game Object during rendering.';
-Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#key';
+Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#key';
 
 Blockly.Msg.PHASER_LOAD_TILEMAP = 'create tilemap';
 Blockly.Msg.PHASER_LOAD_TILEMAP_TOOLTIP = 'Adds a Tile Map data file to the current load queue.';
-Blockly.Msg.PHASER_LOAD_TILEMAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Loader.html#tilemap';
+Blockly.Msg.PHASER_LOAD_TILEMAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Loader.html#tilemap';
 
 Blockly.Msg.PHASER_ADD_TILEMAP = 'add tilemap';
 Blockly.Msg.PHASER_ADD_TILEMAP_TOOLITP = 'Creates a new Phaser.Tilemap object.';
-Blockly.Msg.PHASER_ADD_TILEMAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.GameObjectFactory.html#tilemap';
+Blockly.Msg.PHASER_ADD_TILEMAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.GameObjectFactory.html#tilemap';
 
 Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER = 'create layer number';
 Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_TOOLTIP = 'Creates a new TilemapLayer object.';
-Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createLayer';
+Blockly.Msg.PHASER_CREATE_TILEMAP_LAYER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#createLayer';
 
 Blockly.Msg.PHASER_ADD_TILSET_IMAGE = 'add tileset image for';
 Blockly.Msg.PHASER_ADD_TILSET_IMAGE_TOOLTIP = 'Adds an image to the map to be used as a tileset.';
-Blockly.Msg.PHASER_ADD_TILSET_IMAGE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#addTilesetImage';
+Blockly.Msg.PHASER_ADD_TILSET_IMAGE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#addTilesetImage';
 
 Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_TOOLTIP = '';
-Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#_EAST';
+Blockly.Msg.PHASER_TILEMAP_DIRECTIONS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#_EAST';
 
 Blockly.Msg.PHASER_TILEMAP_SET_FIELD_TOOLTIP = 'Set member fields for the given map.';
 Blockly.Msg.PHASER_TILEMAP_GET_FIELD_TOOLTIP = 'Get member fields for the given map.';
-Blockly.Msg.PHASER_TILEMAP_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#toc-3';
+Blockly.Msg.PHASER_TILEMAP_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#toc-3';
 
 Blockly.Msg.GET_ARRAY_FIELD = 'get array field';
 Blockly.Msg.SET_ARRAY_FIELD = 'set array field';
 
 Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD = 'set current layer for';
 Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD_TOOLTIP = 'The current layer object.';
-Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#layer';
+Blockly.Msg.PHASER_TILEMAP_SET_LAYER_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#layer';
 Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD = 'get current layer for';
 Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD_TOOLTIP = 'The current layer object.';
-Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#layer';
+Blockly.Msg.PHASER_TILEMAP_GET_LAYER_FIELD_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#layer';
 
 Blockly.Msg.TILE_WIDTH = 'tile width';
 Blockly.Msg.TILE_HEIGHT = 'tile height';
@@ -5618,15 +5618,15 @@ Blockly.Msg.TILEMAP_COPY_LAYER = 'on layer';
 Blockly.Msg.TILEMAP_COPY_POSITION = 'starting at position';
 Blockly.Msg.TILEMAP_COPY_BOUNDS = 'with the bounds of';
 Blockly.Msg.TILEMAP_COPY_TOOLTIP = 'Copies all of the tiles in the given rectangular block into the tilemap data buffer.';
-Blockly.Msg.TILEMAP_COPY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#toc-4';
+Blockly.Msg.TILEMAP_COPY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#toc-4';
 
 Blockly.Msg.TILEMAP_CREATE = 'reset tile map';
 Blockly.Msg.TILEMAP_CREATE_TOOLTIP = 'Creates an empty map of the given dimensions and one blank layer.';
-Blockly.Msg.TILEMAP_CREATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#create';
+Blockly.Msg.TILEMAP_CREATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#create';
 
 Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER = 'add blank layer to';
 Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER_TOOLTIP = 'Creates a new and empty layer on this Tilemap.';
-Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createBlankLayer';
+Blockly.Msg.TILEMAP_CREATE_BLANK_LAYER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#createBlankLayer';
 
 Blockly.Msg.GET_WORLD = 'game.world';
 Blockly.Msg.GET_WORLD_TOOLTIP = '';
@@ -5635,136 +5635,136 @@ Blockly.Msg.GET_WORLD_HELP_URL = '';
 Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS = 'add objects to';
 Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_NAME = 'from the group';
 Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_TOOLTIP = 'Creates a Sprite for every object matching the gid argument.';
-Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createBlankLayer';
+Blockly.Msg.TILEMAP_CREATE_FROM_OBJECTS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#createBlankLayer';
 Blockly.Msg.EXISTS = 'exists';
 Blockly.Msg.TILEMAP_ADJUST_Y = 'adjust y';
 Blockly.Msg.CULL = 'auto cull';
 
 Blockly.Msg.TILEMAP_CREATE_FROM_TILES = 'create objects from tiles in';
 Blockly.Msg.TILEMAP_CREATE_FROM_TILES_TOOLTIP = 'Creates a Sprite for every object matching the given tile indexes in the map data.';
-Blockly.Msg.TILEMAP_CREATE_FROM_TILES_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createFromTiles';
+Blockly.Msg.TILEMAP_CREATE_FROM_TILES_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#createFromTiles';
 Blockly.Msg.TILEMAP_CREATE_FROM_TILES_REPLACEMENT = 'replacing with the tiles from position';
 Blockly.Msg.LAYER = 'layer';
 Blockly.Msg.PROPERTIES = 'properties';
 
 Blockly.Msg.TILEMAP_CREATE_LAYER = 'create layer';
 Blockly.Msg.TILEMAP_CREATE_LAYER_TOOLTIP = 'Creates a new TilemapLayer object.';
-Blockly.Msg.TILEMAP_CREATE_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#createLayer';
+Blockly.Msg.TILEMAP_CREATE_LAYER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#createLayer';
 
 Blockly.Msg.TILEMAP_DESTROY_TOOLTIP = 'Removes all layer data from this tile map and nulls the game reference.';
-Blockly.Msg.TILEMAP_DESTROY_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#destroy';
+Blockly.Msg.TILEMAP_DESTROY_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#destroy';
 
 Blockly.Msg.FILL = 'fill';
 Blockly.Msg.TILEMAP_FILL_INDEX = 'with tiles from index';
 Blockly.Msg.TILEMAP_FILL_TOOLTIP = 'Fills the given area with the specified tile.';
-Blockly.Msg.TILEMAP_FILL_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#fill';
+Blockly.Msg.TILEMAP_FILL_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#fill';
 
 Blockly.Msg.TILEMAP_FOR_EACH_TOOLTIP = 'For each tile in the given area defined by x/y and width/height run the given callback.';
-Blockly.Msg.TILEMAP_FOR_EACH_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#forEach';
+Blockly.Msg.TILEMAP_FOR_EACH_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#forEach';
 Blockly.Msg.WHEN = 'when';
 
 Blockly.Msg.TILEMAP_GET_IMAGE_INDEX = 'get index of tile';
 Blockly.Msg.TILEMAP_GET_IMAGE_INDEX_TOOLTIP = 'Gets the image index based on its name.';
-Blockly.Msg.TILEMAP_GET_IMAGE_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#getImageIndex';
+Blockly.Msg.TILEMAP_GET_IMAGE_INDEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#getImageIndex';
 
 Blockly.Msg.TILEMAP_GET_LAYER_INDEX = 'get index of layer';
 Blockly.Msg.TILEMAP_GET_LAYER_INDEX_TOOLTIP = 'Gets the layer index based on its name.';
-Blockly.Msg.TILEMAP_GET_LAYER_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#getLayerIndex';
+Blockly.Msg.TILEMAP_GET_LAYER_INDEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#getLayerIndex';
 
 Blockly.Msg.TILEMAP_GET_TILE = 'get tile in';
 Blockly.Msg.TILEMAP_GET_TILE_TOOLTIP = 'Gets a tile from the Tilemap Layer. The coordinates are given in tile values.';
-Blockly.Msg.TILEMAP_GET_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#getTile';
+Blockly.Msg.TILEMAP_GET_TILE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#getTile';
 
 Blockly.Msg.TILEMAP_GET_TILE_NULL = 'do not return null?';
 
 Blockly.Msg.TILEMAP_GET_TILE_ABOVE = 'get tile';
 Blockly.Msg.TILEMAP_GET_TILE_ABOVE_TOOLTIP = 'Gets the tile around the tile coordinates given based on the given direction.';
-Blockly.Msg.TILEMAP_GET_TILE_ABOVE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#getTile%1';
+Blockly.Msg.TILEMAP_GET_TILE_ABOVE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#getTile%1';
 
 Blockly.Msg.TILEMAP_GET_TILESET_INDEX = 'get index of tileset';
 Blockly.Msg.TILEMAP_GET_TILESET_INDEX_TOOLTIP = 'Gets the tileset index based on its name.';
-Blockly.Msg.TILEMAP_GET_TILESET_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#getTilesetIndex';
+Blockly.Msg.TILEMAP_GET_TILESET_INDEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#getTilesetIndex';
 
 Blockly.Msg.TILEMAP_HAS_TILE = 'have a tile at';
 Blockly.Msg.TILEMAP_HAS_TILE_TOOLTIP = 'Checks if there is a tile at the given location.';
-Blockly.Msg.TILEMAP_HAS_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#hasTile';
+Blockly.Msg.TILEMAP_HAS_TILE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#hasTile';
 
 Blockly.Msg.TILEMAP_PASTE = 'paste blocks from';
 Blockly.Msg.TILEMAP_PASTE_TOOLTIP = 'Pastes a previously copied block of tile data into the given x/y coordinates. Data should have been prepared with Tilemap.copy.';
-Blockly.Msg.TILEMAP_PASTE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#paste';
+Blockly.Msg.TILEMAP_PASTE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#paste';
 
 Blockly.Msg.PUT = 'put tile';
 Blockly.Msg.TILEMAP_PUT_TILE_TOOLTIP = 'Puts a tile of the given index value at the coordinate specified.';
-Blockly.Msg.TILEMAP_PUT_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#putTile';
+Blockly.Msg.TILEMAP_PUT_TILE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#putTile';
 
 Blockly.Msg.TILEMAP_RANDOM = 'randomise tiles in';
 Blockly.Msg.TILEMAP_RANDOM_TOOLTIP = 'Randomises a set of tiles in a given area.';
-Blockly.Msg.TILEMAP_RANDOM_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#random';
+Blockly.Msg.TILEMAP_RANDOM_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#random';
 
 Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS = 'remove all layers from';
 Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_TOOLTIP = 'Removes all layers from this tile map.';
-Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#removeAllLayers';
+Blockly.Msg.TILEMAP_REMOVE_ALL_LAYERS_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#removeAllLayers';
 
 Blockly.Msg.TILEMAP_REMOVE_TILE = 'remove tile from';
 Blockly.Msg.TILEMAP_REMOVE_TILE_TOOLTIP = 'Removes the tile located at the given coordinates and updates the collision data.';
-Blockly.Msg.TILEMAP_REMOVE_TILE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#removeTile';
+Blockly.Msg.TILEMAP_REMOVE_TILE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#removeTile';
 
 Blockly.Msg.TILEMAP_REPLACE = 'with tile from index';
 Blockly.Msg.TILEMAP_REPLACE_DEST = 'replace tile at index';
 Blockly.Msg.TILEMAP_REPLACE_TOOLTIP = 'Scans the given area for tiles with an index matching source and updates their index to match dest';
-Blockly.Msg.TILEMAP_REPLACE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#replace';
+Blockly.Msg.TILEMAP_REPLACE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#replace';
 
 Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX = 'tile at index';
 Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_TOOLTIP = 'Searches the entire map layer for the first tile matching the given index, then returns that Phaser.Tile object.';
-Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#searchTileIndex';
+Blockly.Msg.TILEMAP_SEARCH_TILE_INDEX_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#searchTileIndex';
 Blockly.Msg.SKIP = 'skip';
 
 Blockly.Msg.TILEMAP_SET_COLLISION = 'set collision for tiles at index';
 Blockly.Msg.TILEMAP_SET_COLLISION_TOOLTIP = 'Sets collision on the given tile or tiles. You can pass in either a single numeric index or an array of indexes.';
-Blockly.Msg.TILEMAP_SET_COLLISION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setCollision';
+Blockly.Msg.TILEMAP_SET_COLLISION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setCollision';
 
 Blockly.Msg.COLLIDES = 'collide?';
 Blockly.Msg.RECALCULATE = 'recalculate?';
 
 Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN = 'set collision between tiles at index';
 Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_TOOLTIP = 'Sets collision on a range of tiles where the tile IDs increment sequentially.';
-Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setCollisionBetween';
+Blockly.Msg.TILEMAP_SET_COLLISION_BETWEEN_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setCollisionBetween';
 
 Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION = 'set collision for';
 Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_TILES = 'except for tile array';
 Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_TOOLTIP = 'Sets collision on all tiles in the given layer, except for the IDs of those in the given array.';
-Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setCollisionByExclusion';
+Blockly.Msg.TILEMAP_SET_COLLIISON_BY_EXCLUSION_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setCollisionByExclusion';
 
 Blockly.Msg.TILEMAP_SET_LAYER = 'set layer for';
 Blockly.Msg.TILEMAP_SET_LAYER_TOOLTIP = 'Sets the current layer to the given index.';
-Blockly.Msg.TILEMAP_SET_LAYER_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setLayer';
+Blockly.Msg.TILEMAP_SET_LAYER_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setLayer';
 
 Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE = 'prevent recalculate for tiles on';
 Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_TOOLTIP = 'Turn off/on the recalculation of faces for tile or collision updates.';
-Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setPreventRecalculate';
+Blockly.Msg.TILEMAP_SET_PREVENT_RECALCULATE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setPreventRecalculate';
 
 Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK = 'check collision for tiles at index';
 Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_TOOLTIP = 'Sets a global collision callback for the given tile index within the layer.';
-Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setTileIndexCallback';
+Blockly.Msg.TILEMAP_SET_TILE_INDEX_CALLBACK_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setTileIndexCallback';
 Blockly.Msg.IF_COLLIDING = 'if colliding';
 
 Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK = 'check collision for tiles on';
 Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_TOOLTIP = 'ets a global collision callback for the given map location within the layer.';
-Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setTileLocationCallback';
+Blockly.Msg.TILEMAP_SET_TILE_LOCATION_CALLBACK_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setTileLocationCallback';
 Blockly.Msg.IF_COLLIDING = 'if colliding';
 
 Blockly.Msg.TILEMAP_SET_TILE_SIZE = 'set tile size for';
 Blockly.Msg.TILEMAP_SET_TILE_SIZE_TOOLTIP = 'Sets the base tile size for the map.';
-Blockly.Msg.TILEMAP_SET_TILE_SIZE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#setTileSize';
+Blockly.Msg.TILEMAP_SET_TILE_SIZE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#setTileSize';
 
 Blockly.Msg.TILEMAP_SHUFFLE = 'shuffle tiles on';
 Blockly.Msg.TILEMAP_SHUFFLE_TOOLTIP = 'Shuffles a set of tiles in a given area. It will only randomise the tiles in that area, so if they\'re all the same nothing will appear to have changed!';
-Blockly.Msg.TILEMAP_SHUFFLE_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#shuffle';
+Blockly.Msg.TILEMAP_SHUFFLE_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#shuffle';
 
 Blockly.Msg.TILEMAP_SWAP = 'swap tiles at index';
 Blockly.Msg.TILEMAP_SWAP_WITH = 'with tiles at index';
 Blockly.Msg.TILEMAP_SWAP_TOOLTIP = 'Scans the given area for tiles with an index matching tileA and swaps them with tileB.';
-Blockly.Msg.TILEMAP_SWAP_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Tilemap.html#swap';
+Blockly.Msg.TILEMAP_SWAP_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Tilemap.html#swap';
 Blockly.Msg.STEPPER_CREATE = 'create stepper with';
 Blockly.Msg.STEPS = 'steps';
 Blockly.Msg.STEPPER_TOOLTIP = 'Creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board.';
@@ -5781,4 +5781,4 @@ Blockly.Msg.STEPPER_STEPS_HELP_URL = 'https://www.arduino.cc/en/Reference/Steppe
 
 Blockly.Msg.SPRITE_GET_TAG = 'get tag of sprite';
 Blockly.Msg.SPRITE_GET_TAG_TOOLTIP = 'The key of the image or texture used by this Game Object during rendering.';
-Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondrop.digipen.edu/docs/Phaser.Sprite.html#key';
+Blockly.Msg.SPRITE_GET_TAG_HELP_URL = 'http://dragondropteam.github.io/phaser_ce/Phaser.Sprite.html#key';
