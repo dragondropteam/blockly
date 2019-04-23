@@ -28,6 +28,7 @@ goog.provide('Blockly.C');
 
 goog.require('Blockly.Generator');
 
+goog.require('Blockly.CReservedWords');
 
 /**
  * Dart code generator.
@@ -42,10 +43,7 @@ Blockly.C = new Blockly.Generator('C');
  * accidentally clobbering a built-in object or function.
  * @private
  */
-Blockly.C.addReservedWords(
-    'auto', 'else', 'long', 'switch', 'break', 'enum', 'register', 'typedef', 'case', 'extern', 'return', 'union', 'char',
-    'float', 'short', 'unsigned', 'const', 'for', 'signed', 'void', 'continue', 'goto', 'sizeof', 'volatile',
-    'default', 'if', 'static', 'while', 'do', 'int', 'struct', '_Packed', 'double');
+Blockly.C.addReservedWords(Blockly.CReservedWords);
 
 /**
  * Order of operation ENUMs.
