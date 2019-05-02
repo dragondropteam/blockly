@@ -5769,7 +5769,7 @@ Blockly.Msg.STEPPER_CREATE = 'create stepper with';
 Blockly.Msg.STEPS = 'steps';
 Blockly.Msg.STEPPER_TOOLTIP = 'Creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board.';
 Blockly.Msg.STEPPER_HELP_URL = 'https://www.arduino.cc/en/Reference/StepperConstructor';
-Blockly.Msg.PIN = 'pin #';
+Blockly.Msg.PIN = 'pin #';''
 
 Blockly.Msg.STEPPER_SET_SPEED = 'set speed of stepper to';
 Blockly.Msg.STEPPER_SET_SPEED_TOOLTIP = 'Sets the motor speed in rotations per minute (RPMs).';
