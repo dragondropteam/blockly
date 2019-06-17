@@ -258,6 +258,10 @@ class Gen_compressed(threading.Thread):
         params.append(("js_code", "goog.provide('Blockly.Generator');"))
         filenames = glob.glob(
             os.path.join("generators", folder, "*.js"))
+
+        if folder == 'c':
+            filenames.insert(0, "core/c_reserved_words.js")
+
         filenames.insert(0, os.path.join("generators", language + ".js"))
         for filename in filenames:
             f = open(filename)
